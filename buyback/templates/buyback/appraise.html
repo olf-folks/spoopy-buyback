@@ -1,0 +1,93 @@
+
+<!DOCTYPE html>
+<!-- saved from url=(0031)https://spoopy-buyback.web.app/ -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    
+   
+    
+    {% load static %} 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spoopy</title>
+    <link rel="icon" type="image/png" href="{% static 'buyback/spoopy.png' %}">
+    <!-- <script type="module" crossorigin="" src="{% static 'buyback/index.js' %}"></script> -->
+    <link rel="stylesheet" href="{% static 'buyback/index.css' %}">
+
+</head>
+<body class="bg-srcblack text-srcwhite">
+    <div class="bg-srcred w-full text-center sm:hidden">Optimized for desktop</div>
+    <!-- page head -->
+    <div class="w-full h-24 text-center grid grid-cols-12 content-center">
+        <div>
+            <img src="{% static 'buyback/buyback.png' %}" alt="Spoopy Logo" class="h-20 object-scale-down ml-4">
+        </div>
+        <div class="my-auto font-bold text-5xl col-span-10 content-center">
+            SPOOPY BUYBACK
+        </div>
+        <div>
+            <img src="{% static 'buyback/buyback.png' %}" alt="Spoopy Logo" class="float-right h-20 object-scale-down mr-4">
+        </div>
+    </div>
+    <!-- end page head -->
+<!-- page-appraise -->
+<div class="max-w-6xl mx-auto grid grid-cols-2 font-mono p-4 gap-4" id="app" data-v-app="">
+    <!-- form div -->
+    <div class="grid grid-cols-3 gap-2">
+        <textarea class="focus:ring-2 h-24 ring-inset ring-srcblue col-span-3 px-2 text-srcwhite bg-srcgray-dark outline-none" placeholder="Enter your items here" type="text"></textarea>
+<!-- submit button -->
+        <button class="h-7 ring-2 ring-inset active:bg-srcblack ring-srcblue hover:bg-srcblack-light"><p>Submit</p> </button>
+<!-- clear-button -->
+<a href="{% url 'index' %}" class="h-7 ring-2 ring-inset active:bg-srcblack hover:bg-srcblack-light ring-srcgray-light" id="clear-button">
+<p class="justify-center">Clear</p>
+</a>
+<!-- end clear-button -->
+<!-- sell/buy toggle -->
+<div class="grid grid-cols-3 content-center justify-items-center">
+    <div class="justify-center">SELL</div>
+        <input type="checkbox" class="hidden" id="toggle">
+        <label for="toggle" class="grid grid-cols-2 items-center relative before:h-[1em] before:w-[2em] before:border-[0.1em] before:border-srcwhite before:rounded-full before:grid before:col-span-2 after:h-[0.7em] after:w-[0.7em] after:bg-srcwhite after:absolute after:rounded-full after:left-[0.15em] after:duration-200">    
+        </label>
+<div>BUY</div></div>
+<!-- end sell/buy toggle -->
+</div>
+
+<!-- end form div -->
+<!----><!----><!---->
+<!-- info-right-of-form -->
+<div><table class="w-full"><tr>
+    <td class="text-start">Market Total:</td><td class="text-end">markettotalvalue ISK</td></tr>
+    <tr><td class="text-start">Buyback Total:</td><td class="text-end cursor-pointer" id="buyback-total">1,165,650,000.00 ISK</td></tr>
+    <tr>        <td class="text-start">Effective Rate:</td><td class="text-end">effec rate99.92 %</td></tr>
+    </table>
+            <p>Create a contract to <span class="font-bold">SPOOPY BUYBACK</span></p>
+            <p>Use amount under <span class="font-bold">Buyback Total</span> as the contract value</p>
+        </div>
+        <!-- end info-right-of-form -->
+        <!----><!----><!----><!----><!----><!---->
+        <!-- details-under -->
+        <table class="text-end col-span-2"><tr><th></th>
+<th class="text-start">Name</th><th>Qty</th><th>Market Rate<br>Total</th>
+<th>Buyback Rate<br>Total</th><th>Effective Rate</th></tr>
+<tr class="odd:bg-srcblack-light"><td>
+    <!-- find way to get images -->
+<img src="./Spoopyresultdownload_files/28661_64.png" alt="Kronos">
+
+</td><td class="text-start">Kronos</td><td>1</td><td>1,394,000,000.00 ISK<br>1,394,000,000.00 ISK</td>
+<td>1,165,650,000.00 ISK<br>1,165,650,000.00 ISK</td><td>83.62 %</td></tr></table>
+<!-- end details-under -->
+
+
+<!-- end page-appraise --></div>
+    
+  
+
+
+    <ul>
+{{ context }}
+        </tbody>
+    </table>
+    
+    </ul>
+
+
+</body></html>
