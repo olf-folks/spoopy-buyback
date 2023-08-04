@@ -7,5 +7,3 @@ staticfiles/
 venv/
 .vscode/
 .idea/
-.back
-.orig
