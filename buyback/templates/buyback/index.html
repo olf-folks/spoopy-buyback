@@ -78,8 +78,8 @@
         <!----><!----><!----><!----><!----><!----><!----><!----><!---->
         {% if info_right == 2 %}
         <div><table class="w-full"><tr>
-            <td class="text-start">Market Total:</td><td class="text-end">markettotalvalue ISK</td></tr>
-            <tr><td class="text-start">Buyback Total:</td><td class="text-end cursor-pointer" id="buyback-total">1,165,650,000.00 ISK</td></tr>
+            <td class="text-start">Market Total:</td><td class="text-end">{{ totals_info.1|floatformat:2 }} ISK</td></tr>
+            <tr><td class="text-start">Buyback Total:</td><td class="text-end cursor-pointer" id="buyback-total">{{ totals_info.1|floatformat:2 }} ISK</td></tr>
             <tr>        <td class="text-start">Effective Rate:</td><td class="text-end">effec rate99.92 %</td></tr>
             </table>
                     <p>Create a contract to <span class="font-bold">SPOOPY BUYBACK</span></p>
@@ -88,53 +88,52 @@
 
         <!----><!----><!----><!----><!----><!----><!----><!----><!---->
         {% endif %}
-
+{% if info_right == 2 %}
 <!-- apprase output -->
 
 <table class="text-end col-span-2">
-    {% if info_right == 2 %}
-    
-    <!-- table header -->
-    <table class="text-end col-span-2"><tr><th></th><th class="text-start">Name</th><th>Qty</th><th>Market Rate<br>Total</th><th>Buyback Rate<br>Total</th><th>Effective Rate</th></tr>
-    <!-- table header -->
-    {% endif %}
-
-
-
-    {% for item in api_data %}
-    <tr class="{% cycle 'odd:bg-srcblack-light' 'even:bg-srcblack' %}">
-        <td><img src="https://image.eveonline.com/Type/{{ item.itemType.eid }}_64.png" alt="{{ item.itemType.name }}"></td>
-        <td class="text-start">{{ item.itemType.name }}</td>
-        <td>{{ item.buyVolume }}</td>
-        <td>{{ item.immediatePrices.sellPrice|floatformat:2 }} ISK<br>{{ item.immediatePrices.sellPrice|floatformat:2 }} ISK</td>
-        <td>{{ item.immediatePrices.buyPrice|floatformat:2 }} ISK<br>{{ item.immediatePrices.buyPrice|floatformat:2 }} ISK</td>
-        
+    <tr>
+        <th></th>
+        <th class="text-start">Name</th>
+        <th>Qty</th>
+        <th>Market Rate<br>Total</th>
+        <th>Buyback Rate<br>Total</th>
+        <th>Effective Rate</th>
     </tr>
-    {% endfor %}
+
+    <!-- Inside the table loop -->
+{% for processed_item in processed_items %}
+<tr class="{% cycle 'odd:bg-srcblack-light' 'even:bg-srcblack' %}">
+    <td><img src="https://image.eveonline.com/Type/{{ processed_item.api_data.itemType.eid }}_64.png" alt="{{ processed_item.api_data.itemType.name }}"></td>
+    <td class="text-start">{{ processed_item.api_data.itemType.name }}</td>
+    <td>{{ processed_item.quantity }}</td>
+    <td>
+        {{ processed_item.api_data.immediatePrices.buyPrice5DayMedian|floatformat:2 }} ISK<br>
+        {{ processed_item.market_price_itemtotal|floatformat:2 }} ISK
+    </td>
+    <td>
+        {{ processed_item.buyback_price|floatformat:2 }} ISK<br>
+        {{ processed_item.buyback_price_itemtotal|floatformat:2 }} ISK
+    </td>
+    <td>{{ processed_item.tax_rate }}</td>
+</tr>
+{% endfor %}
 </table>
 
+
 <!-- end appraise output -->
+{% endif %}
 
     </div>
-   git test 
-TEST:
+
 <!-- altform -->
 
 <!-- endaltform -->
 
 <!-- alt out -->
 
-{% if api_data %}
-    <h2>API Data:</h2>
-    <ul>
-        {% for item in api_data %}
-            <li>{{ item.name }}</li>
-        {% endfor %}
-    </ul>
-{% else %}
-    <p>No data available.</p>
-{% endif %}
+
 
 <!--  and alt out-->
-{{ debug }}
+Debug info: {{ debug }}
 </body></html>
