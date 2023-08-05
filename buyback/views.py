@@ -30,23 +30,30 @@ re_asset_list = re.compile(r'^([\S ]+)\s+([\d,]+)$')
 
 
 
-def parse_assets(input_lines):
-    parsed_items = []
-
-    for line in input_lines:
-        logger.debug("Line before matching: %s", line)
-        match = re_asset_list.match(line)
+def parse_user_input(form_data):
+    parsed_input = []
+    input_lines = []
+    logger.debug("form_data input in into parse user input fuction: %s", form_data)
+    items_list = re.split(r'\r?\n', form_data)  # Split using \r\n or \n as the delimiter
+    logger.debug("items_list in parse user input fuction: %s", items_list)
+    for item_input in items_list:
+        item_parts = item_input.strip().split(' ')
+        if len(item_parts) == 2:
+            item_name, quantity = item_parts
+            input_lines.append((item_name, quantity))
         
+    for item_name, quantity in input_lines:
+        line = f"{item_name} {quantity}"
+        match = re_asset_list.match(line)
+        logger.debug("regex debug Line before matching: %s", line)
         if match:
-            logger.debug("Line after matching: %s", line)
+            logger.debug("regex debug Line after matching: %s", line)
             input_name = match.group(1)
             # not working with commas
             #quantity = int(match.group(2))
             # remove commas in quanity
             quantity_str = match.group(2).replace(',', '')  # Remove commas from the quantity string
             input_quantity = int(quantity_str)
-
-
             # group = match.group(3)
             # category = match.group(4)
             # size = match.group(5)
@@ -56,13 +63,13 @@ def parse_assets(input_lines):
             # tech_level = match.group(10)
             # price_estimate = float(match.group(11)) if match.group(11) else 0.0
             
-            parsed_items.append({
+            parsed_input.append({
                 'name': input_name,
                 'quantity': input_quantity,
             })
-    
-    # Return the list of parsed items
-    return parsed_items
+
+            # Return the list of parsed items
+    return parsed_input
 
 
 
@@ -78,63 +85,85 @@ def get_tax_rate_from_database(item_id):
     except EveItemTax.DoesNotExist:
         return 0.0  # Default tax rate if item not found
 
+# def generate_api_input(parsed_user_input):
+#     string = ""
+#     for items in parsed_user_input:
+#         name = items[0]   # Access the first item
+#         quanity = items[1]  # Access the second item
+#         space = " "
+#         ret = "\n"
+#         string = string+name+space+str(quanity)+ret
+#         return string
+
+def getqtys(parsed_user_input):
+    qtys = [] 
+    for item in parsed_user_input:
+        quantity = item['quantity']
+        qtys.append(quantity)
+
+    return qtys  # Move the return statement outside the loop
+
+def generate_api_input(parsed_user_input):
+    string = ""
+    for item in parsed_user_input:
+        name = item['name']
+        quantity = item['quantity']
+        space = " "
+        ret = "\n"
+        string = string + name + space + str(quantity) + ret
+    return string  # Move the return statement outside the loop
+
 def index(request):
     debug = []
     info_right = 2
     if request.method == 'POST':
         form = ItemForm(request.POST)
         if form.is_valid():
-            items_input = form.cleaned_data['item_name']  # Get the input text from the form
-            # items_list = items_input.split('\n')  # Split input by lines
-            items_list = re.split(r'\r?\n', items_input)  # Split using \r\n or \n as the delimiter
-
-
-
-            #items_input
-            #
-            parsed_items = parse_assets(items_list)
-            #
-            # Create a list to store processed item data
+            raw_user_input = form.cleaned_data['item_name']  # Get the input text from the form
+            parsed_user_input = parse_user_input(raw_user_input)
+            logger.debug("parseduserinput: %s", parsed_user_input)
+            api_input = generate_api_input(parsed_user_input)
+            quantity = getqtys(parsed_user_input)
+            logger.debug("apiinput: %s", api_input)
+            janiceurl = 'https://janice.e-351.com/api/rest/v2/pricer?market=2'
+            janiceheaders = {"accept": "application/json", "X-ApiKey": "G9KwKq3465588VPd6747t95Zh94q3W2E", "Content-Type": "text/plain"}
+            janiceresponse = requests.post(janiceurl, api_input, headers=janiceheaders)
+            api_data = janiceresponse.json()
+            logger.debug("janiceapijsonresp: %s", api_data)
+              ############
+            # make seprate set that combines api_data + tax_rate + api_input
+            ######
             processed_items = []
-            
-            for item_input in items_list:
-                item_parts = item_input.strip().split(' ')  # Split item input into parts (item_name, quantity)
-                if len(item_parts) == 2:
-                    item_name, quantity = item_parts
+            for item in parsed_user_input:
+                item_name = item['name']
+                quantity = item['quantity']
+                item_id = api_data[0]['itemType']['eid']  # Assuming you get the item ID from the API response
+                tax_rate = get_tax_rate_from_database(item_id)
+                buyback_price = calculate_buyback_price(api_data[0]['immediatePrices']['buyPrice5DayMedian'], tax_rate)
+                buyback_price_itemtotal = quantity * buyback_price
+                market_price = api_data[0]['immediatePrices']['buyPrice5DayMedian']
+                market_price_itemtotal = quantity * market_price
+         
+                processed_items.append({
+                    'item_id': item_id,
+                    'item_name': item_name,
+                    'quantity': quantity,
+                    'tax_rate': tax_rate,
+                    'buyback_price': buyback_price,
+                    'market_price': market_price,
+                    'buyback_price_itemtotal': buyback_price_itemtotal,
+                    'market_price_itemtotal': market_price_itemtotal,
                     
+                })  # Include the processed item data
+       
+                gtotal_market = sum(item.get('market_price_itemtotal', 0) for item in processed_items)
+                gtotal_buyback = sum(item.get('buyback_price_itemtotal', 0) for item in processed_items)
 
-                    janiceurl = 'https://janice.e-351.com/api/rest/v2/pricer?market=2'
-                    janiceheaders = {"accept": "application/json", "X-ApiKey": "G9KwKq3465588VPd6747t95Zh94q3W2E", "Content-Type": "text/plain"}
-                    janiceresponse = requests.post(janiceurl, item_name, headers=janiceheaders)
-                    api_data = janiceresponse.json()
+                totals_info = [gtotal_buyback, gtotal_market]           
 
-                    
-                    
-                    item_id = api_data[0]['itemType']['eid']  # Assuming you get the item ID from the API response
-                    tax_rate = get_tax_rate_from_database(item_id)
-                    buyback_price = calculate_buyback_price(api_data[0]['immediatePrices']['buyPrice5DayMedian'], tax_rate)
-                    buyback_price_itemtotal = int(quantity)*buyback_price
-                    market_price = api_data[0]['immediatePrices']['buyPrice5DayMedian']
-                    market_price_itemtotal = int(quantity)*market_price
-                    
-                    processed_items.append({
-                        'item_name': item_name,
-                        'quantity': int(quantity),
-                        'tax_rate': tax_rate,
-                        'buyback_price': buyback_price,
-                        'buyback_price_itemtotal': buyback_price_itemtotal,
-                        'market_price_itemtotal': market_price_itemtotal,
-                        'api_data': api_data[0],
-                    })  # Include the processed item data
-
-                    gtotal_market = sum(item.get('market_price_itemtotal', 0) for item in processed_items)
-                    gtotal_buyback = sum(item.get('buyback_price_itemtotal', 0) for item in processed_items)
-
-                    totals_info = [gtotal_buyback, gtotal_market]
-
-            debug = [items_input, items_list, parsed_items]
+            debug = [processed_items]
             # debug = 0
-            return render(request, 'buyback/index.html', {'form': form,'processed_items': processed_items,'totals_info':totals_info, 'debug': debug, 'info_right': info_right})
+            return render(request, 'buyback/index.html', {'form': form,'processed_items': processed_items, 'totals_info':totals_info, 'debug': debug, 'info_right': info_right})
     else:
         form = ItemForm()
         info_right = 1

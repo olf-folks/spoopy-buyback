@@ -104,11 +104,11 @@
     <!-- Inside the table loop -->
 {% for processed_item in processed_items %}
 <tr class="{% cycle 'odd:bg-srcblack-light' 'even:bg-srcblack' %}">
-    <td><img src="https://image.eveonline.com/Type/{{ processed_item.api_data.itemType.eid }}_64.png" alt="{{ processed_item.api_data.itemType.name }}"></td>
-    <td class="text-start">{{ processed_item.api_data.itemType.name }}</td>
+    <td><img src="https://image.eveonline.com/Type/{{ processed_item.item_id }}_64.png" alt="{{ processed_item.item_name }}"></td>
+    <td class="text-start">{{ processed_item.item_name }}</td>
     <td>{{ processed_item.quantity }}</td>
     <td>
-        {{ processed_item.api_data.immediatePrices.buyPrice5DayMedian|floatformat:2 }} ISK<br>
+        {{ processed_item.market_price|floatformat:2 }} ISK<br>
         {{ processed_item.market_price_itemtotal|floatformat:2 }} ISK
     </td>
     <td>

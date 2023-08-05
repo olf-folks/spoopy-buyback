@@ -1,2 +1,350 @@
+form_data input in into parse user input fuction: ishtar 1
+vexor 5
+items_list in parse user input fuction: ['ishtar 1', 'vexor 5']
+regex debug Line before matching: ishtar 1
+regex debug Line after matching: ishtar 1
+regex debug Line before matching: vexor 5
+regex debug Line after matching: vexor 5
+parseduserinput: [{'name': 'ishtar', 'quantity': 1}, {'name': 'vexor', 'quantity': 5}]
+apiinput: ishtar 1
+vexor 5
+
+Starting new HTTPS connection (1): janice.e-351.com:443
+https://janice.e-351.com:443 "POST /api/rest/v2/pricer?market=2 HTTP/1.1" 200 None
+Session data corrupted
+Internal Server Error: /buyback/
+Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/django/utils/deprecation.py", line 119, in __call__
+    response = self.process_response(request, response)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/django/middleware/clickjacking.py", line 26, in process_response
+    if response.get('X-Frame-Options') is not None:
+       ^^^^^^^^^^^^
+AttributeError: 'list' object has no attribute 'get'
 Watching for file changes with StatReloader
 NumExpr defaulting to 2 threads.
+form_data input in into parse user input fuction: ishtar 5
+Vexor 10
+items_list in parse user input fuction: ['ishtar 5', 'Vexor 10']
+regex debug Line before matching: ishtar 5
+regex debug Line after matching: ishtar 5
+regex debug Line before matching: Vexor 10
+regex debug Line after matching: Vexor 10
+parseduserinput: [{'name': 'ishtar', 'quantity': 5}, {'name': 'Vexor', 'quantity': 10}]
+apiinput: ishtar 5
+Vexor 10
+
+Starting new HTTPS connection (1): janice.e-351.com:443
+https://janice.e-351.com:443 "POST /api/rest/v2/pricer?market=2 HTTP/1.1" 200 None
+Session data corrupted
+Internal Server Error: /buyback/
+Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/django/utils/deprecation.py", line 119, in __call__
+    response = self.process_response(request, response)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/django/middleware/clickjacking.py", line 26, in process_response
+    if response.get('X-Frame-Options') is not None:
+       ^^^^^^^^^^^^
+AttributeError: 'list' object has no attribute 'get'
+/root/spoopy/buyback/views.py changed, reloading.
+Watching for file changes with StatReloader
+NumExpr defaulting to 2 threads.
+form_data input in into parse user input fuction: ishtar 5
+Vexor 10
+items_list in parse user input fuction: ['ishtar 5', 'Vexor 10']
+regex debug Line before matching: ishtar 5
+regex debug Line after matching: ishtar 5
+regex debug Line before matching: Vexor 10
+regex debug Line after matching: Vexor 10
+parseduserinput: [{'name': 'ishtar', 'quantity': 5}, {'name': 'Vexor', 'quantity': 10}]
+apiinput: ishtar 5
+Vexor 10
+
+Starting new HTTPS connection (1): janice.e-351.com:443
+https://janice.e-351.com:443 "POST /api/rest/v2/pricer?market=2 HTTP/1.1" 200 None
+janiceapijsonresp: [{'date': '2023-08-05T00:00:00Z', 'market': {'id': 2, 'name': 'Jita 4-4'}, 'buyOrderCount': 27, 'buyVolume': 324, 'sellOrderCount': 32, 'sellVolume': 322, 'immediatePrices': {'buyPrice': 13450000, 'splitPrice': 13955000, 'sellPrice': 14460000, 'buyPrice5DayMedian': 13296000, 'splitPrice5DayMedian': 13850000, 'sellPrice5DayMedian': 14450000, 'buyPrice30DayMedian': 12873666.666666666, 'splitPrice30DayMedian': 13605000, 'sellPrice30DayMedian': 14430000}, 'top5AveragePrices': {'buyPrice': 13413750, 'splitPrice': 13936875, 'sellPrice': 14460000, 'buyPrice5DayMedian': 13370000, 'splitPrice5DayMedian': 13867156.862745099, 'sellPrice5DayMedian': 14460000, 'buyPrice30DayMedian': 12736865.671641791, 'splitPrice30DayMedian': 13528461.538461538, 'sellPrice30DayMedian': 14460000}, 'itemType': {'eid': 626, 'name': 'Vexor', 'volume': 115000, 'packagedVolume': 10000}}, {'date': '2023-08-05T00:00:00Z', 'market': {'id': 2, 'name': 'Jita 4-4'}, 'buyOrderCount': 36, 'buyVolume': 171, 'sellOrderCount': 62, 'sellVolume': 540, 'immediatePrices': {'buyPrice': 171100000, 'splitPrice': 179350000, 'sellPrice': 187600000, 'buyPrice5DayMedian': 169020000, 'splitPrice5DayMedian': 173750000, 'sellPrice5DayMedian': 179000000, 'buyPrice30DayMedian': 177526666.66666666, 'splitPrice30DayMedian': 183850000, 'sellPrice30DayMedian': 188500000}, 'top5AveragePrices': {'buyPrice': 171012500, 'splitPrice': 180472916.6666667, 'sellPrice': 189933333.33333334, 'buyPrice5DayMedian': 168733333.33333334, 'splitPrice5DayMedian': 173800000, 'sellPrice5DayMedian': 180926666.66666666, 'buyPrice30DayMedian': 178512500, 'splitPrice30DayMedian': 183642673.992674, 'sellPrice30DayMedian': 188990322.58064517}, 'itemType': {'eid': 12005, 'name': 'Ishtar', 'volume': 115000, 'packagedVolume': 10000}}]
+Session data corrupted
+Internal Server Error: /buyback/
+Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/django/utils/deprecation.py", line 119, in __call__
+    response = self.process_response(request, response)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/django/middleware/clickjacking.py", line 26, in process_response
+    if response.get('X-Frame-Options') is not None:
+       ^^^^^^^^^^^^
+AttributeError: 'list' object has no attribute 'get'
+/root/spoopy/buyback/views.py changed, reloading.
+Watching for file changes with StatReloader
+NumExpr defaulting to 2 threads.
+form_data input in into parse user input fuction: ishtar 5
+Vexor 10
+items_list in parse user input fuction: ['ishtar 5', 'Vexor 10']
+regex debug Line before matching: ishtar 5
+regex debug Line after matching: ishtar 5
+regex debug Line before matching: Vexor 10
+regex debug Line after matching: Vexor 10
+parseduserinput: [{'name': 'ishtar', 'quantity': 5}, {'name': 'Vexor', 'quantity': 10}]
+apiinput: ishtar 5
+Vexor 10
+
+Starting new HTTPS connection (1): janice.e-351.com:443
+https://janice.e-351.com:443 "POST /api/rest/v2/pricer?market=2 HTTP/1.1" 200 None
+janiceapijsonresp: [{'date': '2023-08-05T00:00:00Z', 'market': {'id': 2, 'name': 'Jita 4-4'}, 'buyOrderCount': 27, 'buyVolume': 324, 'sellOrderCount': 32, 'sellVolume': 322, 'immediatePrices': {'buyPrice': 13450000, 'splitPrice': 13955000, 'sellPrice': 14460000, 'buyPrice5DayMedian': 13296000, 'splitPrice5DayMedian': 13850000, 'sellPrice5DayMedian': 14450000, 'buyPrice30DayMedian': 12873666.666666666, 'splitPrice30DayMedian': 13605000, 'sellPrice30DayMedian': 14430000}, 'top5AveragePrices': {'buyPrice': 13413750, 'splitPrice': 13936875, 'sellPrice': 14460000, 'buyPrice5DayMedian': 13370000, 'splitPrice5DayMedian': 13867156.862745099, 'sellPrice5DayMedian': 14460000, 'buyPrice30DayMedian': 12736865.671641791, 'splitPrice30DayMedian': 13528461.538461538, 'sellPrice30DayMedian': 14460000}, 'itemType': {'eid': 626, 'name': 'Vexor', 'volume': 115000, 'packagedVolume': 10000}}, {'date': '2023-08-05T00:00:00Z', 'market': {'id': 2, 'name': 'Jita 4-4'}, 'buyOrderCount': 36, 'buyVolume': 171, 'sellOrderCount': 62, 'sellVolume': 540, 'immediatePrices': {'buyPrice': 171100000, 'splitPrice': 179350000, 'sellPrice': 187600000, 'buyPrice5DayMedian': 169020000, 'splitPrice5DayMedian': 173750000, 'sellPrice5DayMedian': 179000000, 'buyPrice30DayMedian': 177526666.66666666, 'splitPrice30DayMedian': 183850000, 'sellPrice30DayMedian': 188500000}, 'top5AveragePrices': {'buyPrice': 171012500, 'splitPrice': 180472916.6666667, 'sellPrice': 189933333.33333334, 'buyPrice5DayMedian': 168733333.33333334, 'splitPrice5DayMedian': 173800000, 'sellPrice5DayMedian': 180926666.66666666, 'buyPrice30DayMedian': 178512500, 'splitPrice30DayMedian': 183642673.992674, 'sellPrice30DayMedian': 188990322.58064517}, 'itemType': {'eid': 12005, 'name': 'Ishtar', 'volume': 115000, 'packagedVolume': 10000}}]
+Session data corrupted
+Internal Server Error: /buyback/
+Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/django/utils/deprecation.py", line 119, in __call__
+    response = self.process_response(request, response)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/django/middleware/clickjacking.py", line 26, in process_response
+    if response.get('X-Frame-Options') is not None:
+       ^^^^^^^^^^^^
+AttributeError: 'list' object has no attribute 'get'
+form_data input in into parse user input fuction: ishtar 1
+vexor 20
+items_list in parse user input fuction: ['ishtar 1', 'vexor 20']
+regex debug Line before matching: ishtar 1
+regex debug Line after matching: ishtar 1
+regex debug Line before matching: vexor 20
+regex debug Line after matching: vexor 20
+parseduserinput: [{'name': 'ishtar', 'quantity': 1}, {'name': 'vexor', 'quantity': 20}]
+apiinput: ishtar 1
+vexor 20
+
+Starting new HTTPS connection (1): janice.e-351.com:443
+https://janice.e-351.com:443 "POST /api/rest/v2/pricer?market=2 HTTP/1.1" 200 None
+janiceapijsonresp: [{'date': '2023-08-05T00:00:00Z', 'market': {'id': 2, 'name': 'Jita 4-4'}, 'buyOrderCount': 27, 'buyVolume': 324, 'sellOrderCount': 32, 'sellVolume': 322, 'immediatePrices': {'buyPrice': 13450000, 'splitPrice': 13955000, 'sellPrice': 14460000, 'buyPrice5DayMedian': 13296000, 'splitPrice5DayMedian': 13850000, 'sellPrice5DayMedian': 14450000, 'buyPrice30DayMedian': 12873666.666666666, 'splitPrice30DayMedian': 13605000, 'sellPrice30DayMedian': 14430000}, 'top5AveragePrices': {'buyPrice': 13413750, 'splitPrice': 13936875, 'sellPrice': 14460000, 'buyPrice5DayMedian': 13370000, 'splitPrice5DayMedian': 13867156.862745099, 'sellPrice5DayMedian': 14460000, 'buyPrice30DayMedian': 12736865.671641791, 'splitPrice30DayMedian': 13528461.538461538, 'sellPrice30DayMedian': 14460000}, 'itemType': {'eid': 626, 'name': 'Vexor', 'volume': 115000, 'packagedVolume': 10000}}, {'date': '2023-08-05T00:00:00Z', 'market': {'id': 2, 'name': 'Jita 4-4'}, 'buyOrderCount': 36, 'buyVolume': 171, 'sellOrderCount': 62, 'sellVolume': 540, 'immediatePrices': {'buyPrice': 171100000, 'splitPrice': 179350000, 'sellPrice': 187600000, 'buyPrice5DayMedian': 169020000, 'splitPrice5DayMedian': 173750000, 'sellPrice5DayMedian': 179000000, 'buyPrice30DayMedian': 177526666.66666666, 'splitPrice30DayMedian': 183850000, 'sellPrice30DayMedian': 188500000}, 'top5AveragePrices': {'buyPrice': 171012500, 'splitPrice': 180472916.6666667, 'sellPrice': 189933333.33333334, 'buyPrice5DayMedian': 168733333.33333334, 'splitPrice5DayMedian': 173800000, 'sellPrice5DayMedian': 180926666.66666666, 'buyPrice30DayMedian': 178512500, 'splitPrice30DayMedian': 183642673.992674, 'sellPrice30DayMedian': 188990322.58064517}, 'itemType': {'eid': 12005, 'name': 'Ishtar', 'volume': 115000, 'packagedVolume': 10000}}]
+Session data corrupted
+Internal Server Error: /buyback/
+Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/django/utils/deprecation.py", line 119, in __call__
+    response = self.process_response(request, response)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/django/middleware/clickjacking.py", line 26, in process_response
+    if response.get('X-Frame-Options') is not None:
+       ^^^^^^^^^^^^
+AttributeError: 'list' object has no attribute 'get'
+/root/spoopy/buyback/views.py changed, reloading.
+Watching for file changes with StatReloader
+NumExpr defaulting to 2 threads.
+form_data input in into parse user input fuction: ishtar 1
+vexor 20
+items_list in parse user input fuction: ['ishtar 1', 'vexor 20']
+regex debug Line before matching: ishtar 1
+regex debug Line after matching: ishtar 1
+regex debug Line before matching: vexor 20
+regex debug Line after matching: vexor 20
+parseduserinput: [{'name': 'ishtar', 'quantity': 1}, {'name': 'vexor', 'quantity': 20}]
+apiinput: ishtar 1
+vexor 20
+
+Starting new HTTPS connection (1): janice.e-351.com:443
+https://janice.e-351.com:443 "POST /api/rest/v2/pricer?market=2 HTTP/1.1" 200 None
+janiceapijsonresp: [{'date': '2023-08-05T00:00:00Z', 'market': {'id': 2, 'name': 'Jita 4-4'}, 'buyOrderCount': 27, 'buyVolume': 324, 'sellOrderCount': 32, 'sellVolume': 322, 'immediatePrices': {'buyPrice': 13450000, 'splitPrice': 13955000, 'sellPrice': 14460000, 'buyPrice5DayMedian': 13296000, 'splitPrice5DayMedian': 13850000, 'sellPrice5DayMedian': 14450000, 'buyPrice30DayMedian': 12873666.666666666, 'splitPrice30DayMedian': 13605000, 'sellPrice30DayMedian': 14430000}, 'top5AveragePrices': {'buyPrice': 13413750, 'splitPrice': 13936875, 'sellPrice': 14460000, 'buyPrice5DayMedian': 13370000, 'splitPrice5DayMedian': 13867156.862745099, 'sellPrice5DayMedian': 14460000, 'buyPrice30DayMedian': 12736865.671641791, 'splitPrice30DayMedian': 13528461.538461538, 'sellPrice30DayMedian': 14460000}, 'itemType': {'eid': 626, 'name': 'Vexor', 'volume': 115000, 'packagedVolume': 10000}}, {'date': '2023-08-05T00:00:00Z', 'market': {'id': 2, 'name': 'Jita 4-4'}, 'buyOrderCount': 36, 'buyVolume': 171, 'sellOrderCount': 62, 'sellVolume': 540, 'immediatePrices': {'buyPrice': 171100000, 'splitPrice': 179350000, 'sellPrice': 187600000, 'buyPrice5DayMedian': 169020000, 'splitPrice5DayMedian': 173750000, 'sellPrice5DayMedian': 179000000, 'buyPrice30DayMedian': 177526666.66666666, 'splitPrice30DayMedian': 183850000, 'sellPrice30DayMedian': 188500000}, 'top5AveragePrices': {'buyPrice': 171012500, 'splitPrice': 180472916.6666667, 'sellPrice': 189933333.33333334, 'buyPrice5DayMedian': 168733333.33333334, 'splitPrice5DayMedian': 173800000, 'sellPrice5DayMedian': 180926666.66666666, 'buyPrice30DayMedian': 178512500, 'splitPrice30DayMedian': 183642673.992674, 'sellPrice30DayMedian': 188990322.58064517}, 'itemType': {'eid': 12005, 'name': 'Ishtar', 'volume': 115000, 'packagedVolume': 10000}}]
+/root/spoopy/buyback/views.py changed, reloading.
+Watching for file changes with StatReloader
+NumExpr defaulting to 2 threads.
+form_data input in into parse user input fuction: ishtar 1
+vexor 20
+items_list in parse user input fuction: ['ishtar 1', 'vexor 20']
+regex debug Line before matching: ishtar 1
+regex debug Line after matching: ishtar 1
+regex debug Line before matching: vexor 20
+regex debug Line after matching: vexor 20
+parseduserinput: [{'name': 'ishtar', 'quantity': 1}, {'name': 'vexor', 'quantity': 20}]
+apiinput: ishtar 1
+vexor 20
+
+Starting new HTTPS connection (1): janice.e-351.com:443
+https://janice.e-351.com:443 "POST /api/rest/v2/pricer?market=2 HTTP/1.1" 200 None
+janiceapijsonresp: [{'date': '2023-08-05T00:00:00Z', 'market': {'id': 2, 'name': 'Jita 4-4'}, 'buyOrderCount': 27, 'buyVolume': 324, 'sellOrderCount': 32, 'sellVolume': 322, 'immediatePrices': {'buyPrice': 13450000, 'splitPrice': 13955000, 'sellPrice': 14460000, 'buyPrice5DayMedian': 13296000, 'splitPrice5DayMedian': 13850000, 'sellPrice5DayMedian': 14450000, 'buyPrice30DayMedian': 12873666.666666666, 'splitPrice30DayMedian': 13605000, 'sellPrice30DayMedian': 14430000}, 'top5AveragePrices': {'buyPrice': 13413750, 'splitPrice': 13936875, 'sellPrice': 14460000, 'buyPrice5DayMedian': 13370000, 'splitPrice5DayMedian': 13867156.862745099, 'sellPrice5DayMedian': 14460000, 'buyPrice30DayMedian': 12736865.671641791, 'splitPrice30DayMedian': 13528461.538461538, 'sellPrice30DayMedian': 14460000}, 'itemType': {'eid': 626, 'name': 'Vexor', 'volume': 115000, 'packagedVolume': 10000}}, {'date': '2023-08-05T00:00:00Z', 'market': {'id': 2, 'name': 'Jita 4-4'}, 'buyOrderCount': 36, 'buyVolume': 171, 'sellOrderCount': 63, 'sellVolume': 542, 'immediatePrices': {'buyPrice': 172000000, 'splitPrice': 179500000, 'sellPrice': 187000000, 'buyPrice5DayMedian': 169200000, 'splitPrice5DayMedian': 173750000, 'sellPrice5DayMedian': 179000000, 'buyPrice30DayMedian': 177556666.66666666, 'splitPrice30DayMedian': 183850000, 'sellPrice30DayMedian': 188500000}, 'top5AveragePrices': {'buyPrice': 172000000, 'splitPrice': 180800000, 'sellPrice': 189600000, 'buyPrice5DayMedian': 168733333.33333334, 'splitPrice5DayMedian': 173800000, 'sellPrice5DayMedian': 180926666.66666666, 'buyPrice30DayMedian': 178512500, 'splitPrice30DayMedian': 183642673.992674, 'sellPrice30DayMedian': 188990322.58064517}, 'itemType': {'eid': 12005, 'name': 'Ishtar', 'volume': 115000, 'packagedVolume': 10000}}]
+/root/spoopy/buyback/views.py changed, reloading.
+Watching for file changes with StatReloader
+NumExpr defaulting to 2 threads.
+form_data input in into parse user input fuction: ishtar 1
+vexor 20
+items_list in parse user input fuction: ['ishtar 1', 'vexor 20']
+regex debug Line before matching: ishtar 1
+regex debug Line after matching: ishtar 1
+regex debug Line before matching: vexor 20
+regex debug Line after matching: vexor 20
+parseduserinput: [{'name': 'ishtar', 'quantity': 1}, {'name': 'vexor', 'quantity': 20}]
+apiinput: ishtar 1
+vexor 20
+
+Starting new HTTPS connection (1): janice.e-351.com:443
+https://janice.e-351.com:443 "POST /api/rest/v2/pricer?market=2 HTTP/1.1" 200 None
+janiceapijsonresp: [{'date': '2023-08-05T00:00:00Z', 'market': {'id': 2, 'name': 'Jita 4-4'}, 'buyOrderCount': 27, 'buyVolume': 324, 'sellOrderCount': 32, 'sellVolume': 322, 'immediatePrices': {'buyPrice': 13450000, 'splitPrice': 13955000, 'sellPrice': 14460000, 'buyPrice5DayMedian': 13296000, 'splitPrice5DayMedian': 13850000, 'sellPrice5DayMedian': 14450000, 'buyPrice30DayMedian': 12873666.666666666, 'splitPrice30DayMedian': 13605000, 'sellPrice30DayMedian': 14430000}, 'top5AveragePrices': {'buyPrice': 13413750, 'splitPrice': 13936875, 'sellPrice': 14460000, 'buyPrice5DayMedian': 13370000, 'splitPrice5DayMedian': 13867156.862745099, 'sellPrice5DayMedian': 14460000, 'buyPrice30DayMedian': 12736865.671641791, 'splitPrice30DayMedian': 13528461.538461538, 'sellPrice30DayMedian': 14460000}, 'itemType': {'eid': 626, 'name': 'Vexor', 'volume': 115000, 'packagedVolume': 10000}}, {'date': '2023-08-05T00:00:00Z', 'market': {'id': 2, 'name': 'Jita 4-4'}, 'buyOrderCount': 36, 'buyVolume': 171, 'sellOrderCount': 63, 'sellVolume': 542, 'immediatePrices': {'buyPrice': 172000000, 'splitPrice': 179500000, 'sellPrice': 187000000, 'buyPrice5DayMedian': 169200000, 'splitPrice5DayMedian': 173750000, 'sellPrice5DayMedian': 179000000, 'buyPrice30DayMedian': 177556666.66666666, 'splitPrice30DayMedian': 183850000, 'sellPrice30DayMedian': 188500000}, 'top5AveragePrices': {'buyPrice': 172000000, 'splitPrice': 180800000, 'sellPrice': 189600000, 'buyPrice5DayMedian': 168733333.33333334, 'splitPrice5DayMedian': 173800000, 'sellPrice5DayMedian': 180926666.66666666, 'buyPrice30DayMedian': 178512500, 'splitPrice30DayMedian': 183642673.992674, 'sellPrice30DayMedian': 188990322.58064517}, 'itemType': {'eid': 12005, 'name': 'Ishtar', 'volume': 115000, 'packagedVolume': 10000}}]
+form_data input in into parse user input fuction: ishtar 1
+vexor 20
+items_list in parse user input fuction: ['ishtar 1', 'vexor 20']
+regex debug Line before matching: ishtar 1
+regex debug Line after matching: ishtar 1
+regex debug Line before matching: vexor 20
+regex debug Line after matching: vexor 20
+parseduserinput: [{'name': 'ishtar', 'quantity': 1}, {'name': 'vexor', 'quantity': 20}]
+apiinput: ishtar 1
+vexor 20
+
+Starting new HTTPS connection (1): janice.e-351.com:443
+https://janice.e-351.com:443 "POST /api/rest/v2/pricer?market=2 HTTP/1.1" 200 None
+janiceapijsonresp: [{'date': '2023-08-05T00:00:00Z', 'market': {'id': 2, 'name': 'Jita 4-4'}, 'buyOrderCount': 27, 'buyVolume': 324, 'sellOrderCount': 32, 'sellVolume': 322, 'immediatePrices': {'buyPrice': 13450000, 'splitPrice': 13955000, 'sellPrice': 14460000, 'buyPrice5DayMedian': 13296000, 'splitPrice5DayMedian': 13850000, 'sellPrice5DayMedian': 14450000, 'buyPrice30DayMedian': 12873666.666666666, 'splitPrice30DayMedian': 13605000, 'sellPrice30DayMedian': 14430000}, 'top5AveragePrices': {'buyPrice': 13413750, 'splitPrice': 13936875, 'sellPrice': 14460000, 'buyPrice5DayMedian': 13370000, 'splitPrice5DayMedian': 13867156.862745099, 'sellPrice5DayMedian': 14460000, 'buyPrice30DayMedian': 12736865.671641791, 'splitPrice30DayMedian': 13528461.538461538, 'sellPrice30DayMedian': 14460000}, 'itemType': {'eid': 626, 'name': 'Vexor', 'volume': 115000, 'packagedVolume': 10000}}, {'date': '2023-08-05T00:00:00Z', 'market': {'id': 2, 'name': 'Jita 4-4'}, 'buyOrderCount': 36, 'buyVolume': 171, 'sellOrderCount': 63, 'sellVolume': 542, 'immediatePrices': {'buyPrice': 172000000, 'splitPrice': 179500000, 'sellPrice': 187000000, 'buyPrice5DayMedian': 169200000, 'splitPrice5DayMedian': 173750000, 'sellPrice5DayMedian': 179000000, 'buyPrice30DayMedian': 177556666.66666666, 'splitPrice30DayMedian': 183850000, 'sellPrice30DayMedian': 188500000}, 'top5AveragePrices': {'buyPrice': 172000000, 'splitPrice': 180800000, 'sellPrice': 189600000, 'buyPrice5DayMedian': 168733333.33333334, 'splitPrice5DayMedian': 173800000, 'sellPrice5DayMedian': 180926666.66666666, 'buyPrice30DayMedian': 178512500, 'splitPrice30DayMedian': 183642673.992674, 'sellPrice30DayMedian': 188990322.58064517}, 'itemType': {'eid': 12005, 'name': 'Ishtar', 'volume': 115000, 'packagedVolume': 10000}}]
+form_data input in into parse user input fuction: ishtar 1
+vexor 20
+items_list in parse user input fuction: ['ishtar 1', 'vexor 20']
+regex debug Line before matching: ishtar 1
+regex debug Line after matching: ishtar 1
+regex debug Line before matching: vexor 20
+regex debug Line after matching: vexor 20
+parseduserinput: [{'name': 'ishtar', 'quantity': 1}, {'name': 'vexor', 'quantity': 20}]
+apiinput: ishtar 1
+vexor 20
+
+Starting new HTTPS connection (1): janice.e-351.com:443
+https://janice.e-351.com:443 "POST /api/rest/v2/pricer?market=2 HTTP/1.1" 200 None
+janiceapijsonresp: [{'date': '2023-08-05T00:00:00Z', 'market': {'id': 2, 'name': 'Jita 4-4'}, 'buyOrderCount': 27, 'buyVolume': 324, 'sellOrderCount': 32, 'sellVolume': 322, 'immediatePrices': {'buyPrice': 13450000, 'splitPrice': 13955000, 'sellPrice': 14460000, 'buyPrice5DayMedian': 13296000, 'splitPrice5DayMedian': 13850000, 'sellPrice5DayMedian': 14450000, 'buyPrice30DayMedian': 12873666.666666666, 'splitPrice30DayMedian': 13605000, 'sellPrice30DayMedian': 14430000}, 'top5AveragePrices': {'buyPrice': 13413750, 'splitPrice': 13936875, 'sellPrice': 14460000, 'buyPrice5DayMedian': 13370000, 'splitPrice5DayMedian': 13867156.862745099, 'sellPrice5DayMedian': 14460000, 'buyPrice30DayMedian': 12736865.671641791, 'splitPrice30DayMedian': 13528461.538461538, 'sellPrice30DayMedian': 14460000}, 'itemType': {'eid': 626, 'name': 'Vexor', 'volume': 115000, 'packagedVolume': 10000}}, {'date': '2023-08-05T00:00:00Z', 'market': {'id': 2, 'name': 'Jita 4-4'}, 'buyOrderCount': 36, 'buyVolume': 171, 'sellOrderCount': 63, 'sellVolume': 542, 'immediatePrices': {'buyPrice': 172000000, 'splitPrice': 179500000, 'sellPrice': 187000000, 'buyPrice5DayMedian': 169200000, 'splitPrice5DayMedian': 173750000, 'sellPrice5DayMedian': 179000000, 'buyPrice30DayMedian': 177556666.66666666, 'splitPrice30DayMedian': 183850000, 'sellPrice30DayMedian': 188500000}, 'top5AveragePrices': {'buyPrice': 172000000, 'splitPrice': 180800000, 'sellPrice': 189600000, 'buyPrice5DayMedian': 168733333.33333334, 'splitPrice5DayMedian': 173800000, 'sellPrice5DayMedian': 180926666.66666666, 'buyPrice30DayMedian': 178512500, 'splitPrice30DayMedian': 183642673.992674, 'sellPrice30DayMedian': 188990322.58064517}, 'itemType': {'eid': 12005, 'name': 'Ishtar', 'volume': 115000, 'packagedVolume': 10000}}]
+form_data input in into parse user input fuction: ishtar 1
+vexor 20
+items_list in parse user input fuction: ['ishtar 1', 'vexor 20']
+regex debug Line before matching: ishtar 1
+regex debug Line after matching: ishtar 1
+regex debug Line before matching: vexor 20
+regex debug Line after matching: vexor 20
+parseduserinput: [{'name': 'ishtar', 'quantity': 1}, {'name': 'vexor', 'quantity': 20}]
+apiinput: ishtar 1
+vexor 20
+
+Starting new HTTPS connection (1): janice.e-351.com:443
+https://janice.e-351.com:443 "POST /api/rest/v2/pricer?market=2 HTTP/1.1" 200 None
+janiceapijsonresp: [{'date': '2023-08-05T00:00:00Z', 'market': {'id': 2, 'name': 'Jita 4-4'}, 'buyOrderCount': 27, 'buyVolume': 324, 'sellOrderCount': 32, 'sellVolume': 322, 'immediatePrices': {'buyPrice': 13450000, 'splitPrice': 13955000, 'sellPrice': 14460000, 'buyPrice5DayMedian': 13296000, 'splitPrice5DayMedian': 13850000, 'sellPrice5DayMedian': 14450000, 'buyPrice30DayMedian': 12873666.666666666, 'splitPrice30DayMedian': 13605000, 'sellPrice30DayMedian': 14430000}, 'top5AveragePrices': {'buyPrice': 13413750, 'splitPrice': 13936875, 'sellPrice': 14460000, 'buyPrice5DayMedian': 13370000, 'splitPrice5DayMedian': 13867156.862745099, 'sellPrice5DayMedian': 14460000, 'buyPrice30DayMedian': 12736865.671641791, 'splitPrice30DayMedian': 13528461.538461538, 'sellPrice30DayMedian': 14460000}, 'itemType': {'eid': 626, 'name': 'Vexor', 'volume': 115000, 'packagedVolume': 10000}}, {'date': '2023-08-05T00:00:00Z', 'market': {'id': 2, 'name': 'Jita 4-4'}, 'buyOrderCount': 36, 'buyVolume': 171, 'sellOrderCount': 63, 'sellVolume': 542, 'immediatePrices': {'buyPrice': 172000000, 'splitPrice': 179500000, 'sellPrice': 187000000, 'buyPrice5DayMedian': 169200000, 'splitPrice5DayMedian': 173750000, 'sellPrice5DayMedian': 179000000, 'buyPrice30DayMedian': 177556666.66666666, 'splitPrice30DayMedian': 183850000, 'sellPrice30DayMedian': 188500000}, 'top5AveragePrices': {'buyPrice': 172000000, 'splitPrice': 180800000, 'sellPrice': 189600000, 'buyPrice5DayMedian': 168733333.33333334, 'splitPrice5DayMedian': 173800000, 'sellPrice5DayMedian': 180926666.66666666, 'buyPrice30DayMedian': 178512500, 'splitPrice30DayMedian': 183642673.992674, 'sellPrice30DayMedian': 188990322.58064517}, 'itemType': {'eid': 12005, 'name': 'Ishtar', 'volume': 115000, 'packagedVolume': 10000}}]
+/root/spoopy/buyback/views.py changed, reloading.
+Watching for file changes with StatReloader
+NumExpr defaulting to 2 threads.
+form_data input in into parse user input fuction: ishtar 1
+vexor 20
+items_list in parse user input fuction: ['ishtar 1', 'vexor 20']
+regex debug Line before matching: ishtar 1
+regex debug Line after matching: ishtar 1
+regex debug Line before matching: vexor 20
+regex debug Line after matching: vexor 20
+parseduserinput: [{'name': 'ishtar', 'quantity': 1}, {'name': 'vexor', 'quantity': 20}]
+apiinput: ishtar 1
+vexor 20
+
+Starting new HTTPS connection (1): janice.e-351.com:443
+https://janice.e-351.com:443 "POST /api/rest/v2/pricer?market=2 HTTP/1.1" 200 None
+janiceapijsonresp: [{'date': '2023-08-05T00:00:00Z', 'market': {'id': 2, 'name': 'Jita 4-4'}, 'buyOrderCount': 27, 'buyVolume': 324, 'sellOrderCount': 32, 'sellVolume': 322, 'immediatePrices': {'buyPrice': 13450000, 'splitPrice': 13955000, 'sellPrice': 14460000, 'buyPrice5DayMedian': 13296000, 'splitPrice5DayMedian': 13850000, 'sellPrice5DayMedian': 14450000, 'buyPrice30DayMedian': 12873666.666666666, 'splitPrice30DayMedian': 13605000, 'sellPrice30DayMedian': 14430000}, 'top5AveragePrices': {'buyPrice': 13413750, 'splitPrice': 13936875, 'sellPrice': 14460000, 'buyPrice5DayMedian': 13370000, 'splitPrice5DayMedian': 13867156.862745099, 'sellPrice5DayMedian': 14460000, 'buyPrice30DayMedian': 12736865.671641791, 'splitPrice30DayMedian': 13528461.538461538, 'sellPrice30DayMedian': 14460000}, 'itemType': {'eid': 626, 'name': 'Vexor', 'volume': 115000, 'packagedVolume': 10000}}, {'date': '2023-08-05T00:00:00Z', 'market': {'id': 2, 'name': 'Jita 4-4'}, 'buyOrderCount': 36, 'buyVolume': 171, 'sellOrderCount': 63, 'sellVolume': 542, 'immediatePrices': {'buyPrice': 172000000, 'splitPrice': 179500000, 'sellPrice': 187000000, 'buyPrice5DayMedian': 169200000, 'splitPrice5DayMedian': 173750000, 'sellPrice5DayMedian': 179000000, 'buyPrice30DayMedian': 177556666.66666666, 'splitPrice30DayMedian': 183850000, 'sellPrice30DayMedian': 188500000}, 'top5AveragePrices': {'buyPrice': 172000000, 'splitPrice': 180800000, 'sellPrice': 189600000, 'buyPrice5DayMedian': 168733333.33333334, 'splitPrice5DayMedian': 173800000, 'sellPrice5DayMedian': 180926666.66666666, 'buyPrice30DayMedian': 178512500, 'splitPrice30DayMedian': 183642673.992674, 'sellPrice30DayMedian': 188990322.58064517}, 'itemType': {'eid': 12005, 'name': 'Ishtar', 'volume': 115000, 'packagedVolume': 10000}}]
+form_data input in into parse user input fuction: oxigen 10000
+items_list in parse user input fuction: ['oxigen 10000']
+regex debug Line before matching: oxigen 10000
+regex debug Line after matching: oxigen 10000
+parseduserinput: [{'name': 'oxigen', 'quantity': 10000}]
+apiinput: oxigen 10000
+
+Starting new HTTPS connection (1): janice.e-351.com:443
+https://janice.e-351.com:443 "POST /api/rest/v2/pricer?market=2 HTTP/1.1" 200 None
+janiceapijsonresp: []
+Session data corrupted
+Internal Server Error: /buyback/
+Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/django/core/handlers/base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/spoopy/buyback/views.py", line 140, in index
+    item_id = api_data[0]['itemType']['eid']  # Assuming you get the item ID from the API response
+              ~~~~~~~~^^^
+IndexError: list index out of range
+form_data input in into parse user input fuction: oxigen 1
+items_list in parse user input fuction: ['oxigen 1']
+regex debug Line before matching: oxigen 1
+regex debug Line after matching: oxigen 1
+parseduserinput: [{'name': 'oxigen', 'quantity': 1}]
+apiinput: oxigen 1
+
+Starting new HTTPS connection (1): janice.e-351.com:443
+https://janice.e-351.com:443 "POST /api/rest/v2/pricer?market=2 HTTP/1.1" 200 None
+janiceapijsonresp: []
+Session data corrupted
+Internal Server Error: /buyback/
+Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/django/core/handlers/base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/spoopy/buyback/views.py", line 140, in index
+    item_id = api_data[0]['itemType']['eid']  # Assuming you get the item ID from the API response
+              ~~~~~~~~^^^
+IndexError: list index out of range
+form_data input in into parse user input fuction: oxygen 1
+items_list in parse user input fuction: ['oxygen 1']
+regex debug Line before matching: oxygen 1
+regex debug Line after matching: oxygen 1
+parseduserinput: [{'name': 'oxygen', 'quantity': 1}]
+apiinput: oxygen 1
+
+Starting new HTTPS connection (1): janice.e-351.com:443
+https://janice.e-351.com:443 "POST /api/rest/v2/pricer?market=2 HTTP/1.1" 200 None
+janiceapijsonresp: [{'date': '2023-08-05T00:00:00Z', 'market': {'id': 2, 'name': 'Jita 4-4'}, 'buyOrderCount': 30, 'buyVolume': 11054778, 'sellOrderCount': 127, 'sellVolume': 38667479, 'immediatePrices': {'buyPrice': 378, 'splitPrice': 388.25, 'sellPrice': 398.5, 'buyPrice5DayMedian': 382.28000000000003, 'splitPrice5DayMedian': 389.05, 'sellPrice5DayMedian': 399.5, 'buyPrice30DayMedian': 372.56000000000006, 'splitPrice30DayMedian': 388.9, 'sellPrice30DayMedian': 400.4}, 'top5AveragePrices': {'buyPrice': 378, 'splitPrice': 388.99764579830173, 'sellPrice': 399.9952915966035, 'buyPrice5DayMedian': 376.6382309119159, 'splitPrice5DayMedian': 388.81911545595796, 'sellPrice5DayMedian': 400.9746350077652, 'buyPrice30DayMedian': 375.8097985593256, 'splitPrice30DayMedian': 389.77708848895827, 'sellPrice30DayMedian': 403.42365560426424}, 'itemType': {'eid': 3683, 'name': 'Oxygen', 'volume': 0.19, 'packagedVolume': 0.19}}]
+form_data input in into parse user input fuction: oxyge3n 1
+items_list in parse user input fuction: ['oxyge3n 1']
+regex debug Line before matching: oxyge3n 1
+regex debug Line after matching: oxyge3n 1
+parseduserinput: [{'name': 'oxyge3n', 'quantity': 1}]
+apiinput: oxyge3n 1
+
+Starting new HTTPS connection (1): janice.e-351.com:443
+https://janice.e-351.com:443 "POST /api/rest/v2/pricer?market=2 HTTP/1.1" 200 None
+janiceapijsonresp: []
+Session data corrupted
+Internal Server Error: /buyback/
+Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/django/core/handlers/base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/spoopy/buyback/views.py", line 140, in index
+    item_id = api_data[0]['itemType']['eid']  # Assuming you get the item ID from the API response
+              ~~~~~~~~^^^
+IndexError: list index out of range
+form_data input in into parse user input fuction: oxygen 1
+items_list in parse user input fuction: ['oxygen 1']
+regex debug Line before matching: oxygen 1
+regex debug Line after matching: oxygen 1
+parseduserinput: [{'name': 'oxygen', 'quantity': 1}]
+apiinput: oxygen 1
+
+Starting new HTTPS connection (1): janice.e-351.com:443
+https://janice.e-351.com:443 "POST /api/rest/v2/pricer?market=2 HTTP/1.1" 200 None
+janiceapijsonresp: [{'date': '2023-08-05T00:00:00Z', 'market': {'id': 2, 'name': 'Jita 4-4'}, 'buyOrderCount': 30, 'buyVolume': 11054778, 'sellOrderCount': 127, 'sellVolume': 38667479, 'immediatePrices': {'buyPrice': 378, 'splitPrice': 388.25, 'sellPrice': 398.5, 'buyPrice5DayMedian': 382.28000000000003, 'splitPrice5DayMedian': 389.05, 'sellPrice5DayMedian': 399.5, 'buyPrice30DayMedian': 372.56000000000006, 'splitPrice30DayMedian': 388.9, 'sellPrice30DayMedian': 400.4}, 'top5AveragePrices': {'buyPrice': 378, 'splitPrice': 388.99764579830173, 'sellPrice': 399.9952915966035, 'buyPrice5DayMedian': 376.6382309119159, 'splitPrice5DayMedian': 388.81911545595796, 'sellPrice5DayMedian': 400.9746350077652, 'buyPrice30DayMedian': 375.8097985593256, 'splitPrice30DayMedian': 389.77708848895827, 'sellPrice30DayMedian': 403.42365560426424}, 'itemType': {'eid': 3683, 'name': 'Oxygen', 'volume': 0.19, 'packagedVolume': 0.19}}]
+form_data input in into parse user input fuction: oxygen 100000000
+items_list in parse user input fuction: ['oxygen 100000000']
+regex debug Line before matching: oxygen 100000000
+regex debug Line after matching: oxygen 100000000
+parseduserinput: [{'name': 'oxygen', 'quantity': 100000000}]
+apiinput: oxygen 100000000
+
+Starting new HTTPS connection (1): janice.e-351.com:443
+https://janice.e-351.com:443 "POST /api/rest/v2/pricer?market=2 HTTP/1.1" 200 None
+janiceapijsonresp: [{'date': '2023-08-05T00:00:00Z', 'market': {'id': 2, 'name': 'Jita 4-4'}, 'buyOrderCount': 30, 'buyVolume': 11054778, 'sellOrderCount': 127, 'sellVolume': 38667479, 'immediatePrices': {'buyPrice': 378, 'splitPrice': 388.25, 'sellPrice': 398.5, 'buyPrice5DayMedian': 382.28000000000003, 'splitPrice5DayMedian': 389.05, 'sellPrice5DayMedian': 399.5, 'buyPrice30DayMedian': 372.56000000000006, 'splitPrice30DayMedian': 388.9, 'sellPrice30DayMedian': 400.4}, 'top5AveragePrices': {'buyPrice': 378, 'splitPrice': 388.99764579830173, 'sellPrice': 399.9952915966035, 'buyPrice5DayMedian': 376.6382309119159, 'splitPrice5DayMedian': 388.81911545595796, 'sellPrice5DayMedian': 400.9746350077652, 'buyPrice30DayMedian': 375.8097985593256, 'splitPrice30DayMedian': 389.77708848895827, 'sellPrice30DayMedian': 403.42365560426424}, 'itemType': {'eid': 3683, 'name': 'Oxygen', 'volume': 0.19, 'packagedVolume': 0.19}}]
