@@ -7,3 +7,4 @@ staticfiles/
 venv/
 .vscode/
 .idea/
+django.log
