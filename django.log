@@ -1,208 +1,9 @@
-form_data input in into parse user input function: Gist X-Type Shield Boost Amplifier	1	Shield Boost Amplifier			5 m3	216,518,340.61 ISK
-Ocular Filter - Improved	1	Cyber Learning		1	1 m3	112,722,828.40 ISK
-Cybernetic Subprocessor - Improved	2	Cyber Learning		4	2 m3	222,665,256.58 ISK
-Gist X-Type Thermal Shield Hardener	2	Shield Hardener			10 m3	51,573,170.74 ISK
-Neural Boost - Standard	4	Cyber Learning		3	4 m3	83,403,071.56 ISK
-Master-at-Arms Cerebral Accelerator	5	Booster		10	5 m3	453,170,493.65 ISK
-Pith C-Type Kinetic Shield Hardener	5	Shield Hardener			25 m3	30,408,379.20 ISK
-Sisters Expanded Probe Launcher	8	Scan Probe Launcher			40 m3	217,355,908.48 ISK
-Ocular Filter - Standard	10	Cyber Learning		1	10 m3	208,439,916.90 ISK
-Memory Augmentation - Standard	18	Cyber Learning		2	18 m3	374,210,185.32 ISK
-Covert Ops Cloaking Device II	100	Cloaking Device			10,000 m3	647,487,518.00 ISK
-Compressed Prismatic Gneiss	42,376	Gneiss			2,118.80 m3	176,275,261.04 ISK
-Caldari Navy Mjolnir Heavy Missile	78,634	Heavy Missile			2,359.02 m3	92,212,519.12 ISK
-Compressed Gneiss	178,987	Gneiss			8,949.35 m3	691,790,124.61 ISK
-Oxygen Isotopes	1,173,908	Ice Product			35,217.24 m3	579,358,815.24 ISK
-items_list in parse user input function: ['Gist X-Type Shield Boost Amplifier\t1\tShield Boost Amplifier\t\t\t5 m3\t216,518,340.61 ISK', 'Ocular Filter - Improved\t1\tCyber Learning\t\t1\t1 m3\t112,722,828.40 ISK', 'Cybernetic Subprocessor - Improved\t2\tCyber Learning\t\t4\t2 m3\t222,665,256.58 ISK', 'Gist X-Type Thermal Shield Hardener\t2\tShield Hardener\t\t\t10 m3\t51,573,170.74 ISK', 'Neural Boost - Standard\t4\tCyber Learning\t\t3\t4 m3\t83,403,071.56 ISK', 'Master-at-Arms Cerebral Accelerator\t5\tBooster\t\t10\t5 m3\t453,170,493.65 ISK', 'Pith C-Type Kinetic Shield Hardener\t5\tShield Hardener\t\t\t25 m3\t30,408,379.20 ISK', 'Sisters Expanded Probe Launcher\t8\tScan Probe Launcher\t\t\t40 m3\t217,355,908.48 ISK', 'Ocular Filter - Standard\t10\tCyber Learning\t\t1\t10 m3\t208,439,916.90 ISK', 'Memory Augmentation - Standard\t18\tCyber Learning\t\t2\t18 m3\t374,210,185.32 ISK', 'Covert Ops Cloaking Device II\t100\tCloaking Device\t\t\t10,000 m3\t647,487,518.00 ISK', 'Compressed Prismatic Gneiss\t42,376\tGneiss\t\t\t2,118.80 m3\t176,275,261.04 ISK', 'Caldari Navy Mjolnir Heavy Missile\t78,634\tHeavy Missile\t\t\t2,359.02 m3\t92,212,519.12 ISK', 'Compressed Gneiss\t178,987\tGneiss\t\t\t8,949.35 m3\t691,790,124.61 ISK', 'Oxygen Isotopes\t1,173,908\tIce Product\t\t\t35,217.24 m3\t579,358,815.24 ISK']
-regex debug search found name: Gist X-Type Shield Boost Amplifier
-regex debug search found quantity: 1
-regex debug search found name: Ocular Filter - Improved
-regex debug search found quantity: 1
-regex debug search found name: Cybernetic Subprocessor - Improved
-regex debug search found quantity: 2
-regex debug search found name: Gist X-Type Thermal Shield Hardener
-regex debug search found quantity: 2
-regex debug search found name: Neural Boost - Standard
-regex debug search found quantity: 4
-regex debug search found name: Master-at-Arms Cerebral Accelerator
-regex debug search found quantity: 5
-regex debug search found name: Pith C-Type Kinetic Shield Hardener
-regex debug search found quantity: 5
-regex debug search found name: Sisters Expanded Probe Launcher
-regex debug search found quantity: 8
-regex debug search found name: Ocular Filter - Standard
-regex debug search found quantity: 10
-regex debug search found name: Memory Augmentation - Standard
-regex debug search found quantity: 18
-regex debug search found name: Covert Ops Cloaking Device II
-regex debug search found quantity: 100
-regex debug search found name: Compressed Prismatic Gneiss
-regex debug search found quantity: 42376
-regex debug search found name: Caldari Navy Mjolnir Heavy Missile
-regex debug search found quantity: 78634
-regex debug search found name: Compressed Gneiss
-regex debug search found quantity: 178987
-regex debug search found name: Oxygen Isotopes
-regex debug search found quantity: 1173908
-parseduserinput: [{'name': 'Gist X-Type Shield Boost Amplifier', 'quantity': 1}, {'name': 'Ocular Filter - Improved', 'quantity': 1}, {'name': 'Cybernetic Subprocessor - Improved', 'quantity': 2}, {'name': 'Gist X-Type Thermal Shield Hardener', 'quantity': 2}, {'name': 'Neural Boost - Standard', 'quantity': 4}, {'name': 'Master-at-Arms Cerebral Accelerator', 'quantity': 5}, {'name': 'Pith C-Type Kinetic Shield Hardener', 'quantity': 5}, {'name': 'Sisters Expanded Probe Launcher', 'quantity': 8}, {'name': 'Ocular Filter - Standard', 'quantity': 10}, {'name': 'Memory Augmentation - Standard', 'quantity': 18}, {'name': 'Covert Ops Cloaking Device II', 'quantity': 100}, {'name': 'Compressed Prismatic Gneiss', 'quantity': 42376}, {'name': 'Caldari Navy Mjolnir Heavy Missile', 'quantity': 78634}, {'name': 'Compressed Gneiss', 'quantity': 178987}, {'name': 'Oxygen Isotopes', 'quantity': 1173908}]
-apiinput: Gist X-Type Shield Boost Amplifier 1
-Ocular Filter - Improved 1
-Cybernetic Subprocessor - Improved 2
-Gist X-Type Thermal Shield Hardener 2
-Neural Boost - Standard 4
-Master-at-Arms Cerebral Accelerator 5
-Pith C-Type Kinetic Shield Hardener 5
-Sisters Expanded Probe Launcher 8
-Ocular Filter - Standard 10
-Memory Augmentation - Standard 18
-Covert Ops Cloaking Device II 100
-Compressed Prismatic Gneiss 42376
-Caldari Navy Mjolnir Heavy Missile 78634
-Compressed Gneiss 178987
-Oxygen Isotopes 1173908
-
-Starting new HTTPS connection (1): janice.e-351.com:443
-https://janice.e-351.com:443 "POST /api/rest/v2/pricer?market=2 HTTP/1.1" 200 None
-janiceapijsonresp: [{'date': '2023-08-06T00:00:00Z', 'market': {'id': 2, 'name': 'Jita 4-4'}, 'buyOrderCount': 29, 'buyVolume': 228, 'sellOrderCount': 32, 'sellVolume': 70, 'immediatePrices': {'buyPrice': 26750000, 'splitPrice': 30735000, 'sellPrice': 34720000, 'buyPrice5DayMedian': 27108000, 'splitPrice5DayMedian': 30735000, 'sellPrice5DayMedian': 34720000, 'buyPrice30DayMedian': 23925333.333333332, 'splitPrice30DayMedian': 29045000, 'sellPrice30DayMedian': 32980000}, 'top5AveragePrices': {'buyPrice': 26735454.545454547, 'splitPrice': 30727727.272727273, 'sellPrice': 34720000, 'buyPrice5DayMedian': 26590909.09090909, 'splitPrice5DayMedian': 30703787.878787875, 'sellPrice5DayMedian': 34720000, 'buyPrice30DayMedian': 23367692.307692308, 'splitPrice30DayMedian': 29045833.333333336, 'sellPrice30DayMedian': 32990000}, 'itemType': {'eid': 19283, 'name': 'Gist X-Type Thermal Shield Hardener', 'volume': 5, 'packagedVolume': 5}}, {'date': '2023-08-06T00:00:00Z', 'market': {'id': 2, 'name': 'Jita 4-4'}, 'buyOrderCount': 15, 'buyVolume': 130, 'sellOrderCount': 51, 'sellVolume': 120, 'immediatePrices': {'buyPrice': 188300000, 'splitPrice': 188350000, 'sellPrice': 188400000, 'buyPrice5DayMedian': 190180000, 'splitPrice5DayMedian': 197100000, 'sellPrice5DayMedian': 205400000, 'buyPrice30DayMedian': 192120000, 'splitPrice30DayMedian': 203650000, 'sellPrice30DayMedian': 215700000}, 'top5AveragePrices': {'buyPrice': 187050000, 'splitPrice': 193683333.3333333, 'sellPrice': 200316666.66666666, 'buyPrice5DayMedian': 188516666.66666666, 'splitPrice5DayMedian': 196988333.3333333, 'sellPrice5DayMedian': 205460000, 'buyPrice30DayMedian': 189716666.66666666, 'splitPrice30DayMedian': 203725000, 'sellPrice30DayMedian': 219250000}, 'itemType': {'eid': 19301, 'name': 'Gist X-Type Shield Boost Amplifier', 'volume': 5, 'packagedVolume': 5}}, {'date': '2023-08-06T00:00:00Z', 'market': {'id': 2, 'name': 'Jita 4-4'}, 'buyOrderCount': 21, 'buyVolume': 22893362, 'sellOrderCount': 61, 'sellVolume': 109477188, 'immediatePrices': {'buyPrice': 446.4, 'splitPrice': 464.04999999999995, 'sellPrice': 481.7, 'buyPrice5DayMedian': 445.93999999999994, 'splitPrice5DayMedian': 463.85, 'sellPrice5DayMedian': 481.5, 'buyPrice30DayMedian': 456.79666666666657, 'splitPrice30DayMedian': 471, 'sellPrice30DayMedian': 487.9}, 'top5AveragePrices': {'buyPrice': 446.1704584211318, 'splitPrice': 464.34798664549436, 'sellPrice': 482.5255148698569, 'buyPrice5DayMedian': 446.12841159927586, 'splitPrice5DayMedian': 464.09064418208686, 'sellPrice5DayMedian': 481.6957195388873, 'buyPrice30DayMedian': 452.53192130509274, 'splitPrice30DayMedian': 470.76596065254637, 'sellPrice30DayMedian': 488.52687151547565}, 'itemType': {'eid': 17887, 'name': 'Oxygen Isotopes', 'volume': 0.03, 'packagedVolume': 0.03}}, {'date': '2023-08-06T00:00:00Z', 'market': {'id': 2, 'name': 'Jita 4-4'}, 'buyOrderCount': 24, 'buyVolume': 93, 'sellOrderCount': 20, 'sellVolume': 173, 'immediatePrices': {'buyPrice': 104700000, 'splitPrice': 110350000, 'sellPrice': 116000000, 'buyPrice5DayMedian': 106440000, 'splitPrice5DayMedian': 110400000, 'sellPrice5DayMedian': 116000000, 'buyPrice30DayMedian': 104431333.33333333, 'splitPrice30DayMedian': 110600000, 'sellPrice30DayMedian': 115000000}, 'top5AveragePrices': {'buyPrice': 104675000, 'splitPrice': 110337500, 'sellPrice': 116000000, 'buyPrice5DayMedian': 104966666.66666667, 'splitPrice5DayMedian': 110366666.66666667, 'sellPrice5DayMedian': 116000000, 'buyPrice30DayMedian': 149599.98175845933, 'splitPrice30DayMedian': 57865653.53567686, 'sellPrice30DayMedian': 115000000}, 'itemType': {'eid': 10217, 'name': 'Ocular Filter - Improved', 'volume': 1, 'packagedVolume': 1}}, {'date': '2023-08-06T00:00:00Z', 'market': {'id': 2, 'name': 'Jita 4-4'}, 'buyOrderCount': 23, 'buyVolume': 588, 'sellOrderCount': 40, 'sellVolume': 1266, 'immediatePrices': {'buyPrice': 6484000, 'splitPrice': 6718500, 'sellPrice': 6953000, 'buyPrice5DayMedian': 6696400, 'splitPrice5DayMedian': 6850000, 'sellPrice5DayMedian': 6980000, 'buyPrice30DayMedian': 6127200, 'splitPrice30DayMedian': 6399500, 'sellPrice30DayMedian': 6797000}, 'top5AveragePrices': {'buyPrice': 6483517.24137931, 'splitPrice': 6718441.160372195, 'sellPrice': 6953365.079365079, 'buyPrice5DayMedian': 6720000, 'splitPrice5DayMedian': 6850000, 'sellPrice5DayMedian': 6980000, 'buyPrice30DayMedian': 5929416.20626151, 'splitPrice30DayMedian': 6455333.103130755, 'sellPrice30DayMedian': 6891000}, 'itemType': {'eid': 11578, 'name': 'Covert Ops Cloaking Device II', 'volume': 100, 'packagedVolume': 100}}, {'date': '2023-08-06T00:00:00Z', 'market': {'id': 2, 'name': 'Jita 4-4'}, 'buyOrderCount': 21, 'buyVolume': 244, 'sellOrderCount': 16, 'sellVolume': 109, 'immediatePrices': {'buyPrice': 19470000, 'splitPrice': 20455000, 'sellPrice': 21440000, 'buyPrice5DayMedian': 19538000, 'splitPrice5DayMedian': 20415000, 'sellPrice5DayMedian': 20900000, 'buyPrice30DayMedian': 19205333.333333332, 'splitPrice30DayMedian': 20095000, 'sellPrice30DayMedian': 20900000}, 'top5AveragePrices': {'buyPrice': 19456666.666666668, 'splitPrice': 20448333.333333336, 'sellPrice': 21440000, 'buyPrice5DayMedian': 19456666.666666668, 'splitPrice5DayMedian': 20430000, 'sellPrice5DayMedian': 21440000, 'buyPrice30DayMedian': 87353.8142637767, 'splitPrice30DayMedian': 10676738.307162024, 'sellPrice30DayMedian': 20936250}, 'itemType': {'eid': 10208, 'name': 'Memory Augmentation - Standard', 'volume': 1, 'packagedVolume': 1}}, {'date': '2023-08-06T00:00:00Z', 'market': {'id': 2, 'name': 'Jita 4-4'}, 'buyOrderCount': 25, 'buyVolume': 382, 'sellOrderCount': 13, 'sellVolume': 379, 'immediatePrices': {'buyPrice': 20080000, 'splitPrice': 21095000, 'sellPrice': 22110000, 'buyPrice5DayMedian': 20022000, 'splitPrice5DayMedian': 21065000, 'sellPrice5DayMedian': 22090000, 'buyPrice30DayMedian': 19069666.666666668, 'splitPrice30DayMedian': 20140000, 'sellPrice30DayMedian': 20920000}, 'top5AveragePrices': {'buyPrice': 20074210.52631579, 'splitPrice': 21103216.37426901, 'sellPrice': 22132222.222222224, 'buyPrice5DayMedian': 20040000, 'splitPrice5DayMedian': 21065000, 'sellPrice5DayMedian': 22090000, 'buyPrice30DayMedian': 87227.21478445173, 'splitPrice30DayMedian': 10513802.010020195, 'sellPrice30DayMedian': 20920000}, 'itemType': {'eid': 10212, 'name': 'Neural Boost - Standard', 'volume': 1, 'packagedVolume': 1}}, {'date': '2023-08-06T00:00:00Z', 'market': {'id': 2, 'name': 'Jita 4-4'}, 'buyOrderCount': 28, 'buyVolume': 376, 'sellOrderCount': 10, 'sellVolume': 195, 'immediatePrices': {'buyPrice': 19500000, 'splitPrice': 20440000, 'sellPrice': 21380000, 'buyPrice5DayMedian': 19618000, 'splitPrice5DayMedian': 20440000, 'sellPrice5DayMedian': 21130000, 'buyPrice30DayMedian': 19085000, 'splitPrice30DayMedian': 20135000, 'sellPrice30DayMedian': 21110000}, 'top5AveragePrices': {'buyPrice': 19466666.666666668, 'splitPrice': 20423333.333333336, 'sellPrice': 21380000, 'buyPrice5DayMedian': 19466666.666666668, 'splitPrice5DayMedian': 20423333.333333336, 'sellPrice5DayMedian': 21155000, 'buyPrice30DayMedian': 120721.30374572644, 'splitPrice30DayMedian': 10634465.302979285, 'sellPrice30DayMedian': 21120000}, 'itemType': {'eid': 10216, 'name': 'Ocular Filter - Standard', 'volume': 1, 'packagedVolume': 1}}, {'date': '2023-08-06T00:00:00Z', 'market': {'id': 2, 'name': 'Jita 4-4'}, 'buyOrderCount': 5, 'buyVolume': 236, 'sellOrderCount': 11, 'sellVolume': 86, 'immediatePrices': {'buyPrice': 2656000, 'splitPrice': 4141500, 'sellPrice': 5627000, 'buyPrice5DayMedian': 2862600, 'splitPrice5DayMedian': 4314500, 'sellPrice5DayMedian': 5629000, 'buyPrice30DayMedian': 2888766.6666666665, 'splitPrice30DayMedian': 4335000, 'sellPrice30DayMedian': 5635000}, 'top5AveragePrices': {'buyPrice': 2656000, 'splitPrice': 4143125, 'sellPrice': 5630250, 'buyPrice5DayMedian': 2770666.6666666665, 'splitPrice5DayMedian': 4199833.333333333, 'sellPrice5DayMedian': 5630250, 'buyPrice30DayMedian': 2628416.6666666665, 'splitPrice30DayMedian': 4335728.571428571, 'sellPrice30DayMedian': 5635500}, 'itemType': {'eid': 19258, 'name': 'Pith C-Type Kinetic Shield Hardener', 'volume': 5, 'packagedVolume': 5}}, {'date': '2023-08-06T00:00:00Z', 'market': {'id': 2, 'name': 'Jita 4-4'}, 'buyOrderCount': 27, 'buyVolume': 410, 'sellOrderCount': 33, 'sellVolume': 222, 'immediatePrices': {'buyPrice': 25020000, 'splitPrice': 26450000, 'sellPrice': 27880000, 'buyPrice5DayMedian': 25568000, 'splitPrice5DayMedian': 26980000, 'sellPrice5DayMedian': 28110000, 'buyPrice30DayMedian': 25104333.333333332, 'splitPrice30DayMedian': 26335000, 'sellPrice30DayMedian': 27680000}, 'top5AveragePrices': {'buyPrice': 24990500, 'splitPrice': 26435250, 'sellPrice': 27880000, 'buyPrice5DayMedian': 25831500, 'splitPrice5DayMedian': 26970750, 'sellPrice5DayMedian': 28110000, 'buyPrice30DayMedian': 218027.15617915758, 'splitPrice30DayMedian': 13966289.452969123, 'sellPrice30DayMedian': 27692380.95238095}, 'itemType': {'eid': 28756, 'name': 'Sisters Expanded Probe Launcher', 'volume': 5, 'packagedVolume': 5}}, {'date': '2023-08-06T00:00:00Z', 'market': {'id': 2, 'name': 'Jita 4-4'}, 'buyOrderCount': 16, 'buyVolume': 5938678, 'sellOrderCount': 62, 'sellVolume': 18514823, 'immediatePrices': {'buyPrice': 3547, 'splitPrice': 3771.5, 'sellPrice': 3996, 'buyPrice5DayMedian': 3646.4, 'splitPrice5DayMedian': 3810, 'sellPrice5DayMedian': 3996, 'buyPrice30DayMedian': 3803.9666666666667, 'splitPrice30DayMedian': 4000.5, 'sellPrice30DayMedian': 4096}, 'top5AveragePrices': {'buyPrice': 3546.0103289294216, 'splitPrice': 3771.420737502958, 'sellPrice': 3996.8311460764944, 'buyPrice5DayMedian': 3595, 'splitPrice5DayMedian': 3810.918624761232, 'sellPrice5DayMedian': 4008.334904465384, 'buyPrice30DayMedian': 3862.9897186820463, 'splitPrice30DayMedian': 3976.3096187395895, 'sellPrice30DayMedian': 4099}, 'itemType': {'eid': 62552, 'name': 'Compressed Gneiss', 'volume': 0.05, 'packagedVolume': 0.05}}, {'date': '2023-08-06T00:00:00Z', 'market': {'id': 2, 'name': 'Jita 4-4'}, 'buyOrderCount': 15, 'buyVolume': 3757418, 'sellOrderCount': 20, 'sellVolume': 3813986, 'immediatePrices': {'buyPrice': 4123, 'splitPrice': 4436.5, 'sellPrice': 4750, 'buyPrice5DayMedian': 4241.6, 'splitPrice5DayMedian': 4436.5, 'sellPrice5DayMedian': 4750, 'buyPrice30DayMedian': 4240.833333333333, 'splitPrice30DayMedian': 4478.5, 'sellPrice30DayMedian': 4637}, 'top5AveragePrices': {'buyPrice': 4117.024793740352, 'splitPrice': 4442.534447326654, 'sellPrice': 4768.044100912957, 'buyPrice5DayMedian': 4212.119124929801, 'splitPrice5DayMedian': 4477.533640410222, 'sellPrice5DayMedian': 4768.044100912957, 'buyPrice30DayMedian': 4279.286035708397, 'splitPrice30DayMedian': 4478.63377789952, 'sellPrice30DayMedian': 4692.791718695025}, 'itemType': {'eid': 62554, 'name': 'Compressed Prismatic Gneiss', 'volume': 0.05, 'packagedVolume': 0.05}}, {'date': '2023-08-06T00:00:00Z', 'market': {'id': 2, 'name': 'Jita 4-4'}, 'buyOrderCount': 24, 'buyVolume': 14128752, 'sellOrderCount': 58, 'sellVolume': 4351650, 'immediatePrices': {'buyPrice': 928.2, 'splitPrice': 1033.6, 'sellPrice': 1139, 'buyPrice5DayMedian': 1048.46, 'splitPrice5DayMedian': 1140.5, 'sellPrice5DayMedian': 1181, 'buyPrice30DayMedian': 1054.3733333333334, 'splitPrice30DayMedian': 1140.5, 'sellPrice30DayMedian': 1197}, 'top5AveragePrices': {'buyPrice': 928.1390545795309, 'splitPrice': 1034.722506396493, 'sellPrice': 1141.3059582134551, 'buyPrice5DayMedian': 928.1390545795309, 'splitPrice5DayMedian': 1034.722506396493, 'sellPrice5DayMedian': 1181.711218921006, 'buyPrice30DayMedian': 1090.4784596709933, 'splitPrice30DayMedian': 1152.6703579175137, 'sellPrice30DayMedian': 1212.1642445610112}, 'itemType': {'eid': 27435, 'name': 'Caldari Navy Mjolnir Heavy Missile', 'volume': 0.03, 'packagedVolume': 0.03}}, {'date': '2023-08-06T00:00:00Z', 'market': {'id': 2, 'name': 'Jita 4-4'}, 'buyOrderCount': 74, 'buyVolume': 630, 'sellOrderCount': 70, 'sellVolume': 1234, 'immediatePrices': {'buyPrice': 89300000, 'splitPrice': 92895000, 'sellPrice': 96490000, 'buyPrice5DayMedian': 89520000, 'splitPrice5DayMedian': 92895000, 'sellPrice5DayMedian': 96430000, 'buyPrice30DayMedian': 87213333.33333333, 'splitPrice30DayMedian': 91980000, 'sellPrice30DayMedian': 95000000}, 'top5AveragePrices': {'buyPrice': 89145161.29032259, 'splitPrice': 92824711.79270229, 'sellPrice': 96504262.29508197, 'buyPrice5DayMedian': 89298125, 'splitPrice5DayMedian': 92824711.79270229, 'sellPrice5DayMedian': 96445178.57142857, 'buyPrice30DayMedian': 88030000, 'splitPrice30DayMedian': 91924461.53846154, 'sellPrice30DayMedian': 96141666.66666667}, 'itemType': {'eid': 48582, 'name': 'Master-at-Arms Cerebral Accelerator', 'volume': 1, 'packagedVolume': 1}}, {'date': '2023-08-06T00:00:00Z', 'market': {'id': 2, 'name': 'Jita 4-4'}, 'buyOrderCount': 28, 'buyVolume': 100, 'sellOrderCount': 14, 'sellVolume': 110, 'immediatePrices': {'buyPrice': 105700000, 'splitPrice': 110750000, 'sellPrice': 115800000, 'buyPrice5DayMedian': 106680000, 'splitPrice5DayMedian': 111550000, 'sellPrice5DayMedian': 115900000, 'buyPrice30DayMedian': 104547666.66666667, 'splitPrice30DayMedian': 108600000, 'sellPrice30DayMedian': 112500000}, 'top5AveragePrices': {'buyPrice': 105620000, 'splitPrice': 110710000, 'sellPrice': 115800000, 'buyPrice5DayMedian': 107080000, 'splitPrice5DayMedian': 111490000, 'sellPrice5DayMedian': 115900000, 'buyPrice30DayMedian': 170004.7692988561, 'splitPrice30DayMedian': 56579773.702955864, 'sellPrice30DayMedian': 112625000}, 'itemType': {'eid': 10222, 'name': 'Cybernetic Subprocessor - Improved', 'volume': 1, 'packagedVolume': 1}}]
-Is fee for haul?: False
-haul fee is: 0
-Is fee for haul?: False
-haul fee is: 0
-Is fee for haul?: False
-haul fee is: 0
-Is fee for haul?: False
-haul fee is: 0
-Is fee for haul?: False
-haul fee is: 0
-Is fee for haul?: False
-haul fee is: 0
-Is fee for haul?: False
-haul fee is: 0
-Is fee for haul?: False
-haul fee is: 0
-Is fee for haul?: False
-haul fee is: 0
-Is fee for haul?: False
-haul fee is: 0
-Is fee for haul?: False
-haul fee is: 0
-Is fee for haul?: False
-haul fee is: 0
-Is fee for haul?: False
-haul fee is: 0
-Is fee for haul?: False
-haul fee is: 0
-Is fee for haul?: False
-haul fee is: 0
-form_data input in into parse user input function: Warp Disruptor II	1	Warp Scrambler	5
-Initiated Compact Warp Scrambler	2	Warp Scrambler	1
-items_list in parse user input function: ['Warp Disruptor II\t1\tWarp Scrambler\t5', 'Initiated Compact Warp Scrambler\t2\tWarp Scrambler\t1']
-regex debug search found name: Warp Disruptor II
-regex debug search found quantity: 1
-regex debug search found name: Initiated Compact Warp Scrambler
-regex debug search found quantity: 2
-parseduserinput: [{'name': 'Warp Disruptor II', 'quantity': 1}, {'name': 'Initiated Compact Warp Scrambler', 'quantity': 2}]
-apiinput: Warp Disruptor II 1
-Initiated Compact Warp Scrambler 2
-
-Starting new HTTPS connection (1): janice.e-351.com:443
-https://janice.e-351.com:443 "POST /api/rest/v2/pricer?market=2 HTTP/1.1" 200 None
-janiceapijsonresp: [{'date': '2023-08-06T00:00:00Z', 'market': {'id': 2, 'name': 'Jita 4-4'}, 'buyOrderCount': 27, 'buyVolume': 2263, 'sellOrderCount': 49, 'sellVolume': 6432, 'immediatePrices': {'buyPrice': 1421000, 'splitPrice': 1502000, 'sellPrice': 1583000, 'buyPrice5DayMedian': 1450000, 'splitPrice5DayMedian': 1502000, 'sellPrice5DayMedian': 1613000, 'buyPrice30DayMedian': 1406833.3333333333, 'splitPrice30DayMedian': 1483000, 'sellPrice30DayMedian': 1558000}, 'top5AveragePrices': {'buyPrice': 1420398.2300884956, 'splitPrice': 1501699.1150442478, 'sellPrice': 1583000, 'buyPrice5DayMedian': 1420398.2300884956, 'splitPrice5DayMedian': 1501699.1150442478, 'sellPrice5DayMedian': 1614551.4705882352, 'buyPrice30DayMedian': 1394774.1935483871, 'splitPrice30DayMedian': 1474991.6666666665, 'sellPrice30DayMedian': 1563750}, 'itemType': {'eid': 3244, 'name': 'Warp Disruptor II', 'volume': 5, 'packagedVolume': 5}}, {'date': '2023-08-06T00:00:00Z', 'market': {'id': 2, 'name': 'Jita 4-4'}, 'buyOrderCount': 4, 'buyVolume': 3025, 'sellOrderCount': 70, 'sellVolume': 20163, 'immediatePrices': {'buyPrice': 27220, 'splitPrice': 29295, 'sellPrice': 31370, 'buyPrice5DayMedian': 27264, 'splitPrice5DayMedian': 28665, 'sellPrice5DayMedian': 30000, 'buyPrice30DayMedian': 28505, 'splitPrice30DayMedian': 30195, 'sellPrice30DayMedian': 31410}, 'top5AveragePrices': {'buyPrice': 27220, 'splitPrice': 29299.6378968254, 'sellPrice': 31379.275793650795, 'buyPrice5DayMedian': 27237.63157894737, 'splitPrice5DayMedian': 29294.48827035034, 'sellPrice5DayMedian': 31359.60591133005, 'buyPrice30DayMedian': 28960, 'splitPrice30DayMedian': 30223.350230414748, 'sellPrice30DayMedian': 31486.700460829492}, 'itemType': {'eid': 5445, 'name': 'Initiated Compact Warp Scrambler', 'volume': 5, 'packagedVolume': 5}}]
-Is fee for haul?: False
-haul fee is: 0
-Is fee for haul?: False
-haul fee is: 0
-form_data input in into parse user input function: Initiated Compact Warp Scrambler	2	Warp Scrambler	1
-Warp Disruptor II	1	Warp Scrambler	5
-items_list in parse user input function: ['Initiated Compact Warp Scrambler\t2\tWarp Scrambler\t1', 'Warp Disruptor II\t1\tWarp Scrambler\t5']
-regex debug search found name: Initiated Compact Warp Scrambler
-regex debug search found quantity: 2
-regex debug search found name: Warp Disruptor II
-regex debug search found quantity: 1
-parseduserinput: [{'name': 'Initiated Compact Warp Scrambler', 'quantity': 2}, {'name': 'Warp Disruptor II', 'quantity': 1}]
-apiinput: Initiated Compact Warp Scrambler 2
-Warp Disruptor II 1
-
-Starting new HTTPS connection (1): janice.e-351.com:443
-https://janice.e-351.com:443 "POST /api/rest/v2/pricer?market=2 HTTP/1.1" 200 None
-janiceapijsonresp: [{'date': '2023-08-06T00:00:00Z', 'market': {'id': 2, 'name': 'Jita 4-4'}, 'buyOrderCount': 27, 'buyVolume': 2263, 'sellOrderCount': 49, 'sellVolume': 6432, 'immediatePrices': {'buyPrice': 1421000, 'splitPrice': 1502000, 'sellPrice': 1583000, 'buyPrice5DayMedian': 1450000, 'splitPrice5DayMedian': 1502000, 'sellPrice5DayMedian': 1613000, 'buyPrice30DayMedian': 1406833.3333333333, 'splitPrice30DayMedian': 1483000, 'sellPrice30DayMedian': 1558000}, 'top5AveragePrices': {'buyPrice': 1420398.2300884956, 'splitPrice': 1501699.1150442478, 'sellPrice': 1583000, 'buyPrice5DayMedian': 1420398.2300884956, 'splitPrice5DayMedian': 1501699.1150442478, 'sellPrice5DayMedian': 1614551.4705882352, 'buyPrice30DayMedian': 1394774.1935483871, 'splitPrice30DayMedian': 1474991.6666666665, 'sellPrice30DayMedian': 1563750}, 'itemType': {'eid': 3244, 'name': 'Warp Disruptor II', 'volume': 5, 'packagedVolume': 5}}, {'date': '2023-08-06T00:00:00Z', 'market': {'id': 2, 'name': 'Jita 4-4'}, 'buyOrderCount': 4, 'buyVolume': 3025, 'sellOrderCount': 70, 'sellVolume': 20163, 'immediatePrices': {'buyPrice': 27220, 'splitPrice': 29295, 'sellPrice': 31370, 'buyPrice5DayMedian': 27264, 'splitPrice5DayMedian': 28665, 'sellPrice5DayMedian': 30000, 'buyPrice30DayMedian': 28505, 'splitPrice30DayMedian': 30195, 'sellPrice30DayMedian': 31410}, 'top5AveragePrices': {'buyPrice': 27220, 'splitPrice': 29299.6378968254, 'sellPrice': 31379.275793650795, 'buyPrice5DayMedian': 27237.63157894737, 'splitPrice5DayMedian': 29294.48827035034, 'sellPrice5DayMedian': 31359.60591133005, 'buyPrice30DayMedian': 28960, 'splitPrice30DayMedian': 30223.350230414748, 'sellPrice30DayMedian': 31486.700460829492}, 'itemType': {'eid': 5445, 'name': 'Initiated Compact Warp Scrambler', 'volume': 5, 'packagedVolume': 5}}]
-Is fee for haul?: False
-haul fee is: 0
-Is fee for haul?: False
-haul fee is: 0
-form_data input in into parse user input function: Warp Disruptor II	1	Warp Scrambler	5
-Initiated Compact Warp Scrambler	2	Warp Scrambler	1
-items_list in parse user input function: ['Warp Disruptor II\t1\tWarp Scrambler\t5', 'Initiated Compact Warp Scrambler\t2\tWarp Scrambler\t1']
-regex debug search found name: Warp Disruptor II
-regex debug search found quantity: 1
-regex debug search found name: Initiated Compact Warp Scrambler
-regex debug search found quantity: 2
-parseduserinput: [{'name': 'Warp Disruptor II', 'quantity': 1}, {'name': 'Initiated Compact Warp Scrambler', 'quantity': 2}]
-apiinput: Warp Disruptor II 1
-Initiated Compact Warp Scrambler 2
-
-Starting new HTTPS connection (1): janice.e-351.com:443
-https://janice.e-351.com:443 "POST /api/rest/v2/pricer?market=2 HTTP/1.1" 200 None
-janiceapijsonresp: [{'date': '2023-08-06T00:00:00Z', 'market': {'id': 2, 'name': 'Jita 4-4'}, 'buyOrderCount': 27, 'buyVolume': 2263, 'sellOrderCount': 49, 'sellVolume': 6432, 'immediatePrices': {'buyPrice': 1421000, 'splitPrice': 1502000, 'sellPrice': 1583000, 'buyPrice5DayMedian': 1450000, 'splitPrice5DayMedian': 1502000, 'sellPrice5DayMedian': 1613000, 'buyPrice30DayMedian': 1406833.3333333333, 'splitPrice30DayMedian': 1483000, 'sellPrice30DayMedian': 1558000}, 'top5AveragePrices': {'buyPrice': 1420398.2300884956, 'splitPrice': 1501699.1150442478, 'sellPrice': 1583000, 'buyPrice5DayMedian': 1420398.2300884956, 'splitPrice5DayMedian': 1501699.1150442478, 'sellPrice5DayMedian': 1614551.4705882352, 'buyPrice30DayMedian': 1394774.1935483871, 'splitPrice30DayMedian': 1474991.6666666665, 'sellPrice30DayMedian': 1563750}, 'itemType': {'eid': 3244, 'name': 'Warp Disruptor II', 'volume': 5, 'packagedVolume': 5}}, {'date': '2023-08-06T00:00:00Z', 'market': {'id': 2, 'name': 'Jita 4-4'}, 'buyOrderCount': 4, 'buyVolume': 3025, 'sellOrderCount': 70, 'sellVolume': 20163, 'immediatePrices': {'buyPrice': 27220, 'splitPrice': 29295, 'sellPrice': 31370, 'buyPrice5DayMedian': 27264, 'splitPrice5DayMedian': 28665, 'sellPrice5DayMedian': 30000, 'buyPrice30DayMedian': 28505, 'splitPrice30DayMedian': 30195, 'sellPrice30DayMedian': 31410}, 'top5AveragePrices': {'buyPrice': 27220, 'splitPrice': 29299.6378968254, 'sellPrice': 31379.275793650795, 'buyPrice5DayMedian': 27237.63157894737, 'splitPrice5DayMedian': 29294.48827035034, 'sellPrice5DayMedian': 31359.60591133005, 'buyPrice30DayMedian': 28960, 'splitPrice30DayMedian': 30223.350230414748, 'sellPrice30DayMedian': 31486.700460829492}, 'itemType': {'eid': 5445, 'name': 'Initiated Compact Warp Scrambler', 'volume': 5, 'packagedVolume': 5}}]
-Is fee for haul?: False
-haul fee is: 0
-Is fee for haul?: False
-haul fee is: 0
-form_data input in into parse user input function: Warp Disruptor II	1	Warp Scrambler	5
-Initiated Compact Warp Scrambler	1	Warp Scrambler	1
-items_list in parse user input function: ['Warp Disruptor II\t1\tWarp Scrambler\t5', 'Initiated Compact Warp Scrambler\t1\tWarp Scrambler\t1']
-regex debug search found name: Warp Disruptor II
-regex debug search found quantity: 1
-regex debug search found name: Initiated Compact Warp Scrambler
-regex debug search found quantity: 1
-parseduserinput: [{'name': 'Warp Disruptor II', 'quantity': 1}, {'name': 'Initiated Compact Warp Scrambler', 'quantity': 1}]
-apiinput: Warp Disruptor II 1
-Initiated Compact Warp Scrambler 1
-
-Starting new HTTPS connection (1): janice.e-351.com:443
-https://janice.e-351.com:443 "POST /api/rest/v2/pricer?market=2 HTTP/1.1" 200 None
-janiceapijsonresp: [{'date': '2023-08-06T00:00:00Z', 'market': {'id': 2, 'name': 'Jita 4-4'}, 'buyOrderCount': 27, 'buyVolume': 2263, 'sellOrderCount': 49, 'sellVolume': 6432, 'immediatePrices': {'buyPrice': 1421000, 'splitPrice': 1502000, 'sellPrice': 1583000, 'buyPrice5DayMedian': 1450000, 'splitPrice5DayMedian': 1502000, 'sellPrice5DayMedian': 1613000, 'buyPrice30DayMedian': 1406833.3333333333, 'splitPrice30DayMedian': 1483000, 'sellPrice30DayMedian': 1558000}, 'top5AveragePrices': {'buyPrice': 1420398.2300884956, 'splitPrice': 1501699.1150442478, 'sellPrice': 1583000, 'buyPrice5DayMedian': 1420398.2300884956, 'splitPrice5DayMedian': 1501699.1150442478, 'sellPrice5DayMedian': 1614551.4705882352, 'buyPrice30DayMedian': 1394774.1935483871, 'splitPrice30DayMedian': 1474991.6666666665, 'sellPrice30DayMedian': 1563750}, 'itemType': {'eid': 3244, 'name': 'Warp Disruptor II', 'volume': 5, 'packagedVolume': 5}}, {'date': '2023-08-06T00:00:00Z', 'market': {'id': 2, 'name': 'Jita 4-4'}, 'buyOrderCount': 4, 'buyVolume': 3025, 'sellOrderCount': 70, 'sellVolume': 20163, 'immediatePrices': {'buyPrice': 27220, 'splitPrice': 29295, 'sellPrice': 31370, 'buyPrice5DayMedian': 27264, 'splitPrice5DayMedian': 28665, 'sellPrice5DayMedian': 30000, 'buyPrice30DayMedian': 28505, 'splitPrice30DayMedian': 30195, 'sellPrice30DayMedian': 31410}, 'top5AveragePrices': {'buyPrice': 27220, 'splitPrice': 29299.6378968254, 'sellPrice': 31379.275793650795, 'buyPrice5DayMedian': 27237.63157894737, 'splitPrice5DayMedian': 29294.48827035034, 'sellPrice5DayMedian': 31359.60591133005, 'buyPrice30DayMedian': 28960, 'splitPrice30DayMedian': 30223.350230414748, 'sellPrice30DayMedian': 31486.700460829492}, 'itemType': {'eid': 5445, 'name': 'Initiated Compact Warp Scrambler', 'volume': 5, 'packagedVolume': 5}}]
-Is fee for haul?: False
-haul fee is: 0
-Is fee for haul?: False
-haul fee is: 0
-form_data input in into parse user input function: Warp Disruptor II	1	Warp Scrambler	5
-Initiated Compact Warp Scrambler	1	Warp Scrambler	1
-items_list in parse user input function: ['Warp Disruptor II\t1\tWarp Scrambler\t5', 'Initiated Compact Warp Scrambler\t1\tWarp Scrambler\t1']
-regex debug search found name: Warp Disruptor II
-regex debug search found quantity: 1
-regex debug search found name: Initiated Compact Warp Scrambler
-regex debug search found quantity: 1
-parseduserinput: [{'name': 'Warp Disruptor II', 'quantity': 1}, {'name': 'Initiated Compact Warp Scrambler', 'quantity': 1}]
-apiinput: Warp Disruptor II 1
-Initiated Compact Warp Scrambler 1
-
-Starting new HTTPS connection (1): janice.e-351.com:443
-https://janice.e-351.com:443 "POST /api/rest/v2/pricer?market=2 HTTP/1.1" 200 None
-janiceapijsonresp: [{'date': '2023-08-06T00:00:00Z', 'market': {'id': 2, 'name': 'Jita 4-4'}, 'buyOrderCount': 27, 'buyVolume': 2263, 'sellOrderCount': 49, 'sellVolume': 6432, 'immediatePrices': {'buyPrice': 1421000, 'splitPrice': 1502000, 'sellPrice': 1583000, 'buyPrice5DayMedian': 1450000, 'splitPrice5DayMedian': 1502000, 'sellPrice5DayMedian': 1613000, 'buyPrice30DayMedian': 1406833.3333333333, 'splitPrice30DayMedian': 1483000, 'sellPrice30DayMedian': 1558000}, 'top5AveragePrices': {'buyPrice': 1420398.2300884956, 'splitPrice': 1501699.1150442478, 'sellPrice': 1583000, 'buyPrice5DayMedian': 1420398.2300884956, 'splitPrice5DayMedian': 1501699.1150442478, 'sellPrice5DayMedian': 1614551.4705882352, 'buyPrice30DayMedian': 1394774.1935483871, 'splitPrice30DayMedian': 1474991.6666666665, 'sellPrice30DayMedian': 1563750}, 'itemType': {'eid': 3244, 'name': 'Warp Disruptor II', 'volume': 5, 'packagedVolume': 5}}, {'date': '2023-08-06T00:00:00Z', 'market': {'id': 2, 'name': 'Jita 4-4'}, 'buyOrderCount': 4, 'buyVolume': 3025, 'sellOrderCount': 70, 'sellVolume': 20163, 'immediatePrices': {'buyPrice': 27220, 'splitPrice': 29295, 'sellPrice': 31370, 'buyPrice5DayMedian': 27264, 'splitPrice5DayMedian': 28665, 'sellPrice5DayMedian': 30000, 'buyPrice30DayMedian': 28505, 'splitPrice30DayMedian': 30195, 'sellPrice30DayMedian': 31410}, 'top5AveragePrices': {'buyPrice': 27220, 'splitPrice': 29299.6378968254, 'sellPrice': 31379.275793650795, 'buyPrice5DayMedian': 27237.63157894737, 'splitPrice5DayMedian': 29294.48827035034, 'sellPrice5DayMedian': 31359.60591133005, 'buyPrice30DayMedian': 28960, 'splitPrice30DayMedian': 30223.350230414748, 'sellPrice30DayMedian': 31486.700460829492}, 'itemType': {'eid': 5445, 'name': 'Initiated Compact Warp Scrambler', 'volume': 5, 'packagedVolume': 5}}]
-Is fee for haul?: False
-haul fee is: 0
-Is fee for haul?: False
-haul fee is: 0
-form_data input in into parse user input function: Initiated Compact Warp Scrambler	1	Warp Scrambler	1
-Warp Disruptor II	1	Warp Scrambler	5
-items_list in parse user input function: ['Initiated Compact Warp Scrambler\t1\tWarp Scrambler\t1', 'Warp Disruptor II\t1\tWarp Scrambler\t5']
-regex debug search found name: Initiated Compact Warp Scrambler
-regex debug search found quantity: 1
-regex debug search found name: Warp Disruptor II
-regex debug search found quantity: 1
-parseduserinput: [{'name': 'Initiated Compact Warp Scrambler', 'quantity': 1}, {'name': 'Warp Disruptor II', 'quantity': 1}]
-apiinput: Initiated Compact Warp Scrambler 1
-Warp Disruptor II 1
-
-Starting new HTTPS connection (1): janice.e-351.com:443
-https://janice.e-351.com:443 "POST /api/rest/v2/pricer?market=2 HTTP/1.1" 200 None
-janiceapijsonresp: [{'date': '2023-08-06T00:00:00Z', 'market': {'id': 2, 'name': 'Jita 4-4'}, 'buyOrderCount': 27, 'buyVolume': 2263, 'sellOrderCount': 49, 'sellVolume': 6432, 'immediatePrices': {'buyPrice': 1421000, 'splitPrice': 1502000, 'sellPrice': 1583000, 'buyPrice5DayMedian': 1450000, 'splitPrice5DayMedian': 1502000, 'sellPrice5DayMedian': 1613000, 'buyPrice30DayMedian': 1406833.3333333333, 'splitPrice30DayMedian': 1483000, 'sellPrice30DayMedian': 1558000}, 'top5AveragePrices': {'buyPrice': 1420398.2300884956, 'splitPrice': 1501699.1150442478, 'sellPrice': 1583000, 'buyPrice5DayMedian': 1420398.2300884956, 'splitPrice5DayMedian': 1501699.1150442478, 'sellPrice5DayMedian': 1614551.4705882352, 'buyPrice30DayMedian': 1394774.1935483871, 'splitPrice30DayMedian': 1474991.6666666665, 'sellPrice30DayMedian': 1563750}, 'itemType': {'eid': 3244, 'name': 'Warp Disruptor II', 'volume': 5, 'packagedVolume': 5}}, {'date': '2023-08-06T00:00:00Z', 'market': {'id': 2, 'name': 'Jita 4-4'}, 'buyOrderCount': 4, 'buyVolume': 3025, 'sellOrderCount': 70, 'sellVolume': 20163, 'immediatePrices': {'buyPrice': 27220, 'splitPrice': 29295, 'sellPrice': 31370, 'buyPrice5DayMedian': 27264, 'splitPrice5DayMedian': 28665, 'sellPrice5DayMedian': 30000, 'buyPrice30DayMedian': 28505, 'splitPrice30DayMedian': 30195, 'sellPrice30DayMedian': 31410}, 'top5AveragePrices': {'buyPrice': 27220, 'splitPrice': 29299.6378968254, 'sellPrice': 31379.275793650795, 'buyPrice5DayMedian': 27237.63157894737, 'splitPrice5DayMedian': 29294.48827035034, 'sellPrice5DayMedian': 31359.60591133005, 'buyPrice30DayMedian': 28960, 'splitPrice30DayMedian': 30223.350230414748, 'sellPrice30DayMedian': 31486.700460829492}, 'itemType': {'eid': 5445, 'name': 'Initiated Compact Warp Scrambler', 'volume': 5, 'packagedVolume': 5}}]
-Is fee for haul?: False
-haul fee is: 0
-Is fee for haul?: False
-haul fee is: 0
-/root/spoopy/buyback/views.py changed, reloading.
+Watching for file changes with StatReloader
+NumExpr defaulting to 2 threads.
+/root/spoopy/spoopy/settings.py changed, reloading.
+Watching for file changes with StatReloader
+NumExpr defaulting to 2 threads.
+/root/spoopy/buyback/templatetags/custom_filters.py changed, reloading.
 Watching for file changes with StatReloader
 NumExpr defaulting to 2 threads.
 form_data input in into parse user input function: Initiated Compact Warp Scrambler	1	Warp Scrambler	1
@@ -218,7 +19,61 @@ Warp Disruptor II 1
 
 Starting new HTTPS connection (1): janice.e-351.com:443
 https://janice.e-351.com:443 "POST /api/rest/v2/pricer?market=2 HTTP/1.1" 200 None
-janiceapijsonresp: [{'date': '2023-08-06T00:00:00Z', 'market': {'id': 2, 'name': 'Jita 4-4'}, 'buyOrderCount': 27, 'buyVolume': 2263, 'sellOrderCount': 49, 'sellVolume': 6432, 'immediatePrices': {'buyPrice': 1421000, 'splitPrice': 1502000, 'sellPrice': 1583000, 'buyPrice5DayMedian': 1450000, 'splitPrice5DayMedian': 1502000, 'sellPrice5DayMedian': 1613000, 'buyPrice30DayMedian': 1406833.3333333333, 'splitPrice30DayMedian': 1483000, 'sellPrice30DayMedian': 1558000}, 'top5AveragePrices': {'buyPrice': 1420398.2300884956, 'splitPrice': 1501699.1150442478, 'sellPrice': 1583000, 'buyPrice5DayMedian': 1420398.2300884956, 'splitPrice5DayMedian': 1501699.1150442478, 'sellPrice5DayMedian': 1614551.4705882352, 'buyPrice30DayMedian': 1394774.1935483871, 'splitPrice30DayMedian': 1474991.6666666665, 'sellPrice30DayMedian': 1563750}, 'itemType': {'eid': 3244, 'name': 'Warp Disruptor II', 'volume': 5, 'packagedVolume': 5}}, {'date': '2023-08-06T00:00:00Z', 'market': {'id': 2, 'name': 'Jita 4-4'}, 'buyOrderCount': 4, 'buyVolume': 3025, 'sellOrderCount': 70, 'sellVolume': 20163, 'immediatePrices': {'buyPrice': 27220, 'splitPrice': 29295, 'sellPrice': 31370, 'buyPrice5DayMedian': 27264, 'splitPrice5DayMedian': 28665, 'sellPrice5DayMedian': 30000, 'buyPrice30DayMedian': 28505, 'splitPrice30DayMedian': 30195, 'sellPrice30DayMedian': 31410}, 'top5AveragePrices': {'buyPrice': 27220, 'splitPrice': 29299.6378968254, 'sellPrice': 31379.275793650795, 'buyPrice5DayMedian': 27237.63157894737, 'splitPrice5DayMedian': 29294.48827035034, 'sellPrice5DayMedian': 31359.60591133005, 'buyPrice30DayMedian': 28960, 'splitPrice30DayMedian': 30223.350230414748, 'sellPrice30DayMedian': 31486.700460829492}, 'itemType': {'eid': 5445, 'name': 'Initiated Compact Warp Scrambler', 'volume': 5, 'packagedVolume': 5}}]
+janiceapijsonresp: [{'date': '2023-08-06T00:00:00Z', 'market': {'id': 2, 'name': 'Jita 4-4'}, 'buyOrderCount': 4, 'buyVolume': 3016, 'sellOrderCount': 70, 'sellVolume': 20150, 'immediatePrices': {'buyPrice': 27220, 'splitPrice': 29295, 'sellPrice': 31370, 'buyPrice5DayMedian': 27264, 'splitPrice5DayMedian': 28665, 'sellPrice5DayMedian': 30000, 'buyPrice30DayMedian': 28505, 'splitPrice30DayMedian': 30195, 'sellPrice30DayMedian': 31410}, 'top5AveragePrices': {'buyPrice': 27220, 'splitPrice': 29299.702085402183, 'sellPrice': 31379.40417080437, 'buyPrice5DayMedian': 27237.63157894737, 'splitPrice5DayMedian': 29294.48827035034, 'sellPrice5DayMedian': 31359.60591133005, 'buyPrice30DayMedian': 28960, 'splitPrice30DayMedian': 30223.350230414748, 'sellPrice30DayMedian': 31486.700460829492}, 'itemType': {'eid': 5445, 'name': 'Initiated Compact Warp Scrambler', 'volume': 5, 'packagedVolume': 5}}, {'date': '2023-08-06T00:00:00Z', 'market': {'id': 2, 'name': 'Jita 4-4'}, 'buyOrderCount': 29, 'buyVolume': 2701, 'sellOrderCount': 49, 'sellVolume': 6415, 'immediatePrices': {'buyPrice': 1425000, 'splitPrice': 1504000, 'sellPrice': 1583000, 'buyPrice5DayMedian': 1450800, 'splitPrice5DayMedian': 1504000, 'sellPrice5DayMedian': 1613000, 'buyPrice30DayMedian': 1406966.6666666667, 'splitPrice30DayMedian': 1483000, 'sellPrice30DayMedian': 1558000}, 'top5AveragePrices': {'buyPrice': 1422992.5925925926, 'splitPrice': 1502996.2962962962, 'sellPrice': 1583000, 'buyPrice5DayMedian': 1422992.5925925926, 'splitPrice5DayMedian': 1502996.2962962962, 'sellPrice5DayMedian': 1614551.4705882352, 'buyPrice30DayMedian': 1394774.1935483871, 'splitPrice30DayMedian': 1474991.6666666665, 'sellPrice30DayMedian': 1563750}, 'itemType': {'eid': 3244, 'name': 'Warp Disruptor II', 'volume': 5, 'packagedVolume': 5}}]
+Is fee for haul?: False
+haul fee is: 0
+Is fee for haul?: False
+haul fee is: 0
+form_data input in into parse user input function: Initiated Compact Warp Scrambler	1	Warp Scrambler	1
+Warp Disruptor II	1	Warp Scrambler	5
+items_list in parse user input function: ['Initiated Compact Warp Scrambler\t1\tWarp Scrambler\t1', 'Warp Disruptor II\t1\tWarp Scrambler\t5']
+regex debug search found name: Initiated Compact Warp Scrambler
+regex debug search found quantity: 1
+regex debug search found name: Warp Disruptor II
+regex debug search found quantity: 1
+parseduserinput: [{'name': 'Initiated Compact Warp Scrambler', 'quantity': 1}, {'name': 'Warp Disruptor II', 'quantity': 1}]
+apiinput: Initiated Compact Warp Scrambler 1
+Warp Disruptor II 1
+
+Starting new HTTPS connection (1): janice.e-351.com:443
+form_data input in into parse user input function: Initiated Compact Warp Scrambler	1	Warp Scrambler	1
+Warp Disruptor II	1	Warp Scrambler	5
+items_list in parse user input function: ['Initiated Compact Warp Scrambler\t1\tWarp Scrambler\t1', 'Warp Disruptor II\t1\tWarp Scrambler\t5']
+regex debug search found name: Initiated Compact Warp Scrambler
+regex debug search found quantity: 1
+regex debug search found name: Warp Disruptor II
+regex debug search found quantity: 1
+parseduserinput: [{'name': 'Initiated Compact Warp Scrambler', 'quantity': 1}, {'name': 'Warp Disruptor II', 'quantity': 1}]
+apiinput: Initiated Compact Warp Scrambler 1
+Warp Disruptor II 1
+
+Starting new HTTPS connection (1): janice.e-351.com:443
+https://janice.e-351.com:443 "POST /api/rest/v2/pricer?market=2 HTTP/1.1" 200 None
+janiceapijsonresp: [{'date': '2023-08-06T00:00:00Z', 'market': {'id': 2, 'name': 'Jita 4-4'}, 'buyOrderCount': 29, 'buyVolume': 2701, 'sellOrderCount': 49, 'sellVolume': 6415, 'immediatePrices': {'buyPrice': 1425000, 'splitPrice': 1504000, 'sellPrice': 1583000, 'buyPrice5DayMedian': 1450800, 'splitPrice5DayMedian': 1504000, 'sellPrice5DayMedian': 1613000, 'buyPrice30DayMedian': 1406966.6666666667, 'splitPrice30DayMedian': 1483000, 'sellPrice30DayMedian': 1558000}, 'top5AveragePrices': {'buyPrice': 1422992.5925925926, 'splitPrice': 1502996.2962962962, 'sellPrice': 1583000, 'buyPrice5DayMedian': 1422992.5925925926, 'splitPrice5DayMedian': 1502996.2962962962, 'sellPrice5DayMedian': 1614551.4705882352, 'buyPrice30DayMedian': 1394774.1935483871, 'splitPrice30DayMedian': 1474991.6666666665, 'sellPrice30DayMedian': 1563750}, 'itemType': {'eid': 3244, 'name': 'Warp Disruptor II', 'volume': 5, 'packagedVolume': 5}}, {'date': '2023-08-06T00:00:00Z', 'market': {'id': 2, 'name': 'Jita 4-4'}, 'buyOrderCount': 4, 'buyVolume': 3016, 'sellOrderCount': 70, 'sellVolume': 20150, 'immediatePrices': {'buyPrice': 27220, 'splitPrice': 29295, 'sellPrice': 31370, 'buyPrice5DayMedian': 27264, 'splitPrice5DayMedian': 28665, 'sellPrice5DayMedian': 30000, 'buyPrice30DayMedian': 28505, 'splitPrice30DayMedian': 30195, 'sellPrice30DayMedian': 31410}, 'top5AveragePrices': {'buyPrice': 27220, 'splitPrice': 29299.702085402183, 'sellPrice': 31379.40417080437, 'buyPrice5DayMedian': 27237.63157894737, 'splitPrice5DayMedian': 29294.48827035034, 'sellPrice5DayMedian': 31359.60591133005, 'buyPrice30DayMedian': 28960, 'splitPrice30DayMedian': 30223.350230414748, 'sellPrice30DayMedian': 31486.700460829492}, 'itemType': {'eid': 5445, 'name': 'Initiated Compact Warp Scrambler', 'volume': 5, 'packagedVolume': 5}}]
+Is fee for haul?: False
+haul fee is: 0
+Is fee for haul?: False
+haul fee is: 0
+https://janice.e-351.com:443 "POST /api/rest/v2/pricer?market=2 HTTP/1.1" 200 None
+janiceapijsonresp: [{'date': '2023-08-06T00:00:00Z', 'market': {'id': 2, 'name': 'Jita 4-4'}, 'buyOrderCount': 29, 'buyVolume': 2701, 'sellOrderCount': 49, 'sellVolume': 6415, 'immediatePrices': {'buyPrice': 1425000, 'splitPrice': 1504000, 'sellPrice': 1583000, 'buyPrice5DayMedian': 1450800, 'splitPrice5DayMedian': 1504000, 'sellPrice5DayMedian': 1613000, 'buyPrice30DayMedian': 1406966.6666666667, 'splitPrice30DayMedian': 1483000, 'sellPrice30DayMedian': 1558000}, 'top5AveragePrices': {'buyPrice': 1422992.5925925926, 'splitPrice': 1502996.2962962962, 'sellPrice': 1583000, 'buyPrice5DayMedian': 1422992.5925925926, 'splitPrice5DayMedian': 1502996.2962962962, 'sellPrice5DayMedian': 1614551.4705882352, 'buyPrice30DayMedian': 1394774.1935483871, 'splitPrice30DayMedian': 1474991.6666666665, 'sellPrice30DayMedian': 1563750}, 'itemType': {'eid': 3244, 'name': 'Warp Disruptor II', 'volume': 5, 'packagedVolume': 5}}, {'date': '2023-08-06T00:00:00Z', 'market': {'id': 2, 'name': 'Jita 4-4'}, 'buyOrderCount': 4, 'buyVolume': 3016, 'sellOrderCount': 70, 'sellVolume': 20150, 'immediatePrices': {'buyPrice': 27220, 'splitPrice': 29295, 'sellPrice': 31370, 'buyPrice5DayMedian': 27264, 'splitPrice5DayMedian': 28665, 'sellPrice5DayMedian': 30000, 'buyPrice30DayMedian': 28505, 'splitPrice30DayMedian': 30195, 'sellPrice30DayMedian': 31410}, 'top5AveragePrices': {'buyPrice': 27220, 'splitPrice': 29299.702085402183, 'sellPrice': 31379.40417080437, 'buyPrice5DayMedian': 27237.63157894737, 'splitPrice5DayMedian': 29294.48827035034, 'sellPrice5DayMedian': 31359.60591133005, 'buyPrice30DayMedian': 28960, 'splitPrice30DayMedian': 30223.350230414748, 'sellPrice30DayMedian': 31486.700460829492}, 'itemType': {'eid': 5445, 'name': 'Initiated Compact Warp Scrambler', 'volume': 5, 'packagedVolume': 5}}]
+Is fee for haul?: False
+haul fee is: 0
+Is fee for haul?: False
+haul fee is: 0
+form_data input in into parse user input function: Initiated Compact Warp Scrambler	1	Warp Scrambler	1
+Warp Disruptor II	1	Warp Scrambler	5
+items_list in parse user input function: ['Initiated Compact Warp Scrambler\t1\tWarp Scrambler\t1', 'Warp Disruptor II\t1\tWarp Scrambler\t5']
+regex debug search found name: Initiated Compact Warp Scrambler
+regex debug search found quantity: 1
+regex debug search found name: Warp Disruptor II
+regex debug search found quantity: 1
+parseduserinput: [{'name': 'Initiated Compact Warp Scrambler', 'quantity': 1}, {'name': 'Warp Disruptor II', 'quantity': 1}]
+apiinput: Initiated Compact Warp Scrambler 1
+Warp Disruptor II 1
+
+Starting new HTTPS connection (1): janice.e-351.com:443
+https://janice.e-351.com:443 "POST /api/rest/v2/pricer?market=2 HTTP/1.1" 200 None
+janiceapijsonresp: [{'date': '2023-08-06T00:00:00Z', 'market': {'id': 2, 'name': 'Jita 4-4'}, 'buyOrderCount': 29, 'buyVolume': 2701, 'sellOrderCount': 49, 'sellVolume': 6415, 'immediatePrices': {'buyPrice': 1425000, 'splitPrice': 1504000, 'sellPrice': 1583000, 'buyPrice5DayMedian': 1450800, 'splitPrice5DayMedian': 1504000, 'sellPrice5DayMedian': 1613000, 'buyPrice30DayMedian': 1406966.6666666667, 'splitPrice30DayMedian': 1483000, 'sellPrice30DayMedian': 1558000}, 'top5AveragePrices': {'buyPrice': 1422992.5925925926, 'splitPrice': 1502996.2962962962, 'sellPrice': 1583000, 'buyPrice5DayMedian': 1422992.5925925926, 'splitPrice5DayMedian': 1502996.2962962962, 'sellPrice5DayMedian': 1614551.4705882352, 'buyPrice30DayMedian': 1394774.1935483871, 'splitPrice30DayMedian': 1474991.6666666665, 'sellPrice30DayMedian': 1563750}, 'itemType': {'eid': 3244, 'name': 'Warp Disruptor II', 'volume': 5, 'packagedVolume': 5}}, {'date': '2023-08-06T00:00:00Z', 'market': {'id': 2, 'name': 'Jita 4-4'}, 'buyOrderCount': 4, 'buyVolume': 3016, 'sellOrderCount': 70, 'sellVolume': 20150, 'immediatePrices': {'buyPrice': 27220, 'splitPrice': 29295, 'sellPrice': 31370, 'buyPrice5DayMedian': 27264, 'splitPrice5DayMedian': 28665, 'sellPrice5DayMedian': 30000, 'buyPrice30DayMedian': 28505, 'splitPrice30DayMedian': 30195, 'sellPrice30DayMedian': 31410}, 'top5AveragePrices': {'buyPrice': 27220, 'splitPrice': 29299.702085402183, 'sellPrice': 31379.40417080437, 'buyPrice5DayMedian': 27237.63157894737, 'splitPrice5DayMedian': 29294.48827035034, 'sellPrice5DayMedian': 31359.60591133005, 'buyPrice30DayMedian': 28960, 'splitPrice30DayMedian': 30223.350230414748, 'sellPrice30DayMedian': 31486.700460829492}, 'itemType': {'eid': 5445, 'name': 'Initiated Compact Warp Scrambler', 'volume': 5, 'packagedVolume': 5}}]
 Is fee for haul?: False
 haul fee is: 0
 Is fee for haul?: False

@@ -1,4 +1,4 @@
-
+{% load custom_filters %}
 <!DOCTYPE html>
 <!-- saved from url=(0031)https://spoopy-buyback.web.app/ -->
 <html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
@@ -78,9 +78,9 @@
         <!----><!----><!----><!----><!----><!----><!----><!----><!---->
         {% if info_right == 2 %}
         <div><table class="w-full"><tr>
-            <td class="text-start">Market Total:</td><td class="text-end">{{ totals_info.1|floatformat:2 }} ISK</td></tr>
-            <tr><td class="text-start">Buyback Total:</td><td class="text-end cursor-pointer" id="buyback-total">{{ totals_info.0|floatformat:2 }} ISK</td></tr>
-            <tr>        <td class="text-start">Effective Rate:</td><td class="text-end">effec rate99.92 %</td></tr>
+            <td class="text-start">Market Total:</td><td class="text-end">{{ totals_info.1|add_commas }} ISK</td></tr>
+            <tr><td class="text-start">Buyback Total:</td><td class="text-end cursor-pointer" id="buyback-total">{{ totals_info.0|add_commas }} ISK</td></tr>
+            <tr>        <td class="text-start">Effective Rate:</td><td class="text-end">fix this %</td></tr>
             </table>
                     <p>Create a contract to <span class="font-bold">SPOOPY BUYBACK</span></p>
                     <p>Use amount under <span class="font-bold">Buyback Total</span> as the contract value</p>
@@ -108,12 +108,12 @@
     <td class="text-start">{{ processed_item.item_name }}</td>
     <td>{{ processed_item.quantity }}</td>
     <td>
-        {{ processed_item.market_price|floatformat:2 }} ISK<br>
-        {{ processed_item.market_price_itemtotal|floatformat:2 }} ISK
+        {{ processed_item.market_price|add_commas }} ISK<br>
+        {{ processed_item.market_price_itemtotal|add_commas }} ISK
     </td>
     <td>
-        {{ processed_item.buyback_price|floatformat:2 }} ISK<br>
-        {{ processed_item.buyback_price_itemtotal|floatformat:2 }} ISK
+        {{ processed_item.buyback_price|add_commas }} ISK<br>
+        {{ processed_item.buyback_price_itemtotal|add_commas }} ISK
     </td>
     <td>{{ processed_item.tax_rate }}</td>
 </tr>
