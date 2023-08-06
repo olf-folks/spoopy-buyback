@@ -1,0 +1,49 @@
+Spoopy Buyback II
+Project Description: Spoopy Buyback II is a web application that helps players of the game Eve Online calculate the buyback prices for items in their inventory based on market data and tax rates.
+
+Table of Contents
+Project Description
+Features
+Getting Started
+Prerequisites
+Installation
+Usage
+Contributing
+License
+Features
+Inventory Appraisal: Input items from your Eve Online inventory to get estimated buyback prices.
+Tax Rate Calculation: Automatically calculates the tax rate for each item based on Eve Online tax rules.
+Market Data Integration: Utilizes market data from external sources to provide accurate item valuations.
+Getting Started
+Prerequisites
+Python 3.x
+Django (version X.X.X)
+Django Rest Framework (version X.X.X)
+Other dependencies...
+Installation
+Clone the repository: git clone https://github.com/yourusername/spoopy-buyback.git
+Install the required dependencies: pip install -r requirements.txt
+Configure your database settings in settings.py.
+Run database migrations: python manage.py migrate
+Start the development server: python manage.py runserver
+Usage
+Access the application at http://localhost:8000/buyback/.
+Enter items from your Eve Online inventory in the provided form.
+Click the "Submit" button to get an appraisal for your items.
+Review the appraisal results, including market prices, buyback prices, and tax rates.
+Create a contract in Eve Online using the calculated buyback prices.
+Contributing
+Contributions are welcome! If you'd like to contribute to Spoopy Buyback II, please follow these steps:
+
+Fork the repository and create a new branch for your feature or bug fix.
+Make your changes and ensure tests pass.
+Submit a pull request with a detailed description of your changes.
+Please read our Contribution Guidelines before submitting a pull request.
+
+License
+This project is licensed under the MIT License. See the LICENSE file for details.
+
+Contact
+For questions or feedback, you can reach us at spoopybuyback@example.com.
+
+Remember to replace placeholders like yourusername, http://localhost:8000, and spoopybuyback@example.com with the appropriate information for your project. You can also add any additional sections or information that you think is relevant to your project.
