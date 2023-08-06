@@ -207,11 +207,18 @@ def index(request):
                         haul_fee = 0
                     logger.debug("haul fee is: %s", haul_fee)
                     tax_rate = get_tax_rate_from_database(item_id)
-                    buyback_price = calculate_buyback_price(api_data[0]['immediatePrices']['buyPrice5DayMedian'], tax_rate)
+                    # buyback_price = calculate_buyback_price(api_data[0]['immediatePrices']['buyPrice5DayMedian'], tax_rate)
+                    # buyback_price_itemtotal = quantity * buyback_price
+                    # market_price = api_data[0]['immediatePrices']['buyPrice5DayMedian']
+                    # market_price_itemtotal = quantity * market_price
+                    # 
+                    buyback_price = calculate_buyback_price(item_data['immediatePrices']['buyPrice5DayMedian'], tax_rate)
                     buyback_price_itemtotal = quantity * buyback_price
-                    market_price = api_data[0]['immediatePrices']['buyPrice5DayMedian']
+                    market_price = item_data['immediatePrices']['buyPrice5DayMedian']
                     market_price_itemtotal = quantity * market_price
-            
+
+
+
                     processed_items.append({
                         'item_id': item_id,
                         'item_name': item_name,
