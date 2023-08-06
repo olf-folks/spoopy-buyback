@@ -188,3 +188,123 @@ haul fee is: 0
 Is fee for haul?: False
 haul fee is: 0
 processed_items: [{'item_id': 9832, 'item_name': 'Coolant', 'quantity': 1641, 'tax_rate': 0.77, 'buyback_price': 11312.84, 'market_price': 14692, 'buyback_price_itemtotal': 18564370.44, 'market_price_itemtotal': 24109572, 'haul_bool': False, 'item_volume': 0.75, 'haul_fee': 0}, {'item_id': 44, 'item_name': 'Enriched Uranium', 'quantity': 728, 'tax_rate': 0.77, 'buyback_price': 12179.86, 'market_price': 15818, 'buyback_price_itemtotal': 8866938.08, 'market_price_itemtotal': 11515504, 'haul_bool': False, 'item_volume': 0.75, 'haul_fee': 0}, {'item_id': 16272, 'item_name': 'Heavy Water', 'quantity': 260385, 'tax_rate': 0.85, 'buyback_price': 123.21599999999998, 'market_price': 144.95999999999998, 'buyback_price_itemtotal': 32083598.159999996, 'market_price_itemtotal': 37745409.599999994, 'haul_bool': False, 'item_volume': 0.4, 'haul_fee': 0}, {'item_id': 16273, 'item_name': 'Liquid Ozone', 'quantity': 152653, 'tax_rate': 0.85, 'buyback_price': 117.43599999999999, 'market_price': 138.16, 'buyback_price_itemtotal': 17926957.708, 'market_price_itemtotal': 21090538.48, 'haul_bool': False, 'item_volume': 0.4, 'haul_fee': 0}, {'item_id': 3689, 'item_name': 'Mechanical Parts', 'quantity': 728, 'tax_rate': 0.85, 'buyback_price': 11267.6, 'market_price': 13256, 'buyback_price_itemtotal': 8202812.8, 'market_price_itemtotal': 9650368, 'haul_bool': False, 'item_volume': 0.75, 'haul_fee': 0}, {'item_id': 4314, 'item_name': 'Nitrogen Fuel Block Blueprint', 'quantity': 1, 'tax_rate': 0.0, 'buyback_price': 0.0, 'market_price': 9000000, 'buyback_price_itemtotal': 0.0, 'market_price_itemtotal': 9000000, 'haul_bool': False, 'item_volume': 0.01, 'haul_fee': 0}, {'item_id': 17888, 'item_name': 'Nitrogen Isotopes', 'quantity': 309084, 'tax_rate': 0.85, 'buyback_price': 371.2459999999999, 'market_price': 436.75999999999993, 'buyback_price_itemtotal': 114746198.66399997, 'market_price_itemtotal': 134995527.83999997, 'haul_bool': False, 'item_volume': 0.03, 'haul_fee': 0}, {'item_id': 3683, 'item_name': 'Oxygen', 'quantity': 4012, 'tax_rate': 0.5, 'buyback_price': 188.32000000000002, 'market_price': 376.64000000000004, 'buyback_price_itemtotal': 755539.8400000001, 'market_price_itemtotal': 1511079.6800000002, 'haul_bool': False, 'item_volume': 0.19, 'haul_fee': 0}, {'item_id': 2398, 'item_name': 'Reactive Metals', 'quantity': 20160, 'tax_rate': 0.5, 'buyback_price': 379.02, 'market_price': 758.04, 'buyback_price_itemtotal': 7641043.199999999, 'market_price_itemtotal': 15282086.399999999, 'haul_bool': False, 'item_volume': 0.19, 'haul_fee': 0}, {'item_id': 9848, 'item_name': 'Robotics', 'quantity': 744, 'tax_rate': 0.9, 'buyback_price': 99270.0, 'market_price': 110300, 'buyback_price_itemtotal': 73856880.0, 'market_price_itemtotal': 82063200, 'haul_bool': False, 'item_volume': 3, 'haul_fee': 0}, {'item_id': 16275, 'item_name': 'Strontium Clathrates', 'quantity': 14078, 'tax_rate': 0.85, 'buyback_price': 2755.7, 'market_price': 3242, 'buyback_price_itemtotal': 38794744.599999994, 'market_price_itemtotal': 45640876, 'haul_bool': False, 'item_volume': 3, 'haul_fee': 0}]
+form_data input in into parse user input function: ishtar 1
+items_list in parse user input function: ['ishtar 1']
+found name: ishtar
+found quantity: 1
+parsed_user_input: [{'name': 'ishtar', 'quantity': 1}]
+apiinput: ishtar 1
+
+Starting new HTTPS connection (1): janice.e-351.com:443
+https://janice.e-351.com:443 "POST /api/rest/v2/pricer?market=2 HTTP/1.1" 200 None
+api_data: [{'date': '2023-08-06T00:00:00Z', 'market': {'id': 2, 'name': 'Jita 4-4'}, 'buyOrderCount': 32, 'buyVolume': 134, 'sellOrderCount': 73, 'sellVolume': 611, 'immediatePrices': {'buyPrice': 176500000, 'splitPrice': 181300000, 'sellPrice': 186100000, 'buyPrice5DayMedian': 171680000, 'splitPrice5DayMedian': 174450000, 'sellPrice5DayMedian': 180300000, 'buyPrice30DayMedian': 177720000, 'splitPrice30DayMedian': 183850000, 'sellPrice30DayMedian': 188500000}, 'top5AveragePrices': {'buyPrice': 176500000, 'splitPrice': 181498333.3333333, 'sellPrice': 186496666.66666666, 'buyPrice5DayMedian': 168733333.33333334, 'splitPrice5DayMedian': 174763333.3333333, 'sellPrice5DayMedian': 181948275.86206895, 'buyPrice30DayMedian': 178800000, 'splitPrice30DayMedian': 183642673.992674, 'sellPrice30DayMedian': 188621212.12121212}, 'itemType': {'eid': 12005, 'name': 'Ishtar', 'volume': 115000, 'packagedVolume': 10000}}]
+Is fee for haul?: False
+haul fee is: 0
+processed_items: [{'item_id': 12005, 'item_name': 'ishtar', 'quantity': 1, 'tax_rate': 0.85, 'buyback_price': 145928000.0, 'market_price': 171680000, 'buyback_price_itemtotal': 145928000.0, 'market_price_itemtotal': 171680000, 'haul_bool': False, 'item_volume': 115000, 'haul_fee': 0}]
+form_data input in into parse user input function: ishtar 1
+items_list in parse user input function: ['ishtar 1']
+found name: ishtar
+found quantity: 1
+parsed_user_input: [{'name': 'ishtar', 'quantity': 1}]
+apiinput: ishtar 1
+
+Starting new HTTPS connection (1): janice.e-351.com:443
+https://janice.e-351.com:443 "POST /api/rest/v2/pricer?market=2 HTTP/1.1" 200 None
+api_data: [{'date': '2023-08-06T00:00:00Z', 'market': {'id': 2, 'name': 'Jita 4-4'}, 'buyOrderCount': 32, 'buyVolume': 134, 'sellOrderCount': 73, 'sellVolume': 611, 'immediatePrices': {'buyPrice': 176500000, 'splitPrice': 181300000, 'sellPrice': 186100000, 'buyPrice5DayMedian': 171680000, 'splitPrice5DayMedian': 174450000, 'sellPrice5DayMedian': 180300000, 'buyPrice30DayMedian': 177720000, 'splitPrice30DayMedian': 183850000, 'sellPrice30DayMedian': 188500000}, 'top5AveragePrices': {'buyPrice': 176500000, 'splitPrice': 181498333.3333333, 'sellPrice': 186496666.66666666, 'buyPrice5DayMedian': 168733333.33333334, 'splitPrice5DayMedian': 174763333.3333333, 'sellPrice5DayMedian': 181948275.86206895, 'buyPrice30DayMedian': 178800000, 'splitPrice30DayMedian': 183642673.992674, 'sellPrice30DayMedian': 188621212.12121212}, 'itemType': {'eid': 12005, 'name': 'Ishtar', 'volume': 115000, 'packagedVolume': 10000}}]
+Is fee for haul?: False
+haul fee is: 0
+processed_items: [{'item_id': 12005, 'item_name': 'ishtar', 'quantity': 1, 'tax_rate': 0.85, 'buyback_price': 145928000.0, 'market_price': 171680000, 'buyback_price_itemtotal': 145928000.0, 'market_price_itemtotal': 171680000, 'haul_bool': False, 'item_volume': 115000, 'haul_fee': 0}]
+form_data input in into parse user input function: ishtar 1
+items_list in parse user input function: ['ishtar 1']
+found name: ishtar
+found quantity: 1
+parsed_user_input: [{'name': 'ishtar', 'quantity': 1}]
+apiinput: ishtar 1
+
+Starting new HTTPS connection (1): janice.e-351.com:443
+https://janice.e-351.com:443 "POST /api/rest/v2/pricer?market=2 HTTP/1.1" 200 None
+api_data: [{'date': '2023-08-06T00:00:00Z', 'market': {'id': 2, 'name': 'Jita 4-4'}, 'buyOrderCount': 32, 'buyVolume': 134, 'sellOrderCount': 73, 'sellVolume': 611, 'immediatePrices': {'buyPrice': 176500000, 'splitPrice': 181300000, 'sellPrice': 186100000, 'buyPrice5DayMedian': 171680000, 'splitPrice5DayMedian': 174450000, 'sellPrice5DayMedian': 180300000, 'buyPrice30DayMedian': 177720000, 'splitPrice30DayMedian': 183850000, 'sellPrice30DayMedian': 188500000}, 'top5AveragePrices': {'buyPrice': 176500000, 'splitPrice': 181498333.3333333, 'sellPrice': 186496666.66666666, 'buyPrice5DayMedian': 168733333.33333334, 'splitPrice5DayMedian': 174763333.3333333, 'sellPrice5DayMedian': 181948275.86206895, 'buyPrice30DayMedian': 178800000, 'splitPrice30DayMedian': 183642673.992674, 'sellPrice30DayMedian': 188621212.12121212}, 'itemType': {'eid': 12005, 'name': 'Ishtar', 'volume': 115000, 'packagedVolume': 10000}}]
+Is fee for haul?: False
+haul fee is: 0
+processed_items: [{'item_id': 12005, 'item_name': 'ishtar', 'quantity': 1, 'tax_rate': 0.85, 'buyback_price': 145928000.0, 'market_price': 171680000, 'buyback_price_itemtotal': 145928000.0, 'market_price_itemtotal': 171680000, 'haul_bool': False, 'item_volume': 115000, 'haul_fee': 0}]
+form_data input in into parse user input function: ishtar 1
+items_list in parse user input function: ['ishtar 1']
+found name: ishtar
+found quantity: 1
+parsed_user_input: [{'name': 'ishtar', 'quantity': 1}]
+apiinput: ishtar 1
+
+Starting new HTTPS connection (1): janice.e-351.com:443
+https://janice.e-351.com:443 "POST /api/rest/v2/pricer?market=2 HTTP/1.1" 200 None
+api_data: [{'date': '2023-08-06T00:00:00Z', 'market': {'id': 2, 'name': 'Jita 4-4'}, 'buyOrderCount': 32, 'buyVolume': 134, 'sellOrderCount': 73, 'sellVolume': 611, 'immediatePrices': {'buyPrice': 176500000, 'splitPrice': 181300000, 'sellPrice': 186100000, 'buyPrice5DayMedian': 171680000, 'splitPrice5DayMedian': 174450000, 'sellPrice5DayMedian': 180300000, 'buyPrice30DayMedian': 177720000, 'splitPrice30DayMedian': 183850000, 'sellPrice30DayMedian': 188500000}, 'top5AveragePrices': {'buyPrice': 176500000, 'splitPrice': 181498333.3333333, 'sellPrice': 186496666.66666666, 'buyPrice5DayMedian': 168733333.33333334, 'splitPrice5DayMedian': 174763333.3333333, 'sellPrice5DayMedian': 181948275.86206895, 'buyPrice30DayMedian': 178800000, 'splitPrice30DayMedian': 183642673.992674, 'sellPrice30DayMedian': 188621212.12121212}, 'itemType': {'eid': 12005, 'name': 'Ishtar', 'volume': 115000, 'packagedVolume': 10000}}]
+Is fee for haul?: False
+haul fee is: 0
+processed_items: [{'item_id': 12005, 'item_name': 'ishtar', 'quantity': 1, 'tax_rate': 0.85, 'buyback_price': 145928000.0, 'market_price': 171680000, 'buyback_price_itemtotal': 145928000.0, 'market_price_itemtotal': 171680000, 'haul_bool': False, 'item_volume': 115000, 'haul_fee': 0}]
+form_data input in into parse user input function: ishtar 1
+items_list in parse user input function: ['ishtar 1']
+found name: ishtar
+found quantity: 1
+parsed_user_input: [{'name': 'ishtar', 'quantity': 1}]
+apiinput: ishtar 1
+
+Starting new HTTPS connection (1): janice.e-351.com:443
+https://janice.e-351.com:443 "POST /api/rest/v2/pricer?market=2 HTTP/1.1" 200 None
+api_data: [{'date': '2023-08-06T00:00:00Z', 'market': {'id': 2, 'name': 'Jita 4-4'}, 'buyOrderCount': 32, 'buyVolume': 134, 'sellOrderCount': 73, 'sellVolume': 611, 'immediatePrices': {'buyPrice': 176500000, 'splitPrice': 181300000, 'sellPrice': 186100000, 'buyPrice5DayMedian': 171680000, 'splitPrice5DayMedian': 174450000, 'sellPrice5DayMedian': 180300000, 'buyPrice30DayMedian': 177720000, 'splitPrice30DayMedian': 183850000, 'sellPrice30DayMedian': 188500000}, 'top5AveragePrices': {'buyPrice': 176500000, 'splitPrice': 181498333.3333333, 'sellPrice': 186496666.66666666, 'buyPrice5DayMedian': 168733333.33333334, 'splitPrice5DayMedian': 174763333.3333333, 'sellPrice5DayMedian': 181948275.86206895, 'buyPrice30DayMedian': 178800000, 'splitPrice30DayMedian': 183642673.992674, 'sellPrice30DayMedian': 188621212.12121212}, 'itemType': {'eid': 12005, 'name': 'Ishtar', 'volume': 115000, 'packagedVolume': 10000}}]
+Is fee for haul?: False
+haul fee is: 0
+processed_items: [{'item_id': 12005, 'item_name': 'ishtar', 'quantity': 1, 'tax_rate': 0.85, 'buyback_price': 145928000.0, 'market_price': 171680000, 'buyback_price_itemtotal': 145928000.0, 'market_price_itemtotal': 171680000, 'haul_bool': False, 'item_volume': 115000, 'haul_fee': 0}]
+/root/spoopy/buyback/views.py changed, reloading.
+Watching for file changes with StatReloader
+NumExpr defaulting to 2 threads.
+form_data input in into parse user input function: ishtar 1
+items_list in parse user input function: ['ishtar 1']
+found name: ishtar
+found quantity: 1
+parsed_user_input: [{'name': 'ishtar', 'quantity': 1}]
+apiinput: ishtar 1
+
+Starting new HTTPS connection (1): janice.e-351.com:443
+https://janice.e-351.com:443 "POST /api/rest/v2/pricer?market=2 HTTP/1.1" 200 None
+api_data: [{'date': '2023-08-06T00:00:00Z', 'market': {'id': 2, 'name': 'Jita 4-4'}, 'buyOrderCount': 32, 'buyVolume': 134, 'sellOrderCount': 73, 'sellVolume': 611, 'immediatePrices': {'buyPrice': 176500000, 'splitPrice': 181300000, 'sellPrice': 186100000, 'buyPrice5DayMedian': 171680000, 'splitPrice5DayMedian': 174450000, 'sellPrice5DayMedian': 180300000, 'buyPrice30DayMedian': 177720000, 'splitPrice30DayMedian': 183850000, 'sellPrice30DayMedian': 188500000}, 'top5AveragePrices': {'buyPrice': 176500000, 'splitPrice': 181498333.3333333, 'sellPrice': 186496666.66666666, 'buyPrice5DayMedian': 168733333.33333334, 'splitPrice5DayMedian': 174763333.3333333, 'sellPrice5DayMedian': 181948275.86206895, 'buyPrice30DayMedian': 178800000, 'splitPrice30DayMedian': 183642673.992674, 'sellPrice30DayMedian': 188621212.12121212}, 'itemType': {'eid': 12005, 'name': 'Ishtar', 'volume': 115000, 'packagedVolume': 10000}}]
+Is fee for haul?: False
+haul fee is: 0
+processed_items: [{'item_id': 12005, 'item_name': 'ishtar', 'quantity': 1, 'tax_rate': 0.85, 'buyback_price': 145928000.0, 'market_price': 171680000, 'buyback_price_itemtotal': 145928000.0, 'market_price_itemtotal': 171680000, 'haul_bool': False, 'item_volume': 115000, 'haul_fee': 0}]
+form_data input in into parse user input function: ishtar 1
+items_list in parse user input function: ['ishtar 1']
+found name: ishtar
+found quantity: 1
+parsed_user_input: [{'name': 'ishtar', 'quantity': 1}]
+apiinput: ishtar 1
+
+Starting new HTTPS connection (1): janice.e-351.com:443
+form_data input in into parse user input function: ishtar 1
+items_list in parse user input function: ['ishtar 1']
+found name: ishtar
+found quantity: 1
+parsed_user_input: [{'name': 'ishtar', 'quantity': 1}]
+apiinput: ishtar 1
+
+Starting new HTTPS connection (1): janice.e-351.com:443
+https://janice.e-351.com:443 "POST /api/rest/v2/pricer?market=2 HTTP/1.1" 200 None
+api_data: [{'date': '2023-08-06T00:00:00Z', 'market': {'id': 2, 'name': 'Jita 4-4'}, 'buyOrderCount': 32, 'buyVolume': 134, 'sellOrderCount': 73, 'sellVolume': 611, 'immediatePrices': {'buyPrice': 176500000, 'splitPrice': 181300000, 'sellPrice': 186100000, 'buyPrice5DayMedian': 171680000, 'splitPrice5DayMedian': 174450000, 'sellPrice5DayMedian': 180300000, 'buyPrice30DayMedian': 177720000, 'splitPrice30DayMedian': 183850000, 'sellPrice30DayMedian': 188500000}, 'top5AveragePrices': {'buyPrice': 176500000, 'splitPrice': 181498333.3333333, 'sellPrice': 186496666.66666666, 'buyPrice5DayMedian': 168733333.33333334, 'splitPrice5DayMedian': 174763333.3333333, 'sellPrice5DayMedian': 181948275.86206895, 'buyPrice30DayMedian': 178800000, 'splitPrice30DayMedian': 183642673.992674, 'sellPrice30DayMedian': 188621212.12121212}, 'itemType': {'eid': 12005, 'name': 'Ishtar', 'volume': 115000, 'packagedVolume': 10000}}]
+Is fee for haul?: False
+haul fee is: 0
+processed_items: [{'item_id': 12005, 'item_name': 'ishtar', 'quantity': 1, 'tax_rate': 0.85, 'buyback_price': 145928000.0, 'market_price': 171680000, 'buyback_price_itemtotal': 145928000.0, 'market_price_itemtotal': 171680000, 'haul_bool': False, 'item_volume': 115000, 'haul_fee': 0}]
+https://janice.e-351.com:443 "POST /api/rest/v2/pricer?market=2 HTTP/1.1" 200 None
+api_data: [{'date': '2023-08-06T00:00:00Z', 'market': {'id': 2, 'name': 'Jita 4-4'}, 'buyOrderCount': 32, 'buyVolume': 134, 'sellOrderCount': 73, 'sellVolume': 611, 'immediatePrices': {'buyPrice': 176500000, 'splitPrice': 181300000, 'sellPrice': 186100000, 'buyPrice5DayMedian': 171680000, 'splitPrice5DayMedian': 174450000, 'sellPrice5DayMedian': 180300000, 'buyPrice30DayMedian': 177720000, 'splitPrice30DayMedian': 183850000, 'sellPrice30DayMedian': 188500000}, 'top5AveragePrices': {'buyPrice': 176500000, 'splitPrice': 181498333.3333333, 'sellPrice': 186496666.66666666, 'buyPrice5DayMedian': 168733333.33333334, 'splitPrice5DayMedian': 174763333.3333333, 'sellPrice5DayMedian': 181948275.86206895, 'buyPrice30DayMedian': 178800000, 'splitPrice30DayMedian': 183642673.992674, 'sellPrice30DayMedian': 188621212.12121212}, 'itemType': {'eid': 12005, 'name': 'Ishtar', 'volume': 115000, 'packagedVolume': 10000}}]
+Is fee for haul?: False
+haul fee is: 0
+processed_items: [{'item_id': 12005, 'item_name': 'ishtar', 'quantity': 1, 'tax_rate': 0.85, 'buyback_price': 145928000.0, 'market_price': 171680000, 'buyback_price_itemtotal': 145928000.0, 'market_price_itemtotal': 171680000, 'haul_bool': False, 'item_volume': 115000, 'haul_fee': 0}]
+form_data input in into parse user input function: ishtar 1
+items_list in parse user input function: ['ishtar 1']
+found name: ishtar
+found quantity: 1
+parsed_user_input: [{'name': 'ishtar', 'quantity': 1}]
+apiinput: ishtar 1
+
+Starting new HTTPS connection (1): janice.e-351.com:443
+https://janice.e-351.com:443 "POST /api/rest/v2/pricer?market=2 HTTP/1.1" 200 None
+api_data: [{'date': '2023-08-06T00:00:00Z', 'market': {'id': 2, 'name': 'Jita 4-4'}, 'buyOrderCount': 32, 'buyVolume': 134, 'sellOrderCount': 73, 'sellVolume': 611, 'immediatePrices': {'buyPrice': 176500000, 'splitPrice': 181300000, 'sellPrice': 186100000, 'buyPrice5DayMedian': 171680000, 'splitPrice5DayMedian': 174450000, 'sellPrice5DayMedian': 180300000, 'buyPrice30DayMedian': 177720000, 'splitPrice30DayMedian': 183850000, 'sellPrice30DayMedian': 188500000}, 'top5AveragePrices': {'buyPrice': 176500000, 'splitPrice': 181498333.3333333, 'sellPrice': 186496666.66666666, 'buyPrice5DayMedian': 168733333.33333334, 'splitPrice5DayMedian': 174763333.3333333, 'sellPrice5DayMedian': 181948275.86206895, 'buyPrice30DayMedian': 178800000, 'splitPrice30DayMedian': 183642673.992674, 'sellPrice30DayMedian': 188621212.12121212}, 'itemType': {'eid': 12005, 'name': 'Ishtar', 'volume': 115000, 'packagedVolume': 10000}}]
+Is fee for haul?: False
+haul fee is: 0
+processed_items: [{'item_id': 12005, 'item_name': 'ishtar', 'quantity': 1, 'tax_rate': 0.85, 'buyback_price': 145928000.0, 'market_price': 171680000, 'buyback_price_itemtotal': 145928000.0, 'market_price_itemtotal': 171680000, 'haul_bool': False, 'item_volume': 115000, 'haul_fee': 0}]

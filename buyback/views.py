@@ -219,8 +219,9 @@ def index(request):
             logger.debug("processed_items: %s", processed_items)
             gtotal_market = sum(item.get('market_price_itemtotal', 0) for item in processed_items)
             gtotal_buyback = sum(item.get('buyback_price_itemtotal', 0) for item in processed_items)
+            geff_rate = gtotal_buyback / gtotal_market
 
-            totals_info = [gtotal_buyback, gtotal_market]           
+            totals_info = [gtotal_buyback, gtotal_market, geff_rate]           
             nl_db = "\n"
             debug = [api_data]
             # debug = 0

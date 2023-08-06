@@ -80,7 +80,7 @@
         <div><table class="w-full"><tr>
             <td class="text-start">Market Total:</td><td class="text-end">{{ totals_info.1|add_commas }} ISK</td></tr>
             <tr><td class="text-start">Buyback Total:</td><td class="text-end cursor-pointer" id="buyback-total">{{ totals_info.0|add_commas }} ISK</td></tr>
-            <tr>        <td class="text-start">Effective Rate:</td><td class="text-end">fix this %</td></tr>
+            <tr>        <td class="text-start">Effective Rate:</td><td class="text-end">{{ totals_info.2 }} %</td></tr>
             </table>
                     <p>Create a contract to <span class="font-bold">SPOOPY BUYBACK</span></p>
                     <p>Use amount under <span class="font-bold">Buyback Total</span> as the contract value</p>
@@ -132,14 +132,17 @@
 
 <!-- alt out -->
 
+<br><br><br><br>
+<table>
+
+<tr><td>Debug processed_items info:</td></tr>
+<tr><td>{{ processed_items }}</td></tr>
 
 
-<!--  and alt out-->
-{% for processed_item in processed_items %}
-    <p>Debug: Name: {{ processed_item.name }} - Quantity: {{ processed_item.quantity }}</p>
-{% endfor %}
 
+<tr><td>Debug api info: </td></tr>
 
-<hr>
-Debug api info: {{ debug }}
+<tr><td>{{ debug }}</td></tr>
+
+</table>
 </body></html>
