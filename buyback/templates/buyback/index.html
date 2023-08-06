@@ -135,5 +135,11 @@
 
 
 <!--  and alt out-->
-Debug info: {{ debug }}
+{% for processed_item in processed_items %}
+    <p>Debug: Name: {{ processed_item.name }} - Quantity: {{ processed_item.quantity }}</p>
+{% endfor %}
+
+
+<hr>
+Debug api info: {{ debug }}
 </body></html>

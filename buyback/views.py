@@ -18,71 +18,33 @@ logger = logging.getLogger(__name__)
 re_asset_list = re.compile(r'^([\S ]+)\s+([\d,]+)$')
 
 
-
-
-
-
+## works only with game pasted input
 # def parse_user_input(form_data):
 #     parsed_input = []
-#     input_lines = []
-#     logger.debug("form_data input in into parse user input fuction: %s", form_data)
+#     logger.debug("form_data input in into parse user input function: %s", form_data)
 #     items_list = re.split(r'\r?\n', form_data)  # Split using \r\n or \n as the delimiter
-#     logger.debug("items_list in parse user input fuction: %s", items_list)
+#     logger.debug("items_list in parse user input function: %s", items_list)
     
 #     for item_input in items_list:
-#         # item_parts = item_input.strip().split(' ')
-#         # if len(item_parts) == 2:
-#         #     item_name, quantity = item_parts
-#         #     input_lines.append((item_name, quantity))
-
-#         #
-#         #  mikio search regex
-#         #  
-#         # initial_string = "Large YF-12a Smartbomb    2   Smart Bomb          100 m3  1,444,036.44 ISK"
 #         initial_string = item_input
-#         name = re.search(r'^([\S\ ]*)',initial_string).group(0)
-#         quantity = re.search(r"\t([[\d,'\.\ '  ']*)|(?! |\t)[0-9]+",initial_string).group(0).strip()
-
-        
-
-#         if not quantity:
-#             quantity = 1
+#         #name = re.search(r'^(\S+)', initial_string).group(1)            
+#         name = re.search(r'^([\S\ ]*)', initial_string).group(1)
+#         # quantity = re.search(r"\t(\d+(?:,\d{3})*(?:\.\d+)?)|(?! |\t)(\d+)", initial_string)
+#         quantity = re.search(r"\t(\d+(?:,\d{3})*(?:\.\d+)?)\s", initial_string)
+#         if quantity:
+#             quantity_str = quantity.group(1) or quantity.group(2)
+#             quantity = int(quantity_str.replace(',', ''))
 #         else:
-#             quantity = int(quantity)
-#         print(name)
-#         print(quantity)
+#             quantity = 1
 
-#         item_name = name
 #         logger.debug("regex debug search found name: %s", name)
 #         logger.debug("regex debug search found quantity: %s", quantity)
         
-#     for item_name, quantity in input_lines:
-#         line = f"{item_name} {quantity}"
-#         match = re_asset_list.match(line)
-#         logger.debug("regex debug Line before matching: %s", line)
-#         if match:
-#             logger.debug("regex debug Line after matching: %s", line)
-#             input_name = match.group(1)
-#             # not working with commas
-#             #quantity = int(match.group(2))
-#             # remove commas in quanity
-#             quantity_str = match.group(2).replace(',', '')  # Remove commas from the quantity string
-#             input_quantity = int(quantity_str)
-#             # group = match.group(3)
-#             # category = match.group(4)
-#             # size = match.group(5)
-#             # slot = match.group(6)
-#             # volume = float(match.group(7)) if match.group(7) else 0.0
-#             # meta_level = match.group(9)
-#             # tech_level = match.group(10)
-#             # price_estimate = float(match.group(11)) if match.group(11) else 0.0
-            
-#             parsed_input.append({
-#                 'name': input_name,
-#                 'quantity': input_quantity,
-#             })
+#         parsed_input.append({
+#             'name': name,
+#             'quantity': quantity,
+#         })
 
-#             # Return the list of parsed items
 #     return parsed_input
 
 
@@ -93,26 +55,44 @@ def parse_user_input(form_data):
     logger.debug("items_list in parse user input function: %s", items_list)
     
     for item_input in items_list:
-        initial_string = item_input
-        #name = re.search(r'^(\S+)', initial_string).group(1)            
-        name = re.search(r'^([\S\ ]*)', initial_string).group(1)
-        quantity = re.search(r"\t(\d+(?:,\d{3})*(?:\.\d+)?)|(?! |\t)(\d+)", initial_string)
-        if quantity:
-            quantity_str = quantity.group(1) or quantity.group(2)
-            quantity = int(quantity_str.replace(',', ''))
-        else:
-            quantity = 1
+        # Split the input by whitespace to separate name and quantity
+        parts = item_input.strip().split()
+        if len(parts) == 2:
+            name = parts[0]
+            quantity = parts[1]
 
-        logger.debug("regex debug search found name: %s", name)
-        logger.debug("regex debug search found quantity: %s", quantity)
-        
-        parsed_input.append({
-            'name': name,
-            'quantity': quantity,
-        })
+            # Check if quantity is a valid integer
+            if quantity.isdigit():
+                quantity = int(quantity)
+            else:
+                quantity = 1
+
+            logger.debug("found name: %s", name)
+            logger.debug("found quantity: %s", quantity)
+            
+            parsed_input.append({
+                'name': name,
+                'quantity': quantity,
+            })
+        else:
+            initial_string = item_input
+            name = re.search(r'^([\S\ ]*)', initial_string).group(1)
+            quantity = re.search(r"\t(\d+(?:,\d{3})*(?:\.\d+)?)|(?! |\t)(\d+)", initial_string)
+            if quantity:
+                quantity_str = quantity.group(1) or quantity.group(2)
+                quantity = int(quantity_str.replace(',', ''))
+            else:
+                quantity = 1
+
+            logger.debug("regex debug search found name: %s", name)
+            logger.debug("regex debug search found quantity: %s", quantity)
+            
+            parsed_input.append({
+                'name': name,
+                'quantity': quantity,
+            })
 
     return parsed_input
-
 
 
 def calculate_buyback_price(item_price, tax_rate):
@@ -173,7 +153,7 @@ def index(request):
         if form.is_valid():
             raw_user_input = form.cleaned_data['item_name']  # Get the input text from the form
             parsed_user_input = parse_user_input(raw_user_input)
-            logger.debug("parseduserinput: %s", parsed_user_input)
+            logger.debug("parsed_user_input: %s", parsed_user_input)
             api_input = generate_api_input(parsed_user_input)
             quantity = getqtys(parsed_user_input)
             logger.debug("apiinput: %s", api_input)
@@ -181,19 +161,22 @@ def index(request):
             janiceheaders = {"accept": "application/json", "X-ApiKey": "G9KwKq3465588VPd6747t95Zh94q3W2E", "Content-Type": "text/plain"}
             janiceresponse = requests.post(janiceurl, api_input, headers=janiceheaders)
             api_data = janiceresponse.json()
-            logger.debug("janiceapijsonresp: %s", api_data)
+            logger.debug("api_data: %s", api_data)
 
             # make list of dicts that combines api_data + tax_rate + api_input \\ need to add: hauling fee ###
             processed_items = []
             for item in parsed_user_input:
                 
                 item_name = item['name']
+                item_name_lower = item_name.lower()
                 quantity = item['quantity']
                 #item_id = api_data[0]['itemType']['eid']  # Assuming you get the item ID from the API response
                 #item_data = next((item for item in api_data if item['itemType']['name'] == item_name), None)
                 #item_data = next((item for item in api_data if item['itemType']['name'] == item['name']), None)
                 #item_data = next((item for item in api_data if item['itemType']['name'] == item_data['itemType']['name']), None)
-                item_data = next((api_item for api_item in api_data if api_item['itemType']['name'] == item_name), None)
+                # item_data = next((api_item for api_item in api_data if api_item['itemType']['name'] == item_name), None)
+                item_data = next((api_item for api_item in api_data if api_item['itemType']['name'].lower() == item_name_lower), None)
+            
                 if item_data:
                     
                     item_id = item_data['itemType']['eid']
@@ -233,13 +216,13 @@ def index(request):
                         'haul_fee': haul_fee,
                         
                     })  # Include the processed item data
-       
+            logger.debug("processed_items: %s", processed_items)
             gtotal_market = sum(item.get('market_price_itemtotal', 0) for item in processed_items)
             gtotal_buyback = sum(item.get('buyback_price_itemtotal', 0) for item in processed_items)
 
             totals_info = [gtotal_buyback, gtotal_market]           
             nl_db = "\n"
-            debug = [processed_items, nl_db, api_data]
+            debug = [api_data]
             # debug = 0
             return render(request, 'buyback/index.html', {'form': form,'processed_items': processed_items, 'totals_info':totals_info, 'debug': debug, 'info_right': info_right})
     else:
