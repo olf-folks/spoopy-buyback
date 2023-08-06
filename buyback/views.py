@@ -172,31 +172,37 @@ def index(request):
             janiceresponse = requests.post(janiceurl, api_input, headers=janiceheaders)
             api_data = janiceresponse.json()
             logger.debug("janiceapijsonresp: %s", api_data)
-              ############
-            # make seprate set that combines api_data + tax_rate + api_input
-            ######
+
+            # make list of dicts that combines api_data + tax_rate + api_input
             processed_items = []
             for item in parsed_user_input:
+                
                 item_name = item['name']
                 quantity = item['quantity']
-                item_id = api_data[0]['itemType']['eid']  # Assuming you get the item ID from the API response
-                tax_rate = get_tax_rate_from_database(item_id)
-                buyback_price = calculate_buyback_price(api_data[0]['immediatePrices']['buyPrice5DayMedian'], tax_rate)
-                buyback_price_itemtotal = quantity * buyback_price
-                market_price = api_data[0]['immediatePrices']['buyPrice5DayMedian']
-                market_price_itemtotal = quantity * market_price
-         
-                processed_items.append({
-                    'item_id': item_id,
-                    'item_name': item_name,
-                    'quantity': quantity,
-                    'tax_rate': tax_rate,
-                    'buyback_price': buyback_price,
-                    'market_price': market_price,
-                    'buyback_price_itemtotal': buyback_price_itemtotal,
-                    'market_price_itemtotal': market_price_itemtotal,
-                    
-                })  # Include the processed item data
+                #item_id = api_data[0]['itemType']['eid']  # Assuming you get the item ID from the API response
+                #item_data = next((item for item in api_data if item['itemType']['name'] == item_name), None)
+                #item_data = next((item for item in api_data if item['itemType']['name'] == item['name']), None)
+                #item_data = next((item for item in api_data if item['itemType']['name'] == item_data['itemType']['name']), None)
+                item_data = next((api_item for api_item in api_data if api_item['itemType']['name'] == item_name), None)
+                if item_data:
+                    item_id = item_data['itemType']['eid']
+                    tax_rate = get_tax_rate_from_database(item_id)
+                    buyback_price = calculate_buyback_price(api_data[0]['immediatePrices']['buyPrice5DayMedian'], tax_rate)
+                    buyback_price_itemtotal = quantity * buyback_price
+                    market_price = api_data[0]['immediatePrices']['buyPrice5DayMedian']
+                    market_price_itemtotal = quantity * market_price
+            
+                    processed_items.append({
+                        'item_id': item_id,
+                        'item_name': item_name,
+                        'quantity': quantity,
+                        'tax_rate': tax_rate,
+                        'buyback_price': buyback_price,
+                        'market_price': market_price,
+                        'buyback_price_itemtotal': buyback_price_itemtotal,
+                        'market_price_itemtotal': market_price_itemtotal,
+                        
+                    })  # Include the processed item data
        
             gtotal_market = sum(item.get('market_price_itemtotal', 0) for item in processed_items)
             gtotal_buyback = sum(item.get('buyback_price_itemtotal', 0) for item in processed_items)
