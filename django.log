@@ -515,3 +515,25 @@ Traceback (most recent call last):
                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 AttributeError: 'NoneType' object has no attribute 'group'
 Not Found: /favicon.ico
+Watching for file changes with StatReloader
+NumExpr defaulting to 2 threads.
+form_data input in into parse user input fuction: ishtar 1
+items_list in parse user input fuction: ['ishtar 1']
+Session data corrupted
+Internal Server Error: /buyback/
+Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/django/core/handlers/base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/spoopy/buyback/views.py", line 139, in index
+    parsed_user_input = parse_user_input(raw_user_input)
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/spoopy/buyback/views.py", line 51, in parse_user_input
+    quantity = re.search(r"\t([[\d,'\.\ '  ']*)",initial_string).group(0).strip()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'group'
+Not Found: /favicon.ico
+/root/spoopy/spoopy/settings.py changed, reloading.
