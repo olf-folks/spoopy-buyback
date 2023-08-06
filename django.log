@@ -348,3 +348,170 @@ apiinput: oxygen 100000000
 Starting new HTTPS connection (1): janice.e-351.com:443
 https://janice.e-351.com:443 "POST /api/rest/v2/pricer?market=2 HTTP/1.1" 200 None
 janiceapijsonresp: [{'date': '2023-08-05T00:00:00Z', 'market': {'id': 2, 'name': 'Jita 4-4'}, 'buyOrderCount': 30, 'buyVolume': 11054778, 'sellOrderCount': 127, 'sellVolume': 38667479, 'immediatePrices': {'buyPrice': 378, 'splitPrice': 388.25, 'sellPrice': 398.5, 'buyPrice5DayMedian': 382.28000000000003, 'splitPrice5DayMedian': 389.05, 'sellPrice5DayMedian': 399.5, 'buyPrice30DayMedian': 372.56000000000006, 'splitPrice30DayMedian': 388.9, 'sellPrice30DayMedian': 400.4}, 'top5AveragePrices': {'buyPrice': 378, 'splitPrice': 388.99764579830173, 'sellPrice': 399.9952915966035, 'buyPrice5DayMedian': 376.6382309119159, 'splitPrice5DayMedian': 388.81911545595796, 'sellPrice5DayMedian': 400.9746350077652, 'buyPrice30DayMedian': 375.8097985593256, 'splitPrice30DayMedian': 389.77708848895827, 'sellPrice30DayMedian': 403.42365560426424}, 'itemType': {'eid': 3683, 'name': 'Oxygen', 'volume': 0.19, 'packagedVolume': 0.19}}]
+Watching for file changes with StatReloader
+NumExpr defaulting to 2 threads.
+form_data input in into parse user input fuction: ishtar 1
+vexor 30
+items_list in parse user input fuction: ['ishtar 1', 'vexor 30']
+regex debug Line before matching: ishtar 1
+regex debug Line after matching: ishtar 1
+regex debug Line before matching: vexor 30
+regex debug Line after matching: vexor 30
+parseduserinput: [{'name': 'ishtar', 'quantity': 1}, {'name': 'vexor', 'quantity': 30}]
+apiinput: ishtar 1
+vexor 30
+
+Starting new HTTPS connection (1): janice.e-351.com:443
+https://janice.e-351.com:443 "POST /api/rest/v2/pricer?market=2 HTTP/1.1" 200 None
+janiceapijsonresp: [{'date': '2023-08-05T00:00:00Z', 'market': {'id': 2, 'name': 'Jita 4-4'}, 'buyOrderCount': 25, 'buyVolume': 321, 'sellOrderCount': 32, 'sellVolume': 320, 'immediatePrices': {'buyPrice': 13410000, 'splitPrice': 13935000, 'sellPrice': 14460000, 'buyPrice5DayMedian': 13288000, 'splitPrice5DayMedian': 13850000, 'sellPrice5DayMedian': 14450000, 'buyPrice30DayMedian': 12872333.333333334, 'splitPrice30DayMedian': 13605000, 'sellPrice30DayMedian': 14430000}, 'top5AveragePrices': {'buyPrice': 13410000, 'splitPrice': 13935000, 'sellPrice': 14460000, 'buyPrice5DayMedian': 13370000, 'splitPrice5DayMedian': 13867156.862745099, 'sellPrice5DayMedian': 14460000, 'buyPrice30DayMedian': 12736865.671641791, 'splitPrice30DayMedian': 13528461.538461538, 'sellPrice30DayMedian': 14460000}, 'itemType': {'eid': 626, 'name': 'Vexor', 'volume': 115000, 'packagedVolume': 10000}}, {'date': '2023-08-05T00:00:00Z', 'market': {'id': 2, 'name': 'Jita 4-4'}, 'buyOrderCount': 36, 'buyVolume': 171, 'sellOrderCount': 63, 'sellVolume': 541, 'immediatePrices': {'buyPrice': 172100000, 'splitPrice': 179800000, 'sellPrice': 187500000, 'buyPrice5DayMedian': 169220000, 'splitPrice5DayMedian': 173750000, 'sellPrice5DayMedian': 179000000, 'buyPrice30DayMedian': 177560000, 'splitPrice30DayMedian': 183850000, 'sellPrice30DayMedian': 188500000}, 'top5AveragePrices': {'buyPrice': 172012500, 'splitPrice': 180884027.7777778, 'sellPrice': 189755555.55555555, 'buyPrice5DayMedian': 168733333.33333334, 'splitPrice5DayMedian': 173800000, 'sellPrice5DayMedian': 180926666.66666666, 'buyPrice30DayMedian': 178512500, 'splitPrice30DayMedian': 183642673.992674, 'sellPrice30DayMedian': 188990322.58064517}, 'itemType': {'eid': 12005, 'name': 'Ishtar', 'volume': 115000, 'packagedVolume': 10000}}]
+form_data input in into parse user input fuction: ishtar 1
+vexor 30
+megathron 1
+items_list in parse user input fuction: ['ishtar 1', 'vexor 30', 'megathron 1']
+regex debug Line before matching: ishtar 1
+regex debug Line after matching: ishtar 1
+regex debug Line before matching: vexor 30
+regex debug Line after matching: vexor 30
+regex debug Line before matching: megathron 1
+regex debug Line after matching: megathron 1
+parseduserinput: [{'name': 'ishtar', 'quantity': 1}, {'name': 'vexor', 'quantity': 30}, {'name': 'megathron', 'quantity': 1}]
+apiinput: ishtar 1
+vexor 30
+megathron 1
+
+Starting new HTTPS connection (1): janice.e-351.com:443
+https://janice.e-351.com:443 "POST /api/rest/v2/pricer?market=2 HTTP/1.1" 200 None
+janiceapijsonresp: [{'date': '2023-08-05T00:00:00Z', 'market': {'id': 2, 'name': 'Jita 4-4'}, 'buyOrderCount': 25, 'buyVolume': 321, 'sellOrderCount': 32, 'sellVolume': 320, 'immediatePrices': {'buyPrice': 13410000, 'splitPrice': 13935000, 'sellPrice': 14460000, 'buyPrice5DayMedian': 13288000, 'splitPrice5DayMedian': 13850000, 'sellPrice5DayMedian': 14450000, 'buyPrice30DayMedian': 12872333.333333334, 'splitPrice30DayMedian': 13605000, 'sellPrice30DayMedian': 14430000}, 'top5AveragePrices': {'buyPrice': 13410000, 'splitPrice': 13935000, 'sellPrice': 14460000, 'buyPrice5DayMedian': 13370000, 'splitPrice5DayMedian': 13867156.862745099, 'sellPrice5DayMedian': 14460000, 'buyPrice30DayMedian': 12736865.671641791, 'splitPrice30DayMedian': 13528461.538461538, 'sellPrice30DayMedian': 14460000}, 'itemType': {'eid': 626, 'name': 'Vexor', 'volume': 115000, 'packagedVolume': 10000}}, {'date': '2023-08-05T00:00:00Z', 'market': {'id': 2, 'name': 'Jita 4-4'}, 'buyOrderCount': 12, 'buyVolume': 24, 'sellOrderCount': 19, 'sellVolume': 49, 'immediatePrices': {'buyPrice': 358200000, 'splitPrice': 374250000, 'sellPrice': 390300000, 'buyPrice5DayMedian': 360600000, 'splitPrice5DayMedian': 375050000, 'sellPrice5DayMedian': 390200000, 'buyPrice30DayMedian': 357176666.6666667, 'splitPrice30DayMedian': 370650000, 'sellPrice30DayMedian': 384800000}, 'top5AveragePrices': {'buyPrice': 358200000, 'splitPrice': 374250000, 'sellPrice': 390300000, 'buyPrice5DayMedian': 360100000, 'splitPrice5DayMedian': 375100000, 'sellPrice5DayMedian': 390200000, 'buyPrice30DayMedian': 356200000, 'splitPrice30DayMedian': 371050000, 'sellPrice30DayMedian': 384900000}, 'itemType': {'eid': 641, 'name': 'Megathron', 'volume': 470000, 'packagedVolume': 50000}}, {'date': '2023-08-05T00:00:00Z', 'market': {'id': 2, 'name': 'Jita 4-4'}, 'buyOrderCount': 36, 'buyVolume': 171, 'sellOrderCount': 63, 'sellVolume': 541, 'immediatePrices': {'buyPrice': 172100000, 'splitPrice': 179800000, 'sellPrice': 187500000, 'buyPrice5DayMedian': 169220000, 'splitPrice5DayMedian': 173750000, 'sellPrice5DayMedian': 179000000, 'buyPrice30DayMedian': 177560000, 'splitPrice30DayMedian': 183850000, 'sellPrice30DayMedian': 188500000}, 'top5AveragePrices': {'buyPrice': 172012500, 'splitPrice': 180884027.7777778, 'sellPrice': 189755555.55555555, 'buyPrice5DayMedian': 168733333.33333334, 'splitPrice5DayMedian': 173800000, 'sellPrice5DayMedian': 180926666.66666666, 'buyPrice30DayMedian': 178512500, 'splitPrice30DayMedian': 183642673.992674, 'sellPrice30DayMedian': 188990322.58064517}, 'itemType': {'eid': 12005, 'name': 'Ishtar', 'volume': 115000, 'packagedVolume': 10000}}]
+Not Found: /
+Not Found: /boaform/admin/formLogin
+Not Found: /
+Not Found: /
+Not Found: /GponForm/diag_Form
+Not Found: /
+Not Found: /portal/redlion
+Not Found: /
+Not Found: /
+Not Found: /
+Watching for file changes with StatReloader
+NumExpr defaulting to 2 threads.
+Not Found: /
+Not Found: /
+Not Found: /boaform/admin/formLogin
+Not Found: /google.com:443
+Not Found: /
+Not Found: /boaform/admin/formLogin
+Not Found: /
+Not Found: /boaform/admin/formLogin
+Not Found: /robots.txt
+Not Found: /humans.txt
+Not Found: /ads.txt
+Not Found: /
+Not Found: /
+Not Found: /setup.cgi
+Not Found: /.env
+Forbidden (CSRF cookie not set.): /buyback/
+Forbidden (CSRF cookie not set.): /buyback/
+Not Found: /boaform/admin/formLogin
+Not Found: /
+Not Found: /
+Not Found: /
+Not Found: /
+Not Found: /boaform/admin/formLogin
+form_data input in into parse user input fuction: Ish tar 2
+items_list in parse user input fuction: ['Ish tar 2']
+parseduserinput: []
+apiinput: 
+Starting new HTTPS connection (1): janice.e-351.com:443
+https://janice.e-351.com:443 "POST /api/rest/v2/pricer?market=2 HTTP/1.1" 400 None
+janiceapijsonresp: {'type': 'https://tools.ietf.org/html/rfc7231#section-6.5.1', 'title': 'One or more validation errors occurred.', 'status': 400, 'traceId': '00-0fbfa8c8618927bb7a82bf7a26fb34a9-0477b4e23cf368c8-00', 'errors': {'': ['A non-empty request body is required.'], 'itemTypes': ['The itemTypes field is required.']}}
+Internal Server Error: /buyback/
+Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/django/core/handlers/base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/spoopy/buyback/views.py", line 166, in index
+    return render(request, 'buyback/index.html', {'form': form,'processed_items': processed_items, 'totals_info':totals_info, 'debug': debug, 'info_right': info_right})
+                                                                                                                 ^^^^^^^^^^^
+UnboundLocalError: cannot access local variable 'totals_info' where it is not associated with a value
+form_data input in into parse user input fuction: Large YF-12a Smartbomb    2   Smart Bomb          100 m3  1,444,036.44 ISK
+items_list in parse user input fuction: ['Large YF-12a Smartbomb    2   Smart Bomb          100 m3  1,444,036.44 ISK']
+parseduserinput: []
+apiinput: 
+Starting new HTTPS connection (1): janice.e-351.com:443
+https://janice.e-351.com:443 "POST /api/rest/v2/pricer?market=2 HTTP/1.1" 400 None
+janiceapijsonresp: {'type': 'https://tools.ietf.org/html/rfc7231#section-6.5.1', 'title': 'One or more validation errors occurred.', 'status': 400, 'traceId': '00-f2a2bcb930e332754000e31bba17717f-fa35910e4fb9e3e2-00', 'errors': {'': ['A non-empty request body is required.'], 'itemTypes': ['The itemTypes field is required.']}}
+Internal Server Error: /buyback/
+Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/django/core/handlers/base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/spoopy/buyback/views.py", line 166, in index
+    return render(request, 'buyback/index.html', {'form': form,'processed_items': processed_items, 'totals_info':totals_info, 'debug': debug, 'info_right': info_right})
+                                                                                                                 ^^^^^^^^^^^
+UnboundLocalError: cannot access local variable 'totals_info' where it is not associated with a value
+form_data input in into parse user input fuction: Large YF-12a Smartbomb    2
+items_list in parse user input fuction: ['Large YF-12a Smartbomb    2']
+parseduserinput: []
+apiinput: 
+Starting new HTTPS connection (1): janice.e-351.com:443
+https://janice.e-351.com:443 "POST /api/rest/v2/pricer?market=2 HTTP/1.1" 400 None
+janiceapijsonresp: {'type': 'https://tools.ietf.org/html/rfc7231#section-6.5.1', 'title': 'One or more validation errors occurred.', 'status': 400, 'traceId': '00-7cd82891e0d0f975eae880ac8e4a3b28-690977df4ac718b0-00', 'errors': {'': ['A non-empty request body is required.'], 'itemTypes': ['The itemTypes field is required.']}}
+Internal Server Error: /buyback/
+Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/django/core/handlers/base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/spoopy/buyback/views.py", line 166, in index
+    return render(request, 'buyback/index.html', {'form': form,'processed_items': processed_items, 'totals_info':totals_info, 'debug': debug, 'info_right': info_right})
+                                                                                                                 ^^^^^^^^^^^
+UnboundLocalError: cannot access local variable 'totals_info' where it is not associated with a value
+form_data input in into parse user input fuction: Large YF-12a Smartbomb 2
+items_list in parse user input fuction: ['Large YF-12a Smartbomb 2']
+parseduserinput: []
+apiinput: 
+Starting new HTTPS connection (1): janice.e-351.com:443
+https://janice.e-351.com:443 "POST /api/rest/v2/pricer?market=2 HTTP/1.1" 400 None
+janiceapijsonresp: {'type': 'https://tools.ietf.org/html/rfc7231#section-6.5.1', 'title': 'One or more validation errors occurred.', 'status': 400, 'traceId': '00-b89c762725c328789dc77f251d7f6713-9e7c187b3bbe7145-00', 'errors': {'': ['A non-empty request body is required.'], 'itemTypes': ['The itemTypes field is required.']}}
+Internal Server Error: /buyback/
+Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/django/core/handlers/base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/spoopy/buyback/views.py", line 166, in index
+    return render(request, 'buyback/index.html', {'form': form,'processed_items': processed_items, 'totals_info':totals_info, 'debug': debug, 'info_right': info_right})
+                                                                                                                 ^^^^^^^^^^^
+UnboundLocalError: cannot access local variable 'totals_info' where it is not associated with a value
+Not Found: /
+/root/spoopy/buyback/views.py changed, reloading.
+Watching for file changes with StatReloader
+NumExpr defaulting to 2 threads.
+form_data input in into parse user input fuction: vexor 1
+items_list in parse user input fuction: ['vexor 1']
+Internal Server Error: /buyback/
+Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/django/core/handlers/base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/spoopy/buyback/views.py", line 139, in index
+    parsed_user_input = parse_user_input(raw_user_input)
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/spoopy/buyback/views.py", line 51, in parse_user_input
+    quantity = re.search(r"\t([[\d,'\.\ '  ']*)",initial_string).group(0).strip()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'group'
+Not Found: /favicon.ico

@@ -37,10 +37,26 @@ def parse_user_input(form_data):
     items_list = re.split(r'\r?\n', form_data)  # Split using \r\n or \n as the delimiter
     logger.debug("items_list in parse user input fuction: %s", items_list)
     for item_input in items_list:
-        item_parts = item_input.strip().split(' ')
-        if len(item_parts) == 2:
-            item_name, quantity = item_parts
-            input_lines.append((item_name, quantity))
+        # item_parts = item_input.strip().split(' ')
+        # if len(item_parts) == 2:
+        #     item_name, quantity = item_parts
+        #     input_lines.append((item_name, quantity))
+        
+        #
+        #  mikio search regex
+        #  
+        # initial_string = "Large YF-12a Smartbomb    2   Smart Bomb          100 m3  1,444,036.44 ISK"
+        initial_string = item_input
+        name = re.search(r'^([\S\ ]*)',initial_string).group(0)
+        quantity = re.search(r"\t([[\d,'\.\ '  ']*)",initial_string).group(0).strip()
+        if not quantity:
+            quantity = 1
+        else:
+            quantity = int(quantity)
+        print(name)
+        print(quantity)
+
+        item_name = name
         
     for item_name, quantity in input_lines:
         line = f"{item_name} {quantity}"
