@@ -1,0 +1,124 @@
+form_data input in into parse user input fuction: ishtar 1
+items_list in parse user input fuction: ['ishtar 1']
+regex debug search found name: ishtar 1
+regex debug search found quantity: 1
+parseduserinput: []
+apiinput: 
+Starting new HTTPS connection (1): janice.e-351.com:443
+https://janice.e-351.com:443 "POST /api/rest/v2/pricer?market=2 HTTP/1.1" 400 None
+janiceapijsonresp: {'type': 'https://tools.ietf.org/html/rfc7231#section-6.5.1', 'title': 'One or more validation errors occurred.', 'status': 400, 'traceId': '00-8c16c75c519c6b1ae89f2900148f5b17-55a29ee4ebaa81b0-00', 'errors': {'': ['A non-empty request body is required.'], 'itemTypes': ['The itemTypes field is required.']}}
+/root/spoopy/buyback/views.py changed, reloading.
+Watching for file changes with StatReloader
+NumExpr defaulting to 2 threads.
+form_data input in into parse user input function: ishtar 1
+items_list in parse user input function: ['ishtar 1']
+regex debug search found name: ishtar
+regex debug search found quantity: 1
+parseduserinput: [{'name': 'ishtar', 'quantity': 1}]
+apiinput: ishtar 1
+
+Starting new HTTPS connection (1): janice.e-351.com:443
+https://janice.e-351.com:443 "POST /api/rest/v2/pricer?market=2 HTTP/1.1" 200 None
+janiceapijsonresp: [{'date': '2023-08-06T00:00:00Z', 'market': {'id': 2, 'name': 'Jita 4-4'}, 'buyOrderCount': 35, 'buyVolume': 156, 'sellOrderCount': 61, 'sellVolume': 553, 'immediatePrices': {'buyPrice': 179000000, 'splitPrice': 183950000, 'sellPrice': 188900000, 'buyPrice5DayMedian': 172180000, 'splitPrice5DayMedian': 174450000, 'sellPrice5DayMedian': 180300000, 'buyPrice30DayMedian': 177803333.33333334, 'splitPrice30DayMedian': 183950000, 'sellPrice30DayMedian': 188600000}, 'top5AveragePrices': {'buyPrice': 179000000, 'splitPrice': 184059259.25925925, 'sellPrice': 189118518.5185185, 'buyPrice5DayMedian': 168733333.33333334, 'splitPrice5DayMedian': 174763333.3333333, 'sellPrice5DayMedian': 181948275.86206895, 'buyPrice30DayMedian': 179000000, 'splitPrice30DayMedian': 183975000, 'sellPrice30DayMedian': 188950000}, 'itemType': {'eid': 12005, 'name': 'Ishtar', 'volume': 115000, 'packagedVolume': 10000}}]
+form_data input in into parse user input function: ishtar 1
+vexor 3
+items_list in parse user input function: ['ishtar 1', 'vexor 3']
+regex debug search found name: ishtar
+regex debug search found quantity: 1
+regex debug search found name: vexor
+regex debug search found quantity: 3
+parseduserinput: [{'name': 'ishtar', 'quantity': 1}, {'name': 'vexor', 'quantity': 3}]
+apiinput: ishtar 1
+vexor 3
+
+Starting new HTTPS connection (1): janice.e-351.com:443
+https://janice.e-351.com:443 "POST /api/rest/v2/pricer?market=2 HTTP/1.1" 200 None
+janiceapijsonresp: [{'date': '2023-08-06T00:00:00Z', 'market': {'id': 2, 'name': 'Jita 4-4'}, 'buyOrderCount': 22, 'buyVolume': 251, 'sellOrderCount': 33, 'sellVolume': 388, 'immediatePrices': {'buyPrice': 13430000, 'splitPrice': 13940000, 'sellPrice': 14450000, 'buyPrice5DayMedian': 13362000, 'splitPrice5DayMedian': 13850000, 'sellPrice5DayMedian': 14420000, 'buyPrice30DayMedian': 12896666.666666666, 'splitPrice30DayMedian': 13610000, 'sellPrice30DayMedian': 14430000}, 'top5AveragePrices': {'buyPrice': 13430000, 'splitPrice': 13940526.315789472, 'sellPrice': 14451052.631578946, 'buyPrice5DayMedian': 13377647.05882353, 'splitPrice5DayMedian': 13910294.11764706, 'sellPrice5DayMedian': 14450588.235294119, 'buyPrice30DayMedian': 12783181.818181818, 'splitPrice30DayMedian': 13601642.857142858, 'sellPrice30DayMedian': 14451052.631578946}, 'itemType': {'eid': 626, 'name': 'Vexor', 'volume': 115000, 'packagedVolume': 10000}}, {'date': '2023-08-06T00:00:00Z', 'market': {'id': 2, 'name': 'Jita 4-4'}, 'buyOrderCount': 35, 'buyVolume': 156, 'sellOrderCount': 61, 'sellVolume': 553, 'immediatePrices': {'buyPrice': 179000000, 'splitPrice': 183950000, 'sellPrice': 188900000, 'buyPrice5DayMedian': 172180000, 'splitPrice5DayMedian': 174450000, 'sellPrice5DayMedian': 180300000, 'buyPrice30DayMedian': 177803333.33333334, 'splitPrice30DayMedian': 183950000, 'sellPrice30DayMedian': 188600000}, 'top5AveragePrices': {'buyPrice': 179000000, 'splitPrice': 184059259.25925925, 'sellPrice': 189118518.5185185, 'buyPrice5DayMedian': 168733333.33333334, 'splitPrice5DayMedian': 174763333.3333333, 'sellPrice5DayMedian': 181948275.86206895, 'buyPrice30DayMedian': 179000000, 'splitPrice30DayMedian': 183975000, 'sellPrice30DayMedian': 188950000}, 'itemType': {'eid': 12005, 'name': 'Ishtar', 'volume': 115000, 'packagedVolume': 10000}}]
+form_data input in into parse user input function: Amarr Shuttle	1	Shuttle	Ship			500 m3	19,434.56 ISK
+items_list in parse user input function: ['Amarr Shuttle\t1\tShuttle\tShip\t\t\t500 m3\t19,434.56 ISK']
+regex debug search found name: Amarr
+regex debug search found quantity: 1
+parseduserinput: [{'name': 'Amarr', 'quantity': 1}]
+apiinput: Amarr 1
+
+Starting new HTTPS connection (1): janice.e-351.com:443
+https://janice.e-351.com:443 "POST /api/rest/v2/pricer?market=2 HTTP/1.1" 200 None
+janiceapijsonresp: []
+Session data corrupted
+Internal Server Error: /buyback/
+Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/django/core/handlers/base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/spoopy/buyback/views.py", line 181, in index
+    item_id = api_data[0]['itemType']['eid']  # Assuming you get the item ID from the API response
+              ~~~~~~~~^^^
+IndexError: list index out of range
+/root/spoopy/buyback/views.py changed, reloading.
+Watching for file changes with StatReloader
+NumExpr defaulting to 2 threads.
+form_data input in into parse user input function: Amarr Shuttle	1	Shuttle	Ship			500 m3	19,434.56 ISK
+items_list in parse user input function: ['Amarr Shuttle\t1\tShuttle\tShip\t\t\t500 m3\t19,434.56 ISK']
+regex debug search found name: Amarr Shuttle
+regex debug search found quantity: 1
+parseduserinput: [{'name': 'Amarr Shuttle', 'quantity': 1}]
+apiinput: Amarr Shuttle 1
+
+Starting new HTTPS connection (1): janice.e-351.com:443
+https://janice.e-351.com:443 "POST /api/rest/v2/pricer?market=2 HTTP/1.1" 200 None
+janiceapijsonresp: [{'date': '2023-08-06T00:00:00Z', 'market': {'id': 2, 'name': 'Jita 4-4'}, 'buyOrderCount': 8, 'buyVolume': 15139, 'sellOrderCount': 11, 'sellVolume': 8217, 'immediatePrices': {'buyPrice': 12780, 'splitPrice': 18855, 'sellPrice': 24930, 'buyPrice5DayMedian': 12486, 'splitPrice5DayMedian': 16155, 'sellPrice5DayMedian': 20000, 'buyPrice30DayMedian': 12853.666666666666, 'splitPrice30DayMedian': 15700, 'sellPrice30DayMedian': 18430}, 'top5AveragePrices': {'buyPrice': 12780, 'splitPrice': 18885.951219512193, 'sellPrice': 24991.90243902439, 'buyPrice5DayMedian': 12310, 'splitPrice5DayMedian': 17586.534772182255, 'sellPrice5DayMedian': 22863.06954436451, 'buyPrice30DayMedian': 12310, 'splitPrice30DayMedian': 15550.864928442015, 'sellPrice30DayMedian': 18491.11811023622}, 'itemType': {'eid': 11134, 'name': 'Amarr Shuttle', 'volume': 5000, 'packagedVolume': 500}}]
+form_data input in into parse user input function: Amarr Shuttle	1	Shuttle	Ship			500 m3	19,434.56 ISK
+Dominix	1	Battleship	Ship			50,000 m3	381,156,235.83 ISK
+items_list in parse user input function: ['Amarr Shuttle\t1\tShuttle\tShip\t\t\t500 m3\t19,434.56 ISK', 'Dominix\t1\tBattleship\tShip\t\t\t50,000 m3\t381,156,235.83 ISK']
+regex debug search found name: Amarr Shuttle
+regex debug search found quantity: 1
+regex debug search found name: Dominix
+regex debug search found quantity: 1
+parseduserinput: [{'name': 'Amarr Shuttle', 'quantity': 1}, {'name': 'Dominix', 'quantity': 1}]
+apiinput: Amarr Shuttle 1
+Dominix 1
+
+Starting new HTTPS connection (1): janice.e-351.com:443
+https://janice.e-351.com:443 "POST /api/rest/v2/pricer?market=2 HTTP/1.1" 200 None
+janiceapijsonresp: [{'date': '2023-08-06T00:00:00Z', 'market': {'id': 2, 'name': 'Jita 4-4'}, 'buyOrderCount': 24, 'buyVolume': 37, 'sellOrderCount': 31, 'sellVolume': 73, 'immediatePrices': {'buyPrice': 357800000, 'splitPrice': 375650000, 'sellPrice': 393500000, 'buyPrice5DayMedian': 355640000, 'splitPrice5DayMedian': 375650000, 'sellPrice5DayMedian': 393500000, 'buyPrice30DayMedian': 350796666.6666667, 'splitPrice30DayMedian': 366650000, 'sellPrice30DayMedian': 384300000}, 'top5AveragePrices': {'buyPrice': 357800000, 'splitPrice': 375683333.3333334, 'sellPrice': 393566666.6666667, 'buyPrice5DayMedian': 355750000, 'splitPrice5DayMedian': 375683333.3333334, 'sellPrice5DayMedian': 393566666.6666667, 'buyPrice30DayMedian': 244489424.80769232, 'splitPrice30DayMedian': 323878366.34615386, 'sellPrice30DayMedian': 384433333.3333333}, 'itemType': {'eid': 645, 'name': 'Dominix', 'volume': 454500, 'packagedVolume': 50000}}, {'date': '2023-08-06T00:00:00Z', 'market': {'id': 2, 'name': 'Jita 4-4'}, 'buyOrderCount': 8, 'buyVolume': 15139, 'sellOrderCount': 11, 'sellVolume': 8217, 'immediatePrices': {'buyPrice': 12780, 'splitPrice': 18855, 'sellPrice': 24930, 'buyPrice5DayMedian': 12486, 'splitPrice5DayMedian': 16155, 'sellPrice5DayMedian': 20000, 'buyPrice30DayMedian': 12853.666666666666, 'splitPrice30DayMedian': 15700, 'sellPrice30DayMedian': 18430}, 'top5AveragePrices': {'buyPrice': 12780, 'splitPrice': 18885.951219512193, 'sellPrice': 24991.90243902439, 'buyPrice5DayMedian': 12310, 'splitPrice5DayMedian': 17586.534772182255, 'sellPrice5DayMedian': 22863.06954436451, 'buyPrice30DayMedian': 12310, 'splitPrice30DayMedian': 15550.864928442015, 'sellPrice30DayMedian': 18491.11811023622}, 'itemType': {'eid': 11134, 'name': 'Amarr Shuttle', 'volume': 5000, 'packagedVolume': 500}}]
+form_data input in into parse user input function: Amarr Shuttle	1	Shuttle	Ship			500 m3	19,434.56 ISK
+items_list in parse user input function: ['Amarr Shuttle\t1\tShuttle\tShip\t\t\t500 m3\t19,434.56 ISK']
+regex debug search found name: Amarr Shuttle
+regex debug search found quantity: 1
+parseduserinput: [{'name': 'Amarr Shuttle', 'quantity': 1}]
+apiinput: Amarr Shuttle 1
+
+Starting new HTTPS connection (1): janice.e-351.com:443
+https://janice.e-351.com:443 "POST /api/rest/v2/pricer?market=2 HTTP/1.1" 200 None
+janiceapijsonresp: [{'date': '2023-08-06T00:00:00Z', 'market': {'id': 2, 'name': 'Jita 4-4'}, 'buyOrderCount': 8, 'buyVolume': 15139, 'sellOrderCount': 11, 'sellVolume': 8217, 'immediatePrices': {'buyPrice': 12780, 'splitPrice': 18855, 'sellPrice': 24930, 'buyPrice5DayMedian': 12486, 'splitPrice5DayMedian': 16155, 'sellPrice5DayMedian': 20000, 'buyPrice30DayMedian': 12853.666666666666, 'splitPrice30DayMedian': 15700, 'sellPrice30DayMedian': 18430}, 'top5AveragePrices': {'buyPrice': 12780, 'splitPrice': 18885.951219512193, 'sellPrice': 24991.90243902439, 'buyPrice5DayMedian': 12310, 'splitPrice5DayMedian': 17586.534772182255, 'sellPrice5DayMedian': 22863.06954436451, 'buyPrice30DayMedian': 12310, 'splitPrice30DayMedian': 15550.864928442015, 'sellPrice30DayMedian': 18491.11811023622}, 'itemType': {'eid': 11134, 'name': 'Amarr Shuttle', 'volume': 5000, 'packagedVolume': 500}}]
+form_data input in into parse user input function: Amarr Shuttle	1	Shuttle	Ship			500 m3	19,434.56 ISK
+Amarr Shuttle	1	Shuttle	Ship			500 m3	19,434.56 ISK
+items_list in parse user input function: ['Amarr Shuttle\t1\tShuttle\tShip\t\t\t500 m3\t19,434.56 ISK', 'Amarr Shuttle\t1\tShuttle\tShip\t\t\t500 m3\t19,434.56 ISK']
+regex debug search found name: Amarr Shuttle
+regex debug search found quantity: 1
+regex debug search found name: Amarr Shuttle
+regex debug search found quantity: 1
+parseduserinput: [{'name': 'Amarr Shuttle', 'quantity': 1}, {'name': 'Amarr Shuttle', 'quantity': 1}]
+apiinput: Amarr Shuttle 1
+Amarr Shuttle 1
+
+Starting new HTTPS connection (1): janice.e-351.com:443
+https://janice.e-351.com:443 "POST /api/rest/v2/pricer?market=2 HTTP/1.1" 200 None
+janiceapijsonresp: [{'date': '2023-08-06T00:00:00Z', 'market': {'id': 2, 'name': 'Jita 4-4'}, 'buyOrderCount': 8, 'buyVolume': 15139, 'sellOrderCount': 11, 'sellVolume': 8217, 'immediatePrices': {'buyPrice': 12780, 'splitPrice': 18855, 'sellPrice': 24930, 'buyPrice5DayMedian': 12486, 'splitPrice5DayMedian': 16155, 'sellPrice5DayMedian': 20000, 'buyPrice30DayMedian': 12853.666666666666, 'splitPrice30DayMedian': 15700, 'sellPrice30DayMedian': 18430}, 'top5AveragePrices': {'buyPrice': 12780, 'splitPrice': 18885.951219512193, 'sellPrice': 24991.90243902439, 'buyPrice5DayMedian': 12310, 'splitPrice5DayMedian': 17586.534772182255, 'sellPrice5DayMedian': 22863.06954436451, 'buyPrice30DayMedian': 12310, 'splitPrice30DayMedian': 15550.864928442015, 'sellPrice30DayMedian': 18491.11811023622}, 'itemType': {'eid': 11134, 'name': 'Amarr Shuttle', 'volume': 5000, 'packagedVolume': 500}}]
+form_data input in into parse user input function: Amarr Shuttle	1	Shuttle	Ship			500 m3	19,434.56 ISK
+ishtar	1	Shuttle	Ship			500 m3	19,434.56 ISK
+items_list in parse user input function: ['Amarr Shuttle\t1\tShuttle\tShip\t\t\t500 m3\t19,434.56 ISK', 'ishtar\t1\tShuttle\tShip\t\t\t500 m3\t19,434.56 ISK']
+regex debug search found name: Amarr Shuttle
+regex debug search found quantity: 1
+regex debug search found name: ishtar
+regex debug search found quantity: 1
+parseduserinput: [{'name': 'Amarr Shuttle', 'quantity': 1}, {'name': 'ishtar', 'quantity': 1}]
+apiinput: Amarr Shuttle 1
+ishtar 1
+
+Starting new HTTPS connection (1): janice.e-351.com:443
+https://janice.e-351.com:443 "POST /api/rest/v2/pricer?market=2 HTTP/1.1" 200 None
+janiceapijsonresp: [{'date': '2023-08-06T00:00:00Z', 'market': {'id': 2, 'name': 'Jita 4-4'}, 'buyOrderCount': 8, 'buyVolume': 15139, 'sellOrderCount': 11, 'sellVolume': 8217, 'immediatePrices': {'buyPrice': 12780, 'splitPrice': 18855, 'sellPrice': 24930, 'buyPrice5DayMedian': 12486, 'splitPrice5DayMedian': 16155, 'sellPrice5DayMedian': 20000, 'buyPrice30DayMedian': 12853.666666666666, 'splitPrice30DayMedian': 15700, 'sellPrice30DayMedian': 18430}, 'top5AveragePrices': {'buyPrice': 12780, 'splitPrice': 18885.951219512193, 'sellPrice': 24991.90243902439, 'buyPrice5DayMedian': 12310, 'splitPrice5DayMedian': 17586.534772182255, 'sellPrice5DayMedian': 22863.06954436451, 'buyPrice30DayMedian': 12310, 'splitPrice30DayMedian': 15550.864928442015, 'sellPrice30DayMedian': 18491.11811023622}, 'itemType': {'eid': 11134, 'name': 'Amarr Shuttle', 'volume': 5000, 'packagedVolume': 500}}, {'date': '2023-08-06T00:00:00Z', 'market': {'id': 2, 'name': 'Jita 4-4'}, 'buyOrderCount': 35, 'buyVolume': 156, 'sellOrderCount': 61, 'sellVolume': 553, 'immediatePrices': {'buyPrice': 179000000, 'splitPrice': 183950000, 'sellPrice': 188900000, 'buyPrice5DayMedian': 172180000, 'splitPrice5DayMedian': 174450000, 'sellPrice5DayMedian': 180300000, 'buyPrice30DayMedian': 177803333.33333334, 'splitPrice30DayMedian': 183950000, 'sellPrice30DayMedian': 188600000}, 'top5AveragePrices': {'buyPrice': 179000000, 'splitPrice': 184059259.25925925, 'sellPrice': 189118518.5185185, 'buyPrice5DayMedian': 168733333.33333334, 'splitPrice5DayMedian': 174763333.3333333, 'sellPrice5DayMedian': 181948275.86206895, 'buyPrice30DayMedian': 179000000, 'splitPrice30DayMedian': 183975000, 'sellPrice30DayMedian': 188950000}, 'itemType': {'eid': 12005, 'name': 'Ishtar', 'volume': 115000, 'packagedVolume': 10000}}]

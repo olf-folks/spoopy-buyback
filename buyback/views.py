@@ -15,14 +15,6 @@ import logging
 
 logger = logging.getLogger(__name__)
 
-# Define the regular expression pattern
-# re_asset_list = re.compile(r'^([\S\ ]*)\t([0-9]*)\t([\S ]*)\t([\S ]*)\t(XLarge|Large|Medium|Small|)\t(High|Medium|Low|Rigs|[\d ]*)\t([\d ]*)\s*(m3|м\^3)?\t([\d]+|)\t([\d]+|)\t([\d ]+ ISK)?$')
-# Define the regular expression pattern
-#re_asset_list = re.compile(r'^([\S\ ]*)\t([0-9]*)\t([\S ]*)\t([\S ]*)\t(XLarge|Large|Medium|Small|)\t(High|Medium|Low|Rigs|[\d ]*)\t([\d ]*)\s*(m3|м\^3)?\t([\d]+|)\t([\d]+|)\t([\d ]+ ISK)?$')
-# re_asset_list = re.compile(r'^([\S ]+)\t([0-9]*)\t([\S ]*)\t([\S ]*)\t(XLarge|Large|Medium|Small)\t(High|Medium|Low|Rigs|[0-9 ]*)\t([\d. ]*)(?: (m3|м\^3))?\t([\d ]*)\t([\d ]*)\t([\d,. ]* ISK)?$')
-# re_asset_list = re.compile(r'^([\S ]+)\t')
-# re_asset_list = re.compile(r'^([\S ]+)\t([0-9]+)')
-# re_asset_list = re.compile(r'^([\S ]+)\s+([0-9]+)$') # works
 re_asset_list = re.compile(r'^([\S ]+)\s+([\d,]+)$')
 
 
@@ -30,61 +22,95 @@ re_asset_list = re.compile(r'^([\S ]+)\s+([\d,]+)$')
 
 
 
+# def parse_user_input(form_data):
+#     parsed_input = []
+#     input_lines = []
+#     logger.debug("form_data input in into parse user input fuction: %s", form_data)
+#     items_list = re.split(r'\r?\n', form_data)  # Split using \r\n or \n as the delimiter
+#     logger.debug("items_list in parse user input fuction: %s", items_list)
+    
+#     for item_input in items_list:
+#         # item_parts = item_input.strip().split(' ')
+#         # if len(item_parts) == 2:
+#         #     item_name, quantity = item_parts
+#         #     input_lines.append((item_name, quantity))
+
+#         #
+#         #  mikio search regex
+#         #  
+#         # initial_string = "Large YF-12a Smartbomb    2   Smart Bomb          100 m3  1,444,036.44 ISK"
+#         initial_string = item_input
+#         name = re.search(r'^([\S\ ]*)',initial_string).group(0)
+#         quantity = re.search(r"\t([[\d,'\.\ '  ']*)|(?! |\t)[0-9]+",initial_string).group(0).strip()
+
+        
+
+#         if not quantity:
+#             quantity = 1
+#         else:
+#             quantity = int(quantity)
+#         print(name)
+#         print(quantity)
+
+#         item_name = name
+#         logger.debug("regex debug search found name: %s", name)
+#         logger.debug("regex debug search found quantity: %s", quantity)
+        
+#     for item_name, quantity in input_lines:
+#         line = f"{item_name} {quantity}"
+#         match = re_asset_list.match(line)
+#         logger.debug("regex debug Line before matching: %s", line)
+#         if match:
+#             logger.debug("regex debug Line after matching: %s", line)
+#             input_name = match.group(1)
+#             # not working with commas
+#             #quantity = int(match.group(2))
+#             # remove commas in quanity
+#             quantity_str = match.group(2).replace(',', '')  # Remove commas from the quantity string
+#             input_quantity = int(quantity_str)
+#             # group = match.group(3)
+#             # category = match.group(4)
+#             # size = match.group(5)
+#             # slot = match.group(6)
+#             # volume = float(match.group(7)) if match.group(7) else 0.0
+#             # meta_level = match.group(9)
+#             # tech_level = match.group(10)
+#             # price_estimate = float(match.group(11)) if match.group(11) else 0.0
+            
+#             parsed_input.append({
+#                 'name': input_name,
+#                 'quantity': input_quantity,
+#             })
+
+#             # Return the list of parsed items
+#     return parsed_input
+
+
 def parse_user_input(form_data):
     parsed_input = []
-    input_lines = []
-    logger.debug("form_data input in into parse user input fuction: %s", form_data)
+    logger.debug("form_data input in into parse user input function: %s", form_data)
     items_list = re.split(r'\r?\n', form_data)  # Split using \r\n or \n as the delimiter
-    logger.debug("items_list in parse user input fuction: %s", items_list)
+    logger.debug("items_list in parse user input function: %s", items_list)
+    
     for item_input in items_list:
-        # item_parts = item_input.strip().split(' ')
-        # if len(item_parts) == 2:
-        #     item_name, quantity = item_parts
-        #     input_lines.append((item_name, quantity))
-        
-        #
-        #  mikio search regex
-        #  
-        # initial_string = "Large YF-12a Smartbomb    2   Smart Bomb          100 m3  1,444,036.44 ISK"
         initial_string = item_input
-        name = re.search(r'^([\S\ ]*)',initial_string).group(0)
-        quantity = re.search(r"\t([[\d,'\.\ '  ']*)",initial_string).group(0).strip()
-        if not quantity:
-            quantity = 1
+        #name = re.search(r'^(\S+)', initial_string).group(1)            
+        name = re.search(r'^([\S\ ]*)', initial_string).group(1)
+        quantity = re.search(r"\t(\d+(?:,\d{3})*(?:\.\d+)?)|(?! |\t)(\d+)", initial_string)
+        if quantity:
+            quantity_str = quantity.group(1) or quantity.group(2)
+            quantity = int(quantity_str.replace(',', ''))
         else:
-            quantity = int(quantity)
-        print(name)
-        print(quantity)
+            quantity = 1
 
-        item_name = name
+        logger.debug("regex debug search found name: %s", name)
+        logger.debug("regex debug search found quantity: %s", quantity)
         
-    for item_name, quantity in input_lines:
-        line = f"{item_name} {quantity}"
-        match = re_asset_list.match(line)
-        logger.debug("regex debug Line before matching: %s", line)
-        if match:
-            logger.debug("regex debug Line after matching: %s", line)
-            input_name = match.group(1)
-            # not working with commas
-            #quantity = int(match.group(2))
-            # remove commas in quanity
-            quantity_str = match.group(2).replace(',', '')  # Remove commas from the quantity string
-            input_quantity = int(quantity_str)
-            # group = match.group(3)
-            # category = match.group(4)
-            # size = match.group(5)
-            # slot = match.group(6)
-            # volume = float(match.group(7)) if match.group(7) else 0.0
-            # meta_level = match.group(9)
-            # tech_level = match.group(10)
-            # price_estimate = float(match.group(11)) if match.group(11) else 0.0
-            
-            parsed_input.append({
-                'name': input_name,
-                'quantity': input_quantity,
-            })
+        parsed_input.append({
+            'name': name,
+            'quantity': quantity,
+        })
 
-            # Return the list of parsed items
     return parsed_input
 
 
@@ -172,10 +198,10 @@ def index(request):
                     
                 })  # Include the processed item data
        
-                gtotal_market = sum(item.get('market_price_itemtotal', 0) for item in processed_items)
-                gtotal_buyback = sum(item.get('buyback_price_itemtotal', 0) for item in processed_items)
+            gtotal_market = sum(item.get('market_price_itemtotal', 0) for item in processed_items)
+            gtotal_buyback = sum(item.get('buyback_price_itemtotal', 0) for item in processed_items)
 
-                totals_info = [gtotal_buyback, gtotal_market]           
+            totals_info = [gtotal_buyback, gtotal_market]           
 
             debug = [processed_items]
             # debug = 0
