@@ -1,233 +1,167 @@
-form_data input in into parse user input function: Amarr Shuttle	1	Shuttle	Ship			500 m3	19,434.56 ISK
-ishtar	1	Shuttle	Ship			500 m3	19,434.56 ISK
-items_list in parse user input function: ['Amarr Shuttle\t1\tShuttle\tShip\t\t\t500 m3\t19,434.56 ISK', 'ishtar\t1\tShuttle\tShip\t\t\t500 m3\t19,434.56 ISK']
-regex debug search found name: Amarr Shuttle
-regex debug search found quantity: 1
-regex debug search found name: ishtar
-regex debug search found quantity: 1
-parseduserinput: [{'name': 'Amarr Shuttle', 'quantity': 1}, {'name': 'ishtar', 'quantity': 1}]
-apiinput: Amarr Shuttle 1
-ishtar 1
-
-Starting new HTTPS connection (1): janice.e-351.com:443
-https://janice.e-351.com:443 "POST /api/rest/v2/pricer?market=2 HTTP/1.1" 200 None
-janiceapijsonresp: [{'date': '2023-08-06T00:00:00Z', 'market': {'id': 2, 'name': 'Jita 4-4'}, 'buyOrderCount': 8, 'buyVolume': 15138, 'sellOrderCount': 10, 'sellVolume': 8216, 'immediatePrices': {'buyPrice': 12780, 'splitPrice': 18865, 'sellPrice': 24950, 'buyPrice5DayMedian': 12486, 'splitPrice5DayMedian': 16155, 'sellPrice5DayMedian': 20000, 'buyPrice30DayMedian': 12853.666666666666, 'splitPrice30DayMedian': 15700, 'sellPrice30DayMedian': 18430}, 'top5AveragePrices': {'buyPrice': 12780, 'splitPrice': 18886.03658536585, 'sellPrice': 24992.073170731706, 'buyPrice5DayMedian': 12310, 'splitPrice5DayMedian': 17586.534772182255, 'sellPrice5DayMedian': 22863.06954436451, 'buyPrice30DayMedian': 12310, 'splitPrice30DayMedian': 15550.864928442015, 'sellPrice30DayMedian': 18491.11811023622}, 'itemType': {'eid': 11134, 'name': 'Amarr Shuttle', 'volume': 5000, 'packagedVolume': 500}}, {'date': '2023-08-06T00:00:00Z', 'market': {'id': 2, 'name': 'Jita 4-4'}, 'buyOrderCount': 35, 'buyVolume': 156, 'sellOrderCount': 61, 'sellVolume': 552, 'immediatePrices': {'buyPrice': 179000000, 'splitPrice': 183950000, 'sellPrice': 188900000, 'buyPrice5DayMedian': 172180000, 'splitPrice5DayMedian': 174450000, 'sellPrice5DayMedian': 180300000, 'buyPrice30DayMedian': 177803333.33333334, 'splitPrice30DayMedian': 183950000, 'sellPrice30DayMedian': 188600000}, 'top5AveragePrices': {'buyPrice': 179000000, 'splitPrice': 184079629.6296296, 'sellPrice': 189159259.25925925, 'buyPrice5DayMedian': 168733333.33333334, 'splitPrice5DayMedian': 174763333.3333333, 'sellPrice5DayMedian': 181948275.86206895, 'buyPrice30DayMedian': 179000000, 'splitPrice30DayMedian': 183975000, 'sellPrice30DayMedian': 188950000}, 'itemType': {'eid': 12005, 'name': 'Ishtar', 'volume': 115000, 'packagedVolume': 10000}}]
-/root/spoopy/buyback/views.py changed, reloading.
+/root/spoopy/buyback/urls.py changed, reloading.
 Watching for file changes with StatReloader
 NumExpr defaulting to 2 threads.
-form_data input in into parse user input function: Amarr Shuttle	1	Shuttle	Ship			500 m3	19,434.56 ISK
-ishtar	1	Shuttle	Ship			500 m3	19,434.56 ISK
-items_list in parse user input function: ['Amarr Shuttle\t1\tShuttle\tShip\t\t\t500 m3\t19,434.56 ISK', 'ishtar\t1\tShuttle\tShip\t\t\t500 m3\t19,434.56 ISK']
-regex debug search found name: Amarr Shuttle
-regex debug search found quantity: 1
-regex debug search found name: ishtar
-regex debug search found quantity: 1
-parseduserinput: [{'name': 'Amarr Shuttle', 'quantity': 1}, {'name': 'ishtar', 'quantity': 1}]
-apiinput: Amarr Shuttle 1
-ishtar 1
-
-Starting new HTTPS connection (1): janice.e-351.com:443
-https://janice.e-351.com:443 "POST /api/rest/v2/pricer?market=2 HTTP/1.1" 200 None
-janiceapijsonresp: [{'date': '2023-08-06T00:00:00Z', 'market': {'id': 2, 'name': 'Jita 4-4'}, 'buyOrderCount': 8, 'buyVolume': 15138, 'sellOrderCount': 10, 'sellVolume': 8216, 'immediatePrices': {'buyPrice': 12780, 'splitPrice': 18865, 'sellPrice': 24950, 'buyPrice5DayMedian': 12486, 'splitPrice5DayMedian': 16155, 'sellPrice5DayMedian': 20000, 'buyPrice30DayMedian': 12853.666666666666, 'splitPrice30DayMedian': 15700, 'sellPrice30DayMedian': 18430}, 'top5AveragePrices': {'buyPrice': 12780, 'splitPrice': 18886.03658536585, 'sellPrice': 24992.073170731706, 'buyPrice5DayMedian': 12310, 'splitPrice5DayMedian': 17586.534772182255, 'sellPrice5DayMedian': 22863.06954436451, 'buyPrice30DayMedian': 12310, 'splitPrice30DayMedian': 15550.864928442015, 'sellPrice30DayMedian': 18491.11811023622}, 'itemType': {'eid': 11134, 'name': 'Amarr Shuttle', 'volume': 5000, 'packagedVolume': 500}}, {'date': '2023-08-06T00:00:00Z', 'market': {'id': 2, 'name': 'Jita 4-4'}, 'buyOrderCount': 35, 'buyVolume': 156, 'sellOrderCount': 61, 'sellVolume': 552, 'immediatePrices': {'buyPrice': 179000000, 'splitPrice': 183950000, 'sellPrice': 188900000, 'buyPrice5DayMedian': 172180000, 'splitPrice5DayMedian': 174450000, 'sellPrice5DayMedian': 180300000, 'buyPrice30DayMedian': 177803333.33333334, 'splitPrice30DayMedian': 183950000, 'sellPrice30DayMedian': 188600000}, 'top5AveragePrices': {'buyPrice': 179000000, 'splitPrice': 184079629.6296296, 'sellPrice': 189159259.25925925, 'buyPrice5DayMedian': 168733333.33333334, 'splitPrice5DayMedian': 174763333.3333333, 'sellPrice5DayMedian': 181948275.86206895, 'buyPrice30DayMedian': 179000000, 'splitPrice30DayMedian': 183975000, 'sellPrice30DayMedian': 188950000}, 'itemType': {'eid': 12005, 'name': 'Ishtar', 'volume': 115000, 'packagedVolume': 10000}}]
-Session data corrupted
-Internal Server Error: /buyback/
-Traceback (most recent call last):
-  File "/usr/lib/python3/dist-packages/django/core/handlers/exception.py", line 47, in inner
-    response = get_response(request)
-               ^^^^^^^^^^^^^^^^^^^^^
-  File "/usr/lib/python3/dist-packages/django/core/handlers/base.py", line 181, in _get_response
-    response = wrapped_callback(request, *callback_args, **callback_kwargs)
-               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/root/spoopy/buyback/views.py", line 180, in index
-    item_data = next((item for item in api_data if item['itemType']['name'] == item_name), None)
-                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/root/spoopy/buyback/views.py", line 180, in <genexpr>
-    item_data = next((item for item in api_data if item['itemType']['name'] == item_name), None)
-                                                                               ^^^^^^^^^
-NameError: cannot access free variable 'item_name' where it is not associated with a value in enclosing scope
-/root/spoopy/buyback/views.py changed, reloading.
-Watching for file changes with StatReloader
-NumExpr defaulting to 2 threads.
-form_data input in into parse user input function: ishtar 1
-items_list in parse user input function: ['ishtar 1']
-regex debug search found name: ishtar 1
-regex debug search found quantity: 1
-parseduserinput: [{'name': 'ishtar 1', 'quantity': 1}]
-apiinput: ishtar 1 1
-
-Starting new HTTPS connection (1): janice.e-351.com:443
-https://janice.e-351.com:443 "POST /api/rest/v2/pricer?market=2 HTTP/1.1" 200 None
-janiceapijsonresp: [{'date': '2023-08-06T00:00:00Z', 'market': {'id': 2, 'name': 'Jita 4-4'}, 'buyOrderCount': 35, 'buyVolume': 156, 'sellOrderCount': 61, 'sellVolume': 552, 'immediatePrices': {'buyPrice': 179000000, 'splitPrice': 183950000, 'sellPrice': 188900000, 'buyPrice5DayMedian': 172180000, 'splitPrice5DayMedian': 174450000, 'sellPrice5DayMedian': 180300000, 'buyPrice30DayMedian': 177803333.33333334, 'splitPrice30DayMedian': 183950000, 'sellPrice30DayMedian': 188600000}, 'top5AveragePrices': {'buyPrice': 179000000, 'splitPrice': 184079629.6296296, 'sellPrice': 189159259.25925925, 'buyPrice5DayMedian': 168733333.33333334, 'splitPrice5DayMedian': 174763333.3333333, 'sellPrice5DayMedian': 181948275.86206895, 'buyPrice30DayMedian': 179000000, 'splitPrice30DayMedian': 183975000, 'sellPrice30DayMedian': 188950000}, 'itemType': {'eid': 12005, 'name': 'Ishtar', 'volume': 115000, 'packagedVolume': 10000}}]
-Session data corrupted
-Internal Server Error: /buyback/
-Traceback (most recent call last):
-  File "/usr/lib/python3/dist-packages/django/core/handlers/exception.py", line 47, in inner
-    response = get_response(request)
-               ^^^^^^^^^^^^^^^^^^^^^
-  File "/usr/lib/python3/dist-packages/django/core/handlers/base.py", line 181, in _get_response
-    response = wrapped_callback(request, *callback_args, **callback_kwargs)
-               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/root/spoopy/buyback/views.py", line 181, in index
-    item_data = next((item for item in api_data if item['itemType']['name'] == item['name']), None)
-                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/root/spoopy/buyback/views.py", line 181, in <genexpr>
-    item_data = next((item for item in api_data if item['itemType']['name'] == item['name']), None)
-                                                                               ~~~~^^^^^^^^
-KeyError: 'name'
-form_data input in into parse user input function: Amarr Shuttle	1	Shuttle	Ship			500 m3	19,434.56 ISK
-Dominix	1	Battleship	Ship			50,000 m3	381,156,235.83 ISK
-items_list in parse user input function: ['Amarr Shuttle\t1\tShuttle\tShip\t\t\t500 m3\t19,434.56 ISK', 'Dominix\t1\tBattleship\tShip\t\t\t50,000 m3\t381,156,235.83 ISK']
-regex debug search found name: Amarr Shuttle
-regex debug search found quantity: 1
-regex debug search found name: Dominix
-regex debug search found quantity: 1
-parseduserinput: [{'name': 'Amarr Shuttle', 'quantity': 1}, {'name': 'Dominix', 'quantity': 1}]
-apiinput: Amarr Shuttle 1
-Dominix 1
-
-Starting new HTTPS connection (1): janice.e-351.com:443
-https://janice.e-351.com:443 "POST /api/rest/v2/pricer?market=2 HTTP/1.1" 200 None
-janiceapijsonresp: [{'date': '2023-08-06T00:00:00Z', 'market': {'id': 2, 'name': 'Jita 4-4'}, 'buyOrderCount': 24, 'buyVolume': 37, 'sellOrderCount': 31, 'sellVolume': 73, 'immediatePrices': {'buyPrice': 357800000, 'splitPrice': 375650000, 'sellPrice': 393500000, 'buyPrice5DayMedian': 355640000, 'splitPrice5DayMedian': 375650000, 'sellPrice5DayMedian': 393500000, 'buyPrice30DayMedian': 350796666.6666667, 'splitPrice30DayMedian': 366650000, 'sellPrice30DayMedian': 384300000}, 'top5AveragePrices': {'buyPrice': 357800000, 'splitPrice': 375683333.3333334, 'sellPrice': 393566666.6666667, 'buyPrice5DayMedian': 355750000, 'splitPrice5DayMedian': 375683333.3333334, 'sellPrice5DayMedian': 393566666.6666667, 'buyPrice30DayMedian': 244489424.80769232, 'splitPrice30DayMedian': 323878366.34615386, 'sellPrice30DayMedian': 384433333.3333333}, 'itemType': {'eid': 645, 'name': 'Dominix', 'volume': 454500, 'packagedVolume': 50000}}, {'date': '2023-08-06T00:00:00Z', 'market': {'id': 2, 'name': 'Jita 4-4'}, 'buyOrderCount': 8, 'buyVolume': 15138, 'sellOrderCount': 10, 'sellVolume': 8216, 'immediatePrices': {'buyPrice': 12780, 'splitPrice': 18865, 'sellPrice': 24950, 'buyPrice5DayMedian': 12486, 'splitPrice5DayMedian': 16155, 'sellPrice5DayMedian': 20000, 'buyPrice30DayMedian': 12853.666666666666, 'splitPrice30DayMedian': 15700, 'sellPrice30DayMedian': 18430}, 'top5AveragePrices': {'buyPrice': 12780, 'splitPrice': 18886.03658536585, 'sellPrice': 24992.073170731706, 'buyPrice5DayMedian': 12310, 'splitPrice5DayMedian': 17586.534772182255, 'sellPrice5DayMedian': 22863.06954436451, 'buyPrice30DayMedian': 12310, 'splitPrice30DayMedian': 15550.864928442015, 'sellPrice30DayMedian': 18491.11811023622}, 'itemType': {'eid': 11134, 'name': 'Amarr Shuttle', 'volume': 5000, 'packagedVolume': 500}}]
-Session data corrupted
-Internal Server Error: /buyback/
-Traceback (most recent call last):
-  File "/usr/lib/python3/dist-packages/django/core/handlers/exception.py", line 47, in inner
-    response = get_response(request)
-               ^^^^^^^^^^^^^^^^^^^^^
-  File "/usr/lib/python3/dist-packages/django/core/handlers/base.py", line 181, in _get_response
-    response = wrapped_callback(request, *callback_args, **callback_kwargs)
-               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/root/spoopy/buyback/views.py", line 181, in index
-    item_data = next((item for item in api_data if item['itemType']['name'] == item['name']), None)
-                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/root/spoopy/buyback/views.py", line 181, in <genexpr>
-    item_data = next((item for item in api_data if item['itemType']['name'] == item['name']), None)
-                                                                               ~~~~^^^^^^^^
-KeyError: 'name'
-/root/spoopy/buyback/views.py changed, reloading.
-Watching for file changes with StatReloader
-NumExpr defaulting to 2 threads.
-form_data input in into parse user input function: Amarr Shuttle	1	Shuttle	Ship			500 m3	19,434.56 ISK
-Dominix	1	Battleship	Ship			50,000 m3	381,156,235.83 ISK
-items_list in parse user input function: ['Amarr Shuttle\t1\tShuttle\tShip\t\t\t500 m3\t19,434.56 ISK', 'Dominix\t1\tBattleship\tShip\t\t\t50,000 m3\t381,156,235.83 ISK']
-regex debug search found name: Amarr Shuttle
-regex debug search found quantity: 1
-regex debug search found name: Dominix
-regex debug search found quantity: 1
-parseduserinput: [{'name': 'Amarr Shuttle', 'quantity': 1}, {'name': 'Dominix', 'quantity': 1}]
-apiinput: Amarr Shuttle 1
-Dominix 1
-
-Starting new HTTPS connection (1): janice.e-351.com:443
-https://janice.e-351.com:443 "POST /api/rest/v2/pricer?market=2 HTTP/1.1" 200 None
-janiceapijsonresp: [{'date': '2023-08-06T00:00:00Z', 'market': {'id': 2, 'name': 'Jita 4-4'}, 'buyOrderCount': 24, 'buyVolume': 37, 'sellOrderCount': 31, 'sellVolume': 73, 'immediatePrices': {'buyPrice': 357800000, 'splitPrice': 375650000, 'sellPrice': 393500000, 'buyPrice5DayMedian': 355640000, 'splitPrice5DayMedian': 375650000, 'sellPrice5DayMedian': 393500000, 'buyPrice30DayMedian': 350796666.6666667, 'splitPrice30DayMedian': 366650000, 'sellPrice30DayMedian': 384300000}, 'top5AveragePrices': {'buyPrice': 357800000, 'splitPrice': 375683333.3333334, 'sellPrice': 393566666.6666667, 'buyPrice5DayMedian': 355750000, 'splitPrice5DayMedian': 375683333.3333334, 'sellPrice5DayMedian': 393566666.6666667, 'buyPrice30DayMedian': 244489424.80769232, 'splitPrice30DayMedian': 323878366.34615386, 'sellPrice30DayMedian': 384433333.3333333}, 'itemType': {'eid': 645, 'name': 'Dominix', 'volume': 454500, 'packagedVolume': 50000}}, {'date': '2023-08-06T00:00:00Z', 'market': {'id': 2, 'name': 'Jita 4-4'}, 'buyOrderCount': 8, 'buyVolume': 15138, 'sellOrderCount': 10, 'sellVolume': 8216, 'immediatePrices': {'buyPrice': 12780, 'splitPrice': 18865, 'sellPrice': 24950, 'buyPrice5DayMedian': 12486, 'splitPrice5DayMedian': 16155, 'sellPrice5DayMedian': 20000, 'buyPrice30DayMedian': 12853.666666666666, 'splitPrice30DayMedian': 15700, 'sellPrice30DayMedian': 18430}, 'top5AveragePrices': {'buyPrice': 12780, 'splitPrice': 18886.03658536585, 'sellPrice': 24992.073170731706, 'buyPrice5DayMedian': 12310, 'splitPrice5DayMedian': 17586.534772182255, 'sellPrice5DayMedian': 22863.06954436451, 'buyPrice30DayMedian': 12310, 'splitPrice30DayMedian': 15550.864928442015, 'sellPrice30DayMedian': 18491.11811023622}, 'itemType': {'eid': 11134, 'name': 'Amarr Shuttle', 'volume': 5000, 'packagedVolume': 500}}]
-Session data corrupted
-Internal Server Error: /buyback/
-Traceback (most recent call last):
-  File "/usr/lib/python3/dist-packages/django/core/handlers/exception.py", line 47, in inner
-    response = get_response(request)
-               ^^^^^^^^^^^^^^^^^^^^^
-  File "/usr/lib/python3/dist-packages/django/core/handlers/base.py", line 181, in _get_response
-    response = wrapped_callback(request, *callback_args, **callback_kwargs)
-               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/root/spoopy/buyback/views.py", line 182, in index
-    item_data = next((item for item in api_data if item['itemType']['name'] == item_data['itemType']['name']), None)
-                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/root/spoopy/buyback/views.py", line 182, in <genexpr>
-    item_data = next((item for item in api_data if item['itemType']['name'] == item_data['itemType']['name']), None)
-                                                                               ^^^^^^^^^
-NameError: cannot access free variable 'item_data' where it is not associated with a value in enclosing scope
-/root/spoopy/buyback/views.py changed, reloading.
-Watching for file changes with StatReloader
-NumExpr defaulting to 2 threads.
-form_data input in into parse user input function: Amarr Shuttle	1	Shuttle	Ship			500 m3	19,434.56 ISK
-Dominix	1	Battleship	Ship			50,000 m3	381,156,235.83 ISK
-items_list in parse user input function: ['Amarr Shuttle\t1\tShuttle\tShip\t\t\t500 m3\t19,434.56 ISK', 'Dominix\t1\tBattleship\tShip\t\t\t50,000 m3\t381,156,235.83 ISK']
-regex debug search found name: Amarr Shuttle
-regex debug search found quantity: 1
-regex debug search found name: Dominix
-regex debug search found quantity: 1
-parseduserinput: [{'name': 'Amarr Shuttle', 'quantity': 1}, {'name': 'Dominix', 'quantity': 1}]
-apiinput: Amarr Shuttle 1
-Dominix 1
-
-Starting new HTTPS connection (1): janice.e-351.com:443
-https://janice.e-351.com:443 "POST /api/rest/v2/pricer?market=2 HTTP/1.1" 200 None
-janiceapijsonresp: [{'date': '2023-08-06T00:00:00Z', 'market': {'id': 2, 'name': 'Jita 4-4'}, 'buyOrderCount': 23, 'buyVolume': 36, 'sellOrderCount': 31, 'sellVolume': 73, 'immediatePrices': {'buyPrice': 357700000, 'splitPrice': 375600000, 'sellPrice': 393500000, 'buyPrice5DayMedian': 355620000, 'splitPrice5DayMedian': 375600000, 'sellPrice5DayMedian': 393500000, 'buyPrice30DayMedian': 350793333.3333333, 'splitPrice30DayMedian': 366650000, 'sellPrice30DayMedian': 384300000}, 'top5AveragePrices': {'buyPrice': 357700000, 'splitPrice': 375633333.3333334, 'sellPrice': 393566666.6666667, 'buyPrice5DayMedian': 355750000, 'splitPrice5DayMedian': 375633333.3333334, 'sellPrice5DayMedian': 393566666.6666667, 'buyPrice30DayMedian': 244489424.80769232, 'splitPrice30DayMedian': 323878366.34615386, 'sellPrice30DayMedian': 384433333.3333333}, 'itemType': {'eid': 645, 'name': 'Dominix', 'volume': 454500, 'packagedVolume': 50000}}, {'date': '2023-08-06T00:00:00Z', 'market': {'id': 2, 'name': 'Jita 4-4'}, 'buyOrderCount': 8, 'buyVolume': 15138, 'sellOrderCount': 10, 'sellVolume': 8214, 'immediatePrices': {'buyPrice': 12780, 'splitPrice': 18865, 'sellPrice': 24950, 'buyPrice5DayMedian': 12486, 'splitPrice5DayMedian': 16155, 'sellPrice5DayMedian': 20000, 'buyPrice30DayMedian': 12853.666666666666, 'splitPrice30DayMedian': 15700, 'sellPrice30DayMedian': 18430}, 'top5AveragePrices': {'buyPrice': 12780, 'splitPrice': 18886.158536585368, 'sellPrice': 24992.317073170732, 'buyPrice5DayMedian': 12310, 'splitPrice5DayMedian': 17586.534772182255, 'sellPrice5DayMedian': 22863.06954436451, 'buyPrice30DayMedian': 12310, 'splitPrice30DayMedian': 15550.864928442015, 'sellPrice30DayMedian': 18491.11811023622}, 'itemType': {'eid': 11134, 'name': 'Amarr Shuttle', 'volume': 5000, 'packagedVolume': 500}}]
-Session data corrupted
-Internal Server Error: /buyback/
-Traceback (most recent call last):
-  File "/usr/lib/python3/dist-packages/django/core/handlers/exception.py", line 47, in inner
-    response = get_response(request)
-               ^^^^^^^^^^^^^^^^^^^^^
-  File "/usr/lib/python3/dist-packages/django/core/handlers/base.py", line 181, in _get_response
-    response = wrapped_callback(request, *callback_args, **callback_kwargs)
-               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/root/spoopy/buyback/views.py", line 186, in index
-    item_data = next((item for item in api_data if item['itemType']['name'] == item_data['itemType']['name']), None)
-                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/root/spoopy/buyback/views.py", line 186, in <genexpr>
-    item_data = next((item for item in api_data if item['itemType']['name'] == item_data['itemType']['name']), None)
-                                                                               ^^^^^^^^^
-NameError: cannot access free variable 'item_data' where it is not associated with a value in enclosing scope
-/root/spoopy/buyback/views.py changed, reloading.
-Watching for file changes with StatReloader
-NumExpr defaulting to 2 threads.
-form_data input in into parse user input function: Amarr Shuttle	1	Shuttle	Ship			500 m3	19,434.56 ISK
-Dominix	1	Battleship	Ship			50,000 m3	381,156,235.83 ISK
-items_list in parse user input function: ['Amarr Shuttle\t1\tShuttle\tShip\t\t\t500 m3\t19,434.56 ISK', 'Dominix\t1\tBattleship\tShip\t\t\t50,000 m3\t381,156,235.83 ISK']
-regex debug search found name: Amarr Shuttle
-regex debug search found quantity: 1
-regex debug search found name: Dominix
-regex debug search found quantity: 1
-parseduserinput: [{'name': 'Amarr Shuttle', 'quantity': 1}, {'name': 'Dominix', 'quantity': 1}]
-apiinput: Amarr Shuttle 1
-Dominix 1
-
-Starting new HTTPS connection (1): janice.e-351.com:443
-https://janice.e-351.com:443 "POST /api/rest/v2/pricer?market=2 HTTP/1.1" 200 None
-janiceapijsonresp: [{'date': '2023-08-06T00:00:00Z', 'market': {'id': 2, 'name': 'Jita 4-4'}, 'buyOrderCount': 23, 'buyVolume': 36, 'sellOrderCount': 31, 'sellVolume': 73, 'immediatePrices': {'buyPrice': 357700000, 'splitPrice': 375600000, 'sellPrice': 393500000, 'buyPrice5DayMedian': 355620000, 'splitPrice5DayMedian': 375600000, 'sellPrice5DayMedian': 393500000, 'buyPrice30DayMedian': 350793333.3333333, 'splitPrice30DayMedian': 366650000, 'sellPrice30DayMedian': 384300000}, 'top5AveragePrices': {'buyPrice': 357700000, 'splitPrice': 375633333.3333334, 'sellPrice': 393566666.6666667, 'buyPrice5DayMedian': 355750000, 'splitPrice5DayMedian': 375633333.3333334, 'sellPrice5DayMedian': 393566666.6666667, 'buyPrice30DayMedian': 244489424.80769232, 'splitPrice30DayMedian': 323878366.34615386, 'sellPrice30DayMedian': 384433333.3333333}, 'itemType': {'eid': 645, 'name': 'Dominix', 'volume': 454500, 'packagedVolume': 50000}}, {'date': '2023-08-06T00:00:00Z', 'market': {'id': 2, 'name': 'Jita 4-4'}, 'buyOrderCount': 8, 'buyVolume': 15138, 'sellOrderCount': 10, 'sellVolume': 8214, 'immediatePrices': {'buyPrice': 12780, 'splitPrice': 18865, 'sellPrice': 24950, 'buyPrice5DayMedian': 12486, 'splitPrice5DayMedian': 16155, 'sellPrice5DayMedian': 20000, 'buyPrice30DayMedian': 12853.666666666666, 'splitPrice30DayMedian': 15700, 'sellPrice30DayMedian': 18430}, 'top5AveragePrices': {'buyPrice': 12780, 'splitPrice': 18886.158536585368, 'sellPrice': 24992.317073170732, 'buyPrice5DayMedian': 12310, 'splitPrice5DayMedian': 17586.534772182255, 'sellPrice5DayMedian': 22863.06954436451, 'buyPrice30DayMedian': 12310, 'splitPrice30DayMedian': 15550.864928442015, 'sellPrice30DayMedian': 18491.11811023622}, 'itemType': {'eid': 11134, 'name': 'Amarr Shuttle', 'volume': 5000, 'packagedVolume': 500}}]
-form_data input in into parse user input function: ishtar 1
-items_list in parse user input function: ['ishtar 1']
-regex debug search found name: ishtar 1
-regex debug search found quantity: 1
-parseduserinput: [{'name': 'ishtar 1', 'quantity': 1}]
-apiinput: ishtar 1 1
-
-Starting new HTTPS connection (1): janice.e-351.com:443
-https://janice.e-351.com:443 "POST /api/rest/v2/pricer?market=2 HTTP/1.1" 200 None
-janiceapijsonresp: [{'date': '2023-08-06T00:00:00Z', 'market': {'id': 2, 'name': 'Jita 4-4'}, 'buyOrderCount': 35, 'buyVolume': 156, 'sellOrderCount': 61, 'sellVolume': 552, 'immediatePrices': {'buyPrice': 179000000, 'splitPrice': 183950000, 'sellPrice': 188900000, 'buyPrice5DayMedian': 172180000, 'splitPrice5DayMedian': 174450000, 'sellPrice5DayMedian': 180300000, 'buyPrice30DayMedian': 177803333.33333334, 'splitPrice30DayMedian': 183950000, 'sellPrice30DayMedian': 188600000}, 'top5AveragePrices': {'buyPrice': 179000000, 'splitPrice': 184079629.6296296, 'sellPrice': 189159259.25925925, 'buyPrice5DayMedian': 168733333.33333334, 'splitPrice5DayMedian': 174763333.3333333, 'sellPrice5DayMedian': 181948275.86206895, 'buyPrice30DayMedian': 179000000, 'splitPrice30DayMedian': 183975000, 'sellPrice30DayMedian': 188950000}, 'itemType': {'eid': 12005, 'name': 'Ishtar', 'volume': 115000, 'packagedVolume': 10000}}]
-form_data input in into parse user input function: vexor 1
-ishtar 1
-items_list in parse user input function: ['vexor 1', 'ishtar 1']
-regex debug search found name: vexor 1
-regex debug search found quantity: 1
-regex debug search found name: ishtar 1
-regex debug search found quantity: 1
-parseduserinput: [{'name': 'vexor 1', 'quantity': 1}, {'name': 'ishtar 1', 'quantity': 1}]
-apiinput: vexor 1 1
-ishtar 1 1
-
-Starting new HTTPS connection (1): janice.e-351.com:443
-https://janice.e-351.com:443 "POST /api/rest/v2/pricer?market=2 HTTP/1.1" 200 None
-janiceapijsonresp: [{'date': '2023-08-06T00:00:00Z', 'market': {'id': 2, 'name': 'Jita 4-4'}, 'buyOrderCount': 22, 'buyVolume': 251, 'sellOrderCount': 33, 'sellVolume': 386, 'immediatePrices': {'buyPrice': 13430000, 'splitPrice': 13940000, 'sellPrice': 14450000, 'buyPrice5DayMedian': 13362000, 'splitPrice5DayMedian': 13850000, 'sellPrice5DayMedian': 14420000, 'buyPrice30DayMedian': 12896666.666666666, 'splitPrice30DayMedian': 13610000, 'sellPrice30DayMedian': 14430000}, 'top5AveragePrices': {'buyPrice': 13430000, 'splitPrice': 13941052.631578948, 'sellPrice': 14452105.263157895, 'buyPrice5DayMedian': 13377647.05882353, 'splitPrice5DayMedian': 13910294.11764706, 'sellPrice5DayMedian': 14450588.235294119, 'buyPrice30DayMedian': 12783181.818181818, 'splitPrice30DayMedian': 13601642.857142858, 'sellPrice30DayMedian': 14452105.263157895}, 'itemType': {'eid': 626, 'name': 'Vexor', 'volume': 115000, 'packagedVolume': 10000}}, {'date': '2023-08-06T00:00:00Z', 'market': {'id': 2, 'name': 'Jita 4-4'}, 'buyOrderCount': 35, 'buyVolume': 156, 'sellOrderCount': 61, 'sellVolume': 552, 'immediatePrices': {'buyPrice': 179000000, 'splitPrice': 183950000, 'sellPrice': 188900000, 'buyPrice5DayMedian': 172180000, 'splitPrice5DayMedian': 174450000, 'sellPrice5DayMedian': 180300000, 'buyPrice30DayMedian': 177803333.33333334, 'splitPrice30DayMedian': 183950000, 'sellPrice30DayMedian': 188600000}, 'top5AveragePrices': {'buyPrice': 179000000, 'splitPrice': 184079629.6296296, 'sellPrice': 189159259.25925925, 'buyPrice5DayMedian': 168733333.33333334, 'splitPrice5DayMedian': 174763333.3333333, 'sellPrice5DayMedian': 181948275.86206895, 'buyPrice30DayMedian': 179000000, 'splitPrice30DayMedian': 183975000, 'sellPrice30DayMedian': 188950000}, 'itemType': {'eid': 12005, 'name': 'Ishtar', 'volume': 115000, 'packagedVolume': 10000}}]
-/root/spoopy/buyback/views.py changed, reloading.
-Watching for file changes with StatReloader
-NumExpr defaulting to 2 threads.
-/root/spoopy/buyback/views.py changed, reloading.
-Watching for file changes with StatReloader
-NumExpr defaulting to 2 threads.
-form_data input in into parse user input function: Neural Network Analyzer	16	Sleeper Components	Commodity			1.60 m3	3,200,000.00 ISK
-Sleeper Data Library	2	Sleeper Components	Commodity			0.20 m3	1,000,000.00 ISK
-items_list in parse user input function: ['Neural Network Analyzer\t16\tSleeper Components\tCommodity\t\t\t1.60 m3\t3,200,000.00 ISK', 'Sleeper Data Library\t2\tSleeper Components\tCommodity\t\t\t0.20 m3\t1,000,000.00 ISK']
-regex debug search found name: Neural Network Analyzer
-regex debug search found quantity: 16
-regex debug search found name: Sleeper Data Library
+form_data input in into parse user input function: Initiated Compact Warp Scrambler	2	Warp Scrambler	1
+items_list in parse user input function: ['Initiated Compact Warp Scrambler\t2\tWarp Scrambler\t1']
+regex debug search found name: Initiated Compact Warp Scrambler
 regex debug search found quantity: 2
-parseduserinput: [{'name': 'Neural Network Analyzer', 'quantity': 16}, {'name': 'Sleeper Data Library', 'quantity': 2}]
-apiinput: Neural Network Analyzer 16
-Sleeper Data Library 2
+parseduserinput: [{'name': 'Initiated Compact Warp Scrambler', 'quantity': 2}]
+apiinput: Initiated Compact Warp Scrambler 2
 
 Starting new HTTPS connection (1): janice.e-351.com:443
 https://janice.e-351.com:443 "POST /api/rest/v2/pricer?market=2 HTTP/1.1" 200 None
-janiceapijsonresp: [{'date': '2023-08-06T00:00:00Z', 'market': {'id': 2, 'name': 'Jita 4-4'}, 'buyOrderCount': 16, 'buyVolume': 1045257, 'sellOrderCount': 42, 'sellVolume': 4579, 'immediatePrices': {'buyPrice': 191000, 'splitPrice': 191050, 'sellPrice': 191100, 'buyPrice5DayMedian': 191300, 'splitPrice5DayMedian': 192650, 'sellPrice5DayMedian': 193900, 'buyPrice30DayMedian': 191156.66666666666, 'splitPrice30DayMedian': 191750, 'sellPrice30DayMedian': 192000}, 'top5AveragePrices': {'buyPrice': 112590.94333741533, 'splitPrice': 153021.78745818135, 'sellPrice': 193452.63157894736, 'buyPrice5DayMedian': 96531.32348751849, 'splitPrice5DayMedian': 145289.03180752986, 'sellPrice5DayMedian': 193927.11111111112, 'buyPrice30DayMedian': 43071.568647361964, 'splitPrice30DayMedian': 117802.31818822282, 'sellPrice30DayMedian': 193395.3795379538}, 'itemType': {'eid': 30744, 'name': 'Neural Network Analyzer', 'volume': 0.1, 'packagedVolume': 0.1}}, {'date': '2023-08-06T00:00:00Z', 'market': {'id': 2, 'name': 'Jita 4-4'}, 'buyOrderCount': 11, 'buyVolume': 23503, 'sellOrderCount': 22, 'sellVolume': 1514, 'immediatePrices': {'buyPrice': 477300, 'splitPrice': 477400, 'sellPrice': 477500, 'buyPrice5DayMedian': 478540, 'splitPrice5DayMedian': 479050, 'sellPrice5DayMedian': 479100, 'buyPrice30DayMedian': 479310, 'splitPrice30DayMedian': 480650, 'sellPrice30DayMedian': 481100}, 'top5AveragePrices': {'buyPrice': 477170.6382978723, 'splitPrice': 480030.6524822695, 'sellPrice': 482890.6666666667, 'buyPrice5DayMedian': 478597.52198241407, 'splitPrice5DayMedian': 480057.49663299666, 'sellPrice5DayMedian': 482890.6666666667, 'buyPrice30DayMedian': 159223.33077289243, 'splitPrice30DayMedian': 322323.9941535695, 'sellPrice30DayMedian': 484411.92052980134}, 'itemType': {'eid': 30745, 'name': 'Sleeper Data Library', 'volume': 0.1, 'packagedVolume': 0.1}}]
+janiceapijsonresp: [{'date': '2023-08-06T00:00:00Z', 'market': {'id': 2, 'name': 'Jita 4-4'}, 'buyOrderCount': 4, 'buyVolume': 2664, 'sellOrderCount': 69, 'sellVolume': 20106, 'immediatePrices': {'buyPrice': 27220, 'splitPrice': 29300, 'sellPrice': 31380, 'buyPrice5DayMedian': 27264, 'splitPrice5DayMedian': 28665, 'sellPrice5DayMedian': 30000, 'buyPrice30DayMedian': 28505, 'splitPrice30DayMedian': 30195, 'sellPrice30DayMedian': 31410}, 'top5AveragePrices': {'buyPrice': 27217.81954887218, 'splitPrice': 29298.90977443609, 'sellPrice': 31380, 'buyPrice5DayMedian': 27237.63157894737, 'splitPrice5DayMedian': 29294.48827035034, 'sellPrice5DayMedian': 31359.60591133005, 'buyPrice30DayMedian': 28960, 'splitPrice30DayMedian': 30223.350230414748, 'sellPrice30DayMedian': 31486.700460829492}, 'itemType': {'eid': 5445, 'name': 'Initiated Compact Warp Scrambler', 'volume': 5, 'packagedVolume': 5}}]
+Is fee for haul?: False
+Session data corrupted
+Internal Server Error: /buyback/
+Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/django/core/handlers/base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/spoopy/buyback/views.py", line 206, in index
+    haul_fee == 0
+    ^^^^^^^^
+UnboundLocalError: cannot access local variable 'haul_fee' where it is not associated with a value
+/root/spoopy/buyback/views.py changed, reloading.
+Watching for file changes with StatReloader
+NumExpr defaulting to 2 threads.
+form_data input in into parse user input function: Faint Epsilon Scoped Warp Scrambler	1	Warp Scrambler	1
+items_list in parse user input function: ['Faint Epsilon Scoped Warp Scrambler\t1\tWarp Scrambler\t1']
+regex debug search found name: Faint Epsilon Scoped Warp Scrambler
+regex debug search found quantity: 1
+parseduserinput: [{'name': 'Faint Epsilon Scoped Warp Scrambler', 'quantity': 1}]
+apiinput: Faint Epsilon Scoped Warp Scrambler 1
+
+Starting new HTTPS connection (1): janice.e-351.com:443
+https://janice.e-351.com:443 "POST /api/rest/v2/pricer?market=2 HTTP/1.1" 200 None
+janiceapijsonresp: [{'date': '2023-08-06T00:00:00Z', 'market': {'id': 2, 'name': 'Jita 4-4'}, 'buyOrderCount': 7, 'buyVolume': 101753, 'sellOrderCount': 26, 'sellVolume': 27048, 'immediatePrices': {'buyPrice': 41640, 'splitPrice': 45805, 'sellPrice': 49970, 'buyPrice5DayMedian': 41782, 'splitPrice5DayMedian': 45880, 'sellPrice5DayMedian': 49980, 'buyPrice30DayMedian': 41971.333333333336, 'splitPrice30DayMedian': 48865, 'sellPrice30DayMedian': 55800}, 'top5AveragePrices': {'buyPrice': 3880.402465107136, 'splitPrice': 26925.20123255357, 'sellPrice': 49970, 'buyPrice5DayMedian': 10358.982776911076, 'splitPrice5DayMedian': 32113.3775270694, 'sellPrice5DayMedian': 53867.77227722772, 'buyPrice30DayMedian': 22554.795766423358, 'splitPrice30DayMedian': 39473.562165201394, 'sellPrice30DayMedian': 55851.80790960452}, 'itemType': {'eid': 5443, 'name': 'Faint Epsilon Scoped Warp Scrambler', 'volume': 5, 'packagedVolume': 5}}]
+Is fee for haul?: False
+haul fee is: 0
+Not Found: /
+Session data corrupted
+Session data corrupted
+Session data corrupted
+Forbidden (CSRF token missing or incorrect.): /buyback/
+form_data input in into parse user input function: Compressed Azure Cytoserocin	1	Warp Scrambler	5
+items_list in parse user input function: ['Compressed Azure Cytoserocin\t1\tWarp Scrambler\t5']
+regex debug search found name: Compressed Azure Cytoserocin
+regex debug search found quantity: 1
+parseduserinput: [{'name': 'Compressed Azure Cytoserocin', 'quantity': 1}]
+apiinput: Compressed Azure Cytoserocin 1
+
+Starting new HTTPS connection (1): janice.e-351.com:443
+https://janice.e-351.com:443 "POST /api/rest/v2/pricer?market=2 HTTP/1.1" 200 None
+janiceapijsonresp: [{'date': '2023-08-06T00:00:00Z', 'market': {'id': 2, 'name': 'Jita 4-4'}, 'buyOrderCount': 8, 'buyVolume': 1276210, 'sellOrderCount': 5, 'sellVolume': 18250, 'immediatePrices': {'buyPrice': 33120, 'splitPrice': 54560, 'sellPrice': 76000, 'buyPrice5DayMedian': 33108, 'splitPrice5DayMedian': 54575, 'sellPrice5DayMedian': 76070, 'buyPrice30DayMedian': 26024, 'splitPrice30DayMedian': 50245, 'sellPrice30DayMedian': 76330}, 'top5AveragePrices': {'buyPrice': 10728.316143237738, 'splitPrice': 43372.37079091711, 'sellPrice': 76016.42543859649, 'buyPrice5DayMedian': 10728.03405579063, 'splitPrice5DayMedian': 43395.3498910829, 'sellPrice5DayMedian': 76070, 'buyPrice30DayMedian': 6234.197282543798, 'splitPrice30DayMedian': 41362.0986412719, 'sellPrice30DayMedian': 76330}, 'itemType': {'eid': 62386, 'name': 'Compressed Azure Cytoserocin', 'volume': 1, 'packagedVolume': 1}}]
+Is fee for haul?: True
+haul fee is: 200
+/root/spoopy/buyback/views.py changed, reloading.
+Watching for file changes with StatReloader
+NumExpr defaulting to 2 threads.
+form_data input in into parse user input function: Compressed Azure Cytoserocin	1	Warp Scrambler	5
+items_list in parse user input function: ['Compressed Azure Cytoserocin\t1\tWarp Scrambler\t5']
+regex debug search found name: Compressed Azure Cytoserocin
+regex debug search found quantity: 1
+parseduserinput: [{'name': 'Compressed Azure Cytoserocin', 'quantity': 1}]
+apiinput: Compressed Azure Cytoserocin 1
+
+Starting new HTTPS connection (1): janice.e-351.com:443
+https://janice.e-351.com:443 "POST /api/rest/v2/pricer?market=2 HTTP/1.1" 200 None
+janiceapijsonresp: [{'date': '2023-08-06T00:00:00Z', 'market': {'id': 2, 'name': 'Jita 4-4'}, 'buyOrderCount': 8, 'buyVolume': 1276210, 'sellOrderCount': 5, 'sellVolume': 18250, 'immediatePrices': {'buyPrice': 33120, 'splitPrice': 54560, 'sellPrice': 76000, 'buyPrice5DayMedian': 33108, 'splitPrice5DayMedian': 54575, 'sellPrice5DayMedian': 76070, 'buyPrice30DayMedian': 26024, 'splitPrice30DayMedian': 50245, 'sellPrice30DayMedian': 76330}, 'top5AveragePrices': {'buyPrice': 10728.316143237738, 'splitPrice': 43372.37079091711, 'sellPrice': 76016.42543859649, 'buyPrice5DayMedian': 10728.03405579063, 'splitPrice5DayMedian': 43395.3498910829, 'sellPrice5DayMedian': 76070, 'buyPrice30DayMedian': 6234.197282543798, 'splitPrice30DayMedian': 41362.0986412719, 'sellPrice30DayMedian': 76330}, 'itemType': {'eid': 62386, 'name': 'Compressed Azure Cytoserocin', 'volume': 1, 'packagedVolume': 1}}]
+Is fee for haul?: True
+haul fee is: 200
+/root/spoopy/buyback/views.py changed, reloading.
+Watching for file changes with StatReloader
+NumExpr defaulting to 2 threads.
+form_data input in into parse user input function: Compressed Azure Cytoserocin	1	Warp Scrambler	5
+items_list in parse user input function: ['Compressed Azure Cytoserocin\t1\tWarp Scrambler\t5']
+regex debug search found name: Compressed Azure Cytoserocin
+regex debug search found quantity: 1
+parseduserinput: [{'name': 'Compressed Azure Cytoserocin', 'quantity': 1}]
+apiinput: Compressed Azure Cytoserocin 1
+
+Starting new HTTPS connection (1): janice.e-351.com:443
+https://janice.e-351.com:443 "POST /api/rest/v2/pricer?market=2 HTTP/1.1" 200 None
+janiceapijsonresp: [{'date': '2023-08-06T00:00:00Z', 'market': {'id': 2, 'name': 'Jita 4-4'}, 'buyOrderCount': 8, 'buyVolume': 1276210, 'sellOrderCount': 5, 'sellVolume': 18250, 'immediatePrices': {'buyPrice': 33120, 'splitPrice': 54560, 'sellPrice': 76000, 'buyPrice5DayMedian': 33108, 'splitPrice5DayMedian': 54575, 'sellPrice5DayMedian': 76070, 'buyPrice30DayMedian': 26024, 'splitPrice30DayMedian': 50245, 'sellPrice30DayMedian': 76330}, 'top5AveragePrices': {'buyPrice': 10728.316143237738, 'splitPrice': 43372.37079091711, 'sellPrice': 76016.42543859649, 'buyPrice5DayMedian': 10728.03405579063, 'splitPrice5DayMedian': 43395.3498910829, 'sellPrice5DayMedian': 76070, 'buyPrice30DayMedian': 6234.197282543798, 'splitPrice30DayMedian': 41362.0986412719, 'sellPrice30DayMedian': 76330}, 'itemType': {'eid': 62386, 'name': 'Compressed Azure Cytoserocin', 'volume': 1, 'packagedVolume': 1}}]
+Is fee for haul?: True
+haul fee is: 200
+form_data input in into parse user input function: Salvage Drone I	1	drone	5
+items_list in parse user input function: ['Salvage Drone I\t1\tdrone\t5']
+regex debug search found name: Salvage Drone I
+regex debug search found quantity: 1
+parseduserinput: [{'name': 'Salvage Drone I', 'quantity': 1}]
+apiinput: Salvage Drone I 1
+
+Starting new HTTPS connection (1): janice.e-351.com:443
+https://janice.e-351.com:443 "POST /api/rest/v2/pricer?market=2 HTTP/1.1" 200 None
+janiceapijsonresp: [{'date': '2023-08-06T00:00:00Z', 'market': {'id': 2, 'name': 'Jita 4-4'}, 'buyOrderCount': 15, 'buyVolume': 4415, 'sellOrderCount': 23, 'sellVolume': 5547, 'immediatePrices': {'buyPrice': 61870, 'splitPrice': 65935, 'sellPrice': 70000, 'buyPrice5DayMedian': 61678, 'splitPrice5DayMedian': 70775, 'sellPrice5DayMedian': 80000, 'buyPrice30DayMedian': 59044.666666666664, 'splitPrice30DayMedian': 67575, 'sellPrice30DayMedian': 75420}, 'top5AveragePrices': {'buyPrice': 61870, 'splitPrice': 65935, 'sellPrice': 70000, 'buyPrice5DayMedian': 61676.44351464435, 'splitPrice5DayMedian': 71531.72429124385, 'sellPrice5DayMedian': 81619.86666666667, 'buyPrice30DayMedian': 59320, 'splitPrice30DayMedian': 67607.44107744108, 'sellPrice30DayMedian': 75518.57142857143}, 'itemType': {'eid': 32787, 'name': 'Salvage Drone I', 'volume': 5, 'packagedVolume': 5}}]
+Is fee for haul?: True
+haul fee is: 1000
+form_data input in into parse user input function: Salvage Drone I	2	drone	5
+items_list in parse user input function: ['Salvage Drone I\t2\tdrone\t5']
+regex debug search found name: Salvage Drone I
+regex debug search found quantity: 2
+parseduserinput: [{'name': 'Salvage Drone I', 'quantity': 2}]
+apiinput: Salvage Drone I 2
+
+Starting new HTTPS connection (1): janice.e-351.com:443
+https://janice.e-351.com:443 "POST /api/rest/v2/pricer?market=2 HTTP/1.1" 200 None
+janiceapijsonresp: [{'date': '2023-08-06T00:00:00Z', 'market': {'id': 2, 'name': 'Jita 4-4'}, 'buyOrderCount': 15, 'buyVolume': 4415, 'sellOrderCount': 23, 'sellVolume': 5547, 'immediatePrices': {'buyPrice': 61870, 'splitPrice': 65935, 'sellPrice': 70000, 'buyPrice5DayMedian': 61678, 'splitPrice5DayMedian': 70775, 'sellPrice5DayMedian': 80000, 'buyPrice30DayMedian': 59044.666666666664, 'splitPrice30DayMedian': 67575, 'sellPrice30DayMedian': 75420}, 'top5AveragePrices': {'buyPrice': 61870, 'splitPrice': 65935, 'sellPrice': 70000, 'buyPrice5DayMedian': 61676.44351464435, 'splitPrice5DayMedian': 71531.72429124385, 'sellPrice5DayMedian': 81619.86666666667, 'buyPrice30DayMedian': 59320, 'splitPrice30DayMedian': 67607.44107744108, 'sellPrice30DayMedian': 75518.57142857143}, 'itemType': {'eid': 32787, 'name': 'Salvage Drone I', 'volume': 5, 'packagedVolume': 5}}]
+Is fee for haul?: True
+haul fee is: 1000
+/root/spoopy/buyback/views.py changed, reloading.
+Watching for file changes with StatReloader
+NumExpr defaulting to 2 threads.
+form_data input in into parse user input function: Salvage Drone I	2	drone	5
+items_list in parse user input function: ['Salvage Drone I\t2\tdrone\t5']
+regex debug search found name: Salvage Drone I
+regex debug search found quantity: 2
+parseduserinput: [{'name': 'Salvage Drone I', 'quantity': 2}]
+apiinput: Salvage Drone I 2
+
+Starting new HTTPS connection (1): janice.e-351.com:443
+https://janice.e-351.com:443 "POST /api/rest/v2/pricer?market=2 HTTP/1.1" 200 None
+janiceapijsonresp: [{'date': '2023-08-06T00:00:00Z', 'market': {'id': 2, 'name': 'Jita 4-4'}, 'buyOrderCount': 15, 'buyVolume': 4415, 'sellOrderCount': 23, 'sellVolume': 5547, 'immediatePrices': {'buyPrice': 61870, 'splitPrice': 65935, 'sellPrice': 70000, 'buyPrice5DayMedian': 61678, 'splitPrice5DayMedian': 70775, 'sellPrice5DayMedian': 80000, 'buyPrice30DayMedian': 59044.666666666664, 'splitPrice30DayMedian': 67575, 'sellPrice30DayMedian': 75420}, 'top5AveragePrices': {'buyPrice': 61870, 'splitPrice': 65935, 'sellPrice': 70000, 'buyPrice5DayMedian': 61676.44351464435, 'splitPrice5DayMedian': 71531.72429124385, 'sellPrice5DayMedian': 81619.86666666667, 'buyPrice30DayMedian': 59320, 'splitPrice30DayMedian': 67607.44107744108, 'sellPrice30DayMedian': 75518.57142857143}, 'itemType': {'eid': 32787, 'name': 'Salvage Drone I', 'volume': 5, 'packagedVolume': 5}}]
+Is fee for haul?: True
+haul fee is: 2000
+form_data input in into parse user input function: Salvage Drone I	1	drone	1
+items_list in parse user input function: ['Salvage Drone I\t1\tdrone\t1']
+regex debug search found name: Salvage Drone I
+regex debug search found quantity: 1
+parseduserinput: [{'name': 'Salvage Drone I', 'quantity': 1}]
+apiinput: Salvage Drone I 1
+
+Starting new HTTPS connection (1): janice.e-351.com:443
+https://janice.e-351.com:443 "POST /api/rest/v2/pricer?market=2 HTTP/1.1" 200 None
+janiceapijsonresp: [{'date': '2023-08-06T00:00:00Z', 'market': {'id': 2, 'name': 'Jita 4-4'}, 'buyOrderCount': 15, 'buyVolume': 4415, 'sellOrderCount': 23, 'sellVolume': 5547, 'immediatePrices': {'buyPrice': 61870, 'splitPrice': 65935, 'sellPrice': 70000, 'buyPrice5DayMedian': 61678, 'splitPrice5DayMedian': 70775, 'sellPrice5DayMedian': 80000, 'buyPrice30DayMedian': 59044.666666666664, 'splitPrice30DayMedian': 67575, 'sellPrice30DayMedian': 75420}, 'top5AveragePrices': {'buyPrice': 61870, 'splitPrice': 65935, 'sellPrice': 70000, 'buyPrice5DayMedian': 61676.44351464435, 'splitPrice5DayMedian': 71531.72429124385, 'sellPrice5DayMedian': 81619.86666666667, 'buyPrice30DayMedian': 59320, 'splitPrice30DayMedian': 67607.44107744108, 'sellPrice30DayMedian': 75518.57142857143}, 'itemType': {'eid': 32787, 'name': 'Salvage Drone I', 'volume': 5, 'packagedVolume': 5}}]
+Is fee for haul?: True
+haul fee is: 1000
+form_data input in into parse user input function: Salvage Drone I	1000	drone	1
+items_list in parse user input function: ['Salvage Drone I\t1000\tdrone\t1']
+regex debug search found name: Salvage Drone I
+regex debug search found quantity: 1000
+parseduserinput: [{'name': 'Salvage Drone I', 'quantity': 1000}]
+apiinput: Salvage Drone I 1000
+
+Starting new HTTPS connection (1): janice.e-351.com:443
+https://janice.e-351.com:443 "POST /api/rest/v2/pricer?market=2 HTTP/1.1" 200 None
+janiceapijsonresp: [{'date': '2023-08-06T00:00:00Z', 'market': {'id': 2, 'name': 'Jita 4-4'}, 'buyOrderCount': 15, 'buyVolume': 4415, 'sellOrderCount': 23, 'sellVolume': 5547, 'immediatePrices': {'buyPrice': 61870, 'splitPrice': 65935, 'sellPrice': 70000, 'buyPrice5DayMedian': 61678, 'splitPrice5DayMedian': 70775, 'sellPrice5DayMedian': 80000, 'buyPrice30DayMedian': 59044.666666666664, 'splitPrice30DayMedian': 67575, 'sellPrice30DayMedian': 75420}, 'top5AveragePrices': {'buyPrice': 61870, 'splitPrice': 65935, 'sellPrice': 70000, 'buyPrice5DayMedian': 61676.44351464435, 'splitPrice5DayMedian': 71531.72429124385, 'sellPrice5DayMedian': 81619.86666666667, 'buyPrice30DayMedian': 59320, 'splitPrice30DayMedian': 67607.44107744108, 'sellPrice30DayMedian': 75518.57142857143}, 'itemType': {'eid': 32787, 'name': 'Salvage Drone I', 'volume': 5, 'packagedVolume': 5}}]
+Is fee for haul?: True
+haul fee is: 1000000
+/root/spoopy/buyback/admin.py changed, reloading.
+Watching for file changes with StatReloader
+NumExpr defaulting to 2 threads.
+form_data input in into parse user input function: Salvage Drone I	1000	drone	1
+items_list in parse user input function: ['Salvage Drone I\t1000\tdrone\t1']
+regex debug search found name: Salvage Drone I
+regex debug search found quantity: 1000
+parseduserinput: [{'name': 'Salvage Drone I', 'quantity': 1000}]
+apiinput: Salvage Drone I 1000
+
+Starting new HTTPS connection (1): janice.e-351.com:443
+https://janice.e-351.com:443 "POST /api/rest/v2/pricer?market=2 HTTP/1.1" 200 None
+janiceapijsonresp: [{'date': '2023-08-06T00:00:00Z', 'market': {'id': 2, 'name': 'Jita 4-4'}, 'buyOrderCount': 14, 'buyVolume': 4392, 'sellOrderCount': 23, 'sellVolume': 5547, 'immediatePrices': {'buyPrice': 61870, 'splitPrice': 65935, 'sellPrice': 70000, 'buyPrice5DayMedian': 61678, 'splitPrice5DayMedian': 70775, 'sellPrice5DayMedian': 80000, 'buyPrice30DayMedian': 59044.666666666664, 'splitPrice30DayMedian': 67575, 'sellPrice30DayMedian': 75420}, 'top5AveragePrices': {'buyPrice': 61870, 'splitPrice': 65935, 'sellPrice': 70000, 'buyPrice5DayMedian': 61676.44351464435, 'splitPrice5DayMedian': 71531.72429124385, 'sellPrice5DayMedian': 81619.86666666667, 'buyPrice30DayMedian': 59320, 'splitPrice30DayMedian': 67607.44107744108, 'sellPrice30DayMedian': 75518.57142857143}, 'itemType': {'eid': 32787, 'name': 'Salvage Drone I', 'volume': 5, 'packagedVolume': 5}}]
+Is fee for haul?: False
+haul fee is: 0

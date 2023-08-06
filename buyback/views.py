@@ -127,6 +127,15 @@ def get_tax_rate_from_database(item_id):
     except EveItemTax.DoesNotExist:
         return 0.0  # Default tax rate if item not found
 
+def get_haul_fee_bool_from_database(item_id):
+    try:
+        haul_fee_entry = EveItemTax.objects.get(type_id=item_id)
+        # return tax_entry.jita_buy_percentage / 100.0  # Convert percentage to decimal
+        return haul_fee_entry.hauling_fee  
+    except EveItemTax.DoesNotExist:
+        return False # Default to False not found
+        
+
 # def generate_api_input(parsed_user_input):
 #     string = ""
 #     for items in parsed_user_input:
@@ -156,6 +165,7 @@ def generate_api_input(parsed_user_input):
     return string  # Move the return statement outside the loop
 
 def index(request):
+    haul_fee_rate_sv = 200 # set value is 200 ISK per m3
     debug = []
     info_right = 2
     if request.method == 'POST':
@@ -173,7 +183,7 @@ def index(request):
             api_data = janiceresponse.json()
             logger.debug("janiceapijsonresp: %s", api_data)
 
-            # make list of dicts that combines api_data + tax_rate + api_input
+            # make list of dicts that combines api_data + tax_rate + api_input \\ need to add: hauling fee ###
             processed_items = []
             for item in parsed_user_input:
                 
@@ -185,7 +195,17 @@ def index(request):
                 #item_data = next((item for item in api_data if item['itemType']['name'] == item_data['itemType']['name']), None)
                 item_data = next((api_item for api_item in api_data if api_item['itemType']['name'] == item_name), None)
                 if item_data:
+                    
                     item_id = item_data['itemType']['eid']
+                    item_volume = item_data['itemType']['volume']                    
+                    haul_bool = get_haul_fee_bool_from_database(item_id)
+                    logger.debug("Is fee for haul?: %s", haul_bool)
+                    if haul_bool == True:
+                        total_item_vol = item_volume * quantity
+                        haul_fee = haul_fee_rate_sv * total_item_vol
+                    else:
+                        haul_fee = 0
+                    logger.debug("haul fee is: %s", haul_fee)
                     tax_rate = get_tax_rate_from_database(item_id)
                     buyback_price = calculate_buyback_price(api_data[0]['immediatePrices']['buyPrice5DayMedian'], tax_rate)
                     buyback_price_itemtotal = quantity * buyback_price
@@ -201,6 +221,9 @@ def index(request):
                         'market_price': market_price,
                         'buyback_price_itemtotal': buyback_price_itemtotal,
                         'market_price_itemtotal': market_price_itemtotal,
+                        'haul_bool': haul_bool,
+                        'item_volume': item_volume,
+                        'haul_fee': haul_fee,
                         
                     })  # Include the processed item data
        
@@ -208,14 +231,17 @@ def index(request):
             gtotal_buyback = sum(item.get('buyback_price_itemtotal', 0) for item in processed_items)
 
             totals_info = [gtotal_buyback, gtotal_market]           
-
-            debug = [processed_items]
+            nl_db = "\n"
+            debug = [processed_items, nl_db, api_data]
             # debug = 0
             return render(request, 'buyback/index.html', {'form': form,'processed_items': processed_items, 'totals_info':totals_info, 'debug': debug, 'info_right': info_right})
     else:
         form = ItemForm()
         info_right = 1
     return render(request, 'buyback/index.html', {'form': form, 'debug': debug, 'info_right': info_right})
+
+
+
 '''
 note:
 haul no Use   isk to m3   200 isk per m3
