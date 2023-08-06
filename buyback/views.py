@@ -240,11 +240,6 @@ def index(request):
         info_right = 1
     return render(request, 'buyback/index.html', {'form': form, 'debug': debug, 'info_right': info_right})
 
-
-
-'''
-note:
-haul no Use   isk to m3   200 isk per m3
-none should have both flat and market rate
-jita buy * percent of jita buy
-'''
+def all_item_tax_view(request):
+    all_items = EveItemTax.objects.all()
+    return render(request, 'buyback/all_item_tax.html', {'all_items': all_items})
