@@ -1,310 +1,144 @@
 /root/spoopy/buyback/views.py changed, reloading.
 Watching for file changes with StatReloader
 NumExpr defaulting to 2 threads.
-form_data input in into parse user input function: Vexor 1
-Heavy Water	260,385	Ice Product
-items_list in parse user input function: ['Vexor 1', 'Heavy Water\t260,385\tIce Product']
-found name: Vexor
-found quantity: 1
-regex debug search found name: Heavy Water
-regex debug search found quantity: 260385
-parsed_user_input: [{'name': 'Vexor', 'quantity': 1}, {'name': 'Heavy Water', 'quantity': 260385}]
-apiinput: Vexor 1
-Heavy Water 260385
-
-Starting new HTTPS connection (1): janice.e-351.com:443
-https://janice.e-351.com:443 "POST /api/rest/v2/pricer?market=2 HTTP/1.1" 200 None
-api_data: [{'date': '2023-08-06T00:00:00Z', 'market': {'id': 2, 'name': 'Jita 4-4'}, 'buyOrderCount': 19, 'buyVolume': 209, 'sellOrderCount': 31, 'sellVolume': 346, 'immediatePrices': {'buyPrice': 13500000, 'splitPrice': 13995000, 'sellPrice': 14490000, 'buyPrice5DayMedian': 13376000, 'splitPrice5DayMedian': 13850000, 'sellPrice5DayMedian': 14420000, 'buyPrice30DayMedian': 12899000, 'splitPrice30DayMedian': 13610000, 'sellPrice30DayMedian': 14430000}, 'top5AveragePrices': {'buyPrice': 13490000, 'splitPrice': 13994411.764705881, 'sellPrice': 14498823.529411765, 'buyPrice5DayMedian': 13377647.05882353, 'splitPrice5DayMedian': 13910294.11764706, 'sellPrice5DayMedian': 14450588.235294119, 'buyPrice30DayMedian': 12783181.818181818, 'splitPrice30DayMedian': 13601642.857142858, 'sellPrice30DayMedian': 14470555.555555556}, 'itemType': {'eid': 626, 'name': 'Vexor', 'volume': 115000, 'packagedVolume': 10000}}, {'date': '2023-08-06T00:00:00Z', 'market': {'id': 2, 'name': 'Jita 4-4'}, 'buyOrderCount': 23, 'buyVolume': 101803757, 'sellOrderCount': 70, 'sellVolume': 75366794, 'immediatePrices': {'buyPrice': 139.8, 'splitPrice': 146.35000000000002, 'sellPrice': 152.9, 'buyPrice5DayMedian': 144.95999999999998, 'splitPrice5DayMedian': 149.75, 'sellPrice5DayMedian': 154.3, 'buyPrice30DayMedian': 144.6933333333333, 'splitPrice30DayMedian': 152.45, 'sellPrice30DayMedian': 158.4}, 'top5AveragePrices': {'buyPrice': 139.7003634444078, 'splitPrice': 146.32196832367475, 'sellPrice': 152.94357320294168, 'buyPrice5DayMedian': 143.09354224834195, 'splitPrice5DayMedian': 149.26720902700998, 'sellPrice5DayMedian': 155.44087580567805, 'buyPrice30DayMedian': 143.58605431409885, 'splitPrice30DayMedian': 152.94246182444056, 'sellPrice30DayMedian': 159.95928869834398}, 'itemType': {'eid': 16272, 'name': 'Heavy Water', 'volume': 0.4, 'packagedVolume': 0.4}}]
-Is fee for haul?: False
-haul fee is: 0
-Is fee for haul?: False
-haul fee is: 0
-processed_items: [{'item_id': 626, 'item_name': 'Vexor', 'quantity': 1, 'tax_rate': 0.86, 'buyback_price': 11503360.0, 'market_price': 13376000, 'buyback_price_itemtotal': 11503360.0, 'market_price_itemtotal': 13376000, 'haul_bool': False, 'item_volume': 115000, 'haul_fee': 0}, {'item_id': 16272, 'item_name': 'Heavy Water', 'quantity': 260385, 'tax_rate': 0.85, 'buyback_price': 123.21599999999998, 'market_price': 144.95999999999998, 'buyback_price_itemtotal': 32083598.159999996, 'market_price_itemtotal': 37745409.599999994, 'haul_bool': False, 'item_volume': 0.4, 'haul_fee': 0}]
-form_data input in into parse user input function: Vexor 1
-Heavy Water	260,385	Ice Product
-items_list in parse user input function: ['Vexor 1', 'Heavy Water\t260,385\tIce Product']
-found name: Vexor
-found quantity: 1
-regex debug search found name: Heavy Water
-regex debug search found quantity: 260385
-parsed_user_input: [{'name': 'Vexor', 'quantity': 1}, {'name': 'Heavy Water', 'quantity': 260385}]
-apiinput: Vexor 1
-Heavy Water 260385
-
-Starting new HTTPS connection (1): janice.e-351.com:443
-https://janice.e-351.com:443 "POST /api/rest/v2/pricer?market=2 HTTP/1.1" 200 None
-api_data: [{'date': '2023-08-06T00:00:00Z', 'market': {'id': 2, 'name': 'Jita 4-4'}, 'buyOrderCount': 19, 'buyVolume': 209, 'sellOrderCount': 31, 'sellVolume': 346, 'immediatePrices': {'buyPrice': 13500000, 'splitPrice': 13995000, 'sellPrice': 14490000, 'buyPrice5DayMedian': 13376000, 'splitPrice5DayMedian': 13850000, 'sellPrice5DayMedian': 14420000, 'buyPrice30DayMedian': 12899000, 'splitPrice30DayMedian': 13610000, 'sellPrice30DayMedian': 14430000}, 'top5AveragePrices': {'buyPrice': 13490000, 'splitPrice': 13994411.764705881, 'sellPrice': 14498823.529411765, 'buyPrice5DayMedian': 13377647.05882353, 'splitPrice5DayMedian': 13910294.11764706, 'sellPrice5DayMedian': 14450588.235294119, 'buyPrice30DayMedian': 12783181.818181818, 'splitPrice30DayMedian': 13601642.857142858, 'sellPrice30DayMedian': 14470555.555555556}, 'itemType': {'eid': 626, 'name': 'Vexor', 'volume': 115000, 'packagedVolume': 10000}}, {'date': '2023-08-06T00:00:00Z', 'market': {'id': 2, 'name': 'Jita 4-4'}, 'buyOrderCount': 23, 'buyVolume': 101803757, 'sellOrderCount': 70, 'sellVolume': 75366794, 'immediatePrices': {'buyPrice': 139.8, 'splitPrice': 146.35000000000002, 'sellPrice': 152.9, 'buyPrice5DayMedian': 144.95999999999998, 'splitPrice5DayMedian': 149.75, 'sellPrice5DayMedian': 154.3, 'buyPrice30DayMedian': 144.6933333333333, 'splitPrice30DayMedian': 152.45, 'sellPrice30DayMedian': 158.4}, 'top5AveragePrices': {'buyPrice': 139.7003634444078, 'splitPrice': 146.32196832367475, 'sellPrice': 152.94357320294168, 'buyPrice5DayMedian': 143.09354224834195, 'splitPrice5DayMedian': 149.26720902700998, 'sellPrice5DayMedian': 155.44087580567805, 'buyPrice30DayMedian': 143.58605431409885, 'splitPrice30DayMedian': 152.94246182444056, 'sellPrice30DayMedian': 159.95928869834398}, 'itemType': {'eid': 16272, 'name': 'Heavy Water', 'volume': 0.4, 'packagedVolume': 0.4}}]
-Is fee for haul?: False
-haul fee is: 0
-Is fee for haul?: False
-haul fee is: 0
-processed_items: [{'item_id': 626, 'item_name': 'Vexor', 'quantity': 1, 'tax_rate': 0.86, 'buyback_price': 11503360.0, 'market_price': 13376000, 'buyback_price_itemtotal': 11503360.0, 'market_price_itemtotal': 13376000, 'haul_bool': False, 'item_volume': 115000, 'haul_fee': 0}, {'item_id': 16272, 'item_name': 'Heavy Water', 'quantity': 260385, 'tax_rate': 0.85, 'buyback_price': 123.21599999999998, 'market_price': 144.95999999999998, 'buyback_price_itemtotal': 32083598.159999996, 'market_price_itemtotal': 37745409.599999994, 'haul_bool': False, 'item_volume': 0.4, 'haul_fee': 0}]
-form_data input in into parse user input function: vexor 1
-Heavy Water	260,385	Ice Product
-items_list in parse user input function: ['vexor 1', 'Heavy Water\t260,385\tIce Product']
-found name: vexor
-found quantity: 1
-regex debug search found name: Heavy Water
-regex debug search found quantity: 260385
-parsed_user_input: [{'name': 'vexor', 'quantity': 1}, {'name': 'Heavy Water', 'quantity': 260385}]
-apiinput: vexor 1
-Heavy Water 260385
-
-Starting new HTTPS connection (1): janice.e-351.com:443
-https://janice.e-351.com:443 "POST /api/rest/v2/pricer?market=2 HTTP/1.1" 200 None
-api_data: [{'date': '2023-08-06T00:00:00Z', 'market': {'id': 2, 'name': 'Jita 4-4'}, 'buyOrderCount': 23, 'buyVolume': 101803757, 'sellOrderCount': 70, 'sellVolume': 75366794, 'immediatePrices': {'buyPrice': 139.8, 'splitPrice': 146.35000000000002, 'sellPrice': 152.9, 'buyPrice5DayMedian': 144.95999999999998, 'splitPrice5DayMedian': 149.75, 'sellPrice5DayMedian': 154.3, 'buyPrice30DayMedian': 144.6933333333333, 'splitPrice30DayMedian': 152.45, 'sellPrice30DayMedian': 158.4}, 'top5AveragePrices': {'buyPrice': 139.7003634444078, 'splitPrice': 146.32196832367475, 'sellPrice': 152.94357320294168, 'buyPrice5DayMedian': 143.09354224834195, 'splitPrice5DayMedian': 149.26720902700998, 'sellPrice5DayMedian': 155.44087580567805, 'buyPrice30DayMedian': 143.58605431409885, 'splitPrice30DayMedian': 152.94246182444056, 'sellPrice30DayMedian': 159.95928869834398}, 'itemType': {'eid': 16272, 'name': 'Heavy Water', 'volume': 0.4, 'packagedVolume': 0.4}}, {'date': '2023-08-06T00:00:00Z', 'market': {'id': 2, 'name': 'Jita 4-4'}, 'buyOrderCount': 19, 'buyVolume': 209, 'sellOrderCount': 31, 'sellVolume': 346, 'immediatePrices': {'buyPrice': 13500000, 'splitPrice': 13995000, 'sellPrice': 14490000, 'buyPrice5DayMedian': 13376000, 'splitPrice5DayMedian': 13850000, 'sellPrice5DayMedian': 14420000, 'buyPrice30DayMedian': 12899000, 'splitPrice30DayMedian': 13610000, 'sellPrice30DayMedian': 14430000}, 'top5AveragePrices': {'buyPrice': 13490000, 'splitPrice': 13994411.764705881, 'sellPrice': 14498823.529411765, 'buyPrice5DayMedian': 13377647.05882353, 'splitPrice5DayMedian': 13910294.11764706, 'sellPrice5DayMedian': 14450588.235294119, 'buyPrice30DayMedian': 12783181.818181818, 'splitPrice30DayMedian': 13601642.857142858, 'sellPrice30DayMedian': 14470555.555555556}, 'itemType': {'eid': 626, 'name': 'Vexor', 'volume': 115000, 'packagedVolume': 10000}}]
-Is fee for haul?: False
-haul fee is: 0
-Is fee for haul?: False
-haul fee is: 0
-processed_items: [{'item_id': 626, 'item_name': 'vexor', 'quantity': 1, 'tax_rate': 0.86, 'buyback_price': 11503360.0, 'market_price': 13376000, 'buyback_price_itemtotal': 11503360.0, 'market_price_itemtotal': 13376000, 'haul_bool': False, 'item_volume': 115000, 'haul_fee': 0}, {'item_id': 16272, 'item_name': 'Heavy Water', 'quantity': 260385, 'tax_rate': 0.85, 'buyback_price': 123.21599999999998, 'market_price': 144.95999999999998, 'buyback_price_itemtotal': 32083598.159999996, 'market_price_itemtotal': 37745409.599999994, 'haul_bool': False, 'item_volume': 0.4, 'haul_fee': 0}]
-form_data input in into parse user input function: vexor 1
-Heavy Water	260,385	Ice Product
-items_list in parse user input function: ['vexor 1', 'Heavy Water\t260,385\tIce Product']
-found name: vexor
-found quantity: 1
-regex debug search found name: Heavy Water
-regex debug search found quantity: 260385
-parsed_user_input: [{'name': 'vexor', 'quantity': 1}, {'name': 'Heavy Water', 'quantity': 260385}]
-apiinput: vexor 1
-Heavy Water 260385
-
-Starting new HTTPS connection (1): janice.e-351.com:443
-https://janice.e-351.com:443 "POST /api/rest/v2/pricer?market=2 HTTP/1.1" 200 None
-api_data: [{'date': '2023-08-06T00:00:00Z', 'market': {'id': 2, 'name': 'Jita 4-4'}, 'buyOrderCount': 19, 'buyVolume': 209, 'sellOrderCount': 31, 'sellVolume': 346, 'immediatePrices': {'buyPrice': 13500000, 'splitPrice': 13995000, 'sellPrice': 14490000, 'buyPrice5DayMedian': 13376000, 'splitPrice5DayMedian': 13850000, 'sellPrice5DayMedian': 14420000, 'buyPrice30DayMedian': 12899000, 'splitPrice30DayMedian': 13610000, 'sellPrice30DayMedian': 14430000}, 'top5AveragePrices': {'buyPrice': 13490000, 'splitPrice': 13994411.764705881, 'sellPrice': 14498823.529411765, 'buyPrice5DayMedian': 13377647.05882353, 'splitPrice5DayMedian': 13910294.11764706, 'sellPrice5DayMedian': 14450588.235294119, 'buyPrice30DayMedian': 12783181.818181818, 'splitPrice30DayMedian': 13601642.857142858, 'sellPrice30DayMedian': 14470555.555555556}, 'itemType': {'eid': 626, 'name': 'Vexor', 'volume': 115000, 'packagedVolume': 10000}}, {'date': '2023-08-06T00:00:00Z', 'market': {'id': 2, 'name': 'Jita 4-4'}, 'buyOrderCount': 23, 'buyVolume': 101803757, 'sellOrderCount': 70, 'sellVolume': 75366794, 'immediatePrices': {'buyPrice': 139.8, 'splitPrice': 146.35000000000002, 'sellPrice': 152.9, 'buyPrice5DayMedian': 144.95999999999998, 'splitPrice5DayMedian': 149.75, 'sellPrice5DayMedian': 154.3, 'buyPrice30DayMedian': 144.6933333333333, 'splitPrice30DayMedian': 152.45, 'sellPrice30DayMedian': 158.4}, 'top5AveragePrices': {'buyPrice': 139.7003634444078, 'splitPrice': 146.32196832367475, 'sellPrice': 152.94357320294168, 'buyPrice5DayMedian': 143.09354224834195, 'splitPrice5DayMedian': 149.26720902700998, 'sellPrice5DayMedian': 155.44087580567805, 'buyPrice30DayMedian': 143.58605431409885, 'splitPrice30DayMedian': 152.94246182444056, 'sellPrice30DayMedian': 159.95928869834398}, 'itemType': {'eid': 16272, 'name': 'Heavy Water', 'volume': 0.4, 'packagedVolume': 0.4}}]
-Is fee for haul?: False
-haul fee is: 0
-Is fee for haul?: False
-haul fee is: 0
-processed_items: [{'item_id': 626, 'item_name': 'vexor', 'quantity': 1, 'tax_rate': 0.86, 'buyback_price': 11503360.0, 'market_price': 13376000, 'buyback_price_itemtotal': 11503360.0, 'market_price_itemtotal': 13376000, 'haul_bool': False, 'item_volume': 115000, 'haul_fee': 0}, {'item_id': 16272, 'item_name': 'Heavy Water', 'quantity': 260385, 'tax_rate': 0.85, 'buyback_price': 123.21599999999998, 'market_price': 144.95999999999998, 'buyback_price_itemtotal': 32083598.159999996, 'market_price_itemtotal': 37745409.599999994, 'haul_bool': False, 'item_volume': 0.4, 'haul_fee': 0}]
-form_data input in into parse user input function: megathron 1
-ishtar 1
-items_list in parse user input function: ['megathron 1', 'ishtar 1']
-found name: megathron
-found quantity: 1
-found name: ishtar
-found quantity: 1
-parsed_user_input: [{'name': 'megathron', 'quantity': 1}, {'name': 'ishtar', 'quantity': 1}]
-apiinput: megathron 1
-ishtar 1
-
-Starting new HTTPS connection (1): janice.e-351.com:443
-https://janice.e-351.com:443 "POST /api/rest/v2/pricer?market=2 HTTP/1.1" 200 None
-api_data: [{'date': '2023-08-06T00:00:00Z', 'market': {'id': 2, 'name': 'Jita 4-4'}, 'buyOrderCount': 15, 'buyVolume': 27, 'sellOrderCount': 19, 'sellVolume': 47, 'immediatePrices': {'buyPrice': 358700000, 'splitPrice': 374550000, 'sellPrice': 390400000, 'buyPrice5DayMedian': 359860000, 'splitPrice5DayMedian': 374550000, 'sellPrice5DayMedian': 390100000, 'buyPrice30DayMedian': 357143333.3333333, 'splitPrice30DayMedian': 370650000, 'sellPrice30DayMedian': 384800000}, 'top5AveragePrices': {'buyPrice': 358700000, 'splitPrice': 374650000, 'sellPrice': 390600000, 'buyPrice5DayMedian': 360000000, 'splitPrice5DayMedian': 374650000, 'sellPrice5DayMedian': 390200000, 'buyPrice30DayMedian': 356200000, 'splitPrice30DayMedian': 371050000, 'sellPrice30DayMedian': 384900000}, 'itemType': {'eid': 641, 'name': 'Megathron', 'volume': 470000, 'packagedVolume': 50000}}, {'date': '2023-08-06T00:00:00Z', 'market': {'id': 2, 'name': 'Jita 4-4'}, 'buyOrderCount': 32, 'buyVolume': 134, 'sellOrderCount': 73, 'sellVolume': 611, 'immediatePrices': {'buyPrice': 176500000, 'splitPrice': 181300000, 'sellPrice': 186100000, 'buyPrice5DayMedian': 171680000, 'splitPrice5DayMedian': 174450000, 'sellPrice5DayMedian': 180300000, 'buyPrice30DayMedian': 177720000, 'splitPrice30DayMedian': 183850000, 'sellPrice30DayMedian': 188500000}, 'top5AveragePrices': {'buyPrice': 176500000, 'splitPrice': 181498333.3333333, 'sellPrice': 186496666.66666666, 'buyPrice5DayMedian': 168733333.33333334, 'splitPrice5DayMedian': 174763333.3333333, 'sellPrice5DayMedian': 181948275.86206895, 'buyPrice30DayMedian': 178800000, 'splitPrice30DayMedian': 183642673.992674, 'sellPrice30DayMedian': 188621212.12121212}, 'itemType': {'eid': 12005, 'name': 'Ishtar', 'volume': 115000, 'packagedVolume': 10000}}]
-Is fee for haul?: False
-haul fee is: 0
-Is fee for haul?: False
-haul fee is: 0
-processed_items: [{'item_id': 641, 'item_name': 'megathron', 'quantity': 1, 'tax_rate': 0.85, 'buyback_price': 305881000.0, 'market_price': 359860000, 'buyback_price_itemtotal': 305881000.0, 'market_price_itemtotal': 359860000, 'haul_bool': False, 'item_volume': 470000, 'haul_fee': 0}, {'item_id': 12005, 'item_name': 'ishtar', 'quantity': 1, 'tax_rate': 0.85, 'buyback_price': 145928000.0, 'market_price': 171680000, 'buyback_price_itemtotal': 145928000.0, 'market_price_itemtotal': 171680000, 'haul_bool': False, 'item_volume': 115000, 'haul_fee': 0}]
-form_data input in into parse user input function: Megathron 1
-ishtar 1
-items_list in parse user input function: ['Megathron 1', 'ishtar 1']
-found name: Megathron
-found quantity: 1
-found name: ishtar
-found quantity: 1
-parsed_user_input: [{'name': 'Megathron', 'quantity': 1}, {'name': 'ishtar', 'quantity': 1}]
-apiinput: Megathron 1
-ishtar 1
-
-Starting new HTTPS connection (1): janice.e-351.com:443
-https://janice.e-351.com:443 "POST /api/rest/v2/pricer?market=2 HTTP/1.1" 200 None
-api_data: [{'date': '2023-08-06T00:00:00Z', 'market': {'id': 2, 'name': 'Jita 4-4'}, 'buyOrderCount': 15, 'buyVolume': 27, 'sellOrderCount': 19, 'sellVolume': 47, 'immediatePrices': {'buyPrice': 358700000, 'splitPrice': 374550000, 'sellPrice': 390400000, 'buyPrice5DayMedian': 359860000, 'splitPrice5DayMedian': 374550000, 'sellPrice5DayMedian': 390100000, 'buyPrice30DayMedian': 357143333.3333333, 'splitPrice30DayMedian': 370650000, 'sellPrice30DayMedian': 384800000}, 'top5AveragePrices': {'buyPrice': 358700000, 'splitPrice': 374650000, 'sellPrice': 390600000, 'buyPrice5DayMedian': 360000000, 'splitPrice5DayMedian': 374650000, 'sellPrice5DayMedian': 390200000, 'buyPrice30DayMedian': 356200000, 'splitPrice30DayMedian': 371050000, 'sellPrice30DayMedian': 384900000}, 'itemType': {'eid': 641, 'name': 'Megathron', 'volume': 470000, 'packagedVolume': 50000}}, {'date': '2023-08-06T00:00:00Z', 'market': {'id': 2, 'name': 'Jita 4-4'}, 'buyOrderCount': 32, 'buyVolume': 134, 'sellOrderCount': 73, 'sellVolume': 611, 'immediatePrices': {'buyPrice': 176500000, 'splitPrice': 181300000, 'sellPrice': 186100000, 'buyPrice5DayMedian': 171680000, 'splitPrice5DayMedian': 174450000, 'sellPrice5DayMedian': 180300000, 'buyPrice30DayMedian': 177720000, 'splitPrice30DayMedian': 183850000, 'sellPrice30DayMedian': 188500000}, 'top5AveragePrices': {'buyPrice': 176500000, 'splitPrice': 181498333.3333333, 'sellPrice': 186496666.66666666, 'buyPrice5DayMedian': 168733333.33333334, 'splitPrice5DayMedian': 174763333.3333333, 'sellPrice5DayMedian': 181948275.86206895, 'buyPrice30DayMedian': 178800000, 'splitPrice30DayMedian': 183642673.992674, 'sellPrice30DayMedian': 188621212.12121212}, 'itemType': {'eid': 12005, 'name': 'Ishtar', 'volume': 115000, 'packagedVolume': 10000}}]
-Is fee for haul?: False
-haul fee is: 0
-Is fee for haul?: False
-haul fee is: 0
-processed_items: [{'item_id': 641, 'item_name': 'Megathron', 'quantity': 1, 'tax_rate': 0.85, 'buyback_price': 305881000.0, 'market_price': 359860000, 'buyback_price_itemtotal': 305881000.0, 'market_price_itemtotal': 359860000, 'haul_bool': False, 'item_volume': 470000, 'haul_fee': 0}, {'item_id': 12005, 'item_name': 'ishtar', 'quantity': 1, 'tax_rate': 0.85, 'buyback_price': 145928000.0, 'market_price': 171680000, 'buyback_price_itemtotal': 145928000.0, 'market_price_itemtotal': 171680000, 'haul_bool': False, 'item_volume': 115000, 'haul_fee': 0}]
-form_data input in into parse user input function: Coolant	1,641	Refined Commodities - Tier 2
-Enriched Uranium	728	Refined Commodities - Tier 2
-Heavy Water	260,385	Ice Product
-Liquid Ozone	152,653	Ice Product
-Mechanical Parts	728	Refined Commodities - Tier 2
-Nitrogen Fuel Block Blueprint		Fuel Block Blueprint
-Nitrogen Isotopes	309,084	Ice Product
-Oxygen	4,012	Basic Commodities - Tier 1
-Reactive Metals	20,160	Basic Commodities - Tier 1
-Robotics	744	Specialized Commodities - Tier 3
-Strontium Clathrates	14,078	Ice Product
-items_list in parse user input function: ['Coolant\t1,641\tRefined Commodities - Tier 2', 'Enriched Uranium\t728\tRefined Commodities - Tier 2', 'Heavy Water\t260,385\tIce Product', 'Liquid Ozone\t152,653\tIce Product', 'Mechanical Parts\t728\tRefined Commodities - Tier 2', 'Nitrogen Fuel Block Blueprint\t\tFuel Block Blueprint', 'Nitrogen Isotopes\t309,084\tIce Product', 'Oxygen\t4,012\tBasic Commodities - Tier 1', 'Reactive Metals\t20,160\tBasic Commodities - Tier 1', 'Robotics\t744\tSpecialized Commodities - Tier 3', 'Strontium Clathrates\t14,078\tIce Product']
-regex debug search found name: Coolant
-regex debug search found quantity: 1641
-regex debug search found name: Enriched Uranium
-regex debug search found quantity: 728
-regex debug search found name: Heavy Water
-regex debug search found quantity: 260385
-regex debug search found name: Liquid Ozone
-regex debug search found quantity: 152653
-regex debug search found name: Mechanical Parts
-regex debug search found quantity: 728
-regex debug search found name: Nitrogen Fuel Block Blueprint
-regex debug search found quantity: 1
-regex debug search found name: Nitrogen Isotopes
-regex debug search found quantity: 309084
-regex debug search found name: Oxygen
-regex debug search found quantity: 4012
-regex debug search found name: Reactive Metals
-regex debug search found quantity: 20160
-regex debug search found name: Robotics
-regex debug search found quantity: 744
-regex debug search found name: Strontium Clathrates
-regex debug search found quantity: 14078
-parsed_user_input: [{'name': 'Coolant', 'quantity': 1641}, {'name': 'Enriched Uranium', 'quantity': 728}, {'name': 'Heavy Water', 'quantity': 260385}, {'name': 'Liquid Ozone', 'quantity': 152653}, {'name': 'Mechanical Parts', 'quantity': 728}, {'name': 'Nitrogen Fuel Block Blueprint', 'quantity': 1}, {'name': 'Nitrogen Isotopes', 'quantity': 309084}, {'name': 'Oxygen', 'quantity': 4012}, {'name': 'Reactive Metals', 'quantity': 20160}, {'name': 'Robotics', 'quantity': 744}, {'name': 'Strontium Clathrates', 'quantity': 14078}]
-apiinput: Coolant 1641
-Enriched Uranium 728
-Heavy Water 260385
-Liquid Ozone 152653
-Mechanical Parts 728
-Nitrogen Fuel Block Blueprint 1
-Nitrogen Isotopes 309084
-Oxygen 4012
-Reactive Metals 20160
-Robotics 744
-Strontium Clathrates 14078
-
-Starting new HTTPS connection (1): janice.e-351.com:443
-https://janice.e-351.com:443 "POST /api/rest/v2/pricer?market=2 HTTP/1.1" 200 None
-api_data: [{'date': '2023-08-06T00:00:00Z', 'market': {'id': 2, 'name': 'Jita 4-4'}, 'buyOrderCount': 52, 'buyVolume': 163631, 'sellOrderCount': 50, 'sellVolume': 170764, 'immediatePrices': {'buyPrice': 109000, 'splitPrice': 114600, 'sellPrice': 120200, 'buyPrice5DayMedian': 110300, 'splitPrice5DayMedian': 114600, 'sellPrice5DayMedian': 117800, 'buyPrice30DayMedian': 104365.66666666667, 'splitPrice30DayMedian': 107550, 'sellPrice30DayMedian': 110200}, 'top5AveragePrices': {'buyPrice': 108163.30521941083, 'splitPrice': 114184.80323045969, 'sellPrice': 120206.30124150855, 'buyPrice5DayMedian': 108163.30521941083, 'splitPrice5DayMedian': 114184.80323045969, 'sellPrice5DayMedian': 117906.1553030303, 'buyPrice30DayMedian': 104679.59271630213, 'splitPrice30DayMedian': 107526.2216320618, 'sellPrice30DayMedian': 110691.60997732426}, 'itemType': {'eid': 9848, 'name': 'Robotics', 'volume': 3, 'packagedVolume': 3}}, {'date': '2023-08-06T00:00:00Z', 'market': {'id': 2, 'name': 'Jita 4-4'}, 'buyOrderCount': 26, 'buyVolume': 44912681, 'sellOrderCount': 33, 'sellVolume': 56341017, 'immediatePrices': {'buyPrice': 144.1, 'splitPrice': 148.1, 'sellPrice': 152.1, 'buyPrice5DayMedian': 138.16, 'splitPrice5DayMedian': 140.55, 'sellPrice5DayMedian': 144.9, 'buyPrice30DayMedian': 139.96666666666667, 'splitPrice30DayMedian': 145.6, 'sellPrice30DayMedian': 150.1}, 'top5AveragePrices': {'buyPrice': 143.6838008330832, 'splitPrice': 147.89681175996824, 'sellPrice': 152.10982268685328, 'buyPrice5DayMedian': 136.13290269062173, 'splitPrice5DayMedian': 140.5388298074873, 'sellPrice5DayMedian': 144.94475692435287, 'buyPrice30DayMedian': 140.42689523060176, 'splitPrice30DayMedian': 146.44395964602535, 'sellPrice30DayMedian': 152.10826611542387}, 'itemType': {'eid': 16273, 'name': 'Liquid Ozone', 'volume': 0.4, 'packagedVolume': 0.4}}, {'date': '2023-08-06T00:00:00Z', 'market': {'id': 2, 'name': 'Jita 4-4'}, 'buyOrderCount': 36, 'buyVolume': 78097581, 'sellOrderCount': 71, 'sellVolume': 132470949, 'immediatePrices': {'buyPrice': 435.2, 'splitPrice': 446, 'sellPrice': 456.8, 'buyPrice5DayMedian': 436.75999999999993, 'splitPrice5DayMedian': 449.15, 'sellPrice5DayMedian': 459.3, 'buyPrice30DayMedian': 437.83666666666676, 'splitPrice30DayMedian': 450.4, 'sellPrice30DayMedian': 468.9}, 'top5AveragePrices': {'buyPrice': 433.42889226529167, 'splitPrice': 445.1771153037108, 'sellPrice': 456.92533834213, 'buyPrice5DayMedian': 433.42889226529167, 'splitPrice5DayMedian': 447.2467700362736, 'sellPrice5DayMedian': 460.50945771514716, 'buyPrice30DayMedian': 435.440006208896, 'splitPrice30DayMedian': 452.0513219507735, 'sellPrice30DayMedian': 474.89275221800216}, 'itemType': {'eid': 17888, 'name': 'Nitrogen Isotopes', 'volume': 0.03, 'packagedVolume': 0.03}}, {'date': '2023-08-06T00:00:00Z', 'market': {'id': 2, 'name': 'Jita 4-4'}, 'buyOrderCount': 17, 'buyVolume': 7533391, 'sellOrderCount': 107, 'sellVolume': 31979169, 'immediatePrices': {'buyPrice': 356.7, 'splitPrice': 379, 'sellPrice': 401.3, 'buyPrice5DayMedian': 376.64000000000004, 'splitPrice5DayMedian': 388.5, 'sellPrice5DayMedian': 399.5, 'buyPrice30DayMedian': 372.8333333333333, 'splitPrice30DayMedian': 388.9, 'sellPrice30DayMedian': 400.8}, 'top5AveragePrices': {'buyPrice': 346.52880778614644, 'splitPrice': 374.10386259054997, 'sellPrice': 401.67891739495343, 'buyPrice5DayMedian': 375.8097985593256, 'splitPrice5DayMedian': 387.61546577076433, 'sellPrice5DayMedian': 400.9746350077652, 'buyPrice30DayMedian': 375.76038210551144, 'splitPrice30DayMedian': 389.77708848895827, 'sellPrice30DayMedian': 402.95951993786855}, 'itemType': {'eid': 3683, 'name': 'Oxygen', 'volume': 0.19, 'packagedVolume': 0.19}}, {'date': '2023-08-06T00:00:00Z', 'market': {'id': 2, 'name': 'Jita 4-4'}, 'buyOrderCount': 23, 'buyVolume': 101803757, 'sellOrderCount': 70, 'sellVolume': 75366794, 'immediatePrices': {'buyPrice': 139.8, 'splitPrice': 146.35000000000002, 'sellPrice': 152.9, 'buyPrice5DayMedian': 144.95999999999998, 'splitPrice5DayMedian': 149.75, 'sellPrice5DayMedian': 154.3, 'buyPrice30DayMedian': 144.6933333333333, 'splitPrice30DayMedian': 152.45, 'sellPrice30DayMedian': 158.4}, 'top5AveragePrices': {'buyPrice': 139.7003634444078, 'splitPrice': 146.32196832367475, 'sellPrice': 152.94357320294168, 'buyPrice5DayMedian': 143.09354224834195, 'splitPrice5DayMedian': 149.26720902700998, 'sellPrice5DayMedian': 155.44087580567805, 'buyPrice30DayMedian': 143.58605431409885, 'splitPrice30DayMedian': 152.94246182444056, 'sellPrice30DayMedian': 159.95928869834398}, 'itemType': {'eid': 16272, 'name': 'Heavy Water', 'volume': 0.4, 'packagedVolume': 0.4}}, {'date': '2023-08-06T00:00:00Z', 'market': {'id': 2, 'name': 'Jita 4-4'}, 'buyOrderCount': 13, 'buyVolume': 540009, 'sellOrderCount': 27, 'sellVolume': 976930, 'immediatePrices': {'buyPrice': 15420, 'splitPrice': 15705, 'sellPrice': 15990, 'buyPrice5DayMedian': 15818, 'splitPrice5DayMedian': 16290, 'sellPrice5DayMedian': 16700, 'buyPrice30DayMedian': 15726.666666666666, 'splitPrice30DayMedian': 16290, 'sellPrice30DayMedian': 16730}, 'top5AveragePrices': {'buyPrice': 15413.17037037037, 'splitPrice': 15980.816647331521, 'sellPrice': 16548.462924292675, 'buyPrice5DayMedian': 15916.503275552206, 'splitPrice5DayMedian': 16281.740003492228, 'sellPrice5DayMedian': 16709.260706470774, 'buyPrice30DayMedian': 15853.679694419841, 'splitPrice30DayMedian': 16313.914530800528, 'sellPrice30DayMedian': 16793.330309558907}, 'itemType': {'eid': 44, 'name': 'Enriched Uranium', 'volume': 0.75, 'packagedVolume': 0.75}}, {'date': '2023-08-06T00:00:00Z', 'market': {'id': 2, 'name': 'Jita 4-4'}, 'buyOrderCount': 31, 'buyVolume': 3142843, 'sellOrderCount': 42, 'sellVolume': 3536960, 'immediatePrices': {'buyPrice': 3263, 'splitPrice': 3381.5, 'sellPrice': 3500, 'buyPrice5DayMedian': 3242, 'splitPrice5DayMedian': 3381.5, 'sellPrice5DayMedian': 3500, 'buyPrice30DayMedian': 3215.2, 'splitPrice30DayMedian': 3381.5, 'sellPrice30DayMedian': 3503}, 'top5AveragePrices': {'buyPrice': 3263, 'splitPrice': 3391.2131943816157, 'sellPrice': 3519.426388763232, 'buyPrice5DayMedian': 3261.4780818319005, 'splitPrice5DayMedian': 3382.5264781475844, 'sellPrice5DayMedian': 3519.426388763232, 'buyPrice30DayMedian': 3174.5683034151343, 'splitPrice30DayMedian': 3389.0486421773453, 'sellPrice30DayMedian': 3546.8631613104676}, 'itemType': {'eid': 16275, 'name': 'Strontium Clathrates', 'volume': 3, 'packagedVolume': 3}}, {'date': '2023-08-06T00:00:00Z', 'market': {'id': 2, 'name': 'Jita 4-4'}, 'buyOrderCount': 35, 'buyVolume': 24983451, 'sellOrderCount': 39, 'sellVolume': 5775170, 'immediatePrices': {'buyPrice': 763.8, 'splitPrice': 781.75, 'sellPrice': 799.7, 'buyPrice5DayMedian': 758.04, 'splitPrice5DayMedian': 790.7, 'sellPrice5DayMedian': 821.3, 'buyPrice30DayMedian': 697.4799999999999, 'splitPrice30DayMedian': 723.0999999999999, 'sellPrice30DayMedian': 775}, 'top5AveragePrices': {'buyPrice': 761.8463026708893, 'splitPrice': 780.7731513354447, 'sellPrice': 799.7, 'buyPrice5DayMedian': 756.0137889637913, 'splitPrice5DayMedian': 790.1925009863523, 'sellPrice5DayMedian': 821.3896199830193, 'buyPrice30DayMedian': 670.6885985176425, 'splitPrice30DayMedian': 724.8751209321816, 'sellPrice30DayMedian': 785.0146151269098}, 'itemType': {'eid': 2398, 'name': 'Reactive Metals', 'volume': 0.19, 'packagedVolume': 0.19}}, {'date': '2023-08-06T00:00:00Z', 'market': {'id': 2, 'name': 'Jita 4-4'}, 'buyOrderCount': 21, 'buyVolume': 620542, 'sellOrderCount': 42, 'sellVolume': 1808305, 'immediatePrices': {'buyPrice': 13090, 'splitPrice': 13595, 'sellPrice': 14100, 'buyPrice5DayMedian': 13256, 'splitPrice5DayMedian': 13835, 'sellPrice5DayMedian': 14270, 'buyPrice30DayMedian': 13332, 'splitPrice30DayMedian': 13875, 'sellPrice30DayMedian': 14300}, 'top5AveragePrices': {'buyPrice': 13080.897605311502, 'splitPrice': 13605.476452935018, 'sellPrice': 14130.055300558535, 'buyPrice5DayMedian': 13168.70975481023, 'splitPrice5DayMedian': 13827.527072378374, 'sellPrice5DayMedian': 14334.888384754991, 'buyPrice30DayMedian': 13427.529886786479, 'splitPrice30DayMedian': 13969.596768962867, 'sellPrice30DayMedian': 14471.826885908835}, 'itemType': {'eid': 3689, 'name': 'Mechanical Parts', 'volume': 0.75, 'packagedVolume': 0.75}}, {'date': '2023-08-06T00:00:00Z', 'market': {'id': 2, 'name': 'Jita 4-4'}, 'buyOrderCount': 49, 'buyVolume': 1532731, 'sellOrderCount': 33, 'sellVolume': 1536019, 'immediatePrices': {'buyPrice': 15110, 'splitPrice': 15485, 'sellPrice': 15860, 'buyPrice5DayMedian': 14692, 'splitPrice5DayMedian': 15060, 'sellPrice5DayMedian': 15390, 'buyPrice30DayMedian': 14421.333333333334, 'splitPrice30DayMedian': 14900, 'sellPrice30DayMedian': 15070}, 'top5AveragePrices': {'buyPrice': 15104.827235241923, 'splitPrice': 15482.413617620961, 'sellPrice': 15860, 'buyPrice5DayMedian': 14850, 'splitPrice5DayMedian': 15017.337491873908, 'sellPrice5DayMedian': 15390, 'buyPrice30DayMedian': 14790, 'splitPrice30DayMedian': 14946.015681976598, 'sellPrice30DayMedian': 15335.158520671452}, 'itemType': {'eid': 9832, 'name': 'Coolant', 'volume': 0.75, 'packagedVolume': 0.75}}, {'date': '2023-08-06T00:00:00Z', 'market': {'id': 2, 'name': 'Jita 4-4'}, 'buyOrderCount': 1, 'buyVolume': 35, 'sellOrderCount': 4, 'sellVolume': 88, 'immediatePrices': {'buyPrice': 9000000, 'splitPrice': 9790000, 'sellPrice': 10580000, 'buyPrice5DayMedian': 9000000, 'splitPrice5DayMedian': 9790000, 'sellPrice5DayMedian': 10580000, 'buyPrice30DayMedian': 9000000, 'splitPrice30DayMedian': 9760000, 'sellPrice30DayMedian': 10520000}, 'top5AveragePrices': {'buyPrice': 9000000, 'splitPrice': 9790000, 'sellPrice': 10580000, 'buyPrice5DayMedian': 9000000, 'splitPrice5DayMedian': 9790000, 'sellPrice5DayMedian': 10580000, 'buyPrice30DayMedian': 9000000, 'splitPrice30DayMedian': 9760000, 'sellPrice30DayMedian': 10520000}, 'itemType': {'eid': 4314, 'name': 'Nitrogen Fuel Block Blueprint', 'volume': 0.01, 'packagedVolume': 0.01}}]
-Is fee for haul?: False
-haul fee is: 0
-Is fee for haul?: False
-haul fee is: 0
-Is fee for haul?: False
-haul fee is: 0
-Is fee for haul?: False
-haul fee is: 0
-Is fee for haul?: False
-haul fee is: 0
-Is fee for haul?: False
-haul fee is: 0
-Is fee for haul?: False
-haul fee is: 0
-Is fee for haul?: False
-haul fee is: 0
-Is fee for haul?: False
-haul fee is: 0
-Is fee for haul?: False
-haul fee is: 0
-Is fee for haul?: False
-haul fee is: 0
-processed_items: [{'item_id': 9832, 'item_name': 'Coolant', 'quantity': 1641, 'tax_rate': 0.77, 'buyback_price': 11312.84, 'market_price': 14692, 'buyback_price_itemtotal': 18564370.44, 'market_price_itemtotal': 24109572, 'haul_bool': False, 'item_volume': 0.75, 'haul_fee': 0}, {'item_id': 44, 'item_name': 'Enriched Uranium', 'quantity': 728, 'tax_rate': 0.77, 'buyback_price': 12179.86, 'market_price': 15818, 'buyback_price_itemtotal': 8866938.08, 'market_price_itemtotal': 11515504, 'haul_bool': False, 'item_volume': 0.75, 'haul_fee': 0}, {'item_id': 16272, 'item_name': 'Heavy Water', 'quantity': 260385, 'tax_rate': 0.85, 'buyback_price': 123.21599999999998, 'market_price': 144.95999999999998, 'buyback_price_itemtotal': 32083598.159999996, 'market_price_itemtotal': 37745409.599999994, 'haul_bool': False, 'item_volume': 0.4, 'haul_fee': 0}, {'item_id': 16273, 'item_name': 'Liquid Ozone', 'quantity': 152653, 'tax_rate': 0.85, 'buyback_price': 117.43599999999999, 'market_price': 138.16, 'buyback_price_itemtotal': 17926957.708, 'market_price_itemtotal': 21090538.48, 'haul_bool': False, 'item_volume': 0.4, 'haul_fee': 0}, {'item_id': 3689, 'item_name': 'Mechanical Parts', 'quantity': 728, 'tax_rate': 0.85, 'buyback_price': 11267.6, 'market_price': 13256, 'buyback_price_itemtotal': 8202812.8, 'market_price_itemtotal': 9650368, 'haul_bool': False, 'item_volume': 0.75, 'haul_fee': 0}, {'item_id': 4314, 'item_name': 'Nitrogen Fuel Block Blueprint', 'quantity': 1, 'tax_rate': 0.0, 'buyback_price': 0.0, 'market_price': 9000000, 'buyback_price_itemtotal': 0.0, 'market_price_itemtotal': 9000000, 'haul_bool': False, 'item_volume': 0.01, 'haul_fee': 0}, {'item_id': 17888, 'item_name': 'Nitrogen Isotopes', 'quantity': 309084, 'tax_rate': 0.85, 'buyback_price': 371.2459999999999, 'market_price': 436.75999999999993, 'buyback_price_itemtotal': 114746198.66399997, 'market_price_itemtotal': 134995527.83999997, 'haul_bool': False, 'item_volume': 0.03, 'haul_fee': 0}, {'item_id': 3683, 'item_name': 'Oxygen', 'quantity': 4012, 'tax_rate': 0.5, 'buyback_price': 188.32000000000002, 'market_price': 376.64000000000004, 'buyback_price_itemtotal': 755539.8400000001, 'market_price_itemtotal': 1511079.6800000002, 'haul_bool': False, 'item_volume': 0.19, 'haul_fee': 0}, {'item_id': 2398, 'item_name': 'Reactive Metals', 'quantity': 20160, 'tax_rate': 0.5, 'buyback_price': 379.02, 'market_price': 758.04, 'buyback_price_itemtotal': 7641043.199999999, 'market_price_itemtotal': 15282086.399999999, 'haul_bool': False, 'item_volume': 0.19, 'haul_fee': 0}, {'item_id': 9848, 'item_name': 'Robotics', 'quantity': 744, 'tax_rate': 0.9, 'buyback_price': 99270.0, 'market_price': 110300, 'buyback_price_itemtotal': 73856880.0, 'market_price_itemtotal': 82063200, 'haul_bool': False, 'item_volume': 3, 'haul_fee': 0}, {'item_id': 16275, 'item_name': 'Strontium Clathrates', 'quantity': 14078, 'tax_rate': 0.85, 'buyback_price': 2755.7, 'market_price': 3242, 'buyback_price_itemtotal': 38794744.599999994, 'market_price_itemtotal': 45640876, 'haul_bool': False, 'item_volume': 3, 'haul_fee': 0}]
 form_data input in into parse user input function: ishtar 1
 items_list in parse user input function: ['ishtar 1']
-found name: ishtar
+found name: ishtar 1
 found quantity: 1
-parsed_user_input: [{'name': 'ishtar', 'quantity': 1}]
-apiinput: ishtar 1
+parsed_user_input: [{'name': 'ishtar 1', 'quantity': 1}]
+apiinput: ishtar 1 1
 
 Starting new HTTPS connection (1): janice.e-351.com:443
 https://janice.e-351.com:443 "POST /api/rest/v2/pricer?market=2 HTTP/1.1" 200 None
-api_data: [{'date': '2023-08-06T00:00:00Z', 'market': {'id': 2, 'name': 'Jita 4-4'}, 'buyOrderCount': 32, 'buyVolume': 134, 'sellOrderCount': 73, 'sellVolume': 611, 'immediatePrices': {'buyPrice': 176500000, 'splitPrice': 181300000, 'sellPrice': 186100000, 'buyPrice5DayMedian': 171680000, 'splitPrice5DayMedian': 174450000, 'sellPrice5DayMedian': 180300000, 'buyPrice30DayMedian': 177720000, 'splitPrice30DayMedian': 183850000, 'sellPrice30DayMedian': 188500000}, 'top5AveragePrices': {'buyPrice': 176500000, 'splitPrice': 181498333.3333333, 'sellPrice': 186496666.66666666, 'buyPrice5DayMedian': 168733333.33333334, 'splitPrice5DayMedian': 174763333.3333333, 'sellPrice5DayMedian': 181948275.86206895, 'buyPrice30DayMedian': 178800000, 'splitPrice30DayMedian': 183642673.992674, 'sellPrice30DayMedian': 188621212.12121212}, 'itemType': {'eid': 12005, 'name': 'Ishtar', 'volume': 115000, 'packagedVolume': 10000}}]
-Is fee for haul?: False
-haul fee is: 0
-processed_items: [{'item_id': 12005, 'item_name': 'ishtar', 'quantity': 1, 'tax_rate': 0.85, 'buyback_price': 145928000.0, 'market_price': 171680000, 'buyback_price_itemtotal': 145928000.0, 'market_price_itemtotal': 171680000, 'haul_bool': False, 'item_volume': 115000, 'haul_fee': 0}]
-form_data input in into parse user input function: ishtar 1
-items_list in parse user input function: ['ishtar 1']
-found name: ishtar
-found quantity: 1
-parsed_user_input: [{'name': 'ishtar', 'quantity': 1}]
-apiinput: ishtar 1
-
-Starting new HTTPS connection (1): janice.e-351.com:443
-https://janice.e-351.com:443 "POST /api/rest/v2/pricer?market=2 HTTP/1.1" 200 None
-api_data: [{'date': '2023-08-06T00:00:00Z', 'market': {'id': 2, 'name': 'Jita 4-4'}, 'buyOrderCount': 32, 'buyVolume': 134, 'sellOrderCount': 73, 'sellVolume': 611, 'immediatePrices': {'buyPrice': 176500000, 'splitPrice': 181300000, 'sellPrice': 186100000, 'buyPrice5DayMedian': 171680000, 'splitPrice5DayMedian': 174450000, 'sellPrice5DayMedian': 180300000, 'buyPrice30DayMedian': 177720000, 'splitPrice30DayMedian': 183850000, 'sellPrice30DayMedian': 188500000}, 'top5AveragePrices': {'buyPrice': 176500000, 'splitPrice': 181498333.3333333, 'sellPrice': 186496666.66666666, 'buyPrice5DayMedian': 168733333.33333334, 'splitPrice5DayMedian': 174763333.3333333, 'sellPrice5DayMedian': 181948275.86206895, 'buyPrice30DayMedian': 178800000, 'splitPrice30DayMedian': 183642673.992674, 'sellPrice30DayMedian': 188621212.12121212}, 'itemType': {'eid': 12005, 'name': 'Ishtar', 'volume': 115000, 'packagedVolume': 10000}}]
-Is fee for haul?: False
-haul fee is: 0
-processed_items: [{'item_id': 12005, 'item_name': 'ishtar', 'quantity': 1, 'tax_rate': 0.85, 'buyback_price': 145928000.0, 'market_price': 171680000, 'buyback_price_itemtotal': 145928000.0, 'market_price_itemtotal': 171680000, 'haul_bool': False, 'item_volume': 115000, 'haul_fee': 0}]
-form_data input in into parse user input function: ishtar 1
-items_list in parse user input function: ['ishtar 1']
-found name: ishtar
-found quantity: 1
-parsed_user_input: [{'name': 'ishtar', 'quantity': 1}]
-apiinput: ishtar 1
-
-Starting new HTTPS connection (1): janice.e-351.com:443
-https://janice.e-351.com:443 "POST /api/rest/v2/pricer?market=2 HTTP/1.1" 200 None
-api_data: [{'date': '2023-08-06T00:00:00Z', 'market': {'id': 2, 'name': 'Jita 4-4'}, 'buyOrderCount': 32, 'buyVolume': 134, 'sellOrderCount': 73, 'sellVolume': 611, 'immediatePrices': {'buyPrice': 176500000, 'splitPrice': 181300000, 'sellPrice': 186100000, 'buyPrice5DayMedian': 171680000, 'splitPrice5DayMedian': 174450000, 'sellPrice5DayMedian': 180300000, 'buyPrice30DayMedian': 177720000, 'splitPrice30DayMedian': 183850000, 'sellPrice30DayMedian': 188500000}, 'top5AveragePrices': {'buyPrice': 176500000, 'splitPrice': 181498333.3333333, 'sellPrice': 186496666.66666666, 'buyPrice5DayMedian': 168733333.33333334, 'splitPrice5DayMedian': 174763333.3333333, 'sellPrice5DayMedian': 181948275.86206895, 'buyPrice30DayMedian': 178800000, 'splitPrice30DayMedian': 183642673.992674, 'sellPrice30DayMedian': 188621212.12121212}, 'itemType': {'eid': 12005, 'name': 'Ishtar', 'volume': 115000, 'packagedVolume': 10000}}]
-Is fee for haul?: False
-haul fee is: 0
-processed_items: [{'item_id': 12005, 'item_name': 'ishtar', 'quantity': 1, 'tax_rate': 0.85, 'buyback_price': 145928000.0, 'market_price': 171680000, 'buyback_price_itemtotal': 145928000.0, 'market_price_itemtotal': 171680000, 'haul_bool': False, 'item_volume': 115000, 'haul_fee': 0}]
-form_data input in into parse user input function: ishtar 1
-items_list in parse user input function: ['ishtar 1']
-found name: ishtar
-found quantity: 1
-parsed_user_input: [{'name': 'ishtar', 'quantity': 1}]
-apiinput: ishtar 1
-
-Starting new HTTPS connection (1): janice.e-351.com:443
-https://janice.e-351.com:443 "POST /api/rest/v2/pricer?market=2 HTTP/1.1" 200 None
-api_data: [{'date': '2023-08-06T00:00:00Z', 'market': {'id': 2, 'name': 'Jita 4-4'}, 'buyOrderCount': 32, 'buyVolume': 134, 'sellOrderCount': 73, 'sellVolume': 611, 'immediatePrices': {'buyPrice': 176500000, 'splitPrice': 181300000, 'sellPrice': 186100000, 'buyPrice5DayMedian': 171680000, 'splitPrice5DayMedian': 174450000, 'sellPrice5DayMedian': 180300000, 'buyPrice30DayMedian': 177720000, 'splitPrice30DayMedian': 183850000, 'sellPrice30DayMedian': 188500000}, 'top5AveragePrices': {'buyPrice': 176500000, 'splitPrice': 181498333.3333333, 'sellPrice': 186496666.66666666, 'buyPrice5DayMedian': 168733333.33333334, 'splitPrice5DayMedian': 174763333.3333333, 'sellPrice5DayMedian': 181948275.86206895, 'buyPrice30DayMedian': 178800000, 'splitPrice30DayMedian': 183642673.992674, 'sellPrice30DayMedian': 188621212.12121212}, 'itemType': {'eid': 12005, 'name': 'Ishtar', 'volume': 115000, 'packagedVolume': 10000}}]
-Is fee for haul?: False
-haul fee is: 0
-processed_items: [{'item_id': 12005, 'item_name': 'ishtar', 'quantity': 1, 'tax_rate': 0.85, 'buyback_price': 145928000.0, 'market_price': 171680000, 'buyback_price_itemtotal': 145928000.0, 'market_price_itemtotal': 171680000, 'haul_bool': False, 'item_volume': 115000, 'haul_fee': 0}]
-form_data input in into parse user input function: ishtar 1
-items_list in parse user input function: ['ishtar 1']
-found name: ishtar
-found quantity: 1
-parsed_user_input: [{'name': 'ishtar', 'quantity': 1}]
-apiinput: ishtar 1
-
-Starting new HTTPS connection (1): janice.e-351.com:443
-https://janice.e-351.com:443 "POST /api/rest/v2/pricer?market=2 HTTP/1.1" 200 None
-api_data: [{'date': '2023-08-06T00:00:00Z', 'market': {'id': 2, 'name': 'Jita 4-4'}, 'buyOrderCount': 32, 'buyVolume': 134, 'sellOrderCount': 73, 'sellVolume': 611, 'immediatePrices': {'buyPrice': 176500000, 'splitPrice': 181300000, 'sellPrice': 186100000, 'buyPrice5DayMedian': 171680000, 'splitPrice5DayMedian': 174450000, 'sellPrice5DayMedian': 180300000, 'buyPrice30DayMedian': 177720000, 'splitPrice30DayMedian': 183850000, 'sellPrice30DayMedian': 188500000}, 'top5AveragePrices': {'buyPrice': 176500000, 'splitPrice': 181498333.3333333, 'sellPrice': 186496666.66666666, 'buyPrice5DayMedian': 168733333.33333334, 'splitPrice5DayMedian': 174763333.3333333, 'sellPrice5DayMedian': 181948275.86206895, 'buyPrice30DayMedian': 178800000, 'splitPrice30DayMedian': 183642673.992674, 'sellPrice30DayMedian': 188621212.12121212}, 'itemType': {'eid': 12005, 'name': 'Ishtar', 'volume': 115000, 'packagedVolume': 10000}}]
-Is fee for haul?: False
-haul fee is: 0
-processed_items: [{'item_id': 12005, 'item_name': 'ishtar', 'quantity': 1, 'tax_rate': 0.85, 'buyback_price': 145928000.0, 'market_price': 171680000, 'buyback_price_itemtotal': 145928000.0, 'market_price_itemtotal': 171680000, 'haul_bool': False, 'item_volume': 115000, 'haul_fee': 0}]
+api_data: [{'date': '2023-08-07T00:00:00Z', 'market': {'id': 2, 'name': 'Jita 4-4'}, 'buyOrderCount': 33, 'buyVolume': 135, 'sellOrderCount': 73, 'sellVolume': 610, 'immediatePrices': {'buyPrice': 176600000, 'splitPrice': 181350000, 'sellPrice': 186100000, 'buyPrice5DayMedian': 173200000, 'splitPrice5DayMedian': 181250000, 'sellPrice5DayMedian': 186000000, 'buyPrice30DayMedian': 177613333.33333334, 'splitPrice30DayMedian': 183800000, 'sellPrice30DayMedian': 187900000}, 'top5AveragePrices': {'buyPrice': 176516666.66666666, 'splitPrice': 181520000, 'sellPrice': 186523333.33333334, 'buyPrice5DayMedian': 176500000, 'splitPrice5DayMedian': 181483333.3333333, 'sellPrice5DayMedian': 186466666.66666666, 'buyPrice30DayMedian': 178000000, 'splitPrice30DayMedian': 183425000, 'sellPrice30DayMedian': 188616666.66666666}, 'itemType': {'eid': 12005, 'name': 'Ishtar', 'volume': 115000, 'packagedVolume': 10000}}]
+processed_items: []
+gtotal_market: 0
+gtotal_buyback: 0
+Internal Server Error: /buyback/
+Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/django/core/handlers/base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/spoopy/buyback/views.py", line 290, in index
+    geff_rate = gtotal_buyback / gtotal_market
+                ~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~
+ZeroDivisionError: division by zero
 /root/spoopy/buyback/views.py changed, reloading.
 Watching for file changes with StatReloader
 NumExpr defaulting to 2 threads.
 form_data input in into parse user input function: ishtar 1
 items_list in parse user input function: ['ishtar 1']
-found name: ishtar
+parsed_user_input: []
+apiinput: 
+Starting new HTTPS connection (1): janice.e-351.com:443
+https://janice.e-351.com:443 "POST /api/rest/v2/pricer?market=2 HTTP/1.1" 400 None
+api_data: {'type': 'https://tools.ietf.org/html/rfc7231#section-6.5.1', 'title': 'One or more validation errors occurred.', 'status': 400, 'traceId': '00-eeba062f89e20cc0926b1e13e7f91015-fe6b872b30a62329-00', 'errors': {'': ['A non-empty request body is required.'], 'itemTypes': ['The itemTypes field is required.']}}
+processed_items: []
+gtotal_market: 0
+gtotal_buyback: 0
+Internal Server Error: /buyback/
+Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/django/core/handlers/base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/spoopy/buyback/views.py", line 291, in index
+    geff_rate = gtotal_buyback / gtotal_market
+                ~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~
+ZeroDivisionError: division by zero
+/root/spoopy/buyback/views.py changed, reloading.
+Watching for file changes with StatReloader
+NumExpr defaulting to 2 threads.
+/root/spoopy/buyback/views.py changed, reloading.
+Watching for file changes with StatReloader
+NumExpr defaulting to 2 threads.
+form_data input in into parse user input function: vexor 1
+lines in parse user input function: ['vexor 1']
+parsed_user_input: []
+apiinput: 
+Starting new HTTPS connection (1): janice.e-351.com:443
+https://janice.e-351.com:443 "POST /api/rest/v2/pricer?market=2 HTTP/1.1" 400 None
+api_data: {'type': 'https://tools.ietf.org/html/rfc7231#section-6.5.1', 'title': 'One or more validation errors occurred.', 'status': 400, 'traceId': '00-95a1471d4c17819e2df4b4612f0556f9-8c11f86fd26e7f8f-00', 'errors': {'': ['A non-empty request body is required.'], 'itemTypes': ['The itemTypes field is required.']}}
+processed_items: []
+gtotal_market: 0
+gtotal_buyback: 0
+Internal Server Error: /buyback/
+Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/django/core/handlers/base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/spoopy/buyback/views.py", line 261, in index
+    geff_rate = gtotal_buyback / gtotal_market
+                ~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~
+ZeroDivisionError: division by zero
+form_data input in into parse user input function: Warp Scrambler II	1	Warp Scrambler	5
+Warp Disruptor II	1	Warp Scrambler	5
+Initiated Compact Warp Scrambler	2	Warp Scrambler	1
+Faint Epsilon Scoped Warp Scrambler		Warp Scrambler	1
+lines in parse user input function: ['Warp Scrambler II\t1\tWarp Scrambler\t5\r', 'Warp Disruptor II\t1\tWarp Scrambler\t5\r', 'Initiated Compact Warp Scrambler\t2\tWarp Scrambler\t1\r', 'Faint Epsilon Scoped Warp Scrambler\t\tWarp Scrambler\t1']
+found name: Warp Scrambler II
 found quantity: 1
-parsed_user_input: [{'name': 'ishtar', 'quantity': 1}]
-apiinput: ishtar 1
+found name: Warp Disruptor II
+found quantity: 1
+found name: Initiated Compact Warp Scrambler
+found quantity: 2
+found name: Faint Epsilon Scoped Warp Scrambler
+found quantity: 1
+parsed_user_input: [{'name': 'Warp Scrambler II', 'quantity': 1}, {'name': 'Warp Disruptor II', 'quantity': 1}, {'name': 'Initiated Compact Warp Scrambler', 'quantity': 2}, {'name': 'Faint Epsilon Scoped Warp Scrambler', 'quantity': 1}]
+apiinput: Warp Scrambler II 1
+Warp Disruptor II 1
+Initiated Compact Warp Scrambler 2
+Faint Epsilon Scoped Warp Scrambler 1
 
 Starting new HTTPS connection (1): janice.e-351.com:443
 https://janice.e-351.com:443 "POST /api/rest/v2/pricer?market=2 HTTP/1.1" 200 None
-api_data: [{'date': '2023-08-06T00:00:00Z', 'market': {'id': 2, 'name': 'Jita 4-4'}, 'buyOrderCount': 32, 'buyVolume': 134, 'sellOrderCount': 73, 'sellVolume': 611, 'immediatePrices': {'buyPrice': 176500000, 'splitPrice': 181300000, 'sellPrice': 186100000, 'buyPrice5DayMedian': 171680000, 'splitPrice5DayMedian': 174450000, 'sellPrice5DayMedian': 180300000, 'buyPrice30DayMedian': 177720000, 'splitPrice30DayMedian': 183850000, 'sellPrice30DayMedian': 188500000}, 'top5AveragePrices': {'buyPrice': 176500000, 'splitPrice': 181498333.3333333, 'sellPrice': 186496666.66666666, 'buyPrice5DayMedian': 168733333.33333334, 'splitPrice5DayMedian': 174763333.3333333, 'sellPrice5DayMedian': 181948275.86206895, 'buyPrice30DayMedian': 178800000, 'splitPrice30DayMedian': 183642673.992674, 'sellPrice30DayMedian': 188621212.12121212}, 'itemType': {'eid': 12005, 'name': 'Ishtar', 'volume': 115000, 'packagedVolume': 10000}}]
+api_data: [{'date': '2023-08-07T00:00:00Z', 'market': {'id': 2, 'name': 'Jita 4-4'}, 'buyOrderCount': 5, 'buyVolume': 102382, 'sellOrderCount': 26, 'sellVolume': 25892, 'immediatePrices': {'buyPrice': 35550, 'splitPrice': 42755, 'sellPrice': 49960, 'buyPrice5DayMedian': 39302, 'splitPrice5DayMedian': 42755, 'sellPrice5DayMedian': 49960, 'buyPrice30DayMedian': 41543, 'splitPrice30DayMedian': 48830, 'sellPrice30DayMedian': 55790}, 'top5AveragePrices': {'buyPrice': 1425.6732506348897, 'splitPrice': 26753.489639227802, 'sellPrice': 52081.30602782071, 'buyPrice5DayMedian': 4654.6240043205025, 'splitPrice5DayMedian': 27303.499233150207, 'sellPrice5DayMedian': 52081.30602782071, 'buyPrice30DayMedian': 22554.795766423358, 'splitPrice30DayMedian': 39473.562165201394, 'sellPrice30DayMedian': 55849.68616262482}, 'itemType': {'eid': 5443, 'name': 'Faint Epsilon Scoped Warp Scrambler', 'volume': 5, 'packagedVolume': 5}}, {'date': '2023-08-07T00:00:00Z', 'market': {'id': 2, 'name': 'Jita 4-4'}, 'buyOrderCount': 26, 'buyVolume': 2412, 'sellOrderCount': 54, 'sellVolume': 6227, 'immediatePrices': {'buyPrice': 1435000, 'splitPrice': 1501500, 'sellPrice': 1568000, 'buyPrice5DayMedian': 1435400, 'splitPrice5DayMedian': 1501500, 'sellPrice5DayMedian': 1585000, 'buyPrice30DayMedian': 1409266.6666666667, 'splitPrice30DayMedian': 1484000, 'sellPrice30DayMedian': 1562000}, 'top5AveragePrices': {'buyPrice': 1434141.6666666667, 'splitPrice': 1502651.2191854236, 'sellPrice': 1571160.7717041802, 'buyPrice5DayMedian': 1434141.6666666667, 'splitPrice5DayMedian': 1502569.2307692308, 'sellPrice5DayMedian': 1585750.8090614886, 'buyPrice30DayMedian': 1397000, 'splitPrice30DayMedian': 1486323.3036707453, 'sellPrice30DayMedian': 1570185.053380783}, 'itemType': {'eid': 3244, 'name': 'Warp Disruptor II', 'volume': 5, 'packagedVolume': 5}}, {'date': '2023-08-07T00:00:00Z', 'market': {'id': 2, 'name': 'Jita 4-4'}, 'buyOrderCount': 19, 'buyVolume': 2049, 'sellOrderCount': 81, 'sellVolume': 21851, 'immediatePrices': {'buyPrice': 1447000, 'splitPrice': 1496500, 'sellPrice': 1546000, 'buyPrice5DayMedian': 1488200, 'splitPrice5DayMedian': 1499000, 'sellPrice5DayMedian': 1615000, 'buyPrice30DayMedian': 1563266.6666666667, 'splitPrice30DayMedian': 1636000, 'sellPrice30DayMedian': 1742000}, 'top5AveragePrices': {'buyPrice': 1446294.1176470588, 'splitPrice': 1500059.604611075, 'sellPrice': 1553825.0915750915, 'buyPrice5DayMedian': 1446294.1176470588, 'splitPrice5DayMedian': 1500059.604611075, 'sellPrice5DayMedian': 1618449.575871819, 'buyPrice30DayMedian': 1572189.4736842106, 'splitPrice30DayMedian': 1645104.4260027662, 'sellPrice30DayMedian': 1764208.8520055325}, 'itemType': {'eid': 448, 'name': 'Warp Scrambler II', 'volume': 5, 'packagedVolume': 5}}, {'date': '2023-08-07T00:00:00Z', 'market': {'id': 2, 'name': 'Jita 4-4'}, 'buyOrderCount': 3, 'buyVolume': 2516, 'sellOrderCount': 69, 'sellVolume': 19904, 'immediatePrices': {'buyPrice': 27210, 'splitPrice': 29295, 'sellPrice': 31380, 'buyPrice5DayMedian': 27246, 'splitPrice5DayMedian': 28665, 'sellPrice5DayMedian': 30000, 'buyPrice30DayMedian': 28446.333333333332, 'splitPrice30DayMedian': 30185, 'sellPrice30DayMedian': 31410}, 'top5AveragePrices': {'buyPrice': 27210, 'splitPrice': 29295, 'sellPrice': 31380, 'buyPrice5DayMedian': 27229.37062937063, 'splitPrice5DayMedian': 29294.48827035034, 'sellPrice5DayMedian': 31359.60591133005, 'buyPrice30DayMedian': 28950, 'splitPrice30DayMedian': 30216.96644920783, 'sellPrice30DayMedian': 31463.932898415656}, 'itemType': {'eid': 5445, 'name': 'Initiated Compact Warp Scrambler', 'volume': 5, 'packagedVolume': 5}}]
 Is fee for haul?: False
 haul fee is: 0
-processed_items: [{'item_id': 12005, 'item_name': 'ishtar', 'quantity': 1, 'tax_rate': 0.85, 'buyback_price': 145928000.0, 'market_price': 171680000, 'buyback_price_itemtotal': 145928000.0, 'market_price_itemtotal': 171680000, 'haul_bool': False, 'item_volume': 115000, 'haul_fee': 0}]
-form_data input in into parse user input function: ishtar 1
-items_list in parse user input function: ['ishtar 1']
-found name: ishtar
-found quantity: 1
-parsed_user_input: [{'name': 'ishtar', 'quantity': 1}]
-apiinput: ishtar 1
-
-Starting new HTTPS connection (1): janice.e-351.com:443
-form_data input in into parse user input function: ishtar 1
-items_list in parse user input function: ['ishtar 1']
-found name: ishtar
-found quantity: 1
-parsed_user_input: [{'name': 'ishtar', 'quantity': 1}]
-apiinput: ishtar 1
-
-Starting new HTTPS connection (1): janice.e-351.com:443
-https://janice.e-351.com:443 "POST /api/rest/v2/pricer?market=2 HTTP/1.1" 200 None
-api_data: [{'date': '2023-08-06T00:00:00Z', 'market': {'id': 2, 'name': 'Jita 4-4'}, 'buyOrderCount': 32, 'buyVolume': 134, 'sellOrderCount': 73, 'sellVolume': 611, 'immediatePrices': {'buyPrice': 176500000, 'splitPrice': 181300000, 'sellPrice': 186100000, 'buyPrice5DayMedian': 171680000, 'splitPrice5DayMedian': 174450000, 'sellPrice5DayMedian': 180300000, 'buyPrice30DayMedian': 177720000, 'splitPrice30DayMedian': 183850000, 'sellPrice30DayMedian': 188500000}, 'top5AveragePrices': {'buyPrice': 176500000, 'splitPrice': 181498333.3333333, 'sellPrice': 186496666.66666666, 'buyPrice5DayMedian': 168733333.33333334, 'splitPrice5DayMedian': 174763333.3333333, 'sellPrice5DayMedian': 181948275.86206895, 'buyPrice30DayMedian': 178800000, 'splitPrice30DayMedian': 183642673.992674, 'sellPrice30DayMedian': 188621212.12121212}, 'itemType': {'eid': 12005, 'name': 'Ishtar', 'volume': 115000, 'packagedVolume': 10000}}]
 Is fee for haul?: False
 haul fee is: 0
-processed_items: [{'item_id': 12005, 'item_name': 'ishtar', 'quantity': 1, 'tax_rate': 0.85, 'buyback_price': 145928000.0, 'market_price': 171680000, 'buyback_price_itemtotal': 145928000.0, 'market_price_itemtotal': 171680000, 'haul_bool': False, 'item_volume': 115000, 'haul_fee': 0}]
-https://janice.e-351.com:443 "POST /api/rest/v2/pricer?market=2 HTTP/1.1" 200 None
-api_data: [{'date': '2023-08-06T00:00:00Z', 'market': {'id': 2, 'name': 'Jita 4-4'}, 'buyOrderCount': 32, 'buyVolume': 134, 'sellOrderCount': 73, 'sellVolume': 611, 'immediatePrices': {'buyPrice': 176500000, 'splitPrice': 181300000, 'sellPrice': 186100000, 'buyPrice5DayMedian': 171680000, 'splitPrice5DayMedian': 174450000, 'sellPrice5DayMedian': 180300000, 'buyPrice30DayMedian': 177720000, 'splitPrice30DayMedian': 183850000, 'sellPrice30DayMedian': 188500000}, 'top5AveragePrices': {'buyPrice': 176500000, 'splitPrice': 181498333.3333333, 'sellPrice': 186496666.66666666, 'buyPrice5DayMedian': 168733333.33333334, 'splitPrice5DayMedian': 174763333.3333333, 'sellPrice5DayMedian': 181948275.86206895, 'buyPrice30DayMedian': 178800000, 'splitPrice30DayMedian': 183642673.992674, 'sellPrice30DayMedian': 188621212.12121212}, 'itemType': {'eid': 12005, 'name': 'Ishtar', 'volume': 115000, 'packagedVolume': 10000}}]
 Is fee for haul?: False
 haul fee is: 0
-processed_items: [{'item_id': 12005, 'item_name': 'ishtar', 'quantity': 1, 'tax_rate': 0.85, 'buyback_price': 145928000.0, 'market_price': 171680000, 'buyback_price_itemtotal': 145928000.0, 'market_price_itemtotal': 171680000, 'haul_bool': False, 'item_volume': 115000, 'haul_fee': 0}]
-form_data input in into parse user input function: ishtar 1
-items_list in parse user input function: ['ishtar 1']
-found name: ishtar
-found quantity: 1
-parsed_user_input: [{'name': 'ishtar', 'quantity': 1}]
-apiinput: ishtar 1
+Is fee for haul?: False
+haul fee is: 0
+processed_items: [{'item_id': 448, 'item_name': 'Warp Scrambler II', 'quantity': 1, 'tax_rate': 0.85, 'buyback_price': 1264970.0, 'market_price': 1488200, 'buyback_price_itemtotal': 1264970.0, 'market_price_itemtotal': 1488200, 'haul_bool': False, 'item_volume': 5, 'haul_fee': 0}, {'item_id': 3244, 'item_name': 'Warp Disruptor II', 'quantity': 1, 'tax_rate': 0.85, 'buyback_price': 1220090.0, 'market_price': 1435400, 'buyback_price_itemtotal': 1220090.0, 'market_price_itemtotal': 1435400, 'haul_bool': False, 'item_volume': 5, 'haul_fee': 0}, {'item_id': 5445, 'item_name': 'Initiated Compact Warp Scrambler', 'quantity': 2, 'tax_rate': 0.85, 'buyback_price': 23159.1, 'market_price': 27246, 'buyback_price_itemtotal': 46318.2, 'market_price_itemtotal': 54492, 'haul_bool': False, 'item_volume': 5, 'haul_fee': 0}, {'item_id': 5443, 'item_name': 'Faint Epsilon Scoped Warp Scrambler', 'quantity': 1, 'tax_rate': 0.85, 'buyback_price': 33406.7, 'market_price': 39302, 'buyback_price_itemtotal': 33406.7, 'market_price_itemtotal': 39302, 'haul_bool': False, 'item_volume': 5, 'haul_fee': 0}]
+gtotal_market: 3017394
+gtotal_buyback: 2564784.9000000004
+form_data input in into parse user input function: Cap Booster 200	200	Capacitor Booster Charge	Charge	Medium		1,600 m3	1,013,184.00 ISK
+lines in parse user input function: ['Cap Booster 200\t200\tCapacitor Booster Charge\tCharge\tMedium\t\t1,600 m3\t1,013,184.00 ISK']
+found name: Cap Booster 200
+found quantity: 200
+parsed_user_input: [{'name': 'Cap Booster 200', 'quantity': 200}]
+apiinput: Cap Booster 200 200
 
 Starting new HTTPS connection (1): janice.e-351.com:443
 https://janice.e-351.com:443 "POST /api/rest/v2/pricer?market=2 HTTP/1.1" 200 None
-api_data: [{'date': '2023-08-06T00:00:00Z', 'market': {'id': 2, 'name': 'Jita 4-4'}, 'buyOrderCount': 32, 'buyVolume': 134, 'sellOrderCount': 73, 'sellVolume': 611, 'immediatePrices': {'buyPrice': 176500000, 'splitPrice': 181300000, 'sellPrice': 186100000, 'buyPrice5DayMedian': 171680000, 'splitPrice5DayMedian': 174450000, 'sellPrice5DayMedian': 180300000, 'buyPrice30DayMedian': 177720000, 'splitPrice30DayMedian': 183850000, 'sellPrice30DayMedian': 188500000}, 'top5AveragePrices': {'buyPrice': 176500000, 'splitPrice': 181498333.3333333, 'sellPrice': 186496666.66666666, 'buyPrice5DayMedian': 168733333.33333334, 'splitPrice5DayMedian': 174763333.3333333, 'sellPrice5DayMedian': 181948275.86206895, 'buyPrice30DayMedian': 178800000, 'splitPrice30DayMedian': 183642673.992674, 'sellPrice30DayMedian': 188621212.12121212}, 'itemType': {'eid': 12005, 'name': 'Ishtar', 'volume': 115000, 'packagedVolume': 10000}}]
+api_data: [{'date': '2023-08-07T00:00:00Z', 'market': {'id': 2, 'name': 'Jita 4-4'}, 'buyOrderCount': 17, 'buyVolume': 140748, 'sellOrderCount': 12, 'sellVolume': 13509, 'immediatePrices': {'buyPrice': 4208, 'splitPrice': 6492, 'sellPrice': 8776, 'buyPrice5DayMedian': 3922, 'splitPrice5DayMedian': 6355, 'sellPrice5DayMedian': 8881, 'buyPrice30DayMedian': 3577.0666666666666, 'splitPrice30DayMedian': 4350.5, 'sellPrice30DayMedian': 5090}, 'top5AveragePrices': {'buyPrice': 4109.92923120648, 'splitPrice': 6442.9646156032395, 'sellPrice': 8776, 'buyPrice5DayMedian': 3735.238366301409, 'splitPrice5DayMedian': 6352.838541666667, 'sellPrice5DayMedian': 8881, 'buyPrice30DayMedian': 3609.973188405797, 'splitPrice30DayMedian': 4359.486594202898, 'sellPrice30DayMedian': 5099.539208074534}, 'itemType': {'eid': 11285, 'name': 'Cap Booster 200', 'volume': 8, 'packagedVolume': 8}}]
 Is fee for haul?: False
 haul fee is: 0
-processed_items: [{'item_id': 12005, 'item_name': 'ishtar', 'quantity': 1, 'tax_rate': 0.85, 'buyback_price': 145928000.0, 'market_price': 171680000, 'buyback_price_itemtotal': 145928000.0, 'market_price_itemtotal': 171680000, 'haul_bool': False, 'item_volume': 115000, 'haul_fee': 0}]
+processed_items: [{'item_id': 11285, 'item_name': 'Cap Booster 200', 'quantity': 200, 'tax_rate': 0.85, 'buyback_price': 3333.7, 'market_price': 3922, 'buyback_price_itemtotal': 666740.0, 'market_price_itemtotal': 784400, 'haul_bool': False, 'item_volume': 8, 'haul_fee': 0}]
+gtotal_market: 784400
+gtotal_buyback: 666740.0
+form_data input in into parse user input function: Cap Booster 200	1	Capacitor Booster Charge	Charge	Medium		1,600 m3	1,013,184.00 ISK
+lines in parse user input function: ['Cap Booster 200\t1\tCapacitor Booster Charge\tCharge\tMedium\t\t1,600 m3\t1,013,184.00 ISK']
+found name: Cap Booster 200
+found quantity: 1
+parsed_user_input: [{'name': 'Cap Booster 200', 'quantity': 1}]
+apiinput: Cap Booster 200 1
+
+Starting new HTTPS connection (1): janice.e-351.com:443
+https://janice.e-351.com:443 "POST /api/rest/v2/pricer?market=2 HTTP/1.1" 200 None
+api_data: [{'date': '2023-08-07T00:00:00Z', 'market': {'id': 2, 'name': 'Jita 4-4'}, 'buyOrderCount': 17, 'buyVolume': 140748, 'sellOrderCount': 12, 'sellVolume': 13509, 'immediatePrices': {'buyPrice': 4208, 'splitPrice': 6492, 'sellPrice': 8776, 'buyPrice5DayMedian': 3922, 'splitPrice5DayMedian': 6355, 'sellPrice5DayMedian': 8881, 'buyPrice30DayMedian': 3577.0666666666666, 'splitPrice30DayMedian': 4350.5, 'sellPrice30DayMedian': 5090}, 'top5AveragePrices': {'buyPrice': 4109.92923120648, 'splitPrice': 6442.9646156032395, 'sellPrice': 8776, 'buyPrice5DayMedian': 3735.238366301409, 'splitPrice5DayMedian': 6352.838541666667, 'sellPrice5DayMedian': 8881, 'buyPrice30DayMedian': 3609.973188405797, 'splitPrice30DayMedian': 4359.486594202898, 'sellPrice30DayMedian': 5099.539208074534}, 'itemType': {'eid': 11285, 'name': 'Cap Booster 200', 'volume': 8, 'packagedVolume': 8}}]
+Is fee for haul?: False
+haul fee is: 0
+processed_items: [{'item_id': 11285, 'item_name': 'Cap Booster 200', 'quantity': 1, 'tax_rate': 0.85, 'buyback_price': 3333.7, 'market_price': 3922, 'buyback_price_itemtotal': 3333.7, 'market_price_itemtotal': 3922, 'haul_bool': False, 'item_volume': 8, 'haul_fee': 0}]
+gtotal_market: 3922
+gtotal_buyback: 3333.7

@@ -47,19 +47,66 @@ re_asset_list = re.compile(r'^([\S ]+)\s+([\d,]+)$')
 
 #     return parsed_input
 
+############ worked for user typed input and game paste but dose not get qty right for "capboosters 100   5"
+# def parse_user_input(form_data):
+#     parsed_input = []
+#     logger.debug("form_data input in into parse user input function: %s", form_data)
+#     items_list = re.split(r'\r?\n', form_data)  # Split using \r\n or \n as the delimiter
+#     logger.debug("items_list in parse user input function: %s", items_list)
+    
+#     for item_input in items_list:
+#         # Split the input by whitespace to separate name and quantity
+#         parts = item_input.strip().split()
+#         if len(parts) == 2:
+#             name = parts[0]
+#             quantity = parts[1]
 
+#             # Check if quantity is a valid integer
+#             if quantity.isdigit():
+#                 quantity = int(quantity)
+#             else:
+#                 quantity = 1
+
+#             logger.debug("found name: %s", name)
+#             logger.debug("found quantity: %s", quantity)
+            
+#             parsed_input.append({
+#                 'name': name,
+#                 'quantity': quantity,
+#             })
+#         else:
+#             initial_string = item_input
+#             name = re.search(r'^([\S\ ]*)', initial_string).group(1)
+#             quantity = re.search(r"\t(\d+(?:,\d{3})*(?:\.\d+)?)|(?! |\t)(\d+)", initial_string)
+#             if quantity:
+#                 quantity_str = quantity.group(1) or quantity.group(2)
+#                 quantity = int(quantity_str.replace(',', ''))
+#             else:
+#                 quantity = 1
+
+#             logger.debug("regex debug search found name: %s", name)
+#             logger.debug("regex debug search found quantity: %s", quantity)
+            
+#             parsed_input.append({
+#                 'name': name,
+#                 'quantity': quantity,
+#             })
+
+#     return parsed_input
+# ################################################
+
+# ################### wont do user input
 def parse_user_input(form_data):
     parsed_input = []
     logger.debug("form_data input in into parse user input function: %s", form_data)
-    items_list = re.split(r'\r?\n', form_data)  # Split using \r\n or \n as the delimiter
-    logger.debug("items_list in parse user input function: %s", items_list)
+    lines = form_data.strip().split('\n')
+    logger.debug("lines in parse user input function: %s", lines)
     
-    for item_input in items_list:
-        # Split the input by whitespace to separate name and quantity
-        parts = item_input.strip().split()
-        if len(parts) == 2:
+    for line in lines:
+        parts = line.strip().split('\t')
+        if len(parts) >= 2:
             name = parts[0]
-            quantity = parts[1]
+            quantity = parts[1].replace(',', '')
 
             # Check if quantity is a valid integer
             if quantity.isdigit():
@@ -74,27 +121,13 @@ def parse_user_input(form_data):
                 'name': name,
                 'quantity': quantity,
             })
-        else:
-            initial_string = item_input
-            name = re.search(r'^([\S\ ]*)', initial_string).group(1)
-            quantity = re.search(r"\t(\d+(?:,\d{3})*(?:\.\d+)?)|(?! |\t)(\d+)", initial_string)
-            if quantity:
-                quantity_str = quantity.group(1) or quantity.group(2)
-                quantity = int(quantity_str.replace(',', ''))
-            else:
-                quantity = 1
-
-            logger.debug("regex debug search found name: %s", name)
-            logger.debug("regex debug search found quantity: %s", quantity)
-            
-            parsed_input.append({
-                'name': name,
-                'quantity': quantity,
-            })
 
     return parsed_input
+################################
 
 
+
+####################################
 def calculate_buyback_price(item_price, tax_rate):
     buyback_price = item_price * tax_rate
     return buyback_price
@@ -218,8 +251,16 @@ def index(request):
                     })  # Include the processed item data
             logger.debug("processed_items: %s", processed_items)
             gtotal_market = sum(item.get('market_price_itemtotal', 0) for item in processed_items)
+            logger.debug("gtotal_market: %s", gtotal_market)
             gtotal_buyback = sum(item.get('buyback_price_itemtotal', 0) for item in processed_items)
+            logger.debug("gtotal_buyback: %s", gtotal_buyback)
+            if gtotal_market != 0 and gtotal_buyback !=0:
+                geff_rate = gtotal_buyback / gtotal_market
+            else:
+                geff_rate = 0 
             geff_rate = gtotal_buyback / gtotal_market
+            totals_info = [gtotal_buyback, gtotal_market, geff_rate]
+            
 
             totals_info = [gtotal_buyback, gtotal_market, geff_rate]           
             nl_db = "\n"
