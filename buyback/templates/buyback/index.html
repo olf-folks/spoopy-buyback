@@ -80,7 +80,7 @@
         <div><table class="w-full"><tr>
             <td class="text-start">Market Total:</td><td class="text-end">{{ totals_info.1|add_commas }} ISK</td></tr>
             <tr><td class="text-start">Buyback Total:</td><td class="text-end cursor-pointer" id="buyback-total">{{ totals_info.0|add_commas }} ISK</td></tr>
-            <tr>        <td class="text-start">Effective Rate:</td><td class="text-end">{{ totals_info.2 }} %</td></tr>
+            <tr>        <td class="text-start">Effective Rate:</td><td class="text-end">{{ totals_info.2|floatformat:2 }} %</td></tr>
             </table>
                     <p>Create a contract to <span class="font-bold">SPOOPY BUYBACK</span></p>
                     <p>Use amount under <span class="font-bold">Buyback Total</span> as the contract value</p>
