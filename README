@@ -63,3 +63,12 @@ This project is licensed under the MIT License. See the [LICENSE](LICENSE) file 
 For questions or feedback, you can reach us at spoopybuyback@example.com.
 
 ---
+
+Fix regex problem where numbers in name become qty - done
+Add Flat rate
+Effective rate total - done
+Finnish hauling fee
+Admin improvements:
+Batch edit groups
+Batch add for new items
+Lock group Id edit
