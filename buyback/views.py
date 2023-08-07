@@ -10,44 +10,13 @@ from .forms import ItemForm
 import pandas as pd
 import re
 from .models import EveItemTax  # Import your model
-
+from typing import List
 import logging
 
 logger = logging.getLogger(__name__)
 
-re_asset_list = re.compile(r'^([\S ]+)\s+([\d,]+)$')
-
-
-## works only with game pasted input
-# def parse_user_input(form_data):
-#     parsed_input = []
-#     logger.debug("form_data input in into parse user input function: %s", form_data)
-#     items_list = re.split(r'\r?\n', form_data)  # Split using \r\n or \n as the delimiter
-#     logger.debug("items_list in parse user input function: %s", items_list)
-    
-#     for item_input in items_list:
-#         initial_string = item_input
-#         #name = re.search(r'^(\S+)', initial_string).group(1)            
-#         name = re.search(r'^([\S\ ]*)', initial_string).group(1)
-#         # quantity = re.search(r"\t(\d+(?:,\d{3})*(?:\.\d+)?)|(?! |\t)(\d+)", initial_string)
-#         quantity = re.search(r"\t(\d+(?:,\d{3})*(?:\.\d+)?)\s", initial_string)
-#         if quantity:
-#             quantity_str = quantity.group(1) or quantity.group(2)
-#             quantity = int(quantity_str.replace(',', ''))
-#         else:
-#             quantity = 1
-
-#         logger.debug("regex debug search found name: %s", name)
-#         logger.debug("regex debug search found quantity: %s", quantity)
-        
-#         parsed_input.append({
-#             'name': name,
-#             'quantity': quantity,
-#         })
-
-#     return parsed_input
-
 ############ worked for user typed input and game paste but dose not get qty right for "capboosters 100   5"
+
 # def parse_user_input(form_data):
 #     parsed_input = []
 #     logger.debug("form_data input in into parse user input function: %s", form_data)
@@ -93,41 +62,74 @@ re_asset_list = re.compile(r'^([\S ]+)\s+([\d,]+)$')
 #             })
 
 #     return parsed_input
-# ################################################
 
-# ################### wont do user input
-def parse_user_input(form_data):
-    parsed_input = []
-    logger.debug("form_data input in into parse user input function: %s", form_data)
-    lines = form_data.strip().split('\n')
-    logger.debug("lines in parse user input function: %s", lines)
+#################################################
+
+# ################### wont do user input, works with pasted items even if the name has a number at the end
+# def parse_user_input(form_data):
+#     parsed_input = []
+#     logger.debug("form_data input in into parse user input function: %s", form_data)
+#     lines = form_data.strip().split('\n')
+#     logger.debug("lines in parse user input function: %s", lines)
     
-    for line in lines:
-        parts = line.strip().split('\t')
-        if len(parts) >= 2:
-            name = parts[0]
-            quantity = parts[1].replace(',', '')
+#     for line in lines:
+#         parts = line.strip().split('\t')
+#         if len(parts) >= 2:
+#             name = parts[0]
+#             quantity = parts[1].replace(',', '')
 
-            # Check if quantity is a valid integer
-            if quantity.isdigit():
-                quantity = int(quantity)
-            else:
-                quantity = 1
+#             # Check if quantity is a valid integer
+#             if quantity.isdigit():
+#                 quantity = int(quantity)
+#             else:
+#                 quantity = 1
 
-            logger.debug("found name: %s", name)
-            logger.debug("found quantity: %s", quantity)
+#             logger.debug("found name: %s", name)
+#             logger.debug("found quantity: %s", quantity)
             
-            parsed_input.append({
-                'name': name,
-                'quantity': quantity,
-            })
+#             parsed_input.append({
+#                 'name': name,
+#                 'quantity': quantity,
+#             })
 
-    return parsed_input
+#     return parsed_input
 ################################
 
+# jake convinced an IA to to finnaly give this answer taht con do everyting, dont know how it works though
+def parse_user_input(form_data):
+    lines = form_data.strip().split('\n')
+    parsed_input = []
+    default_quantity = 1
+ 
+    for line in lines:
+        parts = line.split('\t')
+        item_name = parts[0].strip()
+ 
+        if len(parts) > 1:
+            quantity = parts[1].strip()
+            quantity = quantity.replace(',', '')
+        else:
+            # Check if the line has a quantity by splitting at spaces
+            item_parts = item_name.split()
+            if len(item_parts) > 1 and item_parts[-1].isdigit():
+                quantity = item_parts[-1]
+                quantity = quantity.replace(',', '')
+                item_name = " ".join(item_parts[:-1])
+            else:
+                quantity = default_quantity
+        
+        if len(str(quantity)) < 1:
+            quantity = default_quantity
+ 
+        quantity = int(quantity)
+ 
+        parsed_input.append({
+            'name': item_name,
+            'quantity': quantity,
+        })
+ 
+    return parsed_input
 
-
-####################################
 def calculate_buyback_price(item_price, tax_rate):
     buyback_price = item_price * tax_rate
     return buyback_price
@@ -186,6 +188,7 @@ def index(request):
         if form.is_valid():
             raw_user_input = form.cleaned_data['item_name']  # Get the input text from the form
             parsed_user_input = parse_user_input(raw_user_input)
+
             logger.debug("parsed_user_input: %s", parsed_user_input)
             api_input = generate_api_input(parsed_user_input)
             quantity = getqtys(parsed_user_input)
@@ -202,6 +205,7 @@ def index(request):
                 
                 item_name = item['name']
                 item_name_lower = item_name.lower()
+
                 quantity = item['quantity']
                 #item_id = api_data[0]['itemType']['eid']  # Assuming you get the item ID from the API response
                 #item_data = next((item for item in api_data if item['itemType']['name'] == item_name), None)
