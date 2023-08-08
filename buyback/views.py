@@ -321,7 +321,7 @@ def index(request):
             totals_info = [gtotal_buyback, gtotal_market, geff_rate]           
             nl_db = "\n"
             debug = [api_data]
-            debugtog = True
+            debugtog = False
             return render(request, 'buyback/index.html', {'form': form,'processed_items': processed_items, 'totals_info':totals_info, 'debugtog': debugtog, 'debug': debug, 'info_right': info_right})
     else:
         form = ItemForm()
