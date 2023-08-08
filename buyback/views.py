@@ -141,6 +141,49 @@ def get_tax_rate_from_database(item_id):
         return tax_entry.jita_buy_percentage  # dont Convert percentage to decimal
     except EveItemTax.DoesNotExist:
         return 0.0  # Default tax rate if item not found
+    
+# def get_flat_rate_from_database(item_id):
+#     try:
+#         tax_entry = EveItemTax.objects.get(type_id=item_id)
+
+#         # Check if flat_cost is a string with commas
+#         if isinstance(tax_entry.flat_cost, str):
+#             # Remove commas and convert to int
+#             flat_cost_int = int(tax_entry.flat_cost.replace(',', ''))
+            
+#             # Update the database entry with the converted integer
+#             tax_entry.flat_cost = flat_cost_int
+#             tax_entry.save()
+
+#             return tax_entry.flat_cost
+
+#         return tax_entry.flat_cost
+#     except EveItemTax.DoesNotExist:
+#         return 0  # Default tax rate if item not found
+
+
+
+from .models import EveItemTax
+import re
+
+
+def get_flat_rate_from_database(item_id):
+    try:
+        tax_entry = EveItemTax.objects.get(type_id=item_id)
+        
+        flat_cost_str = str(tax_entry.flat_cost)
+        flat_cost_cleaned = flat_cost_str.replace(',', '')  # Remove commas
+        
+        if flat_cost_cleaned.isdigit():
+            return int(flat_cost_cleaned)
+        else:
+            return 0  # Default tax rate if not a valid integer
+    except EveItemTax.DoesNotExist:
+        return 0  # Default tax rate if item not found
+
+
+
+
 
 def get_haul_fee_bool_from_database(item_id):
     try:
@@ -227,12 +270,21 @@ def index(request):
                         haul_fee = 0
                     logger.debug("haul fee is: %s", haul_fee)
                     tax_rate = get_tax_rate_from_database(item_id)
+                    flat_rate = get_flat_rate_from_database(item_id)
+                    
+
+
                     # buyback_price = calculate_buyback_price(api_data[0]['immediatePrices']['buyPrice5DayMedian'], tax_rate)
                     # buyback_price_itemtotal = quantity * buyback_price
                     # market_price = api_data[0]['immediatePrices']['buyPrice5DayMedian']
                     # market_price_itemtotal = quantity * market_price
                     # 
-                    buyback_price = calculate_buyback_price(item_data['immediatePrices']['buyPrice5DayMedian'], tax_rate)
+                    prembuyback_price = calculate_buyback_price(item_data['immediatePrices']['buyPrice5DayMedian'], tax_rate)
+                    buyback_price = prembuyback_price + haul_fee
+                    logger.debug("bb before flat rate price is: %s", buyback_price)
+                    if flat_rate != 0:
+                        buyback_price = flat_rate
+                    logger.debug("bb price after flat rate price is: %s", buyback_price)
                     buyback_price_itemtotal = quantity * buyback_price
                     market_price = item_data['immediatePrices']['buyPrice5DayMedian']
                     market_price_itemtotal = quantity * market_price
@@ -269,8 +321,8 @@ def index(request):
             totals_info = [gtotal_buyback, gtotal_market, geff_rate]           
             nl_db = "\n"
             debug = [api_data]
-            debug = 0
-            return render(request, 'buyback/index.html', {'form': form,'processed_items': processed_items, 'totals_info':totals_info, 'debug': debug, 'info_right': info_right})
+            debugtog = True
+            return render(request, 'buyback/index.html', {'form': form,'processed_items': processed_items, 'totals_info':totals_info, 'debugtog': debugtog, 'debug': debug, 'info_right': info_right})
     else:
         form = ItemForm()
         info_right = 1

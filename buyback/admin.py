@@ -1,22 +1,17 @@
 from django.contrib import admin
 from .models import EveItemTax
+from .filters import GroupNameFilter
 
 class EveItemTaxAdmin(admin.ModelAdmin):
-    search_fields = ['type_name', 'type_id', 'group_id']
-    list_display = ['type_name', 'type_id', 'group_id', 'jita_buy_percentage']
-    list_filter = ['group_id']
+    search_fields = ['type_name', 'type_id', 'group']
+    list_display = ['type_name', 'type_id', 'group', 'jita_buy_percentage', 'flat_cost', 'hauling_fee']
+    # list_filter = ['group_id']
+    list_filter = ['group']
+    readonly_fields = ['group_id', 'type_name', 'type_id']  # Make the group_id, type_name, and type_id fields read-only
 
-    # Define a custom action to batch edit the jita_buy_percentage for an entire group
-    def batch_edit_jita_buy_percentage(self, request, queryset):
-        selected_group_id = queryset.first().group_id
-        new_jita_buy_percentage = float(request.POST.get('new_jita_buy_percentage'))
-        
-        # Update the jita_buy_percentage for the selected group
-        EveItemTax.objects.filter(group_id=selected_group_id).update(jita_buy_percentage=new_jita_buy_percentage)
     
-    batch_edit_jita_buy_percentage.short_description = "Batch Edit Jita Buy Percentage"
-
-    # Add the custom action to the actions list
-    actions = [batch_edit_jita_buy_percentage]
+    def group_name(self, obj):
+        return obj.group.name if obj.group else ''
+    group_name.short_description = 'Group Name'
 
 admin.site.register(EveItemTax, EveItemTaxAdmin)
