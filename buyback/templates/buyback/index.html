@@ -82,7 +82,7 @@
             <tr><td class="text-start">Buyback Total:</td><td class="text-end cursor-pointer" id="buyback-total">            
             <span id="effective-rate-value">{{ totals_info.0|add_commas }}</span> ISK
             </td></tr>
-            <tr>        <td class="text-start">Effective Rate:</td><td class="text-end">{{ totals_info.2|   floatformat:2 }} %</td></tr>
+            <tr>        <td class="text-start">Effective Rate:</td><td class="text-end">{{ totals_info.2|floatformat:2 }} %</td></tr>
             </table>
                     <p>Create a contract to <span class="font-bold">SPOOPY BUYBACK</span></p>
                     <p>Use amount under <span class="font-bold">Buyback Total</span> as the contract value</p>
@@ -119,7 +119,7 @@
         {{ processed_item.buyback_price|add_commas }} ISK<br>
         {{ processed_item.buyback_price_itemtotal|add_commas }} ISK
     </td>
-    <td>{{ processed_item.tax_rate }}</td>
+    <td>{{ processed_item.tax_rate|floatformat:2 }} %</td>
 </tr>
 {% endfor %}
 </table>

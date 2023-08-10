@@ -131,7 +131,8 @@ def parse_user_input(form_data):
     return parsed_input
 
 def calculate_buyback_price(item_price, tax_rate):
-    buyback_price = item_price * tax_rate
+    tax_deci = tax_rate / 100
+    buyback_price = item_price * tax_deci
     return buyback_price
 
 def get_tax_rate_from_database(item_id):
@@ -269,7 +270,8 @@ def index(request):
                     else:
                         haul_fee = 0
                     logger.debug("haul fee is: %s", haul_fee)
-                    tax_rate = get_tax_rate_from_database(item_id)
+                    tax_deci = get_tax_rate_from_database(item_id)
+                    tax_rate = tax_deci * 100
                     flat_rate = get_flat_rate_from_database(item_id)
                     
 
@@ -312,14 +314,14 @@ def index(request):
             logger.debug("gtotal_buyback: %s", gtotal_buyback)
             if gtotal_market != 0 and gtotal_buyback !=0:
                 geff_rate = gtotal_buyback / gtotal_market
+                
             else:
                 geff_rate = 0 
-            geff_rate = gtotal_buyback / gtotal_market
+            # geff_rate = gtotal_buyback / gtotal_market
             totals_info = [gtotal_buyback, gtotal_market, geff_rate]
             
 
             totals_info = [gtotal_buyback, gtotal_market, geff_rate]           
-            nl_db = "\n"
             debug = [api_data]
             debugtog = False
             return render(request, 'buyback/index.html', {'form': form,'processed_items': processed_items, 'totals_info':totals_info, 'debugtog': debugtog, 'debug': debug, 'info_right': info_right})
