@@ -313,8 +313,8 @@ def index(request):
             gtotal_buyback = sum(item.get('buyback_price_itemtotal', 0) for item in processed_items)
             logger.debug("gtotal_buyback: %s", gtotal_buyback)
             if gtotal_market != 0 and gtotal_buyback !=0:
-                geff_rate = gtotal_buyback / gtotal_market
-                
+                geff_drate = gtotal_buyback / gtotal_market
+                geff_rate = geff_drate * 100
             else:
                 geff_rate = 0 
             # geff_rate = gtotal_buyback / gtotal_market
