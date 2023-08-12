@@ -209,9 +209,9 @@ input::placeholder,textarea::placeholder{
 button,[role=button]{
     cursor:pointer
 }
-:disabled{
+/* :disabled{
     cursor:default
-}
+} */
 img,svg,video,canvas,audio,iframe,embed,object{
     display:block;
     vertical-align:middle
@@ -425,9 +425,6 @@ img,video{
 }
 .max-w-6xl{
     max-width:72rem
-}
-.cursor-not-allowed{
-    cursor:not-allowed
 }
 .cursor-progress{
     cursor:progress
