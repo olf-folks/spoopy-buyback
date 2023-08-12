@@ -1,27 +1,3 @@
-# from django.core.management.base import BaseCommand
-# import requests
-# from buyback.models import EveItemTax
-
-# class Command(BaseCommand):
-#     help = 'Load group names from the API and update the database'
-
-#     def handle(self, *args, **options):
-#         item_taxes = EveItemTax.objects.all()
-
-#         for item_tax in item_taxes:
-#             group_id = item_tax.group_id
-#             print(group_id)
-#             group_info = requests.get(f"https://esi.evetech.net/latest/universe/groups/{group_id}/").json()
-#             group_name = group_info['name']
-#             print(group_name)
-#             item_tax.group = group_name
-#             item_tax.save()
-#             self.stdout.write(self.style.SUCCESS(f'Successfully updated group name for group ID {group_id}'))
-
-#         self.stdout.write(self.style.SUCCESS('Finished updating group names'))
-
-# v2
-
 from django.core.management.base import BaseCommand
 import requests
 import requests_cache

@@ -10,6 +10,9 @@
             <tr>
                 <th>Type ID</th>
                 <th>Type Name</th>
+                <th>Category</th>
+                
+                <th>Category ID</th>
                 <th>Group</th>
                 <th>Group ID</th>
                 <th>Jita Buy Percentage</th>
@@ -22,8 +25,12 @@
                 <tr>
                     <td>{{ item.type_id }}</td>
                     <td>{{ item.type_name }}</td>
+                    <td>{{ item.category_name }}</td>
+                    <td>{{ item.category_id }}</td>
+                    
                     <td>{{ item.group }}</td>
                     <td>{{ item.group_id }}</td>
+                    
                     <td>{{ item.jita_buy_percentage }}</td>
                     <td>{{ item.flat_cost }}</td>
                     <td>{{ item.hauling_fee }}</td>

@@ -17,6 +17,8 @@ class EveItemTax(models.Model):
     # jita_sell_percentage = models.FloatField(default=0.0)  # Example default value
     # effective_rate = models.FloatField(default=0.0)  # Example default value
     group = models.CharField(max_length=255, default='', blank=True)
+    category_id = models.IntegerField(null=True, blank=True)
+    category_name = models.CharField(max_length=255, null=True, blank=True)
 
     # def save(self, *args, **kwargs):
     #     if not self.group:

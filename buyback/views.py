@@ -102,21 +102,23 @@ def parse_user_input(form_data):
     default_quantity = 1
  
     for line in lines:
-        parts = line.split('\t')
-        item_name = parts[0].strip()
+        parts = line.split('\t') # split line at first tab
+        item_name = parts[0].strip() # get name out of line
  
         if len(parts) > 1:
-            quantity = parts[1].strip()
-            quantity = quantity.replace(',', '')
-        else:
+            quantity = parts[1].strip() # get quantity
+            quantity = quantity.replace(',', '') # remove commas
+            quantity = quantity.replace('.', '') # non us money format
+        else: # if the line dose not have more than 1 parts or is seperated with spaces
             # Check if the line has a quantity by splitting at spaces
-            item_parts = item_name.split()
+            item_parts = item_name.split() # what is this doing?
             if len(item_parts) > 1 and item_parts[-1].isdigit():
-                quantity = item_parts[-1]
-                quantity = quantity.replace(',', '')
-                item_name = " ".join(item_parts[:-1])
+                quantity = item_parts[-1] #?
+                quantity = quantity.replace(',', '') # remove commas
+                quantity = quantity.replace('.', '') # non us money format
+                item_name = " ".join(item_parts[:-1]) # what is this doing?
             else:
-                quantity = default_quantity
+                quantity = default_quantity # if there is no quanity eg: unpackaged items are 1
         
         if len(str(quantity)) < 1:
             quantity = default_quantity
@@ -333,3 +335,28 @@ def index(request):
 def all_item_tax_view(request):
     all_items = EveItemTax.objects.all()
     return render(request, 'buyback/all_item_tax.html', {'all_items': all_items})
+
+
+def collapsible_tree_view(request):
+    categories = {}
+    items = EveItemTax.objects.all()
+
+    for item in items:
+        category_id = item.category_id
+        group_id = item.group_id
+        item_id = item.taxid
+        if category_id not in categories:
+            categories[category_id] = {
+                'name': item.category_name,
+                'groups': {},
+            }
+
+        if group_id not in categories[category_id]['groups']:
+            categories[category_id]['groups'][group_id] = {
+                'name': item.group,
+                'items': [],
+            }
+
+        categories[category_id]['groups'][group_id]['items'][item_id].append(item)
+
+    return render(request, 'buyback/collapsible_tree.html', {'categories': categories})
