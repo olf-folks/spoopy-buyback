@@ -1,0 +1,85 @@
+parsed_user_input: [{'name': 'ishtar', 'quantity': 1}]
+apiinput: ishtar 1
+
+Starting new HTTPS connection (1): janice.e-351.com:443
+https://janice.e-351.com:443 "POST /api/rest/v2/pricer?market=2 HTTP/1.1" 200 None
+api_data: [{'date': '2023-08-13T00:00:00Z', 'market': {'id': 2, 'name': 'Jita 4-4'}, 'buyOrderCount': 27, 'buyVolume': 114, 'sellOrderCount': 70, 'sellVolume': 572, 'immediatePrices': {'buyPrice': 175200000, 'splitPrice': 179900000, 'sellPrice': 184600000, 'buyPrice5DayMedian': 175920000, 'splitPrice5DayMedian': 180600000, 'sellPrice5DayMedian': 185100000, 'buyPrice30DayMedian': 175676666.66666666, 'splitPrice30DayMedian': 181250000, 'sellPrice30DayMedian': 186700000}, 'top5AveragePrices': {'buyPrice': 175140000, 'splitPrice': 179953928.57142857, 'sellPrice': 184767857.14285713, 'buyPrice5DayMedian': 175933333.33333334, 'splitPrice5DayMedian': 180518214.28571427, 'sellPrice5DayMedian': 185196428.57142857, 'buyPrice30DayMedian': 175933333.33333334, 'splitPrice30DayMedian': 181504166.6666667, 'sellPrice30DayMedian': 187020689.6551724}, 'itemType': {'eid': 12005, 'name': 'Ishtar', 'volume': 115000, 'packagedVolume': 10000}}]
+Is fee for haul?: False
+haul fee is: 0
+bb before flat rate price is: 149532000.0
+bb price after flat rate price is: 149532000.0
+processed_items: [{'item_id': 12005, 'item_name': 'ishtar', 'quantity': 1, 'tax_rate': 85.0, 'buyback_price': 149532000.0, 'market_price': 175920000, 'buyback_price_itemtotal': 149532000.0, 'market_price_itemtotal': 175920000, 'haul_bool': False, 'item_volume': 115000, 'haul_fee': 0}]
+gtotal_market: 175920000
+gtotal_buyback: 149532000.0
+/root/spoopy/buyback/views.py changed, reloading.
+Watching for file changes with StatReloader
+NumExpr defaulting to 2 threads.
+Not Found: /buyback/update_inventory/
+Not Found: /favicon.ico
+Not Found: /buyback/update_inventory
+/root/spoopy/buyback/urls.py changed, reloading.
+Watching for file changes with StatReloader
+NumExpr defaulting to 2 threads.
+parsed_user_input: [{'name': 'Cap Booster 100', 'quantity': 990}, {'name': 'Cap Booster 150', 'quantity': 750}, {'name': 'Cap Booster 200', 'quantity': 200}, {'name': 'Cap Booster 3200', 'quantity': 1580}, {'name': 'Cap Booster 400', 'quantity': 88}, {'name': 'Vexor', 'quantity': 5}, {'name': 'ishtar', 'quantity': 1}, {'name': 'Megathron', 'quantity': 2}, {'name': "'Limos' Rapid Heavy Missile Launcher I", 'quantity': 1}, {'name': '10000MN Afterburner I', 'quantity': 1}, {'name': 'Acolyte I', 'quantity': 1}]
+apiinput: Cap Booster 100 990
+Cap Booster 150 750
+Cap Booster 200 200
+Cap Booster 3200 1580
+Cap Booster 400 88
+Vexor 5
+ishtar 1
+Megathron 2
+'Limos' Rapid Heavy Missile Launcher I 1
+10000MN Afterburner I 1
+Acolyte I 1
+
+Starting new HTTPS connection (1): janice.e-351.com:443
+https://janice.e-351.com:443 "POST /api/rest/v2/pricer?market=2 HTTP/1.1" 200 None
+api_data: [{'date': '2023-08-13T00:00:00Z', 'market': {'id': 2, 'name': 'Jita 4-4'}, 'buyOrderCount': 17, 'buyVolume': 27, 'sellOrderCount': 24, 'sellVolume': 59, 'immediatePrices': {'buyPrice': 359500000, 'splitPrice': 369500000, 'sellPrice': 379500000, 'buyPrice5DayMedian': 359360000, 'splitPrice5DayMedian': 373800000, 'sellPrice5DayMedian': 389000000, 'buyPrice30DayMedian': 357933333.3333333, 'splitPrice30DayMedian': 373400000, 'sellPrice30DayMedian': 389500000}, 'top5AveragePrices': {'buyPrice': 359500000, 'splitPrice': 369500000, 'sellPrice': 379500000, 'buyPrice5DayMedian': 359400000, 'splitPrice5DayMedian': 373825000, 'sellPrice5DayMedian': 389050000, 'buyPrice30DayMedian': 358600000, 'splitPrice30DayMedian': 373475000, 'sellPrice30DayMedian': 389550000}, 'itemType': {'eid': 641, 'name': 'Megathron', 'volume': 470000, 'packagedVolume': 50000}}, {'date': '2023-08-13T00:00:00Z', 'market': {'id': 2, 'name': 'Jita 4-4'}, 'buyOrderCount': 26, 'buyVolume': 107, 'sellOrderCount': 70, 'sellVolume': 571, 'immediatePrices': {'buyPrice': 175100000, 'splitPrice': 179850000, 'sellPrice': 184600000, 'buyPrice5DayMedian': 175900000, 'splitPrice5DayMedian': 180600000, 'sellPrice5DayMedian': 185100000, 'buyPrice30DayMedian': 175673333.33333334, 'splitPrice30DayMedian': 181250000, 'sellPrice30DayMedian': 186700000}, 'top5AveragePrices': {'buyPrice': 175060000, 'splitPrice': 179922857.14285713, 'sellPrice': 184785714.2857143, 'buyPrice5DayMedian': 175933333.33333334, 'splitPrice5DayMedian': 180518214.28571427, 'sellPrice5DayMedian': 185196428.57142857, 'buyPrice30DayMedian': 175933333.33333334, 'splitPrice30DayMedian': 181504166.6666667, 'sellPrice30DayMedian': 187020689.6551724}, 'itemType': {'eid': 12005, 'name': 'Ishtar', 'volume': 115000, 'packagedVolume': 10000}}, {'date': '2023-08-13T00:00:00Z', 'market': {'id': 2, 'name': 'Jita 4-4'}, 'buyOrderCount': 29, 'buyVolume': 275, 'sellOrderCount': 20, 'sellVolume': 126, 'immediatePrices': {'buyPrice': 13720000, 'splitPrice': 14730000, 'sellPrice': 15740000, 'buyPrice5DayMedian': 13480000, 'splitPrice5DayMedian': 14105000, 'sellPrice5DayMedian': 14750000, 'buyPrice30DayMedian': 13044333.333333334, 'splitPrice30DayMedian': 13785000, 'sellPrice30DayMedian': 14440000}, 'top5AveragePrices': {'buyPrice': 13720000, 'splitPrice': 14730000, 'sellPrice': 15740000, 'buyPrice5DayMedian': 13448571.42857143, 'splitPrice5DayMedian': 14108869.047619049, 'sellPrice5DayMedian': 14769166.666666666, 'buyPrice30DayMedian': 13080000, 'splitPrice30DayMedian': 13790277.777777778, 'sellPrice30DayMedian': 14470555.555555556}, 'itemType': {'eid': 626, 'name': 'Vexor', 'volume': 115000, 'packagedVolume': 10000}}, {'date': '2023-08-13T00:00:00Z', 'market': {'id': 2, 'name': 'Jita 4-4'}, 'buyOrderCount': 4, 'buyVolume': 153794, 'sellOrderCount': 10, 'sellVolume': 25227, 'immediatePrices': {'buyPrice': 1472, 'splitPrice': 1722.5, 'sellPrice': 1973, 'buyPrice5DayMedian': 1471.8, 'splitPrice5DayMedian': 1982, 'sellPrice5DayMedian': 2492, 'buyPrice30DayMedian': 1473.0666666666666, 'splitPrice30DayMedian': 1689.5, 'sellPrice30DayMedian': 1908}, 'top5AveragePrices': {'buyPrice': 1472, 'splitPrice': 1722.5, 'sellPrice': 1973, 'buyPrice5DayMedian': 1472, 'splitPrice5DayMedian': 1982.5831925675675, 'sellPrice5DayMedian': 2493.166385135135, 'buyPrice30DayMedian': 1471, 'splitPrice30DayMedian': 1689.5, 'sellPrice30DayMedian': 1908}, 'itemType': {'eid': 3554, 'name': 'Cap Booster 100', 'volume': 4, 'packagedVolume': 4}}, {'date': '2023-08-13T00:00:00Z', 'market': {'id': 2, 'name': 'Jita 4-4'}, 'buyOrderCount': 9, 'buyVolume': 49762, 'sellOrderCount': 26, 'sellVolume': 153475, 'immediatePrices': {'buyPrice': 16870, 'splitPrice': 18435, 'sellPrice': 20000, 'buyPrice5DayMedian': 16840, 'splitPrice5DayMedian': 18415, 'sellPrice5DayMedian': 20000, 'buyPrice30DayMedian': 16057.333333333334, 'splitPrice30DayMedian': 17875, 'sellPrice30DayMedian': 19000}, 'top5AveragePrices': {'buyPrice': 16870, 'splitPrice': 18435, 'sellPrice': 20000, 'buyPrice5DayMedian': 16850, 'splitPrice5DayMedian': 18435, 'sellPrice5DayMedian': 20000, 'buyPrice30DayMedian': 16155.053097345133, 'splitPrice30DayMedian': 17949.699221202663, 'sellPrice30DayMedian': 19953.772301516503}, 'itemType': {'eid': 41489, 'name': 'Cap Booster 3200', 'volume': 128, 'packagedVolume': 128}}, {'date': '2023-08-13T00:00:00Z', 'market': {'id': 2, 'name': 'Jita 4-4'}, 'buyOrderCount': 23, 'buyVolume': 287484, 'sellOrderCount': 13, 'sellVolume': 64079, 'immediatePrices': {'buyPrice': 7007, 'splitPrice': 7702, 'sellPrice': 8397, 'buyPrice5DayMedian': 6662.4, 'splitPrice5DayMedian': 7702, 'sellPrice5DayMedian': 8600, 'buyPrice30DayMedian': 6315.4, 'splitPrice30DayMedian': 6829.5, 'sellPrice30DayMedian': 7446}, 'top5AveragePrices': {'buyPrice': 7006.155836927786, 'splitPrice': 7701.577918463893, 'sellPrice': 8397, 'buyPrice5DayMedian': 6502, 'splitPrice5DayMedian': 7740.908735332464, 'sellPrice5DayMedian': 8979.817470664928, 'buyPrice30DayMedian': 6261.1736858940185, 'splitPrice30DayMedian': 6832.2593264001525, 'sellPrice30DayMedian': 7483}, 'itemType': {'eid': 11287, 'name': 'Cap Booster 400', 'volume': 16, 'packagedVolume': 16}}, {'date': '2023-08-13T00:00:00Z', 'market': {'id': 2, 'name': 'Jita 4-4'}, 'buyOrderCount': 10, 'buyVolume': 3209, 'sellOrderCount': 14, 'sellVolume': 235, 'immediatePrices': {'buyPrice': 22490, 'splitPrice': 28245, 'sellPrice': 34000, 'buyPrice5DayMedian': 22444, 'splitPrice5DayMedian': 28245, 'sellPrice5DayMedian': 34000, 'buyPrice30DayMedian': 21973.666666666668, 'splitPrice30DayMedian': 28030, 'sellPrice30DayMedian': 34000}, 'top5AveragePrices': {'buyPrice': 22490, 'splitPrice': 28653.636363636364, 'sellPrice': 34817.27272727273, 'buyPrice5DayMedian': 22459.032258064515, 'splitPrice5DayMedian': 28653.636363636364, 'sellPrice5DayMedian': 34817.27272727273, 'buyPrice30DayMedian': 22200, 'splitPrice30DayMedian': 28166.635071090048, 'sellPrice30DayMedian': 34330}, 'itemType': {'eid': 33441, 'name': "'Limos' Rapid Heavy Missile Launcher I", 'volume': 20, 'packagedVolume': 20}}, {'date': '2023-08-13T00:00:00Z', 'market': {'id': 2, 'name': 'Jita 4-4'}, 'buyOrderCount': 0, 'buyVolume': 0, 'sellOrderCount': 18, 'sellVolume': 38, 'immediatePrices': {'buyPrice': 0, 'splitPrice': 21050000, 'sellPrice': 42100000, 'buyPrice5DayMedian': 34010000, 'splitPrice5DayMedian': 38740000, 'sellPrice5DayMedian': 42990000, 'buyPrice30DayMedian': 37873571.428571425, 'splitPrice30DayMedian': 41530000, 'sellPrice30DayMedian': 46780000}, 'top5AveragePrices': {'buyPrice': 0, 'splitPrice': 21050000, 'sellPrice': 42100000, 'buyPrice5DayMedian': 34010000, 'splitPrice5DayMedian': 38740000, 'sellPrice5DayMedian': 42995000, 'buyPrice30DayMedian': 36270000, 'splitPrice30DayMedian': 41530000, 'sellPrice30DayMedian': 46785000}, 'itemType': {'eid': 41236, 'name': '10000MN Afterburner I', 'volume': 4000, 'packagedVolume': 1000}}, {'date': '2023-08-13T00:00:00Z', 'market': {'id': 2, 'name': 'Jita 4-4'}, 'buyOrderCount': 12, 'buyVolume': 176353, 'sellOrderCount': 31, 'sellVolume': 70030, 'immediatePrices': {'buyPrice': 5019, 'splitPrice': 5708, 'sellPrice': 6397, 'buyPrice5DayMedian': 5019.6, 'splitPrice5DayMedian': 5758.5, 'sellPrice5DayMedian': 6497, 'buyPrice30DayMedian': 4786.733333333334, 'splitPrice30DayMedian': 5886, 'sellPrice30DayMedian': 6497}, 'top5AveragePrices': {'buyPrice': 4959.1655892026765, 'splitPrice': 5680.269027106337, 'sellPrice': 6401.3724650099975, 'buyPrice5DayMedian': 5018.059188275084, 'splitPrice5DayMedian': 5760.197935652841, 'sellPrice5DayMedian': 6501.919595164464, 'buyPrice30DayMedian': 4959.1655892026765, 'splitPrice30DayMedian': 5791.335041468172, 'sellPrice30DayMedian': 6501.919595164464}, 'itemType': {'eid': 11283, 'name': 'Cap Booster 150', 'volume': 6, 'packagedVolume': 6}}, {'date': '2023-08-13T00:00:00Z', 'market': {'id': 2, 'name': 'Jita 4-4'}, 'buyOrderCount': 7, 'buyVolume': 10286, 'sellOrderCount': 26, 'sellVolume': 35221, 'immediatePrices': {'buyPrice': 3516, 'splitPrice': 3875, 'sellPrice': 4234, 'buyPrice5DayMedian': 3516, 'splitPrice5DayMedian': 3758.5, 'sellPrice5DayMedian': 4000, 'buyPrice30DayMedian': 3542.9666666666667, 'splitPrice30DayMedian': 3803, 'sellPrice30DayMedian': 4000}, 'top5AveragePrices': {'buyPrice': 3516, 'splitPrice': 3875.1706416808634, 'sellPrice': 4234.341283361727, 'buyPrice5DayMedian': 3516, 'splitPrice5DayMedian': 3856.3460749102105, 'sellPrice5DayMedian': 4195.692149820421, 'buyPrice30DayMedian': 3511.072139303483, 'splitPrice30DayMedian': 3830.9787111622554, 'sellPrice30DayMedian': 4098}, 'itemType': {'eid': 2203, 'name': 'Acolyte I', 'volume': 5, 'packagedVolume': 5}}, {'date': '2023-08-13T00:00:00Z', 'market': {'id': 2, 'name': 'Jita 4-4'}, 'buyOrderCount': 13, 'buyVolume': 133016, 'sellOrderCount': 19, 'sellVolume': 130495, 'immediatePrices': {'buyPrice': 4134, 'splitPrice': 5766, 'sellPrice': 7398, 'buyPrice5DayMedian': 4133.6, 'splitPrice5DayMedian': 5776, 'sellPrice5DayMedian': 7413, 'buyPrice30DayMedian': 3692.9333333333334, 'splitPrice30DayMedian': 4450, 'sellPrice30DayMedian': 5192}, 'top5AveragePrices': {'buyPrice': 4065.2016541353382, 'splitPrice': 5737.60481235277, 'sellPrice': 7410.007970570202, 'buyPrice5DayMedian': 4133.369452278463, 'splitPrice5DayMedian': 5769.708680799249, 'sellPrice5DayMedian': 7414.92972729997, 'buyPrice30DayMedian': 3710.990789884483, 'splitPrice30DayMedian': 4450.4894742791275, 'sellPrice30DayMedian': 5192.116822429906}, 'itemType': {'eid': 11285, 'name': 'Cap Booster 200', 'volume': 8, 'packagedVolume': 8}}]
+Is fee for haul?: False
+haul fee is: 0
+bb before flat rate price is: 1251.03
+bb price after flat rate price is: 1251.03
+Is fee for haul?: False
+haul fee is: 0
+bb before flat rate price is: 4266.66
+bb price after flat rate price is: 4266.66
+Is fee for haul?: False
+haul fee is: 0
+bb before flat rate price is: 3513.5600000000004
+bb price after flat rate price is: 3513.5600000000004
+Is fee for haul?: False
+haul fee is: 0
+bb before flat rate price is: 14314.0
+bb price after flat rate price is: 14314.0
+Is fee for haul?: False
+haul fee is: 0
+bb before flat rate price is: 5663.04
+bb price after flat rate price is: 5663.04
+Is fee for haul?: False
+haul fee is: 0
+bb before flat rate price is: 11592800.0
+bb price after flat rate price is: 11592800.0
+Is fee for haul?: False
+haul fee is: 0
+bb before flat rate price is: 149515000.0
+bb price after flat rate price is: 149515000.0
+Is fee for haul?: False
+haul fee is: 0
+bb before flat rate price is: 305456000.0
+bb price after flat rate price is: 305456000.0
+Is fee for haul?: False
+haul fee is: 0
+bb before flat rate price is: 19077.399999999998
+bb price after flat rate price is: 19077.399999999998
+Is fee for haul?: False
+haul fee is: 0
+bb before flat rate price is: 28908500.0
+bb price after flat rate price is: 28908500.0
+Is fee for haul?: False
+haul fee is: 0
+bb before flat rate price is: 2988.6
+bb price after flat rate price is: 2988.6
+processed_items: [{'item_id': 3554, 'item_name': 'Cap Booster 100', 'quantity': 990, 'tax_rate': 85.0, 'buyback_price': 1251.03, 'market_price': 1471.8, 'buyback_price_itemtotal': 1238519.7, 'market_price_itemtotal': 1457082.0, 'haul_bool': False, 'item_volume': 4, 'haul_fee': 0}, {'item_id': 11283, 'item_name': 'Cap Booster 150', 'quantity': 750, 'tax_rate': 85.0, 'buyback_price': 4266.66, 'market_price': 5019.6, 'buyback_price_itemtotal': 3199995.0, 'market_price_itemtotal': 3764700.0000000005, 'haul_bool': False, 'item_volume': 6, 'haul_fee': 0}, {'item_id': 11285, 'item_name': 'Cap Booster 200', 'quantity': 200, 'tax_rate': 85.0, 'buyback_price': 3513.5600000000004, 'market_price': 4133.6, 'buyback_price_itemtotal': 702712.0000000001, 'market_price_itemtotal': 826720.0000000001, 'haul_bool': False, 'item_volume': 8, 'haul_fee': 0}, {'item_id': 41489, 'item_name': 'Cap Booster 3200', 'quantity': 1580, 'tax_rate': 85.0, 'buyback_price': 14314.0, 'market_price': 16840, 'buyback_price_itemtotal': 22616120.0, 'market_price_itemtotal': 26607200, 'haul_bool': False, 'item_volume': 128, 'haul_fee': 0}, {'item_id': 11287, 'item_name': 'Cap Booster 400', 'quantity': 88, 'tax_rate': 85.0, 'buyback_price': 5663.04, 'market_price': 6662.4, 'buyback_price_itemtotal': 498347.52, 'market_price_itemtotal': 586291.2, 'haul_bool': False, 'item_volume': 16, 'haul_fee': 0}, {'item_id': 626, 'item_name': 'Vexor', 'quantity': 5, 'tax_rate': 86.0, 'buyback_price': 11592800.0, 'market_price': 13480000, 'buyback_price_itemtotal': 57964000.0, 'market_price_itemtotal': 67400000, 'haul_bool': False, 'item_volume': 115000, 'haul_fee': 0}, {'item_id': 12005, 'item_name': 'ishtar', 'quantity': 1, 'tax_rate': 85.0, 'buyback_price': 149515000.0, 'market_price': 175900000, 'buyback_price_itemtotal': 149515000.0, 'market_price_itemtotal': 175900000, 'haul_bool': False, 'item_volume': 115000, 'haul_fee': 0}, {'item_id': 641, 'item_name': 'Megathron', 'quantity': 2, 'tax_rate': 85.0, 'buyback_price': 305456000.0, 'market_price': 359360000, 'buyback_price_itemtotal': 610912000.0, 'market_price_itemtotal': 718720000, 'haul_bool': False, 'item_volume': 470000, 'haul_fee': 0}, {'item_id': 33441, 'item_name': "'Limos' Rapid Heavy Missile Launcher I", 'quantity': 1, 'tax_rate': 85.0, 'buyback_price': 19077.399999999998, 'market_price': 22444, 'buyback_price_itemtotal': 19077.399999999998, 'market_price_itemtotal': 22444, 'haul_bool': False, 'item_volume': 20, 'haul_fee': 0}, {'item_id': 41236, 'item_name': '10000MN Afterburner I', 'quantity': 1, 'tax_rate': 85.0, 'buyback_price': 28908500.0, 'market_price': 34010000, 'buyback_price_itemtotal': 28908500.0, 'market_price_itemtotal': 34010000, 'haul_bool': False, 'item_volume': 4000, 'haul_fee': 0}, {'item_id': 2203, 'item_name': 'Acolyte I', 'quantity': 1, 'tax_rate': 85.0, 'buyback_price': 2988.6, 'market_price': 3516, 'buyback_price_itemtotal': 2988.6, 'market_price_itemtotal': 3516, 'haul_bool': False, 'item_volume': 5, 'haul_fee': 0}]
+gtotal_market: 1029297953.2
+gtotal_buyback: 875577260.22

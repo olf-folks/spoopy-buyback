@@ -360,3 +360,8 @@ def collapsible_tree_view(request):
         categories[category_id]['groups'][group_id]['items'][item_id].append(item)
 
     return render(request, 'buyback/collapsible_tree.html', {'categories': categories})
+
+def update_inventory(request):
+    all_items = EveItemTax.objects.all()
+    return render(request, 'buyback/update_inventory.html', {'all_items': all_items})
+update_inventory
