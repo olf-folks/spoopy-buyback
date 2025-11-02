@@ -1,0 +1,83 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Category Tree</title>
+    <style>
+        /* Add your CSS styling here */
+        .category-list {
+            list-style: none;
+            padding-left: 0;
+        }
+        .category-item {
+            margin-left: 20px;
+            cursor: pointer;
+        }
+        .group-list {
+            list-style: none;
+            padding-left: 20px;
+            display: none;
+        }
+        .group-item {
+            margin-left: 20px;
+            cursor: pointer;
+        }
+        .item-list {
+            list-style: none;
+            padding-left: 20px;
+            display: none;
+        }
+        .item-item {
+            margin-left: 20px;
+        }
+    </style>
+</head>
+<body style="background-color: #f0f0f0;">
+    <ul class="category-list">
+        {% for category_id, category in categories.items %}
+            <li class="category-item">
+                {{ category.name }}
+                <ul class="group-list">
+                    {% for group_id, group in category.groups.items %}
+                        <li class="group-item">
+                            {{ group.name }}
+                            <ul class="item-list">
+                                {% for item in group.items %}
+                                    <li class="item-item">
+                                        <a href="/admin/buyback/eveitemtax/{% item.taxid %}/change/">
+                                            {{ item.type_name }}
+                                        </a>
+                                    </li>
+                                {% endfor %}
+                            </ul>
+                        </li>
+                    {% endfor %}
+                </ul>
+            </li>
+        {% endfor %}
+    </ul>
+    <script>
+      // JavaScript to toggle the visibility of nested lists
+const categoryItems = document.querySelectorAll('.category-item');
+categoryItems.forEach(item => {
+    item.addEventListener('click', (event) => {
+        if (!event.target.closest('.group-item')) {
+            const groupList = item.querySelector('.group-list');
+            groupList.style.display = groupList.style.display === 'none' ? 'block' : 'none';
+        }
+    });
+});
+
+const groupItems = document.querySelectorAll('.group-item');
+groupItems.forEach(item => {
+    item.addEventListener('click', (event) => {
+        event.stopPropagation(); // Prevent the event from reaching the parent category
+        const itemList = item.querySelector('.item-list');
+        itemList.style.display = itemList.style.display === 'none' ? 'block' : 'none';
+    });
+});
+    </script>
+</body>
+</html>

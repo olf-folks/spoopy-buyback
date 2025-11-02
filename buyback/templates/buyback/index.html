@@ -1,0 +1,178 @@
+{% load custom_filters %}
+<!DOCTYPE html>
+<!-- saved from url=(0031)https://spoopy-buyback.web.app/ -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+     
+    {% load static %}
+   
+   
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spoopy Buyback</title>
+    <link rel="icon" type="image/png" href="{% static 'buyback/spoopy.png' %}">
+    <!-- <script type="module" crossorigin="" src="{% static 'buyback/index.js' %}"></script> -->
+    <link rel="stylesheet" href="{% static 'buyback/index.css' %}">
+
+    <style>
+        /* div {
+            border: 2px solid red;  debug divs 
+        } */ 
+    </style>
+
+
+</head>
+  <body class="bg-srcblack text-srcwhite">
+		<div class="bg-srcred w-full text-center sm:hidden">Optimized for desktop</div>
+		<div class="w-full h-24 text-center grid grid-cols-12 content-center">
+			<div>
+				<img src="{% static 'buyback/buyback.png' %}" alt="Spoopy Logo" class="h-20 object-scale-down ml-4">
+			</div>
+			<div class="my-auto font-bold text-5xl col-span-10 content-center">
+				SPOOPY BUYBACK III
+			</div>
+			<div>
+				<img src="{% static 'buyback/buyback.png' %}" alt="Spoopy Logo" class="float-right h-20 object-scale-down mr-4">
+			</div>
+		</div>
+    <div class="max-w-6xl mx-auto grid grid-cols-2 font-mono p-4 gap-4" id="app" data-v-app="">
+        
+         <!-- form -->
+       
+         <form method="post">   
+        <div class="grid grid-cols-3 gap-2">
+            
+        <!-- <textarea id="item_input" class="form-control focus:ring-2 h-24 ring-inset ring-srcblue col-span-3 px-2 text-srcwhite bg-srcgray-dark outline-none" placeholder="{{ textinputdata }}" type="text" name="Item_Input">{{ form.item_name.value }}</textarea> -->
+        {% csrf_token %}{% for field in form %}
+        <!-- <div class="form-field"> -->
+            {{ field }}
+            {{ field.errors }}
+        <!-- </div> -->
+    {% endfor %}
+        <!-- submit button -->
+        <button type="submit" value="OK" class="h-7 ring-2 ring-inset active:bg-srcblack hover:bg-srcblack-light ring-srcgray cursor-not-allowed"> Submit </button>
+                
+        <!-- clear buton -->
+        <!-- <button class="h-7 ring-2 ring-inset active:bg-srcblack ring-srcgray cursor-not-allowed" id="clear-button"> Clear </button> -->
+        <a href="{% url 'buyback:index' %}" class="h-7 ring-2 ring-inset active:bg-srcblack hover:bg-srcblack-light ring-srcgray-light" id="clear-button">
+            <p class="text-center">Clear</p>
+            </a>
+            {% if user.is_staff %}
+            <!-- staff button -->
+        <a href="{% url 'buyback:category-list' %}" class="h-7 ring-2 ring-inset active:bg-srcblack hover:bg-srcblack-light ring-srcgray-light" id="clear-button">
+            <p class="text-center">Staff</p>
+            </a>
+            {% endif %}
+        </div>
+ 
+    <!-- </div> -->
+        </form>
+        <!-- end form -->
+
+
+        {% if info_right == 1 %}    
+        <!----><!----><!----><!---->
+        <div class="ring-2 ring-inset ring-srcgray p-1.5 h-[132px]">
+        <ol class="list-decimal list-inside">
+        <li>Copy items from your inventory in the textbox</li>
+        <li>Wait for appraisal to be calculated</li>
+        <li>Create a contract to <span class="font-bold">SPOOPY BUYBACK</span></li>
+        <li>Use the amount shown as "Buyback Total"</li>
+        <li>Stonks</li>
+        </ol>
+        </div>
+        <!----><!----><!----><!----><!----><!----><!----><!----><!---->
+        {% endif %}
+        <!----><!----><!----><!----><!----><!----><!----><!----><!---->
+        {% if info_right == 2 %}
+        <div><table class="w-full"><tr>
+            <td class="text-start">Market Total:</td><td class="text-end">{{ totals_info.1|add_commas }} ISK</td></tr>
+            <tr><td class="text-start">Buyback Total:</td><td class="text-end cursor-pointer" id="buyback-total">            
+            <span id="effective-rate-value" onclick="copyToClipboard('{{ totals_info.0|add_commas }}')">{{ totals_info.0|add_commas }}</span> ISK
+            <script>
+                function copyToClipboard(text) {
+                  const textarea = document.createElement("textarea");
+                  textarea.value = text;
+                  document.body.appendChild(textarea);
+                  textarea.select();
+                  document.execCommand("copy");
+                  document.body.removeChild(textarea);
+                  alert("Copied to clipboard: " + text);
+                }
+              </script>
+
+            </td></tr>
+            <tr>        <td class="text-start">Effective Rate:</td><td class="text-end">{{ totals_info.2|floatformat:2 }} %</td></tr>
+            </table>
+                    <p>Create a contract to <span class="font-bold">SPOOPY BUYBACK</span></p>
+                    <p>Use amount under <span class="font-bold">Buyback Total</span> as the contract value</p>
+                </div>
+
+               
+
+        <!----><!----><!----><!----><!----><!----><!----><!----><!---->
+    </div>
+        {% endif %}
+{% if info_right == 2 %}
+<!-- apprase output -->
+<div class="max-w-6xl mx-auto grid grid-cols-2 font-mono p-4 gap-4">
+<table class="text-end col-span-2">
+    <tr>
+        <th></th>
+        <th class="text-start">Name</th>
+        <th>Qty</th>
+        <th>Market Rate<br>Total</th>
+        <th>Buyback Rate<br>Total</th>
+        <th>Effective Rate</th>
+    </tr>
+
+    <!-- Inside the table loop -->
+{% for processed_item in processed_items %}
+<tr class="{% cycle 'odd:bg-srcblack-light' 'even:bg-srcblack' %}">
+    <td><img src="https://image.eveonline.com/Type/{{ processed_item.item_id }}_64.png" alt="{{ processed_item.item_name }}"></td>
+    <td class="text-start">{{ processed_item.item_name }}</td>
+    <td>{{ processed_item.quantity }}</td>
+    <td>
+        {{ processed_item.market_price|add_commas }} ISK<br>
+        {{ processed_item.market_price_itemtotal|add_commas }} ISK
+    </td>
+    <td>
+        {{ processed_item.buyback_price|add_commas }} ISK<br>
+        {{ processed_item.buyback_price_itemtotal|add_commas }} ISK
+    </td>
+    <td>{{ processed_item.tax_rate|floatformat:2 }} %</td>
+</tr>
+{% endfor %}
+</table>
+
+</div>
+<!-- end appraise output -->
+{% endif %}
+
+    </div>
+
+<!-- altform -->
+
+<!-- endaltform -->
+
+<!-- alt out -->
+
+<br><br><br><br>
+<table>
+
+    {% if debugtog == True %}
+    
+<tr><td>Debug processed_items info:</td></tr>
+<tr><td>{{ processed_items }}</td></tr>
+
+
+
+<tr><td>Debug api info: </td></tr>
+
+<tr><td>{{ debug }}</td></tr>
+
+</table>
+
+
+{% endif %}
+
+
+</body></html>

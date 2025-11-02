@@ -1,0 +1,136 @@
+<html>
+    <head>
+
+
+        {% load static %}
+   
+   
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Spoopy</title>
+        <link rel="icon" type="image/png" href="{% static 'buyback/spoopy.png' %}">
+        <!-- <script type="module" crossorigin="" src="{% static 'buyback/index.js' %}"></script> -->
+        <link rel="stylesheet" href="{% static 'buyback/index.css' %}">
+
+        <style>
+            .horizontal-row {
+                display: flex;
+                justify-content: space-between;
+            }
+            .padded-list {
+                padding-left: 20px; /* Add your desired padding value */
+                padding-right: 20px; /* Add your desired padding value */
+            }
+            .table-bordered {
+                border: 1px solid rgba(59, 130, 246, 0.5);
+            }
+        </style>
+    </head>
+    
+    <body class="bg-srcblack text-srcwhite">
+        <div class="container-fluid">
+    
+            <div class="row horizontal-row">
+                <div class="col-12 bg-primary py-3">
+
+
+{% if mode == 1 %}
+        <ul class="padded-list"><li>  <a href="../">Back</a></li>
+            {% for category in categories %}
+              <li><a href="{% url 'buyback:group-list' category.category_id %}">{{ category.category_name }}</a></li>
+            {% endfor %}
+          </ul>
+        </div>
+    </div>
+{% endif%}
+{% if mode == 2 %}
+        <ul class="padded-list"><li>  <a href="../">Back</a>  </li>
+            {% for group in groups %}
+    <li><a href="{% url 'buyback:item-list' category_id group.group_id %}">{{ group.group }}</a></li>
+            {% endfor %}
+          </ul>
+        </div>
+    </div>
+{% endif%}
+{% if mode == 3 %}
+
+<ul class="padded-list"><li>  <a href="../">Back</a>  </li></ul>
+    </div>
+</div>
+
+<div class="row horizontal-row"><!-- row for forms -->
+<div name="form1" class="col-lg-2 col-md-2 col-sm-2 col-6 bg-success py-3 text-center">
+<!-- Form for modifying Jita Buy Percentage -->
+<form method="post">
+    {% csrf_token %}
+    {{ jita_buy_percentage_form.as_p }}
+    <button type="submit" class="h-7 ring-2 ring-inset active:bg-srcblack hover:bg-srcblack-light ring-srcgray-light">Update Jita Buy Percentage</button>
+</form>
+</div>
+
+<div name="form2" class="col-lg-2 col-md-2 col-sm-2 col-6 bg-info py-3 text-center">
+<!-- Form for modifying flat cost -->
+<form method="post">
+    {% csrf_token %}
+    {{ flat_cost_form.as_p }}
+    <button type="submit" class="h-7 ring-2 ring-inset active:bg-srcblack hover:bg-srcblack-light ring-srcgray-light">Update Flat Cost</button>
+</form>
+</div>
+
+<div class="col-lg-2 col-md-2 col-sm-2 col-6 bg-warning py-3 text-center">
+    
+    <!-- Div 3 -->
+</div>
+<div class="col-lg-2 col-md-2 col-sm-2 col-6 bg-danger py-3 text-center">
+    <!-- Div 4 -->
+</div>
+<div class="col-lg-2 col-md-2 col-sm-2 col-6 bg-secondary py-3 text-center">
+    <!-- Div 5 -->
+</div>
+
+
+</div><!-- end row -->
+
+<div class="row horizontal-row">
+    <div class="col-12 bg-light py-5">
+
+    <h2>Items for Category ID: {{ category_id }}, Group ID: {{ group_id }}</h2>
+    <table class="table table-bordered">
+        <thead>
+            <tr class="table-bordered">
+                <th>Type ID</th>
+                <th>Type Name</th>
+                <th>Category</th>
+                <th>Category ID</th>
+                <th>Group</th>
+                <th>Group ID</th>
+                <th>Jita Buy Percentage</th>
+                <th>Flat Cost</th>
+                <th>Hauling Fee</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for item in items %}
+                <tr class="table-bordered">
+                    <!-- <td class="table-bordered">{{ item.type_id }}</td> -->
+                    <td><a href="{% url 'admin:buyback_eveitemtax_change' item.taxid %}">{{ item.type_id }}</a></td>
+                   
+                    <td class="table-bordered">{{ item.type_name }}</td>
+                    <td class="table-bordered">{{ item.category_name }}</td>
+                    <td class="table-bordered">{{ item.category_id }}</td>
+                    <td class="table-bordered">{{ item.group }}</td>
+                    <td class="table-bordered">{{ item.group_id }}</td>
+                    <td class="table-bordered">{{ item.jita_buy_percentage }}</td>
+                    <td class="table-bordered">{{ item.flat_cost }}</td>
+                    <td class="table-bordered">{{ item.hauling_fee }}</td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+{% endif %}
+
+</div>
+</div>
+<!-- end row -->
+</div>
+    </body>
+</html>
