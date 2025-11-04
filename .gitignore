@@ -1,0 +1,21 @@
+# Python bytecode
+*.pyc
+*.pyo
+*.pyd
+__pycache__/
+
+# Django migrations (optional: ignore all except __init__.py)
+**/migrations/*.py[cod]
+**/migrations/__pycache__/
+
+# Virtual environments
+venv/
+env/
+.env/
+
+# Logs
+*.log
+
+# OS files
+.DS_Store
+Thumbs.db
