@@ -1,4 +1,5 @@
 # Create your views here.
+from django.conf import settings
 from django.http import Http404
 import requests
 from django.http import HttpResponse, HttpResponseRedirect
@@ -234,7 +235,7 @@ def index(request):
                 geff_rate = 0 
             totals_info = [gtotal_buyback, gtotal_market, geff_rate]           
             debug = [api_data]
-            debugtog = True
+            debugtog = settings.DEBUG
             return render(request, 'buyback/index.html', {'form': form,'processed_items': processed_items, 'totals_info':totals_info, 'debugtog': debugtog, 'debug': debug, 'info_right': info_right})
     else:
         form = ItemForm()
