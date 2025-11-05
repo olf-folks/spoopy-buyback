@@ -19,3 +19,4 @@ env/
 # OS files
 .DS_Store
 Thumbs.db
+buyback/migrations/0007_eveitemtax_needs_update.py

@@ -21,6 +21,8 @@ class EveItemTax(models.Model):
     category_name = models.CharField(max_length=255, null=True, blank=True)
 
     needs_review = models.BooleanField(default=False)
+    needs_update = models.BooleanField(default=True)
+
 
     # def save(self, *args, **kwargs):
     #     if not self.group:
