@@ -10,8 +10,9 @@ __pycache__/
 
 # Virtual environments
 venv/
-env/
-.env/
+.venv/
+env
+.env
 
 # Logs
 *.log
@@ -19,4 +20,4 @@ env/
 # OS files
 .DS_Store
 Thumbs.db
-buyback/migrations/0007_eveitemtax_needs_update.py
+.env
