@@ -12,6 +12,8 @@ if not User.objects.filter(username='admin').exists():
     User.objects.create_superuser('admin', 'admin@example.com', 'changeme')
 END
 
+python manage.py collectstatic --noinput
+
 # Update groups and categorys
 python manage.py item-update
 

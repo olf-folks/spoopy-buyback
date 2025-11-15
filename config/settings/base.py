@@ -25,6 +25,7 @@ CSRF_TRUSTED_ORIGINS = config("CSRF_TRUSTED_ORIGINS", cast=Csv())
 
 MIDDLEWARE = [
     "django.middleware.security.SecurityMiddleware",
+    "whitenoise.middleware.WhiteNoiseMiddleware",
     "django.contrib.sessions.middleware.SessionMiddleware",
     "django.middleware.common.CommonMiddleware",
     "django.middleware.csrf.CsrfViewMiddleware",
@@ -32,6 +33,13 @@ MIDDLEWARE = [
     "django.contrib.messages.middleware.MessageMiddleware",
     "django.middleware.clickjacking.XFrameOptionsMiddleware",
 ]
+
+STORAGES = {
+    # compress and hash static files to reduce file size and improve caching
+    "staticfiles": {
+        "BACKEND": "whitenoise.storage.CompressedManifestStaticFilesStorage",
+    },
+}
 
 ROOT_URLCONF = "config.urls"
 
@@ -42,6 +50,7 @@ INSTALLED_APPS = [
     "django.contrib.contenttypes",
     "django.contrib.sessions",
     "django.contrib.messages",
+    "whitenoise.runserver_nostatic",
     "django.contrib.staticfiles",
 ]
 
@@ -124,5 +133,6 @@ DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
 # Celery
 #CELERY_BROKER_URL = config("CELERY_BROKER_URL")
 #CELERY_RESULT_BACKEND = config("REDIS_BACKEND")
+STATIC_ROOT = os.path.join(BASE_DIR, "staticfiles")
 
 print("Django base settings loaded successfully")
