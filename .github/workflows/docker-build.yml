@@ -50,6 +50,6 @@ jobs:
       uses: docker/build-push-action@v5
       with:
         context: .                              # Build from repository root
-        push: true                              # Push image to registry
+        push: ${{ github.ref == 'refs/heads/main' }}        # Only push if on main branch
         tags: ${{ steps.meta.outputs.tags }}    # Use tags generated above
         labels: ${{ steps.meta.outputs.labels }} # Use labels generated above
