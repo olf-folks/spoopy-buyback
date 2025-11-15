@@ -34,6 +34,16 @@ jobs:
         username: ${{ github.actor }}           # GitHub username that triggered workflow
         password: ${{ secrets.GITHUB_TOKEN }}   # Auto-generated token for this workflow
 
+    # Set up QEMU for emulation (required for building non-native architectures)
+    - name: Set up QEMU
+      uses: docker/setup-qemu-action@v3
+      with:
+        platforms: linux/amd64,linux/arm64
+
+    # Set up Docker Buildx for multi-architecture builds
+    - name: Set up Docker Buildx
+      uses: docker/setup-buildx-action@v3
+
     # Generate tags and labels for the Docker image
     - name: Extract metadata
       id: meta  # ID to reference outputs from this step
@@ -45,11 +55,12 @@ jobs:
           type=ref,event=pr          # PR number (e.g., pr-123)
           type=sha,format=short      # Short commit SHA (e.g., abc1234)
 
-    # Build Docker image and push to registry
+    # Build multi-arch Docker image and push to registry
     - name: Build and push Docker image
       uses: docker/build-push-action@v5
       with:
         context: .                              # Build from repository root
-        push: ${{ github.ref == 'refs/heads/main' }}        # Only push if on main branch
+        push: true        # Only push if on main branch
+        platforms: linux/amd64,linux/arm64      # Multi-arch targets
         tags: ${{ steps.meta.outputs.tags }}    # Use tags generated above
         labels: ${{ steps.meta.outputs.labels }} # Use labels generated above
