@@ -51,6 +51,7 @@ jobs:
       with:
         images: ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}  # Full image name
         tags: |
+          latest
           type=ref,event=branch      # Branch name (e.g., main)
           type=ref,event=pr          # PR number (e.g., pr-123)
           type=sha,format=short      # Short commit SHA (e.g., abc1234)
