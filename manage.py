@@ -8,12 +8,6 @@ from decouple import config
 
 def main():
     """Run administrative tasks."""
-    # If running tests, use test settings automatically
-    # Must set this BEFORE importing Django to ensure test settings are used
-    if 'test' in sys.argv:
-        os.environ["DJANGO_SETTINGS_MODULE"] = "config.settings.test"
-    else:
-        os.environ.setdefault("DJANGO_SETTINGS_MODULE", config("DJANGO_SETTINGS_MODULE"))
     try:
         from django.core.management import execute_from_command_line
     except ImportError as exc:

@@ -19,6 +19,12 @@ Spoopy Buyback 2 is a web-based tool designed to streamline the process of calcu
 
 ## Getting Started
 
+### Running tests
+
+```bash
+pytest --ds=config.settings.test
+```
+
 ### Prerequisites
 
 - [Docker](https://www.docker.com/) [version]
