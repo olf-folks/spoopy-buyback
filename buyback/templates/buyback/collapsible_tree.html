@@ -46,7 +46,7 @@
                             <ul class="item-list">
                                 {% for item in group.items %}
                                     <li class="item-item">
-                                        <a href="/admin/buyback/eveitemtax/{% item.taxid %}/change/">
+                                        <a href="/admin/buyback/eveitemtax/{{ item.taxid }}/change/">
                                             {{ item.type_name }}
                                         </a>
                                     </li>

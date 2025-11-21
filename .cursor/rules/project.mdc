@@ -1,0 +1,47 @@
+---
+alwaysApply: true
+---
+# Spoopy Buyback 2
+
+## Project Context
+This is a Django 4.1.2 web application ("Spoopy Buyback"), likely related to EVE Online (references to Jita, items, taxes). It uses PostgreSQL database (SQLite during testing).
+
+## Technology Stack
+- **Backend**: Python 3, Django 4.1.2
+- **Database**: PostgreSQL (psycopg2-binary)
+- **Testing**: Pytest (pytest-django)
+- **Frontend**: Django Templates, Vanilla JavaScript, CSS
+- **Environment**: python-decouple for config
+
+## Coding Guidelines
+
+### Python & Django
+- **Style**: Follow PEP 8 strict coding standards.
+- **Views**: The project currently uses **Function-Based Views (FBVs)**. Continue this pattern unless refactoring to Class-Based Views is explicitly requested.
+- **Type Hinting**: Use Python type hints (e.g., `from typing import List, Optional`) for function arguments and return values.
+- **Imports**: Group imports: standard library, third-party libraries, local Django app imports.
+- **Models**: Keep business logic in Models or dedicated Service layers/utils, not in Views.
+- **Settings**: Use `python-decouple` (`config(...)`) for environment variables. Do not hardcode secrets.
+
+### Testing database (SQLite during testing)python manage.py testytest
+- Use **pytest** for all tests.
+- Place tests in `buyback/tests/`.
+- Write unit tests for models and utility functions.
+- Write integration tests for views and flows.
+- Run tests using `python manage.py test`.
+
+### Frontend
+- Use Django Template Language (DTL) for server-side rendering.
+- Keep JavaScript in `static/` files, avoid inline scripts where possible.
+- Use semantic HTML.
+
+### General
+- **Comments**: clear, concise comments explaining "why", not just "what". Remove debug comments (like `# jake`, `# what is this doing?`) when refactoring.
+- **Error Handling**: Handle exceptions gracefully. Use `get_object_or_404` for object retrieval in views.
+- **Logging**: Use the `logging` module (as seen in `views.py`) instead of `print` statements.
+- **Virtual Environment**: utilize virtual environments, either venv, or uv
+
+## AI Behavior
+- **Reasoning**: Think step-by-step before suggesting code.
+- **Safety**: Verify relevant file paths before writing.
+- **Code Quality**: When modifying existing code, try to improve its quality (e.g., fixing "magic numbers", adding types) while preserving behavior.
