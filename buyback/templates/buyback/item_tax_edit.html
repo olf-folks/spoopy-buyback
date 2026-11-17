@@ -1,0 +1,15 @@
+{% extends 'buyback/tax_editor_base.html' %}
+{% block editor_content %}
+<nav class="breadcrumbs" aria-label="Breadcrumb"><a href="{% url 'buyback:category-list' %}">All items</a>{% for crumb in breadcrumbs %}<span>/</span><a href="{{ crumb.url }}">{{ crumb.name }}</a>{% endfor %}<span>/</span><span aria-current="page">{{ editing_item.type_name }}</span></nav>
+<div class="title-row"><div><span class="eyebrow">EDIT ITEM</span><h2>{{ editing_item.type_name }}</h2><p>Type ID {{ editing_item.type_id }} · {{ editing_item.group }}{% if editing_item.category_name %} · {{ editing_item.category_name }}{% endif %}</p></div></div>
+<p><a href="{{ return_url }}">← Back to selection</a></p>
+<section class="bulk-editor item-editor" aria-label="Edit item">
+  <div class="bulk-heading"><h3>Item settings</h3><p>Changes apply only to {{ editing_item.type_name }}. A nonzero flat price overrides the Jita rate only for Spoopy Newbies members; set it to 0 to use their percentage rate.</p></div>
+  <form method="post">
+    {% csrf_token %}
+    {{ item_form.as_p }}
+    <button type="submit">Save and return</button>
+    <p class="cancel-link"><a href="{{ return_url }}">Cancel</a></p>
+  </form>
+</section>
+{% endblock %}

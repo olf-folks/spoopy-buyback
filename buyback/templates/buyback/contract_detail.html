@@ -1,0 +1,6 @@
+{% extends 'buyback/staff_base.html' %}{% block staff_content %}
+<p><a href="{% url 'buyback:contracts' %}">← Back to contracts</a></p><div class="title-row"><span class="eyebrow">CONTRACT {{ contract.contract_id }}</span><h2>{{ contract.data.title|default:'Item exchange' }}</h2><p>{{ contract.data.status }} · {{ contract.data.price|floatformat:2 }} ISK · Issuer {{ contract.issuer_name }}</p></div>
+<p>Contract status and price were synced {{ contract.synced_at|date:"Y-m-d H:i T" }}. Items below are fetched from ESI when you open this page.</p>
+{% if error %}<p class="message error" role="alert">{{ error }}</p>{% endif %}
+<section class="item-panel"><div class="table-scroll"><table><thead><tr><th>Item</th><th>Type ID</th><th>Quantity</th><th>Direction</th></tr></thead><tbody>{% for item in items %}<tr><td><div class="contract-item"><img src="https://images.evetech.net/types/{{ item.type_id }}/icon?size=64" alt="" width="40" height="40" loading="lazy"><span>{{ item.name }}</span></div></td><td>{{ item.type_id }}</td><td>{{ item.quantity }}</td><td>{% if item.is_included %}Offered to buyback{% else %}Requested from buyback{% endif %}</td></tr>{% empty %}<tr><td colspan="4">No item data available.</td></tr>{% endfor %}</tbody></table></div></section>
+{% endblock %}

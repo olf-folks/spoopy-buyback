@@ -1,0 +1,21 @@
+[Unit]
+Description=Spoopy Buyback Gunicorn
+After=network.target postgresql.service
+
+[Service]
+User=buyback
+Group=buyback
+WorkingDirectory=/srv/buyback/app
+EnvironmentFile=/etc/buyback.env
+ExecStart=/srv/buyback/venv/bin/gunicorn --workers 2 --bind 127.0.0.1:8000 --access-logfile - --error-logfile - config.wsgi:application
+Restart=on-failure
+RestartSec=5
+NoNewPrivileges=true
+PrivateTmp=true
+ProtectSystem=strict
+ProtectHome=true
+ReadWritePaths=/srv/buyback/mediafiles
+UMask=0027
+
+[Install]
+WantedBy=multi-user.target

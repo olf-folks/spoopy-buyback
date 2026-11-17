@@ -1,136 +1,53 @@
-<html>
-    <head>
-
-
-        {% load static %}
-   
-   
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Spoopy</title>
-        <link rel="icon" type="image/png" href="{% static 'buyback/spoopy.png' %}">
-        <!-- <script type="module" crossorigin="" src="{% static 'buyback/index.js' %}"></script> -->
-        <link rel="stylesheet" href="{% static 'buyback/index.css' %}">
-
-        <style>
-            .horizontal-row {
-                display: flex;
-                justify-content: space-between;
-            }
-            .padded-list {
-                padding-left: 20px; /* Add your desired padding value */
-                padding-right: 20px; /* Add your desired padding value */
-            }
-            .table-bordered {
-                border: 1px solid rgba(59, 130, 246, 0.5);
-            }
-        </style>
-    </head>
-    
-    <body class="bg-srcblack text-srcwhite">
-        <div class="container-fluid">
-    
-            <div class="row horizontal-row">
-                <div class="col-12 bg-primary py-3">
-
-
-{% if mode == 1 %}
-        <ul class="padded-list"><li>  <a href="../">Back</a></li>
-            {% for category in categories %}
-              <li><a href="{% url 'buyback:group-list' category.category_id %}">{{ category.category_name }}</a></li>
-            {% endfor %}
-          </ul>
-        </div>
-    </div>
-{% endif%}
-{% if mode == 2 %}
-        <ul class="padded-list"><li>  <a href="../">Back</a>  </li>
-            {% for group in groups %}
-    <li><a href="{% url 'buyback:item-list' category_id group.group_id %}">{{ group.group }}</a></li>
-            {% endfor %}
-          </ul>
-        </div>
-    </div>
-{% endif%}
-{% if mode == 3 %}
-
-<ul class="padded-list"><li>  <a href="../">Back</a>  </li></ul>
-    </div>
-</div>
-
-<div class="row horizontal-row"><!-- row for forms -->
-<div name="form1" class="col-lg-2 col-md-2 col-sm-2 col-6 bg-success py-3 text-center">
-<!-- Form for modifying Jita Buy Percentage -->
-<form method="post">
-    {% csrf_token %}
-    {{ jita_buy_percentage_form.as_p }}
-    <button type="submit" class="h-7 ring-2 ring-inset active:bg-srcblack hover:bg-srcblack-light ring-srcgray-light">Update Jita Buy Percentage</button>
-</form>
-</div>
-
-<div name="form2" class="col-lg-2 col-md-2 col-sm-2 col-6 bg-info py-3 text-center">
-<!-- Form for modifying flat cost -->
-<form method="post">
-    {% csrf_token %}
-    {{ flat_cost_form.as_p }}
-    <button type="submit" class="h-7 ring-2 ring-inset active:bg-srcblack hover:bg-srcblack-light ring-srcgray-light">Update Flat Cost</button>
-</form>
-</div>
-
-<div class="col-lg-2 col-md-2 col-sm-2 col-6 bg-warning py-3 text-center">
-    
-    <!-- Div 3 -->
-</div>
-<div class="col-lg-2 col-md-2 col-sm-2 col-6 bg-danger py-3 text-center">
-    <!-- Div 4 -->
-</div>
-<div class="col-lg-2 col-md-2 col-sm-2 col-6 bg-secondary py-3 text-center">
-    <!-- Div 5 -->
-</div>
-
-
-</div><!-- end row -->
-
-<div class="row horizontal-row">
-    <div class="col-12 bg-light py-5">
-
-    <h2>Items for Category ID: {{ category_id }}, Group ID: {{ group_id }}</h2>
-    <table class="table table-bordered">
-        <thead>
-            <tr class="table-bordered">
-                <th>Type ID</th>
-                <th>Type Name</th>
-                <th>Category</th>
-                <th>Category ID</th>
-                <th>Group</th>
-                <th>Group ID</th>
-                <th>Jita Buy Percentage</th>
-                <th>Flat Cost</th>
-                <th>Hauling Fee</th>
-            </tr>
-        </thead>
-        <tbody>
-            {% for item in items %}
-                <tr class="table-bordered">
-                    <!-- <td class="table-bordered">{{ item.type_id }}</td> -->
-                    <td><a href="{% url 'admin:buyback_eveitemtax_change' item.taxid %}">{{ item.type_id }}</a></td>
-                   
-                    <td class="table-bordered">{{ item.type_name }}</td>
-                    <td class="table-bordered">{{ item.category_name }}</td>
-                    <td class="table-bordered">{{ item.category_id }}</td>
-                    <td class="table-bordered">{{ item.group }}</td>
-                    <td class="table-bordered">{{ item.group_id }}</td>
-                    <td class="table-bordered">{{ item.jita_buy_percentage }}</td>
-                    <td class="table-bordered">{{ item.flat_cost }}</td>
-                    <td class="table-bordered">{{ item.hauling_fee }}</td>
-                </tr>
-            {% endfor %}
-        </tbody>
-    </table>
-{% endif %}
-
-</div>
-</div>
-<!-- end row -->
-</div>
-    </body>
-</html>
+{% extends 'buyback/tax_editor_base.html' %}
+{% block editor_content %}
+    <nav class="breadcrumbs" aria-label="Breadcrumb"><a href="{% url 'buyback:category-list' %}">All items</a>{% for crumb in breadcrumbs %}<span>/</span><a href="{{ crumb.url }}"{% if forloop.last %} aria-current="page"{% endif %}>{{ crumb.name }}</a>{% endfor %}{% if unlisted %}<span>/</span><span>Outside the market</span>{% endif %}</nav>
+    <div class="title-row"><div><span class="eyebrow">BUYBACK RATES</span><h2>{{ scope_title }}</h2><p>{{ total }} matching items{% if selected %}, including subcategories{% endif %}.</p></div></div>
+    <form class="item-search" method="get" role="search">
+      {% if unlisted %}<input type="hidden" name="unlisted" value="1">{% endif %}
+      <label for="item-search">Find an item in this selection</label>
+      <div><input id="item-search" name="q" value="{{ search }}" maxlength="100" placeholder="Item name or type ID"><button type="submit">Search</button>{% if search %}<a href="{% if unlisted %}?unlisted=1{% else %}{{ request.path }}{% endif %}{% if review_only %}{% if unlisted %}&amp;{% else %}?{% endif %}review=1{% endif %}">Clear</a>{% endif %}</div>
+      <label class="review-filter"><input type="checkbox" name="review" value="1" onchange="this.form.requestSubmit()"{% if review_only %} checked{% endif %}> Needs review only</label>
+    </form>
+    <section class="bulk-editor" aria-label="Edit selected item rates">
+      <div class="bulk-heading"><h3>Edit this selection</h3><p>Changes apply to all {{ total }} matching items across every page{% if selected %}, including subcategories{% endif %}.</p></div>
+      <form method="post" class="rate-form">
+        {% csrf_token %}<input type="hidden" name="action" value="rate">
+        {{ rate_form.as_p }}
+        <button type="submit"{% if not total %} disabled{% endif %}>Apply Jita rate</button>
+      </form>
+      <form method="post" class="corp-form">
+        {% csrf_token %}<input type="hidden" name="action" value="corp_rate">
+        {{ corp_form.as_p }}
+        <button type="submit" class="secondary"{% if not total %} disabled{% endif %}>Apply Spoopy Newbies rate</button>
+      </form>
+      <form method="post" class="outsider-form">
+        {% csrf_token %}<input type="hidden" name="action" value="outsider_rate">
+        {{ outsider_form.as_p }}
+        <button type="submit" class="secondary"{% if not total %} disabled{% endif %}>Apply outsider rate</button>
+      </form>
+      <form method="post" class="flat-form">
+        {% csrf_token %}<input type="hidden" name="action" value="flat">
+        {{ flat_form.as_p }}
+        <button type="submit" class="secondary"{% if not total %} disabled{% endif %}>Apply flat price</button>
+        <small>A nonzero flat price overrides the Jita rate only for Spoopy Newbies members. Set to 0 to use their percentage rate.</small>
+      </form>
+      <form method="post" class="review-form">
+        {% csrf_token %}<input type="hidden" name="action" value="review">
+        {{ review_form.as_p }}
+        <button type="submit" class="secondary"{% if not total %} disabled{% endif %}>Apply review status</button>
+      </form>
+    </section>
+    <section class="item-panel" aria-label="Items">
+      <div class="table-scroll"><table>
+        <thead><tr><th>Item</th><th>Type ID</th><th>Spoopy Newbies Jita rate</th><th>Alliance Jita rate</th><th>Outsider Jita rate</th><th>Spoopy flat price</th><th>Hauling fee</th><th>Review</th></tr></thead>
+        <tbody>{% for item in page_obj %}<tr>
+          <td><a href="{% url 'buyback:item-tax-editor' item.taxid %}?next={{ request.get_full_path|urlencode }}">{{ item.type_name }}</a><span class="inventory-group">{{ item.group }}</span></td>
+          <td>{{ item.type_id }}</td><td>{{ item.corp_display_rate|floatformat:"-2" }}%</td><td>{{ item.display_rate|floatformat:"-2" }}%</td><td>{{ item.outsider_display_rate|floatformat:"-2" }}%</td><td>{{ item.flat_cost|floatformat:2 }} ISK</td><td>{{ item.hauling_fee|yesno:"Yes,No" }}</td><td>{% if item.needs_review %}<span class="review-badge">Needs review</span>{% else %}Reviewed{% endif %}</td>
+        </tr>{% empty %}<tr><td colspan="8" class="empty-state">No items match this selection.</td></tr>{% endfor %}</tbody>
+      </table></div>
+      <nav class="pagination" aria-label="Item pages">
+        <span>Page {{ page_obj.number }} of {{ page_obj.paginator.num_pages }}</span>
+        <div>{% if page_obj.has_previous %}<a href="?{{ page_query }}{% if page_query %}&amp;{% endif %}page={{ page_obj.previous_page_number }}">Previous</a>{% endif %}{% if page_obj.has_next %}<a href="?{{ page_query }}{% if page_query %}&amp;{% endif %}page={{ page_obj.next_page_number }}">Next</a>{% endif %}</div>
+      </nav>
+    </section>
+{% endblock %}

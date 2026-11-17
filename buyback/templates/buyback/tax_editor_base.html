@@ -1,0 +1,28 @@
+{% load static %}
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Tax editor · Spoopy</title>
+  <link rel="icon" href="{% static 'buyback/spoopy.png' %}">
+  <link rel="stylesheet" href="{% static 'buyback/tax-editor.css' %}">
+{% if legacy_ui %}<link rel="stylesheet" href="{% static 'buyback/legacy-buyback.css' %}"><link rel="stylesheet" href="{% static 'buyback/classic-staff.css' %}">{% else %}<link rel="stylesheet" href="{% static 'buyback/site-header.css' %}">{% endif %}</head>
+<body{% if legacy_ui %} class="classic-staff"{% endif %}>
+{% if legacy_ui %}{% include 'buyback/classic_staff_header.html' %}{% else %}{% include 'buyback/site_header.html' with section='Tax editor' %}{% endif %}
+<div class="editor-layout">
+  <aside class="market-sidebar" aria-label="Market categories">
+    <div class="sidebar-heading"><span class="eyebrow">BROWSE</span><h1>Market categories</h1><p>Expand a branch to browse its subcategories.</p></div>
+    <nav aria-label="Market browser">
+      <a class="scope-link" href="{% url 'buyback:category-list' %}{% if review_only %}?review=1{% endif %}"{% if all_selected %} aria-current="page"{% endif %}>All items{% include 'buyback/review_indicator.html' with review_count=all_review_count only %}</a>
+      <ul class="market-tree">{% for node in market_tree %}{% include 'buyback/market_branch.html' %}{% empty %}<li class="empty-menu">Market categories are not loaded yet.</li>{% endfor %}</ul>
+      {% if unlisted_count %}<a class="scope-link" href="{% url 'buyback:category-list' %}?unlisted=1{% if review_only %}&amp;review=1{% endif %}"{% if unlisted %} aria-current="page"{% endif %}>Outside the market{% include 'buyback/review_indicator.html' with review_count=unlisted_review_count only %} <span class="node-count">{{ unlisted_count }}</span></a>{% endif %}
+    </nav>
+  </aside>
+  <main id="items">
+    {% if messages %}<div class="messages" role="status">{% for message in messages %}<p class="message {{ message.tags }}">{{ message }}</p>{% endfor %}</div>{% endif %}
+    {% block editor_content %}{% endblock %}
+  </main>
+</div>
+</body>
+</html>

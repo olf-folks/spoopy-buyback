@@ -27,7 +27,7 @@ class NewItemFilter(admin.SimpleListFilter):
 
 class EveItemTaxAdmin(admin.ModelAdmin):
     search_fields = ['type_name', 'type_id', 'group']
-    list_display = ['type_name', 'type_id', 'group', 'jita_buy_percentage', 'flat_cost', 'hauling_fee', 'needs_review']
+    list_display = ['type_name', 'type_id', 'group', 'jita_buy_percentage', 'corp_jita_buy_percentage', 'outsider_jita_buy_percentage', 'flat_cost', 'hauling_fee', 'needs_review']
     # list_filter = ['group_id']
     list_filter = [ NewItemFilter, 'group', 'needs_review']
     #readonly_fields = ['group_id', 'category_id', 'category_name', 'type_name', 'group', 'type_id']  # Make the group_id, type_name, and type_id fields read-only
@@ -43,3 +43,5 @@ class EveItemTaxAdmin(admin.ModelAdmin):
     group_name.short_description = 'Group Name'
 
 admin.site.register(EveItemTax, EveItemTaxAdmin)
+
+admin.site.login_template = 'buyback/staff_login.html'

@@ -1,0 +1,2 @@
+# Update pending item groups/categories from EVE ESI hourly, at minute 7.
+7 * * * * root /usr/local/sbin/buyback-update-items >> /var/log/buyback-item-update.log 2>&1

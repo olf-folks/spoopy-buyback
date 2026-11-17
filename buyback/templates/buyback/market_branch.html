@@ -1,0 +1,10 @@
+<li class="market-node">
+{% if node.children %}
+  <details{% if node.open %} open{% endif %}>
+    <summary><a href="{{ node.url }}"{% if node.selected %} aria-current="page"{% endif %}>{{ node.name }}{% include 'buyback/review_indicator.html' with review_count=node.review_count only %}</a><span class="node-count">{{ node.count }}</span></summary>
+    <ul>{% for child in node.children %}{% include 'buyback/market_branch.html' with node=child %}{% endfor %}</ul>
+  </details>
+{% else %}
+  <a class="market-leaf" href="{{ node.url }}"{% if node.selected %} aria-current="page"{% endif %}>{{ node.name }}{% include 'buyback/review_indicator.html' with review_count=node.review_count only %}<span class="node-count">{{ node.count }}</span></a>
+{% endif %}
+</li>

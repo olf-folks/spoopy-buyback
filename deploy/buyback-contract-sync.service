@@ -1,0 +1,17 @@
+[Unit]
+Description=Sync Spoopy Buyback incoming corporation contracts
+After=network-online.target postgresql.service
+
+[Service]
+Type=oneshot
+User=buyback
+Group=buyback
+WorkingDirectory=/srv/buyback/app
+EnvironmentFile=/etc/buyback.env
+ExecStart=/srv/buyback/venv/bin/python manage.py sync_buyback_contracts
+TimeoutStartSec=4min
+NoNewPrivileges=true
+PrivateTmp=true
+ProtectSystem=strict
+ProtectHome=true
+UMask=0077

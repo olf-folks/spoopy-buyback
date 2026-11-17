@@ -1,4 +1,4 @@
-
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -33,8 +33,8 @@
             margin-left: 20px;
         }
     </style>
-</head>
-<body style="background-color: #f0f0f0;">
+<link rel="stylesheet" href="{% static 'buyback/site-header.css' %}"></head>
+<body style="background-color: #f0f0f0;">{% include 'buyback/site_header.html' with section='Buyback' %}
     <ul class="category-list">
         {% for category_id, category in categories.items %}
             <li class="category-item">
@@ -46,7 +46,7 @@
                             <ul class="item-list">
                                 {% for item in group.items %}
                                     <li class="item-item">
-                                        <a href="/admin/buyback/eveitemtax/{% item.taxid %}/change/">
+                                        <a href="{% url 'admin:buyback_eveitemtax_change' item.taxid %}">
                                             {{ item.type_name }}
                                         </a>
                                     </li>
@@ -79,5 +79,6 @@ groupItems.forEach(item => {
     });
 });
     </script>
+{% include "buyback/pagination.html" %}
 </body>
 </html>

@@ -1,0 +1,5 @@
+{% load static %}<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>EVE login · Spoopy Buyback</title><link rel="stylesheet" href="{% static 'buyback/site-header.css' %}"></head><body style="background:#111827;color:#e5e7eb;font-family:sans-serif;padding:2rem">{% include 'buyback/site_header.html' with section='Buyback' %}<h1>Spoopy Buyback</h1>
+{% if unavailable %}<p>Alliance verification is temporarily unavailable. Please retry shortly, or log out to appraise at outsider rates.</p>{% elif login_error %}<p>EVE login could not be completed. Please start a new login.</p>{% else %}<p>Log in with your EVE character to appraise your items.</p>{% endif %}
+<p><a style="color:#67e8f9" href="{% url 'buyback:eve-login' %}">Log in with EVE Online</a></p>
+<form method="post" action="{% url 'buyback:eve-logout' %}">{% csrf_token %}<button type="submit">Continue as guest</button></form>
+<p><a style="color:#67e8f9" href="{% url 'buyback:index' %}">Back to buyback</a></p></body></html>

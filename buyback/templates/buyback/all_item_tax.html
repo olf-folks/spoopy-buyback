@@ -1,9 +1,9 @@
-<!DOCTYPE html>
+{% load static %}<!DOCTYPE html>
 <html>
 <head>
     <title>All Item Tax Recordss</title>
-</head>
-<body>
+<link rel="stylesheet" href="{% static 'buyback/site-header.css' %}"></head>
+<body>{% include 'buyback/site_header.html' with section='Buyback' %}
     <h1>All Item Tax Records</h1>
     <table>
         <thead>
@@ -16,7 +16,7 @@
                 <th>Group</th>
                 <th>Group ID</th>
                 <th>Jita Buy Percentage</th>
-                <th>Flat Cost</th>
+                <th>Spoopy Newbies Flat Price</th>
                 <th>Hauling Fee</th>
             </tr>
         </thead>
@@ -38,5 +38,6 @@
             {% endfor %}
         </tbody>
     </table>
+{% include "buyback/pagination.html" %}
 </body>
 </html>

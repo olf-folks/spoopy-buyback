@@ -1,16 +1,17 @@
 # Create your views here.
+from django.core.paginator import Paginator
 from django.conf import settings
 from django.http import Http404
 import requests
 from django.http import HttpResponse, HttpResponseRedirect
 from django.template import loader
 from django.shortcuts import render, redirect
-from .forms import ItemForm
+from .forms import ItemForm, LegacyItemForm
 import re
 from .models import EveItemTax  # Import your model
 from typing import List
 import logging
-from django.contrib.admin.views.decorators import staff_member_required
+from .staff_auth import staff_member_required
 from .forms import FlatCostForm, JitaBuyPercentageForm
 from django.db import IntegrityError
 logger = logging.getLogger(__name__)
@@ -131,12 +132,25 @@ def generate_api_input(parsed_user_input):
         string = string + name + space + str(quantity) + ret
     return string  # Move the return statement outside the loop
 
+from django.views.decorators.cache import never_cache
+
+@never_cache
 def index(request):
+    from .eve_auth import pricing_identity
+    from .context_processors import ui_preference
+    legacy_ui = ui_preference(request)
+    page_template = 'buyback/legacy_index.html' if legacy_ui else 'buyback/index.html'
+    form_class = LegacyItemForm if legacy_ui else ItemForm
+    identity = {**pricing_identity(request), 'legacy_ui': legacy_ui, 'show_ui_toggle': True}
+    if identity['login_required']:
+        return render(request, 'buyback/eve_login.html', identity)
+    if identity['unavailable']:
+        return render(request, 'buyback/eve_login.html', identity, status=503)
     haul_fee_rate_sv = 200 # set value is 200 ISK per m3
     debug = []
     info_right = 2
     if request.method == 'POST':
-        form = ItemForm(request.POST)
+        form = form_class(request.POST)
         if form.is_valid():
             raw_user_input = form.cleaned_data['item_name']  # Get the input text from the form
             parsed_user_input = parse_user_input(raw_user_input)
@@ -146,8 +160,8 @@ def index(request):
             quantity = getqtys(parsed_user_input)
             logger.debug("apiinput: %s", api_input)
             janiceurl = 'https://janice.e-351.com/api/rest/v2/pricer?market=2'
-            janiceheaders = {"accept": "application/json", "X-ApiKey": "G9KwKq3465588VPd6747t95Zh94q3W2E", "Content-Type": "text/plain"}
-            janiceresponse = requests.post(janiceurl, api_input, headers=janiceheaders)
+            janiceheaders = {"accept": "application/json", "X-ApiKey": settings.JANICE_API_KEY, "Content-Type": "text/plain"}
+            janiceresponse = requests.post(janiceurl, api_input, headers=janiceheaders, timeout=30)
             api_data = janiceresponse.json()
             logger.debug("api_resp: %s", api_data)
 
@@ -196,6 +210,10 @@ def index(request):
                         haul_fee = 0
                     logger.debug("haul fee is: %s", haul_fee)
                     tax_deci = get_tax_rate_from_database(item_id)
+                    if identity['enabled'] and identity['is_corp_member']:
+                        tax_deci = eve_item.corp_jita_buy_percentage
+                    elif identity['enabled'] and not identity['is_member']:
+                        tax_deci = eve_item.outsider_jita_buy_percentage
                     tax_rate = tax_deci * 100
                     flat_rate = get_flat_rate_from_database(item_id)
                     prembuyback_price = calculate_buyback_price(item_data['immediatePrices']['buyPrice5DayMedian'], tax_rate)
@@ -203,7 +221,8 @@ def index(request):
                     buyback_price = prembuyback_price + haul_fee
                     logger.debug("bbp before flat_rate: %s", buyback_price)
                     logger.debug("flat_rate: %s", flat_rate)
-                    if flat_rate != 0:
+                    flat_price_applied = identity['enabled'] and identity['is_corp_member'] and flat_rate != 0
+                    if flat_price_applied:
                         buyback_price = flat_rate
                     logger.debug("bbp after flat_rate: %s", buyback_price)
                     buyback_price_itemtotal = quantity * buyback_price
@@ -214,6 +233,7 @@ def index(request):
                         'item_name': item_name,
                         'quantity': quantity,
                         'tax_rate': tax_rate,
+                        'flat_price_applied': flat_price_applied,
                         'buyback_price': buyback_price,
                         'market_price': market_price,
                         'buyback_price_itemtotal': buyback_price_itemtotal,
@@ -236,22 +256,22 @@ def index(request):
             totals_info = [gtotal_buyback, gtotal_market, geff_rate]           
             debug = [api_data]
             debugtog = settings.DEBUG
-            return render(request, 'buyback/index.html', {'form': form,'processed_items': processed_items, 'totals_info':totals_info, 'debugtog': debugtog, 'debug': debug, 'info_right': info_right})
+            return render(request, page_template, {**identity, 'form': form,'processed_items': processed_items, 'totals_info':totals_info, 'debugtog': debugtog, 'debug': debug, 'info_right': info_right})
     else:
-        form = ItemForm()
+        form = form_class()
         info_right = 1
-    return render(request, 'buyback/index.html', {'form': form, 'debug': debug, 'info_right': info_right})
+    return render(request, page_template, {**identity, 'form': form, 'debug': debug, 'info_right': info_right})
 
 def all_item_tax_view(request):
-    all_items = EveItemTax.objects.all()
-    return render(request, 'buyback/all_item_tax.html', {'all_items': all_items})
+    page = Paginator(EveItemTax.objects.order_by('type_name', 'taxid'), 200).get_page(request.GET.get('page'))
+    return render(request, 'buyback/all_item_tax.html', {'all_items': page, 'page_obj': page})
 
 
 def collapsible_tree_view(request):
     categories = {}
-    items = EveItemTax.objects.all()
+    page = Paginator(EveItemTax.objects.order_by('category_id', 'group_id', 'type_name', 'taxid'), 200).get_page(request.GET.get('page'))
 
-    for item in items:
+    for item in page:
         category_id = item.category_id
         group_id = item.group_id
         item_id = item.taxid
@@ -267,9 +287,9 @@ def collapsible_tree_view(request):
                 'items': [],
             }
 
-        categories[category_id]['groups'][group_id]['items'][item_id].append(item)
+        categories[category_id]['groups'][group_id]['items'].append(item)
 
-    return render(request, 'buyback/collapsible_tree.html', {'categories': categories})
+    return render(request, 'buyback/collapsible_tree.html', {'categories': categories, 'page_obj': page})
 
 def update_inventory(request):
     all_items = EveItemTax.objects.all()
@@ -278,15 +298,14 @@ update_inventory
 
 @staff_member_required
 def category_list_view(request):
-    categories = EveItemTax.objects.values('category_name', 'category_id').distinct()
-    mode=1
-    return render(request, 'buyback/tax_edit.html', {'categories': categories, 'mode': mode})
+    from .tax_editor import market_tax_editor
+    return market_tax_editor(request)
 
 @staff_member_required
 def group_list_view(request, category_id):
     groups = EveItemTax.objects.filter(category_id=category_id).values('group', 'group_id').distinct()
     mode=2
-    return render(request, 'buyback/tax_edit.html', {'groups': groups, 'category_id': category_id, 'mode': mode})
+    return render(request, 'buyback/legacy_tax_edit.html', {'groups': groups, 'category_id': category_id, 'mode': mode})
 
 
 
@@ -308,7 +327,7 @@ def item_list_view(request, category_id, group_id):
 
         if jita_buy_percentage_form.is_valid():
             # Process the form data and update Jita Buy Percentage
-            new_jita_buy_percentage = jita_buy_percentage_form.cleaned_data['jita_buy_percentage']
+            new_jita_buy_percentage = jita_buy_percentage_form.cleaned_data['jita_buy_percentage'] / 100
             for item in items:
                 item.jita_buy_percentage = new_jita_buy_percentage
                 item.save()
@@ -316,8 +335,10 @@ def item_list_view(request, category_id, group_id):
         flat_cost_form = FlatCostForm()
         jita_buy_percentage_form = JitaBuyPercentageForm()
 
-    return render(request, 'buyback/tax_edit.html', {
-        'items': items,
+    page = Paginator(items.order_by('type_name', 'taxid'), 200).get_page(request.GET.get('page'))
+    return render(request, 'buyback/legacy_tax_edit.html', {
+        'items': page,
+        'page_obj': page,
         'category_id': category_id,
         'group_id': group_id,
         'mode': mode,

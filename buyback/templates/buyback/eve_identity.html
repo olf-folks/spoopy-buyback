@@ -1,0 +1,4 @@
+{% load static %}
+<section class="buyback-card identity-card"><span class="eyebrow">PLAYER RATES</span>
+{% if character_name %}<h2>Your rates</h2><p class="identity-status">{% if is_corp_member %}Spoopy Newbies rates{% elif is_member %}Alliance member rates{% else %}Out-of-alliance rates{% endif %}</p>{% else %}<h2>Member rates</h2><p>Default rates available for all players without log-in.</p><p>Spoopy Newbies and Brave Collective players can log in for better rates on certain items.</p>{% endif %}
+<div class="accepted-locations"><h3>Contracts accepted in the following locations:</h3><ul><li>Spoopy Newbies Citadels (Astrahus/Fortizar) - Compressed Ore and NON-Compressed gas should be contracted separately in the Reactor (Athanor/Tatara)</li><li>Brave Collective Keepstars</li><li>Alliance-designated forward staging (during wartime only)</li><li>Jita and Amarr trade hubs.</li></ul></div></section>
